@@ -1,0 +1,81 @@
+@import fonts
+@import titles
+
+body
+	min-width: 320px
+	+av
+	background: #fff
+	color: #4A4A4A
+	&:before
+		content: ""
+		display: none
+		position: fixed
+		z-index: 11
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(#000, 0.5)
+	&.is-overflow
+		overflow: hidden
+		&:before
+			display: block
+
+
+.out
+	padding-top: 57px
+
+
+.l-center
+	max-width: 946px
+	margin: 0 auto
+	padding: 0 15px
+
+
+.mobile-checkout
+	max-width: 450px
+	margin: 40px auto
+	padding: 0 30px
+
+.button
+	display: inline-block
+	text-decoration: none
+	text-align: center
+	padding: 5px 10px
+	+av-bold
+	font-size: 20px
+	color: #FFF
+	background: #E93368
+	letter-spacing: -0.24px
+	border-radius: 5px
+	+tr(background 0.2s ease)
+	&:hover
+		text-decoration: none
+		color: #FFF
+		background: darken(#E93368, 5%)
+	&--full-w
+		width: 100%
+		max-width: 442px
+		+rmin(768)
+			max-width: initial
+	&--checkout
+		text-transform: uppercase
+		font-size: 14px
+		background: #4A90E2
+		+av
+		&:hover
+			background: darken(#4A90E2, 5%)
+	&--more-pad
+		padding: 11px 10px
+	&__price
+		display: block
+		text-transform: uppercase
+		+av-medium
+		font-size: 16px
+		line-height: 1
+	&__note
+		display: block
+		+av
+		text-transform: none
+		font-size: 12px
+		line-height: 0.8

@@ -1,0 +1,66 @@
+.header
+	position: fixed
+	z-index: 10
+	top: 0
+	left: 0
+	right: 0
+	min-height: 57px
+	padding: 11px 0 5px
+	background: #F2F2F2
+	&__in
+		max-width: 1360px
+		margin: 0 auto
+	&__checkout
+		display: none
+		font-size: 0
+		+rmin(992)
+			display: block
+	&__info
+		display: inline-block
+		vertical-align: top
+		margin-right: 10px
+		+rmin(1200)
+			margin-right: 20px
+	&__price
+		+av-medium
+		font-size: 22px
+		color: #000
+		letter-spacing: -0.31px
+		line-height: 1
+	&__note
+		font-size: 13px
+		color: #1567AE
+		letter-spacing: -0.18px
+	&__menu-ico
+		display: inline-block
+		margin-top: 3px
+
+.menu
+	position: fixed
+	z-index: 12
+	top: 0
+	bottom: 0
+	width: 100%
+	background: #313131
+	overflow: auto
+	transform: translate3d(-100%, 0, 0)
+	transition: transform 0.3s ease-in
+	&.is-active
+		transform: translate3d(0,0,0)
+	+rmin(500)
+		width: 300px
+	&__in
+		padding: 20px
+	&__close
+		display: inline-block
+		width: 20px
+		margin-bottom: 40px
+	&__option
+		margin-bottom: 20px
+	&__link
+		color: #FFF
+		font-size: 17px
+		&:hover,
+		&:visited
+			text-decoration: none
+			color: #FFF
