@@ -33,9 +33,12 @@ body
 
 
 .mobile-checkout
-	max-width: 450px
-	margin: 40px auto
-	padding: 0 30px
+	position: fixed
+	left: 0
+	right: 0
+	bottom: 0
+	+rmin(641)
+		display: none
 
 .button
 	display: inline-block
@@ -65,8 +68,16 @@ body
 		+av
 		&:hover
 			background: darken(#4A90E2, 5%)
-	&--more-pad
+	&--mob-checkout
+		width: 100%
 		padding: 11px 10px
+		text-transform: uppercase
+		font-size: 14px
+		background: #4A90E2
+		border-radius: 0
+		+av
+		&:hover
+			background: darken(#4A90E2, 5%)
 	&__price
 		display: block
 		text-transform: uppercase

@@ -2,24 +2,26 @@
 <html>
 
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Product page</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#fff">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" /> </head>
 
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <header class="header">
+      <header class="header js-header">
         <div class="header__in">
           <div class="container-fluid">
             <div class="row">
-              <div class="col"> <a href="#" class="header__menu-ico js-show-menu-btn"><img src="img/menu.svg" alt="menu icon"></a> </div>
+              <div class="col"> <a href="#" class="header__menu-ico js-show-menu-btn">
+						<img src="img/menu.svg" alt="menu icon" />
+					</a> </div>
               <div class="col">
-                <div class="text-center"> <a href="/"><img src="img/logo.svg" alt="dara"></a> </div>
+                <div class="text-center"> <a href="/" class="header__logo"><img src="img/logo.svg" alt="dara"></a> </div>
               </div>
               <div class="col">
                 <div class="header__checkout text-right">
@@ -32,7 +34,7 @@
       </header>
       <nav class="menu js-menu">
         <div class="menu__in">
-          <div class="text-right"> <a href="#" class="menu__close js-close-menu-btn"><img src="img/close.svg" alt="close menu"></a> </div>
+          <div class="text-right"> <a href="#" class="menu__close js-close-menu-btn"><img src="img/close.svg" alt="close menu" /></a> </div>
           <ul class="menu__list">
             <li class="menu__option"><a href="#" class="menu__link">Accesibility</a></li>
             <li class="menu__option"><a href="#" class="menu__link">Terms Of Service</a></li>
@@ -52,7 +54,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-12 col-md-6"> <img class="product__img img-fluid" src="img/product-img.jpg" alt="product"> </div>
+              <div class="col-sm-12 col-md-6"> <img class="product__img img-fluid" src="img/product-img.jpg" alt="product" /> </div>
               <div class="col-sm-12 col-md-6">
                 <div class="product__info">
                   <p>Acerola cherry is one of the most nutritionally dense superfruits with one of the highest levels of vitamin C and antioxidants of any food source.</p>
@@ -116,7 +118,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col">
-                <h2 class="faq__title title-h2 text-center">Frequently <br> Asked Questions</h2>
+                <h2 class="faq__title title-h2 text-center">Frequently <br/> Asked Questions</h2>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="pr-4">
@@ -152,7 +154,7 @@
         </div>
       </section>
       <!-- begin mobile checkout button -->
-      <div class="mobile-checkout d-lg-none"> <a href="#" class="button button--more-pad button--full-w button--checkout">
+      <div class="mobile-checkout d-lg-none"> <a href="#" class="button button--more-pad button--mob-checkout">
 		<span class="button__price">PAY $99.99 / MONTH</span>
 		<small class="button__note">One month supply (30 servings)</small>
 	</a> </div>
