@@ -1,0 +1,50 @@
+.hero
+	position: relative
+	min-height: 595px
+	padding: 24px 0 120px
+	background-position: right bottom
+	background-repeat: no-repeat
+	background-image: url(../img/home-bg-mob.svg)
+	&:before,
+	&:after
+		display: none
+		content: ""
+		position: absolute
+		width: 380px
+		height: 250px
+		bottom: 0
+		background-repeat: no-repeat
+		background-size: contain
+		+rmin(768)
+			display: block
+		+rmin(1024)
+			width: 500px
+	&:before
+		left: 0
+		background-position: left bottom
+		background-image: url(../img/home-bg-left.svg)
+	&:after
+		right: 0
+		background-position: right bottom
+		background-image: url(../img/home-bg-right.svg)
+	+rmin(768)
+		min-height: auto
+		padding: 202px 0 187px
+		background-image: none
+	&__head
+		margin-bottom: 58px
+		+av-medium
+		letter-spacing: -0.24px
+	&__title
+		margin-bottom: 12px
+		+av-demibold
+		font-size: 30px
+		letter-spacing: -0.2px
+		line-height: 1.4
+		+rmin(768)
+			font-size: 52px
+			letter-spacing: -0.43px
+	&__subtitle
+		br
+			+rmin(576)
+				display: none

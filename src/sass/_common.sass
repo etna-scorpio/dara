@@ -4,7 +4,7 @@
 body
 	min-width: 320px
 	+av
-	background: #fff
+	background: #f2f2f2
 	color: #4A4A4A
 	&:before
 		content: ""
@@ -37,53 +37,56 @@ body
 	left: 0
 	right: 0
 	bottom: 0
-	+rmin(641)
+	+rmin(1025)
 		display: none
 
 .button
 	display: inline-block
+	text-transform: uppercase
 	text-decoration: none
 	text-align: center
 	padding: 5px 10px
 	+av-bold
 	font-size: 20px
 	color: #FFF
-	background: #E93368
+	background: #FE0066
 	letter-spacing: -0.24px
 	border-radius: 5px
 	+tr(background 0.2s ease)
 	&:hover
 		text-decoration: none
 		color: #FFF
-		background: darken(#E93368, 5%)
+		background: darken(#FE0066, 5%)
 	&--full-w
 		width: 100%
 		max-width: 442px
 		+rmin(768)
 			max-width: initial
 	&--checkout
-		text-transform: uppercase
 		font-size: 14px
-		background: #4A90E2
+		background: #1078EE
 		+av
 		&:hover
-			background: darken(#4A90E2, 5%)
+			background: darken(#1078EE, 5%)
 	&--mob-checkout
 		width: 100%
-		padding: 11px 10px
+		padding: 13.5px 10px
 		text-transform: uppercase
 		font-size: 14px
-		background: #4A90E2
+		background: #1078EE
 		border-radius: 0
 		+av
 		&:hover
-			background: darken(#4A90E2, 5%)
+			background: darken(#1078EE, 5%)
+	&--start
+		width: 100%
+		max-width: 256px
+		+av-medium
 	&__price
 		display: block
 		text-transform: uppercase
 		+av-medium
 		font-size: 16px
-		line-height: 1
 	&__note
 		display: block
 		+av
