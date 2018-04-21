@@ -5,7 +5,7 @@ title: Home
 
 {% block content %}
 	<!-- begin hero -->
-	<div class="hero">
+	<section class="hero">
 		<div class="l-center">
 			<div class="container-fluid">
 				<div class="row">
@@ -19,8 +19,95 @@ title: Home
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 	<!-- end hero -->
+	<!-- begin subscription -->
+	<section class="subscription">
+		<div class="subscription__in">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<div class="subscription__head">
+							<p class="subscription__title title-h1">How subscriptions work</p>
+							<p>Receive a monthly supply of your custom blend of premium ingredients in powder form</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					{% set steps = [{
+						title: 'CHOOSE',
+						text: 'Select ingredients and dosages from a highly curated library'
+					}, {
+						title: 'RECEIVE',
+						text: 'Made to order and shipped free next business day'
+					}, {
+						title: 'ENJOY',
+						text: 'Drink with water, juice or a smoothie. Store in a beautiful stainless steel canister'
+					}, {
+						title: 'REFINE',
+						text: 'Change your formulation or cancel anytime'
+					}] %}
+
+					{% for step in steps %}
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="step">
+							<div class="step__img"><span>step {{ loop.index }}</span></div>
+							<div class="step__info">
+								<div class="step__title">{{ step.title }}</div>
+								<p>{{ step.text }}</p>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="features">
+							<div class="row justify-content-md-center">
+								{% set features = [{
+									icon: 'quality',
+									text: 'Premium Quality'
+								}, {
+									icon: 'transparency',
+									text: 'Full Transparency'
+								}, {
+									icon: 'usa',
+									text: 'Made in the USA'
+								}, {
+									icon: 'sustainability',
+									text: 'Sustainable Packaging'
+								}, {
+									icon: 'flask',
+									text: 'No Additives'
+								}, {
+									icon: 'gmo',
+									text: 'Non GMO'
+								}, {
+									icon: 'vegan',
+									text: 'Vegan'
+								}, {
+									icon: 'gluten-free',
+									text: 'Gluten & Allergen Free'
+								}] %}
+
+								{% for feature in features %}
+								<div class="col-6 col-sm-6 col-md-4 col-lg-3">
+									<div class="feature">
+										<div class="feature__pic">
+											<i class="feature__icon feature__icon--{{ feature.icon }}"></i>
+										</div>
+										<p class="feature__text">{{ feature.text }}</p>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end subscription -->
 	<!-- begin faq -->
 	<section class="faq">
 		<div class="faq__in">

@@ -2,16 +2,32 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
+				{% if title === 'Home' %}
+				<ul class="header-list d-md-flex" hidden>
+					<li class="header-list__option"><span class="header-list__item header-list__item--active">Home</span></li>
+					<li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
+					<li class="header-list__option"><a href="#" class="header-list__item">FAQ</a></li>
+				</ul>
+				<a href="#" class="header__menu-ico d-md-none js-show-menu-btn">
+					<img src="img/menu.svg" alt="menu icon" />
+				</a>
+				{% else %}
 				<a href="#" class="header__menu-ico js-show-menu-btn">
 					<img src="img/menu.svg" alt="menu icon" />
 				</a>
+				{% endif %}
 			</div>
 			<div class="col">
 				<div class="text-center">
-					<a href="/" class="header__logo"><img src="img/logo.svg" alt="dara"></a>
+					<a href="/" class="header__logo{% if title === 'Home' %} header__logo--move{% endif %} js-header-logo"><img src="img/logo.svg" alt="dara"></a>
 				</div>
 			</div>
 			<div class="col">
+				{% if title === 'Home' %}
+				<div class="text-right">
+					<a href="#" class="header__sign">Log in</a>
+				</div>
+				{% else %}
 				<div class="header__checkout text-right">
 					<div class="header__info">
 						<div class="header__price">$99.99/mo</div>
@@ -19,6 +35,7 @@
 					</div>
 					<a href="#" class="button button--checkout">Checkout</a>
 				</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>
@@ -29,6 +46,9 @@
 			<a href="#" class="menu__close js-close-menu-btn"><img src="img/close.svg" alt="close menu" /></a>
 		</div>
 		<ul class="menu__list">
+			<li class="menu__option"><a href="#" class="menu__link">Home</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">FAQ</a></li>
 			<li class="menu__option"><a href="#" class="menu__link">Accesibility</a></li>
 			<li class="menu__option"><a href="#" class="menu__link">Terms Of Service</a></li>
 			<li class="menu__option"><a href="#" class="menu__link">Privacy Policy</a></li>

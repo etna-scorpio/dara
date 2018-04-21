@@ -5,6 +5,8 @@
 	background-position: right bottom
 	background-repeat: no-repeat
 	background-image: url(../img/home-bg-mob.svg)
+	+rmin(576)
+		min-height: 480px
 	&:before,
 	&:after
 		display: none
@@ -29,7 +31,7 @@
 		background-image: url(../img/home-bg-right.svg)
 	+rmin(768)
 		min-height: auto
-		padding: 202px 0 187px
+		padding: 146px 0 187px
 		background-image: none
 	&__head
 		margin-bottom: 58px
@@ -48,3 +50,116 @@
 		br
 			+rmin(576)
 				display: none
+
+
+.subscription
+	padding: 35px 0 30px
+	background: #F5F9FC
+	+rmin(768)
+		padding: 56px 0 43px
+	&__in
+		max-width: 1225px
+		margin: 0 auto
+		padding: 0 15px
+	&__title
+		font-size: 29px
+		margin-bottom: 0
+	&__head
+		max-width: 492px
+		margin: 0 auto 39px
+		text-align: center
+		+av-medium
+		font-size: 20px
+		letter-spacing: -0.45px
+		+rmin(768)
+			margin-bottom: 55px
+
+
+.step
+	margin-bottom: 47px
+	text-align: center
+	+av-medium
+	font-size: 16px
+	line-height: 1.375
+	letter-spacing: -0.19px
+	&__img
+		width: 100%
+		max-width: 240px
+		height: 240px
+		margin: 0 auto 31px
+		background: #D8D8D8
+		border: 1px solid #979797
+		+cover
+		+vertical
+		+rmin(768)
+			margin-bottom: 39px
+		span
+			display: inline-block
+			vertical-align: middle
+			+av-demibold
+			font-size: 30px
+			line-height: 1
+	&__title
+		margin-bottom: 6px
+		text-transform: uppercase
+		+av-bold
+		font-size: 14px
+		line-height: 1.35
+		letter-spacing: 1.5px
+	&__info
+		max-width: 296px
+		margin: 0 auto
+
+
+.features
+	position: relative
+	margin-top: 10px
+	padding-top: 53px
+	+rmin(768)
+		padding-top: 66px
+		margin-top: 45px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 9px
+		right: 9px
+		border-top: 1px solid #D8D8D8
+		+rmin(768)
+			left: 0
+			right: 0
+
+
+.feature
+	margin-bottom: 47px
+	text-align: center
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		&--quality
+			+s(quality)
+		&--transparency
+			+s(transparency)
+		&--usa
+			+s(usa)
+		&--sustainability
+			+s(sustainability)
+		&--flask
+			+s(flask)
+		&--gmo
+			+s(gmo)
+		&--vegan
+			+s(vegan)
+		&--gluten-free
+			+s(gluten-free)
+	&__pic
+		height: 65px
+		margin-bottom: 13px
+		+vertical
+	&__text
+		+av-medium
+		font-size: 16px
+		letter-spacing: -0.25px
+		line-height: 1
+		+rmin(768)
+			+av-demibold

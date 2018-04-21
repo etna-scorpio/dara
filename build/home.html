@@ -17,16 +17,19 @@
       <header class="header js-header">
         <div class="container-fluid">
           <div class="row">
-            <div class="col"> <a href="#" class="header__menu-ico js-show-menu-btn">
+            <div class="col">
+              <ul class="header-list d-md-flex" hidden>
+                <li class="header-list__option"><span class="header-list__item header-list__item--active">Home</span></li>
+                <li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
+                <li class="header-list__option"><a href="#" class="header-list__item">FAQ</a></li>
+              </ul> <a href="#" class="header__menu-ico d-md-none js-show-menu-btn">
 					<img src="img/menu.svg" alt="menu icon" />
 				</a> </div>
             <div class="col">
-              <div class="text-center"> <a href="/" class="header__logo"><img src="img/logo.svg" alt="dara"></a> </div>
+              <div class="text-center"> <a href="/" class="header__logo header__logo--move js-header-logo"><img src="img/logo.svg" alt="dara"></a> </div>
             </div>
             <div class="col">
-              <div class="header__checkout text-right">
-                <div class="header__info">
-                  <div class="header__price">$99.99/mo</div> <small class="header__note">One month supply (30 servings)</small> </div> <a href="#" class="button button--checkout">Checkout</a> </div>
+              <div class="text-right"> <a href="#" class="header__sign">Log in</a> </div>
             </div>
           </div>
         </div>
@@ -35,6 +38,9 @@
         <div class="menu__in">
           <div class="text-right"> <a href="#" class="menu__close js-close-menu-btn"><img src="img/close.svg" alt="close menu" /></a> </div>
           <ul class="menu__list">
+            <li class="menu__option"><a href="#" class="menu__link">Home</a></li>
+            <li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
+            <li class="menu__option"><a href="#" class="menu__link">FAQ</a></li>
             <li class="menu__option"><a href="#" class="menu__link">Accesibility</a></li>
             <li class="menu__option"><a href="#" class="menu__link">Terms Of Service</a></li>
             <li class="menu__option"><a href="#" class="menu__link">Privacy Policy</a></li>
@@ -44,7 +50,7 @@
         </div>
       </nav>
       <!-- begin hero -->
-      <div class="hero">
+      <section class="hero">
         <div class="l-center">
           <div class="container-fluid">
             <div class="row">
@@ -56,8 +62,118 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- end hero -->
+      <!-- begin subscription -->
+      <section class="subscription">
+        <div class="subscription__in">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div class="subscription__head">
+                  <p class="subscription__title title-h1">How subscriptions work</p>
+                  <p>Receive a monthly supply of your custom blend of premium ingredients in powder form</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="step">
+                  <div class="step__img"><span>step 1</span></div>
+                  <div class="step__info">
+                    <div class="step__title">CHOOSE</div>
+                    <p>Select ingredients and dosages from a highly curated library</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="step">
+                  <div class="step__img"><span>step 2</span></div>
+                  <div class="step__info">
+                    <div class="step__title">RECEIVE</div>
+                    <p>Made to order and shipped free next business day</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="step">
+                  <div class="step__img"><span>step 3</span></div>
+                  <div class="step__info">
+                    <div class="step__title">ENJOY</div>
+                    <p>Drink with water, juice or a smoothie. Store in a beautiful stainless steel canister</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="step">
+                  <div class="step__img"><span>step 4</span></div>
+                  <div class="step__info">
+                    <div class="step__title">REFINE</div>
+                    <p>Change your formulation or cancel anytime</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="features">
+                  <div class="row justify-content-md-center">
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                      <div class="feature">
+                        <div class="feature__pic"> <i class="feature__icon feature__icon--quality"></i> </div>
+                        <p class="feature__text">Premium Quality</p>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                      <div class="feature">
+                        <div class="feature__pic"> <i class="feature__icon feature__icon--transparency"></i> </div>
+                        <p class="feature__text">Full Transparency</p>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                      <div class="feature">
+                        <div class="feature__pic"> <i class="feature__icon feature__icon--usa"></i> </div>
+                        <p class="feature__text">Made in the USA</p>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                      <div class="feature">
+                        <div class="feature__pic"> <i class="feature__icon feature__icon--sustainability"></i> </div>
+                        <p class="feature__text">Sustainable Packaging</p>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                      <div class="feature">
+                        <div class="feature__pic"> <i class="feature__icon feature__icon--flask"></i> </div>
+                        <p class="feature__text">No Additives</p>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                      <div class="feature">
+                        <div class="feature__pic"> <i class="feature__icon feature__icon--gmo"></i> </div>
+                        <p class="feature__text">Non GMO</p>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                      <div class="feature">
+                        <div class="feature__pic"> <i class="feature__icon feature__icon--vegan"></i> </div>
+                        <p class="feature__text">Vegan</p>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                      <div class="feature">
+                        <div class="feature__pic"> <i class="feature__icon feature__icon--gluten-free"></i> </div>
+                        <p class="feature__text">Gluten &amp; Allergen Free</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end subscription -->
       <!-- begin faq -->
       <section class="faq">
         <div class="faq__in">

@@ -38,8 +38,46 @@
 	&__logo
 		display: inline-block
 		max-width: 73px
+		transition: all 0.2s ease
+		&--move
+			+rmin(768)
+				max-width: 125px
+				transform: translate3d(0, 82px, 0)
 		img
 			width: 100%
+	&__sign
+		display: none
+		padding-top: 5px
+		font-size: 16px
+		color: #FE0066
+		line-height: 1.375
+		letter-spacing: -0.45px
+		+rmin(768)
+			display: block
+		&:hover
+			color: #FE0066
+
+
+.header-list
+	margin-bottom: 0
+	padding-top: 5px
+	&__option
+		margin-right: 20px
+	&__item
+		display: inline-block
+		font-size: 16px
+		color: #4a4a4a
+		border-bottom: 1px solid transparent
+		&:hover,
+		&:visited
+			text-decoration: none
+			color: #4A4A4A
+			border-bottom-color: currentColor
+		&--active
+		 color: #9b9b9b
+		 &:hover
+		 	border-bottom-color: transparent
+
 
 .menu
 	position: fixed
