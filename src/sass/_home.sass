@@ -93,12 +93,28 @@
 		+vertical
 		+rmin(768)
 			margin-bottom: 39px
+		+rmin(992)
+			width: 200px
+			height: 200px
+		+rmin(1024)
+			width: 220px
+			height: 220px
+			padding-bottom: 0
+		+rmin(1200)
+			width: 240px
+			height: 240px
 		span
 			display: inline-block
 			vertical-align: middle
 			+av-demibold
 			font-size: 30px
 			line-height: 1
+			+rmin(992)
+				font-size: 25px
+			+rmin(1024)
+				font-size: 28px
+			+rmin(1200)
+				font-size: 30px
 	&__title
 		margin-bottom: 6px
 		text-transform: uppercase

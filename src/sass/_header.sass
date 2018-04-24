@@ -10,6 +10,9 @@
 	transition: background 0.2s ease
 	&.is-active
 		background: #FFF
+		.button--header-start
+			opacity: 1
+			visibility: visible
 	&__checkout
 		display: none
 		font-size: 0
@@ -38,6 +41,7 @@
 	&__logo
 		display: inline-block
 		max-width: 73px
+		margin-top: 3.5px
 		transition: all 0.2s ease
 		&--move
 			+rmin(768)
@@ -61,6 +65,11 @@
 .header-list
 	margin-bottom: 0
 	padding-top: 5px
+	&--with-button
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		padding-top: 0
 	&__option
 		margin-right: 20px
 	&__item
@@ -74,9 +83,14 @@
 			color: #4A4A4A
 			border-bottom-color: currentColor
 		&--active
-		 color: #9b9b9b
-		 &:hover
-		 	border-bottom-color: transparent
+			color: #9b9b9b
+			&:hover
+				border-bottom-color: transparent
+		&--sign
+			color: #FE0066
+			&:hover,
+			&:visited
+				color: #FE0066
 
 
 .menu

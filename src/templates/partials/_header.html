@@ -6,7 +6,6 @@
 				<ul class="header-list d-md-flex" hidden>
 					<li class="header-list__option"><span class="header-list__item header-list__item--active">Home</span></li>
 					<li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
-					<li class="header-list__option"><a href="#" class="header-list__item">FAQ</a></li>
 				</ul>
 				<a href="#" class="header__menu-ico d-md-none js-show-menu-btn">
 					<img src="img/menu.svg" alt="menu icon" />
@@ -19,14 +18,16 @@
 			</div>
 			<div class="col">
 				<div class="text-center">
-					<a href="/" class="header__logo{% if title === 'Home' %} header__logo--move{% endif %} js-header-logo"><img src="img/logo.svg" alt="dara"></a>
+					<a href="/" class="header__logo{% if title === 'Home' %} js-header-logo{% endif %}"><img src="img/logo.svg" alt="dara"></a>
 				</div>
 			</div>
 			<div class="col">
 				{% if title === 'Home' %}
-				<div class="text-right">
-					<a href="#" class="header__sign">Log in</a>
-				</div>
+				<ul class="header-list header-list--with-button">
+					<li class="header-list__option mr-0 mr-lg-4"><a href="#" class="button button--header-start">Start</a></li>
+					<li class="header-list__option d-lg-block" hidden><a href="#" class="header-list__item">Support</a></li>
+					<li class="header-list__option d-lg-block" hidden><a href="#" class="header-list__item header-list__item--sign">Sign In</a></li>
+				</ul>
 				{% else %}
 				<div class="header__checkout text-right">
 					<div class="header__info">
