@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
 var win = $(window);
-var header = $('.js-header');
-var logo = $('.js-header-logo');
+var header = $('.js-dara-header');
+var logo = $('.js-dara-header-logo');
 
 changeHeaderBg();
 transformHeader();
@@ -26,9 +26,9 @@ function transformHeader() {
 function moveLogo() {
   if (logo.length) {
     if (win.scrollTop() === 0) {
-      logo.addClass('header__logo--move');
+      logo.addClass('dara-header__logo--move');
     } else {
-      logo.removeClass('header__logo--move');
+      logo.removeClass('dara-header__logo--move');
     }
   }
 }

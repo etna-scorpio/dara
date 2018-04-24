@@ -1,38 +1,38 @@
-<header class="header js-header">
+<dara-header class="dara-header js-dara-header">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
 				{% if title === 'Home' %}
-				<ul class="header-list d-md-flex" hidden>
-					<li class="header-list__option"><span class="header-list__item header-list__item--active">Home</span></li>
-					<li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
+				<ul class="dara-header-list d-md-flex" hidden>
+					<li class="dara-header-list__option"><span class="dara-header-list__item dara-header-list__item--active">Home</span></li>
+					<li class="dara-header-list__option"><a href="#" class="dara-header-list__item">Ingredients</a></li>
 				</ul>
-				<a href="#" class="header__menu-ico d-md-none js-show-menu-btn">
+				<a href="#" class="dara-header-menu-ico d-md-none js-dara-show-menu-btn">
 					<img src="img/menu.svg" alt="menu icon" />
 				</a>
 				{% else %}
-				<a href="#" class="header__menu-ico js-show-menu-btn">
+				<a href="#" class="dara-header-menu-ico js-dara-show-menu-btn">
 					<img src="img/menu.svg" alt="menu icon" />
 				</a>
 				{% endif %}
 			</div>
 			<div class="col">
 				<div class="text-center">
-					<a href="/" class="header__logo{% if title === 'Home' %} js-header-logo{% endif %}"><img src="img/logo.svg" alt="dara"></a>
+					<a href="/" class="dara-header__logo{% if title === 'Home' %} js-dara-header-logo{% endif %}"><img src="img/logo.svg" alt="dara"></a>
 				</div>
 			</div>
 			<div class="col">
 				{% if title === 'Home' %}
-				<ul class="header-list header-list--with-button">
-					<li class="header-list__option mr-0 mr-lg-4"><a href="#" class="button button--header-start">Start</a></li>
-					<li class="header-list__option d-lg-block" hidden><a href="#" class="header-list__item">Support</a></li>
-					<li class="header-list__option d-lg-block" hidden><a href="#" class="header-list__item header-list__item--sign">Sign In</a></li>
+				<ul class="dara-header-list dara-header-list--with-button">
+					<li class="dara-header-list__option mr-0 mr-lg-4"><a href="#" class="dara-button dara-button--header-start">Start</a></li>
+					<li class="dara-header-list__option d-lg-block" hidden><a href="#" class="dara-header-list__item">Support</a></li>
+					<li class="dara-header-list__option d-lg-block" hidden><a href="#" class="dara-header-list__item dara-header-list__item--sign">Sign In</a></li>
 				</ul>
 				{% else %}
-				<div class="header__checkout text-right">
-					<div class="header__info">
-						<div class="header__price">$99.99/mo</div>
-						<small class="header__note">One month supply (30 servings)</small>
+				<div class="dara-header__checkout text-right">
+					<div class="dara-header__info">
+						<div class="dara-header__price">$99.99/mo</div>
+						<small class="dara-header__note">One month supply (30 servings)</small>
 					</div>
 					<a href="#" class="button button--checkout">Checkout</a>
 				</div>
@@ -40,21 +40,21 @@
 			</div>
 		</div>
 	</div>
-</header>
-<nav class="menu js-menu">
-	<div class="menu__in">
+</dara-header>
+<nav class="dara-menu js-dara-menu">
+	<div class="dara-menu__in">
 		<div class="text-right">
-			<a href="#" class="menu__close js-close-menu-btn"><img src="img/close.svg" alt="close menu" /></a>
+			<a href="#" class="dara-menu__close js-dara-close-menu-btn"><img src="img/close.svg" alt="close dara-menu" /></a>
 		</div>
-		<ul class="menu__list">
-			<li class="menu__option"><a href="#" class="menu__link">Home</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">FAQ</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Accesibility</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Terms Of Service</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Privacy Policy</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Legal Stuff</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Join The Team</a></li>
+		<ul class="dara-menu__list">
+			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Home</a></li>
+			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Ingredients</a></li>
+			<li class="dara-menu__option"><a href="#" class="dara-menu__link">FAQ</a></li>
+			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Accesibility</a></li>
+			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Terms Of Service</a></li>
+			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Privacy Policy</a></li>
+			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Legal Stuff</a></li>
+			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Join The Team</a></li>
 		</ul>
 	</div>
 </nav>

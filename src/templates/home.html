@@ -4,31 +4,31 @@ title: Home
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	<!-- begin hero -->
-	<section class="hero">
-		<div class="l-center">
+	<!-- begin dara-hero -->
+	<section class="dara-hero">
+		<div class="dara-l-center">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col text-center">
-						<div class="hero__head">
-							<p class="hero__title">Build Your Dream Supplement</p>
-							<p class="hero__subtitle">Full customization.<br/> Premium ingredients.<br/> Amazing prices.</p>
+						<div class="dara-hero__head">
+							<p class="dara-hero__title">Build Your Dream Supplement</p>
+							<p class="dara-hero__subtitle">Full customization.<br/> Premium ingredients.<br/> Amazing prices.</p>
 						</div>
-						<a href="#" class="button button--start">Get started</a>
+						<a href="#" class="dara-button dara-button--start">Get started</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- end hero -->
-	<!-- begin subscription -->
-	<section class="subscription">
-		<div class="subscription__in">
+	<!-- end dara-hero -->
+	<!-- begin dara-subscription -->
+	<section class="dara-subscription">
+		<div class="dara-subscription__in">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<div class="subscription__head">
-							<p class="subscription__title title-h1">How subscriptions work</p>
+						<div class="dara-subscription__head">
+							<p class="dara-subscription__title dara-title-h1">How subscriptions work</p>
 							<p>Receive a monthly supply of your custom blend of premium ingredients in powder form</p>
 						</div>
 					</div>
@@ -50,10 +50,10 @@ title: Home
 
 					{% for step in steps %}
 					<div class="col-sm-12 col-md-6 col-lg-3">
-						<div class="step">
-							<div class="step__img"><span>step {{ loop.index }}</span></div>
-							<div class="step__info">
-								<div class="step__title">{{ step.title }}</div>
+						<div class="dara-step">
+							<div class="dara-step__img"><span>step {{ loop.index }}</span></div>
+							<div class="dara-step__info">
+								<div class="dara-step__title">{{ step.title }}</div>
 								<p>{{ step.text }}</p>
 							</div>
 						</div>
@@ -62,7 +62,7 @@ title: Home
 				</div>
 				<div class="row">
 					<div class="col">
-						<div class="features">
+						<div class="dara-features">
 							<div class="row">
 								{% set features = [{
 									icon: 'quality',
@@ -92,11 +92,11 @@ title: Home
 
 								{% for feature in features %}
 								<div class="col-6 col-sm-6 col-md-4 col-lg-3">
-									<div class="feature">
-										<div class="feature__pic">
-											<i class="feature__icon feature__icon--{{ feature.icon }}"></i>
+									<div class="dara-feature">
+										<div class="dara-feature__pic">
+											<i class="dara-feature__icon dara-feature__icon--{{ feature.icon }}"></i>
 										</div>
-										<p class="feature__text">{{ feature.text }}</p>
+										<p class="dara-feature__text">{{ feature.text }}</p>
 									</div>
 								</div>
 								{% endfor %}
@@ -107,47 +107,7 @@ title: Home
 			</div>
 		</div>
 	</section>
-	<!-- end subscription -->
-	<!-- begin faq -->
-	<section class="faq">
-		<div class="faq__in">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col">
-						<h2 class="faq__title title-h2 text-center">Frequently Asked <br/>Questions</h2>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="pr-4">
-									<div class="faq__bl">
-										<h4 class="faq__subtitle title-h4">Was Ascorbic Acid added to this product?</h4>
-										<p>No, nothing was added to this product. All Vitamin C content is natural from the Acerola fruit.</p>
-									</div>
-									<div class="faq__bl">
-										<h4 class="faq__subtitle title-h4">Is this the certificate for my supplement?</h4>
-										<p>Yes, the certificate of analysis on this page is from our latest batch of product.</p>
-									</div>
-									<div class="faq__bl">
-										<h4 class="faq__subtitle title-h4">What’s the expiration date on this?</h4>
-										<p>We only ship ingredients with many months until the expiration date of each product. Our supplements are designed to be consumed within a month of delivery.</p>
-									</div>
-									<div class="faq__bl">
-										<h4 class="faq__subtitle title-h4">Where is this manufactured?</h4>
-										<p>This is manufactured in California, USA.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="faq__bl">
-									<h4 class="faq__subtitle title-h4">Why does this contain small quantities of heavy metals?</h4>
-									<p>Plants absorb elements from the soil where they are grown, and every soil contains small amounts of heavy metals. Our Quality Control section above reports the trace amounts detected, well within the federal safety guidelines. Please visit fda.gov for more details.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- end faq -->
+	<!-- end dara-subscription -->
+	{% include 'partials/_faq.html' %}
 
 {% endblock %}

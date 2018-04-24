@@ -1,9 +1,9 @@
 import $ from 'jquery';
 
 const BODY = $('body');
-var showMenuBtn = $('.js-show-menu-btn');
-var closeMenuBtn = $('.js-close-menu-btn');
-var menu = $('.js-menu');
+var showMenuBtn = $('.js-dara-show-menu-btn');
+var closeMenuBtn = $('.js-dara-close-menu-btn');
+var menu = $('.js-dara-menu');
 
 function showMenu() {
   menu.addClass('is-active');
@@ -26,8 +26,8 @@ closeMenuBtn.click(function(e) {
 });
 
 BODY.click(function(e) {
-  if ( !e.target.closest('.js-menu')
-  	&& !e.target.closest('.js-show-menu-btn')
+  if ( !e.target.closest('.js-dara-menu')
+  	&& !e.target.closest('.js-dara-show-menu-btn')
   	&& menu.hasClass('is-active')) {
     hideMenu();
   }
