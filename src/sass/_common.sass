@@ -83,13 +83,18 @@ body
 		max-width: 256px
 		+av-medium
 	&--header-start
-		padding: 8px 33.5px
+		margin-top: 3.5px
+		padding: 8px 20px
 		+av-medium
 		font-size: 14px
 		line-height: 1
-		opacity: 0
-		visibility: hidden
 		transition: opacity 0.2s ease, visibility 0.2s ease
+		+rmin(768)
+			padding: 8px 33.5px
+			opacity: 0
+			visibility: hidden
+		+rmin(992)
+			margin-top: 0
 	&__price
 		display: block
 		text-transform: uppercase
