@@ -5,3 +5,5 @@ PageList:
   ready: 100
 - file: product-page.html
   ready: 100
+- file: products-list.html
+  ready: 100

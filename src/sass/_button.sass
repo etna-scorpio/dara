@@ -1,0 +1,56 @@
+.dara-button
+	display: inline-block
+	text-transform: uppercase
+	text-decoration: none
+	text-align: center
+	padding: 5px 10px
+	+av-bold
+	font-size: 20px
+	color: #FFF
+	background: #FE0066
+	letter-spacing: -0.24px
+	border-radius: 5px
+	+tr(background 0.2s ease)
+	&:hover
+		text-decoration: none
+		color: #FFF
+		background: darken(#FE0066, 5%)
+	&--checkout,
+	&--mob-checkout
+		font-size: 14px
+		background: #1078EE
+		+av
+		&:hover
+			background: darken(#1078EE, 5%)
+	&--mob-checkout
+		width: 100%
+		padding: 13.5px 10px
+		border-radius: 0
+	&--start
+		width: 100%
+		max-width: 256px
+		+av-medium
+	&--header-start
+		margin-top: 3.5px
+		padding: 8px 20px
+		+av-medium
+		font-size: 14px
+		line-height: 1
+		transition: opacity 0.2s ease, visibility 0.2s ease
+		+rmin(768)
+			padding: 8px 33.5px
+		+rmin(992)
+			margin-top: 0
+			opacity: 0
+			visibility: hidden
+	&__price
+		display: block
+		text-transform: uppercase
+		+av-medium
+		font-size: 16px
+	&__note
+		display: block
+		+av
+		text-transform: none
+		font-size: 12px
+		line-height: 0.8

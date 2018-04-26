@@ -1,0 +1,120 @@
+.dara-category
+	padding-top: 19px
+	+av-medium
+	&--pad
+		padding-top: 82px
+	&--gray
+		padding-top: 40px
+		background: #F5F9FC
+	&--blue
+		padding: 40px 0 10px
+		background: #F5FCF7
+	&__p
+		margin-bottom: 1.2rem
+	&__cards
+		margin-top: 4px
+		+rmin(768)
+			margin: 4px -4px 0
+
+
+.dara-category-card
+	max-width: 360px
+	margin: 0 auto
+	height: 100%
+	padding-bottom: 40px
+	+rmin(768)
+		margin: 0 4px
+	&__in
+		height: 100%
+		position: relative
+		padding: 15px 0 17px
+		background: #FFF
+		border-radius: 5px
+		border: 1px solid #979797
+	&__title
+		text-align: center
+		padding: 0 10px
+		margin-bottom: 0
+		+rmin(375)
+			margin-bottom: 14px
+	&__pic
+		width: 100%
+		max-width: 206px
+		height: 171px
+		margin: 0 auto
+		background: #d8d8d8
+		+cover
+		+rmin(768)
+			max-width: 235px
+			height: 195px
+	&__info
+		margin-top: 21px
+		padding: 0 20px 0 18px
+		+av-medium
+		font-size: 16px
+		line-height: 1.375
+	&__highlight
+		color: #FE0066
+		&:hover,
+		&:visited
+			color: #FE0066
+	&__button
+		display: block
+		width: 100%
+		max-width: 133px
+		font-size: 16px
+		margin: 14px auto 7px
+		padding: 3px 10px
+		text-align: center
+		+av-medium
+	&__link
+		display: inline-block
+		margin-right: 25px
+		color: #D6D5D5
+		&:hover
+			color: darken(#D6D5D5, 10%)
+	&__details
+		display: flex
+		max-width: 208px
+		margin: 5px auto 0
+		text-align: center
+		justify-content: space-between
+		align-items: center
+	&__calc
+		font-size: 14px
+		line-height: 1
+	&__ico
+		width: 29px
+		height: 29px
+		border: 1px solid #979797
+		border-radius: 50%
+		background: none
+		+vertical
+	&__val
+		+av-medium
+		font-size: 14px
+		color: #9B9B9B
+		line-height: 1.357
+		letter-spacing: -0.5px
+	&__num
+		+av-demibold
+		font-size: 28px
+		line-height: 0.9
+		letter-spacing: -0.65px
+
+
+.dara-icon-minus
+	display: inline-block
+	vertical-align: middle
+	width: 9px
+	height: 2px
+	background: url(../img/minus.svg) top center no-repeat
+	background-size: contain
+
+.dara-icon-plus
+	display: inline-block
+	vertical-align: middle
+	width: 9px
+	height: 10px
+	background: url(../img/plus.svg) top center no-repeat
+	background-size: contain

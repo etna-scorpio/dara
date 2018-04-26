@@ -1,0 +1,166 @@
+.dara-filter
+	position: relative
+	background: #DDD
+	padding: 6px 0
+	&.is-overlay
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(#9B9B9B, 0.33)
+			z-index: 1
+		.dara-filter__search
+			background: none
+	&__in
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 766px
+		margin: 0 auto
+	&__search-box
+		position: relative
+		flex-basis: 648px
+		margin-right: 22px
+	&__search
+		display: block
+		width: 100%
+		padding: 2px 10px 4px 30px
+		font-size: 16px
+		+av-medium
+		background: #FFF
+	&__search-ico
+		position: absolute
+		top: 50%
+		left: 6px
+		width: 17px
+		height: 17px
+		margin-top: -8.5px
+		background: url(../img/loop.svg) top center no-repeat
+		background-size: contain
+	&__search-list
+		position: absolute
+		display: none
+		top: 100%
+		left: 0
+		width: 100%
+		background: #FFF
+		border-radius: 3px
+		&.is-active
+			display: block
+	&__search-option
+		&:nth-child(even)
+			background: #EFEFEF
+	&__search-link
+		display: block
+		padding: 4px 30px
+		text-decoration: none
+		+av-demibold
+		font-size: 16px
+		line-height: 1.375
+		letter-spacing: -0.22px
+		color: #4a4a4a
+		&:hover
+			text-decoration: none
+			color: #fff
+			background: #1078EE
+
+
+.dara-filter-dropdown
+	position: relative
+	min-width: 70px
+	+rmin(576)
+		margin-right: 27px
+	&.is-open
+		.dara-filter-dropdown__list
+			display: block
+	&__list
+		display: none
+		position: absolute
+		top: 100%
+		right: -15px
+		width: 263px
+		margin-top: 10px
+		background: #FFF
+		border-radius: 3px
+		z-index: 1
+		+rmin(576)
+			width: 280px
+			right: 0
+		&:before
+			content: ""
+			position: absolute
+			right: 41px
+			bottom: 100%
+			+arr(24, 12, #EFEFEF, t)
+	&__link
+		+av-demibold
+		font-size: 16px
+		line-height: 1.375
+		letter-spacing: -0.25px
+		color: #4a4a4a
+		&:hover
+			text-decoration: none
+			color: #4a4a4a
+	&__arrow-down
+		display: inline-block
+		vertical-align: middle
+		margin-left: 5px
+		width: 20px
+		height: 10px
+		background: url(../img/arrow-down.svg) top center no-repeat
+		background-size: contain
+	&__option
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 10px 19px 10px 12px
+		+av-demibold
+		font-size: 16px
+		line-height: 1.375
+		letter-spacing: -0.25px
+		border-bottom: 1px solid #979797
+		&:last-child
+			border-bottom: none
+		&:first-child
+			background: #EFEFEF
+	&__clear
+		display: inline-block
+		+av
+		color: #FE0066
+		&:hover
+			text-decoration: none
+			color: #FE0066
+
+
+
+.dara-radio
+	position: relative
+	width: 20px
+	height: 20px
+	border: 1px solid #979797
+	border-radius: 50%
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		&:checked
+			+ .dara-radio__dot
+				display: block
+	&__dot
+		display: none
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 10px
+		height: 10px
+		margin: -5px 0 0 -5px
+		background: #FE0066
+		border-radius: 50%
