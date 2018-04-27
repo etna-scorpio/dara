@@ -31,8 +31,15 @@
 		font-size: 16px
 		+av-medium
 		background: #FFF
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.2s ease, visibility 0.2s ease
+		&.is-visible
+			opacity: 1
+			visibility: visible
 	&__search-ico
 		position: absolute
+		z-index: 1
 		top: 50%
 		left: 6px
 		width: 17px
@@ -40,6 +47,7 @@
 		margin-top: -8.5px
 		background: url(../img/loop.svg) top center no-repeat
 		background-size: contain
+		cursor: pointer
 	&__search-list
 		position: absolute
 		display: none
@@ -47,12 +55,9 @@
 		left: 0
 		width: 100%
 		background: #FFF
-		border-radius: 3px
+		border-radius: 0 0 3px 3px
 		&.is-active
 			display: block
-	&__search-option
-		&:nth-child(even)
-			background: #EFEFEF
 	&__search-link
 		display: block
 		padding: 4px 30px
@@ -64,8 +69,8 @@
 		color: #4a4a4a
 		&:hover
 			text-decoration: none
-			color: #fff
-			background: #1078EE
+			background: #EFEFEF
+			color: #4a4a4a
 
 
 .dara-filter-dropdown
@@ -82,7 +87,7 @@
 		top: 100%
 		right: -15px
 		width: 263px
-		margin-top: 10px
+		margin-top: 9px
 		background: #FFF
 		border-radius: 3px
 		z-index: 1
@@ -121,7 +126,7 @@
 		font-size: 16px
 		line-height: 1.375
 		letter-spacing: -0.25px
-		border-bottom: 1px solid #979797
+		border-bottom: 1px solid #EFEFEF
 		&:last-child
 			border-bottom: none
 		&:first-child

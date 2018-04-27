@@ -49,12 +49,12 @@
 				<div class="col">
 					<div class="dara-filter__in">
 						<div class="dara-filter__search-box">
-							<i class="dara-filter__search-ico"></i>
+							<i class="dara-filter__search-ico js-search-icon"></i>
 							<input type="text" class="dara-filter__search js-search">
 							<ul class="dara-filter__search-list js-search-autocomplete">
-								<li class="dara-filter__search-option"><a href="#" class="dara-filter__search-link">Maca root</a></li>
-								<li class="dara-filter__search-option"><a href="#" class="dara-filter__search-link">Magnesium</a></li>
-								<li class="dara-filter__search-option"><a href="#" class="dara-filter__search-link">Manganese</a></li>
+								<li><a href="#" class="dara-filter__search-link">Maca root</a></li>
+								<li><a href="#" class="dara-filter__search-link">Magnesium</a></li>
+								<li><a href="#" class="dara-filter__search-link">Manganese</a></li>
 							</ul>
 						</div>
 						<div class="dara-filter-dropdown js-filter-dropdown">
@@ -62,7 +62,7 @@
 							<ul class="dara-filter-dropdown__list js-filter-dropdown-list">
 								<li class="dara-filter-dropdown__option">
 									<span>Filter by:</span>
-									<a href="#" class="dara-filter-dropdown__clear">Clear</a>
+									<a href="#" class="dara-filter-dropdown__clear js-filter-dropdown-hide">Clear</a>
 								</li>
 								{% set radio = ['My Formulation', 'Vitamins', 'Minerals', 'Botanicals'] %}
 								{% for item in radio %}

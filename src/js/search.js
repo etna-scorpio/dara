@@ -1,6 +1,8 @@
 var search = $('.js-search');
 var autocomplete = $('.js-search-autocomplete');
+var searchIcon = $('.js-search-icon');
 
+toggleSearchField();
 showAutocomplete();
 hideAutocomplete();
 
@@ -17,5 +19,12 @@ function showAutocomplete() {
 function hideAutocomplete() {
   search.on('blur', function() {
     autocomplete.removeClass('is-active');
+  });
+}
+
+
+function toggleSearchField() {
+  searchIcon.click(function() {
+    search.toggleClass('is-visible');
   });
 }

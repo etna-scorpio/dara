@@ -35,14 +35,14 @@
 		padding: 8px 20px
 		+av-medium
 		font-size: 14px
+		opacity: 0
+		visibility: hidden
 		line-height: 1
-		transition: opacity 0.2s ease, visibility 0.2s ease
+		transition: opacity 0.2s linear, visibility 0.2s linear
 		+rmin(768)
 			padding: 8px 33.5px
 		+rmin(992)
 			margin-top: 0
-			opacity: 0
-			visibility: hidden
 	&__price
 		display: block
 		text-transform: uppercase

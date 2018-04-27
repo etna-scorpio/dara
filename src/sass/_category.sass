@@ -25,12 +25,13 @@
 	+rmin(768)
 		margin: 0 4px
 	&__in
-		height: 100%
 		position: relative
-		padding: 15px 0 17px
+		height: 100%
+		// padding: 15px 0 17px
+		padding: 15px 0 57px
 		background: #FFF
 		border-radius: 5px
-		border: 1px solid #979797
+		border: 1px solid #ddd
 	&__title
 		text-align: center
 		padding: 0 10px
@@ -49,7 +50,7 @@
 			height: 195px
 	&__info
 		margin-top: 21px
-		padding: 0 20px 0 18px
+		padding: 0 20px 10px 18px
 		+av-medium
 		font-size: 16px
 		line-height: 1.375
@@ -74,6 +75,10 @@
 		&:hover
 			color: darken(#D6D5D5, 10%)
 	&__details
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 8px
 		display: flex
 		max-width: 208px
 		margin: 5px auto 0
@@ -84,12 +89,23 @@
 		font-size: 14px
 		line-height: 1
 	&__ico
-		width: 29px
-		height: 29px
-		border: 1px solid #979797
+		width: 30px
+		height: 30px
+		border: 1px solid #dadada
 		border-radius: 50%
 		background: none
 		+vertical
+		transition: border-color 0.2s ease
+		&:focus,
+		&.is-focused
+			outline: none
+			border-color: #000
+		&:disabled,
+		&.is-disabled
+			cursor: not-allowed
+			border-color: #dadada
+			.icon
+				stroke: #ddd
 	&__val
 		+av-medium
 		font-size: 14px
@@ -101,20 +117,12 @@
 		font-size: 28px
 		line-height: 0.9
 		letter-spacing: -0.65px
-
-
-.dara-icon-minus
-	display: inline-block
-	vertical-align: middle
-	width: 9px
-	height: 2px
-	background: url(../img/minus.svg) top center no-repeat
-	background-size: contain
-
-.dara-icon-plus
-	display: inline-block
-	vertical-align: middle
-	width: 9px
-	height: 10px
-	background: url(../img/plus.svg) top center no-repeat
-	background-size: contain
+	.icon
+		display: inline-block
+		vertical-align: middle
+		width: 10px
+		stroke: #4a4a4a
+	.icon-minus
+		height: 2px
+	.icon-plus
+		height: 10px
