@@ -18,7 +18,9 @@
     <div class="dara-out">
       {% include 'partials/_header.html' %}
       {% block content %}{% endblock %}
+      {% if footer !== false %}
       {% include 'partials/_footer.html' %}
+      {% endif %}
     </div>
     <!-- END content -->
 

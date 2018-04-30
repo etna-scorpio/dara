@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 var search = $('.js-search');
 var autocomplete = $('.js-search-autocomplete');
 var searchIcon = $('.js-search-icon');

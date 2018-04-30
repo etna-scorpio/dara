@@ -7,3 +7,5 @@ PageList:
   ready: 100
 - file: products-list.html
   ready: 100
+- file: checkout.html
+  ready: 100
