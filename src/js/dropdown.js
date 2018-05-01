@@ -3,7 +3,6 @@ import $ from 'jquery';
 var filter = $('.js-dara-filter');
 var dropdown = '.js-filter-dropdown';
 var dropdownLink = $('.js-filter-dropdown-link');
-var dropdownList = '.js-filter-dropdown-list';
 var dropdownHide = $('.js-filter-dropdown-hide');
 
 showDropdown();

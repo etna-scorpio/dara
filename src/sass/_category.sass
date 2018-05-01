@@ -98,14 +98,15 @@
 		transition: border-color 0.2s ease
 		&:focus,
 		&.is-focused
-			outline: none
 			border-color: #000
+			outline: none
 		&:disabled,
 		&.is-disabled
 			cursor: not-allowed
 			border-color: #dadada
-			.icon
-				stroke: #ddd
+			background: none
+			.dara-icon
+				color: #ddd
 	&__val
 		+av-medium
 		font-size: 14px
@@ -117,12 +118,13 @@
 		font-size: 28px
 		line-height: 0.9
 		letter-spacing: -0.65px
-	.icon
+	.dara-icon
 		display: inline-block
 		vertical-align: middle
+		color: #4a4a4a
+	.dara-icon-minus
 		width: 10px
-		stroke: #4a4a4a
-	.icon-minus
 		height: 2px
-	.icon-plus
+	.dara-icon-plus
+		width: 10px
 		height: 10px

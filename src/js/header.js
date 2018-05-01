@@ -7,16 +7,16 @@ var logo = $('.js-dara-header-logo');
 
 changeHeaderBg();
 moveLogo();
-showHeaderStartButton();
+if (startButton.length > 0) showHeaderStartButton();
 
 win.scroll(function() {
   changeHeaderBg();
   moveLogo();
-  showHeaderStartButton();
+  if (startButton.length > 0) showHeaderStartButton();
 });
 
 win.resize(function() {
-  showHeaderStartButton();
+  if (startButton.length > 0) showHeaderStartButton();
 });
 
 function changeHeaderBg() {
