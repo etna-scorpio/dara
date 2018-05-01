@@ -47,6 +47,7 @@
       <section class="dara-checkout">
         <div class="dara-checkout__in">
           <div class="dara-checkout__bl dara-checkout__bl--account">
+            <!-- begin ACCOUNT CARD -->
             <div class="dara-checkout-card">
               <div class="dara-checkout-card__title">YOUR ACCOUNT</div>
               <form class="dara-form">
@@ -90,10 +91,12 @@
                   </div>
                 </div>
               </form>
-              <div class="dara-checkout-card__note"> <i class="dara-icon dara-icon-lock"></i> <span class="d-none d-md-inline">All transactions secured and encrypted</span> <span class="d-md-none">Payment information safely stored with Stripe</span> </div>
+              <div class="dara-checkout-card__note"> <svg class="icon icon-lock"><use xlink:href="img/sprite.svg#icon-lock"></use></svg> <span class="d-none d-md-inline">All transactions secured and encrypted</span> <span class="d-md-none">Payment information safely stored with Stripe</span>                </div>
             </div>
+            <!-- end ACCOUNT CARD -->
           </div>
           <div class="dara-checkout__bl dara-checkout__bl--ship">
+            <!-- begin SHIP CARD -->
             <div class="dara-checkout-card">
               <div class="dara-checkout-card__title">SHIPS NEXT BUSINESS DAY</div>
               <div class="dara-checkout-product">
@@ -150,12 +153,12 @@
                     <div class="row justify-content-between">
                       <div class="col">
                         <div class="dara-total__el dara-total__el--final">
-                          <div class="dara-total__title dara-total__title--final">Today&#39;s total</div>
+                          <div class="dara-total__title">Today&#39;s total</div>
                         </div>
                       </div>
                       <div class="col text-right">
                         <div class="dara-total__el dara-total__el--final">
-                          <div class="dara-total__price dara-total__price--final">$29.90</div>
+                          <div class="dara-total__price">$29.90</div>
                         </div>
                       </div>
                     </div>
@@ -169,12 +172,36 @@
                   <div class="dara-total__button-el text-right"> <a href="#" class="dara-total__button dara-total__button--buy dara-button"><span>Buy with</span><i class="dara-icon dara-icon-apple"></i></a> </div>
                 </div>
               </div>
-              <div class="dara-checkout-card__note dara-checkout-card__note--margin-b"> <i class="dara-icon dara-icon-truck"></i> <span>Ships next business day</span> </div>
-              <div class="dara-checkout-card__note dara-checkout-card__note--last"> <i class="dara-icon dara-icon-paper-plane"></i> <span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span> </div>
+              <div class="dara-checkout-card__note dara-checkout-card__note--margin-b"> <svg class="icon icon-truck"><use xlink:href="img/sprite.svg#icon-truck"></use></svg> <span>Ships next business day</span> </div>
+              <div class="dara-checkout-card__note dara-checkout-card__note--last"> <svg class="icon icon-paper-plane"><use xlink:href="img/sprite.svg#icon-paper-plane"></use></svg> <span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span> </div>
             </div>
+            <!-- end SHIP CARD -->
           </div>
         </div>
       </section>
+      <!-- begin mobile checkout button -->
+      <div class="dara-mobile-checkout"> <a href="#" class="dara-button dara-button--mob-checkout">
+		<span class="dara-button__price">PAY $99.99 / MONTH</span>
+		<small class="dara-button__note">One month supply (30 servings)</small>
+	</a> </div>
+      <!-- end mobile checkout button -->
+      <!-- begin footer -->
+      <footer class="dara-footer">
+        <div class="dara-footer__in">
+          <nav class="dara-nav">
+            <ul class="dara-nav__list">
+              <li class="dara-nav__option"><a href="#" class="dara-nav__link">Accesibility</a></li>
+              <li class="dara-nav__option"><a href="#" class="dara-nav__link">Terms Of Service</a></li>
+              <li class="dara-nav__option"><a href="#" class="dara-nav__link">Privacy Policy</a></li>
+              <li class="dara-nav__option"><a href="#" class="dara-nav__link">Legal Stuff</a></li>
+              <li class="dara-nav__option"><a href="#" class="dara-nav__link">Join The Team</a></li>
+            </ul>
+          </nav>
+          <p class="dara-footer__copyright">Dara Health Inc 2017-2018</p>
+          <p class="dara-footer__info">Health claims herein have not been reviewed by the FDA. Dara Health's products are not intended to treat, diagnose, cure or prevent any disease.</p>
+        </div>
+      </footer>
+      <!-- end footer -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

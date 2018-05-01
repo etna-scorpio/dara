@@ -1,7 +1,7 @@
 .dara-checkout
 	padding: 28px 0 40px
 	+rmin(768)
-		padding: 116px 0 130px
+		padding: 84px 0 43px
 	&__in
 		display: flex
 		flex-wrap: wrap
@@ -14,22 +14,30 @@
 		+rmin(768)
 			margin: 0 20px 40px
 		&--account
-			width: 479px
+			+rmin(1024)
+				width: 479px
 		&--ship
-			width: 385px
+			+rmin(1024)
+				width: 385px
 
 
 .dara-checkout-card
+	max-width: 479px
 	min-height: 591px
+	margin: 0 auto
 	padding: 20px 20px 23px
 	background: #FFF
 	border: 1px solid #ddd
 	border-radius: 5px
+	+rmin(1024)
+		max-width: initial
+		margin: auto
 	&__title
 		margin-bottom: 22px
 		text-transform: uppercase
 		font-size: 12px
 		+av-bold
+		letter-spacing: 1.13px
 	&__note
 		position: relative
 		margin: 20px 0 12px
@@ -44,24 +52,16 @@
 			padding-top: 0
 		&--margin-b
 			margin-bottom: 28px
-		.dara-icon
+		.dara-icon,
+		.icon
 			position: absolute
 			display: inline-block
 			top: 50%
 			left: 0
 			margin-top: -15px
+			font-size: 30px
 	hr
 		margin: 36px -20px 39px
-
-
-.dara-icon-lock
-	+s(lock)
-
-.dara-icon-paper-plane
-	+s(paper-plane)
-
-.dara-icon-truck
-	+s(truck)
 
 
 .dara-form
@@ -157,31 +157,33 @@
 		letter-spacing: 1.13px
 		&--final
 			color: #4a4a4a
+			.dara-total__title
+				text-transform: none
+				padding-top: 2px
+			.dara-total__price
+				font-size: 24px
+				line-height: 1.45
 	&__title
 		text-transform: uppercase
-		&--final
-			text-transform: none
-			padding-top: 2px
-	&__price
-		&--final
-			font-size: 24px
-			line-height: 1.45
 	&__button-wrap
 		display: flex
 		justify-content: space-between
-		margin-bottom: 26px
+		margin: 0 -5px 26px
 	&__button-el
 		flex-basis: 100%
+		margin: 0 5px
 	&__button
 		width: 100%
 		max-width: 143px
-		font-size: 18px
+		font-size: 14px
 		line-height: 1.38
 		letter-spacing: -0.22px
+		+rmin(375)
+			font-size: 18px
 		+rmin(768)
 			max-width: 161px
 		&--checkout
-			padding: 13px
+			padding: 14px 10px 12px
 			+av-medium
 		&--buy
 			text-transform: none
@@ -190,17 +192,23 @@
 			background: #000
 			color: #FFF
 			letter-spacing: -0.24px
+			&:hover
+				background: #000
+				color: #FFF
 			span
 				display: inline-block
 				vertical-align: middle
-				padding-right: 5px
+				+rmin(375)
+					padding-right: 5px
 
 
 .dara-icon-apple
 	display: inline-block
 	vertical-align: middle
-	width: 54px
-	height: 26px
+	width: 50px
+	height: 22px
 	background: url(../img/apple.svg) top center no-repeat
 	background-size: contain
-
+	+rmin(375)
+		width: 54px
+		height: 26px

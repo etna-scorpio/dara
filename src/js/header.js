@@ -38,8 +38,9 @@ function moveLogo() {
 }
 
 function showHeaderStartButton() {
+  var startButtonPos = startButton.offset().top + startButton.outerHeight();
   if (startButton.length) {
-    if (win.scrollTop() > startButton.offset().top + startButton.height()) {
+    if (win.scrollTop() + header.height() > startButtonPos) {
       header.addClass('is-start');
     } else {
       header.removeClass('is-start');
