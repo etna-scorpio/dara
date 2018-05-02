@@ -11,6 +11,7 @@
 		padding: 0 20px
 	&__bl
 		margin: 0 0 40px
+		width: 100%
 		+rmin(768)
 			margin: 0 20px 40px
 		&--account
@@ -22,6 +23,7 @@
 
 
 .dara-checkout-card
+	width: 100%
 	max-width: 479px
 	min-height: 591px
 	margin: 0 auto
@@ -30,14 +32,23 @@
 	border: 1px solid #ddd
 	border-radius: 5px
 	+rmin(1024)
-		max-width: initial
+		width: 100%
 		margin: auto
+	&--auto-height
+		min-height: auto
+	&--no-padding-b
+		padding-bottom: 0
 	&__title
 		margin-bottom: 22px
 		text-transform: uppercase
 		font-size: 12px
 		+av-bold
 		letter-spacing: 1.13px
+		&--with-pad
+			position: relative
+			padding: 0 38px
+		&--sm-margin-b
+			margin-bottom: 3px
 	&__note
 		position: relative
 		margin: 20px 0 12px
@@ -60,8 +71,28 @@
 			left: 0
 			margin-top: -15px
 			font-size: 30px
+	&__close
+		position: absolute
+		right: 0
+		bottom: 0
+		text-decoration: underline
+		+av-demibold
+		font-size: 12px
+		letter-spacing: -0.17px
+		color: #868686
+		&:hover
+			text-decoration: none
+			color: #868686
+	&__date
+		margin-bottom: 7px
+		+av-demibold
+		font-size: 36px
+		color: #868686
+		letter-spacing: 1.13px
+		line-height: 1.36
 	hr
 		margin: 36px -20px 39px
+
 
 
 .dara-form
@@ -213,3 +244,44 @@
 	+rmin(375)
 		width: 54px
 		height: 26px
+
+
+.dara-field
+	position: relative
+	display: block
+	text-decoration: none
+	margin: 0 -20px
+	padding: 18px 57px 18px 22px
+	+av-bold
+	font-size: 12px
+	line-height: 1.33
+	letter-spacing: 1.13px
+	color: #868686
+	border-top: 2px solid #f2f2f2
+	&:hover
+		text-decoration: none
+		color: #868686
+	&__title
+		text-transform: uppercase
+		color: #000
+	&__info
+		margin-top: 5px
+		&--flex
+			display: flex
+			max-width: 100%
+			justify-content: space-between
+	&__el
+		max-width: 150px
+	&__arrow
+		position: absolute
+		top: 50%
+		right: 21px
+		margin-top: -10px
+		font-size: 20px
+	&__icon
+		color: #4a4a4a
+		font-size: 16px
+		vertical-align: middle
+		line-height: 1
+	&__cancel
+		margin-left: 14px

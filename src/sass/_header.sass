@@ -8,7 +8,9 @@
 	transition: background 0.2s ease
 	&__in
 		min-height: 57px
-		padding: 11px 0 5px
+		padding: 11px 5px 5px
+		+rmin(1024)
+			padding: 11px 25px 5px
 	&.is-active
 		background: #FFF
 	&.is-start
@@ -67,9 +69,9 @@
 	&--with-button
 		display: flex
 		justify-content: flex-end
-		align-items: center
-		padding-top: 0
+		min-height: 30px
 	&__option
+		position: relative
 		margin-right: 20px
 		&:last-child
 			margin-right: 0

@@ -31,7 +31,10 @@
 		max-width: 256px
 		+av-medium
 	&--header-start
-		margin-top: 3.5px
+		position: absolute
+		top: 50%
+		right: 100%
+		margin-top: -15px
 		padding: 8px 20px
 		+av-medium
 		font-size: 14px
@@ -41,8 +44,28 @@
 		transition: opacity 0.2s linear, visibility 0.2s linear
 		+rmin(768)
 			padding: 8px 33.5px
-		+rmin(992)
-			margin-top: 0
+	&--update
+		width: 100%
+		padding: 13px 10px
+		+av-medium
+		font-size: 18px
+		line-height: 1.38
+		letter-spacing: -0.22px
+		background: #1078EE
+		&:hover
+			background: darken(#1078EE, 5%)
+	&--cancel
+		text-transform: none
+		padding: 0 10px
+		+av-medium
+		font-size: 10px
+		line-height: 1.4
+		letter-spacing: -0.22px
+		color: #E34F30
+		background: #FFF
+		border: 1px solid #E34F30
+		&:hover
+			background: #E34F30
 	&__price
 		display: block
 		text-transform: uppercase
