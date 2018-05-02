@@ -1,0 +1,123 @@
+---
+title: Account
+header: initialWhite
+mobCheckout: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{% set form = [{
+		row: [{
+			state: 'is-active is-error',
+			id: 'name',
+			name: 'Full Name',
+			helper: 'Please type a name'
+		}]
+	}, {
+		row: [{
+			id: 'address',
+			name: 'Address'
+		}, {
+			id: 'apt',
+			name: 'Apt/Suite'
+		}]
+	}, {
+		row: [{
+			id: 'city',
+			name: 'City'
+		}, {
+			id: 'state',
+			name: 'State'
+		}, {
+			id: 'zip',
+			name: 'ZIP'
+		}]
+	}, {
+		row: [{
+			id: 'tel',
+			type: 'tel',
+			name: 'Phone <small>(optional)</small>'
+		}]
+	}] %}
+
+	{% set fields = [{
+		title: 'SHIPPING ADDRESS',
+		info: '555 Wellness Way Mill Valley, CA 94941'
+	}, {
+		title: 'YOUR PLAN',
+		info: 'Custom supplement 30 daily servings',
+		plan: true
+	}, {
+		title: 'PAYMENT METHOD',
+		info: '*1633 07/18',
+		icon: 'mastercard'
+	}, {
+		title: 'EMAIL',
+		info: 'jdoe@gmail.com'
+	}, {
+		title: 'PASSWORD'
+	}, {
+		title: 'ORDER HISTORY'
+	}] %}
+
+
+	<section class="dara-checkout">
+		<form>
+			<div class="dara-checkout__in">
+				<div class="dara-checkout__bl dara-checkout__bl--ship">
+					<!-- begin CARD -->
+					<div class="dara-checkout-card dara-checkout-card--no-padding-b dara-checkout-card--auto-height">
+						<div class="dara-checkout-card__title dara-checkout-card__title--sm-margin-b">Next shipment</div>
+						<div class="dara-checkout-card__date text-center">May 5th</div>
+						{% for field in fields %}
+						<a href="#" class="dara-field">
+							<div class="dara-field__title">{{ field.title }} {% if field.plan %}<button class="dara-field__cancel dara-button dara-button--cancel">Cancel</button>{% endif %}</div>
+							{% if field.info %}
+								{% if field.plan %}
+								<div class="dara-field__info dara-field__info--flex">
+									<div class="dara-field__el">{{ field.info }}</div>
+									<div class="dara-field__el">$29.90</div>
+								</div>
+								{% else %}
+								<div class="dara-field__info">
+									<div class="dara-field__el">
+										{% if field.icon %} <span class="dara-field__icon">{{ mixins.icon(field.icon) }}</span> {% endif %}
+										{{ field.info}}
+									</div>
+								</div>
+								{% endif %}
+							{% endif %}
+							<span class="dara-field__arrow">{{ mixins.icon('arrow-right') }}</span>
+						</a>
+						{% endfor %}
+					</div>
+					<!-- end CARD -->
+				</div>
+				<div class="dara-checkout__bl dara-checkout__bl--account">
+					<!-- begin CARD -->
+					<div class="dara-checkout-card dara-checkout-card--auto-height">
+						<div class="dara-checkout-card__title dara-checkout-card__title--with-pad text-center">			Change shipping address
+							<a href="#" class="dara-checkout-card__close">Close</a>
+						</div>
+						<div class="dara-form">
+							{% for row in form %}
+							<div class="dara-form__row">
+								{% for item in row.row %}
+								<div class="dara-form__field js-input-box{% if item.state %} {{ item.state }}{% endif %}">
+									<input id="{{ item.id }}" type="{{ item.type | default('text') }}" class="dara-form__input js-input" {% if item.value %}value="{{ item.value }}"{% endif %}>
+									<label for="{{ item.id }}" class="dara-form__label">{{ item.name | safe }}</label>
+									<div class="dara-form__helper">{{ item.helper | default('This is not valid') }}</div>
+								</div>
+								{% endfor %}
+							</div>
+							{% endfor %}
+						</div>
+						<a href="#" class="dara-button dara-button--update mt-2">Update Address</a>
+					</div>
+					<!-- end CARD -->
+				</div>
+			</div>
+		</form>
+	</section>
+{% endblock %}
+
