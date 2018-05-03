@@ -1,0 +1,12 @@
+.dara-account-modal
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	z-index: 12
+	transform: translate3d(110%, 0, 0)
+	transition: transform 0.4s linear
+	&.is-visible
+		transform: translate3d(0, 0, 0)
+	+r(768)
+		width: 100%

@@ -6,7 +6,7 @@
     <title>Account</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover">
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" media="all" href="css/app.css" /> </head>
@@ -55,20 +55,20 @@
       </nav>
       <section class="dara-checkout">
         <form>
-          <div class="dara-checkout__in">
+          <div class="dara-checkout__in dara-checkout__in--one-card">
             <div class="dara-checkout__bl dara-checkout__bl--ship">
               <!-- begin CARD -->
               <div class="dara-checkout-card dara-checkout-card--no-padding-b dara-checkout-card--auto-height">
                 <div class="dara-checkout-card__title dara-checkout-card__title--sm-margin-b">Next shipment</div>
                 <div class="dara-checkout-card__date text-center">May 5th</div>
-                <a href="#" class="dara-field">
+                <a href="#" class="dara-field js-show-account-pane">
                   <div class="dara-field__title">SHIPPING ADDRESS </div>
                   <div class="dara-field__info">
                     <div class="dara-field__el"> 555 Wellness Way Mill Valley, CA 94941 </div>
                   </div> <span class="dara-field__arrow">
 <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
 </span> </a>
-                <a href="#" class="dara-field">
+                <a href="#" class="dara-field js-show-account-pane">
                   <div class="dara-field__title">YOUR PLAN <button class="dara-field__cancel dara-button dara-button--cancel">Cancel</button></div>
                   <div class="dara-field__info dara-field__info--flex">
                     <div class="dara-field__el">Custom supplement 30 daily servings</div>
@@ -76,7 +76,7 @@
                   </div> <span class="dara-field__arrow">
 <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
 </span> </a>
-                <a href="#" class="dara-field">
+                <a href="#" class="dara-field js-show-account-pane">
                   <div class="dara-field__title">PAYMENT METHOD </div>
                   <div class="dara-field__info">
                     <div class="dara-field__el"> <span class="dara-field__icon">
@@ -85,64 +85,66 @@
                   </div> <span class="dara-field__arrow">
 <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
 </span> </a>
-                <a href="#" class="dara-field">
+                <a href="#" class="dara-field js-show-account-pane">
                   <div class="dara-field__title">EMAIL </div>
                   <div class="dara-field__info">
                     <div class="dara-field__el"> jdoe@gmail.com </div>
                   </div> <span class="dara-field__arrow">
 <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
 </span> </a>
-                <a href="#" class="dara-field">
+                <a href="#" class="dara-field js-show-account-pane">
                   <div class="dara-field__title">PASSWORD </div> <span class="dara-field__arrow">
 <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
 </span> </a>
-                <a href="#" class="dara-field">
+                <a href="#" class="dara-field js-show-account-pane">
                   <div class="dara-field__title">ORDER HISTORY </div> <span class="dara-field__arrow">
 <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
 </span> </a>
               </div>
               <!-- end CARD -->
             </div>
-            <div class="dara-checkout__bl dara-checkout__bl--account">
-              <!-- begin CARD -->
-              <div class="dara-checkout-card dara-checkout-card--auto-height">
-                <div class="dara-checkout-card__title dara-checkout-card__title--with-pad text-center"> Change shipping address <a href="#" class="dara-checkout-card__close">Close</a> </div>
-                <div class="dara-form">
-                  <div class="dara-form__row">
-                    <div class="dara-form__field js-input-box is-active is-error"> <input id="name" type="text" class="dara-form__input js-input"> <label for="name" class="dara-form__label">Full Name</label>
-                      <div class="dara-form__helper">Please type a name</div>
-                    </div>
-                  </div>
-                  <div class="dara-form__row">
-                    <div class="dara-form__field js-input-box"> <input id="address" type="text" class="dara-form__input js-input"> <label for="address" class="dara-form__label">Address</label>
-                      <div class="dara-form__helper">This is not valid</div>
-                    </div>
-                    <div class="dara-form__field js-input-box"> <input id="apt" type="text" class="dara-form__input js-input"> <label for="apt" class="dara-form__label">Apt/Suite</label>
-                      <div class="dara-form__helper">This is not valid</div>
-                    </div>
-                  </div>
-                  <div class="dara-form__row">
-                    <div class="dara-form__field js-input-box"> <input id="city" type="text" class="dara-form__input js-input"> <label for="city" class="dara-form__label">City</label>
-                      <div class="dara-form__helper">This is not valid</div>
-                    </div>
-                    <div class="dara-form__field js-input-box"> <input id="state" type="text" class="dara-form__input js-input"> <label for="state" class="dara-form__label">State</label>
-                      <div class="dara-form__helper">This is not valid</div>
-                    </div>
-                    <div class="dara-form__field js-input-box"> <input id="zip" type="text" class="dara-form__input js-input"> <label for="zip" class="dara-form__label">ZIP</label>
-                      <div class="dara-form__helper">This is not valid</div>
-                    </div>
-                  </div>
-                  <div class="dara-form__row">
-                    <div class="dara-form__field js-input-box"> <input id="tel" type="tel" class="dara-form__input js-input"> <label for="tel" class="dara-form__label">Phone <small>(optional)</small></label>
-                      <div class="dara-form__helper">This is not valid</div>
-                    </div>
-                  </div>
-                </div> <a href="#" class="dara-button dara-button--update mt-2">Update Address</a> </div>
-              <!-- end CARD -->
-            </div>
           </div>
         </form>
       </section>
+      <!-- begin Modal -->
+      <div class="dara-account-modal js-modal">
+        <div class="dara-checkout-card dara-checkout-card--modal dara-checkout-card--full-height"> <a href="#" class="dara-checkout-card__close js-close-modal">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</a>
+          <div class="dara-checkout-card__title dara-checkout-card__title--with-pad text-center"> Change shipping address </div>
+          <div class="dara-form">
+            <div class="dara-form__row">
+              <div class="dara-form__field js-input-box is-active is-error"> <input id="name" type="text" class="dara-form__input js-input"> <label for="name" class="dara-form__label">Full Name</label>
+                <div class="dara-form__helper">Please type a name</div>
+              </div>
+            </div>
+            <div class="dara-form__row">
+              <div class="dara-form__field js-input-box"> <input id="address" type="text" class="dara-form__input js-input"> <label for="address" class="dara-form__label">Address</label>
+                <div class="dara-form__helper">This is not valid</div>
+              </div>
+              <div class="dara-form__field js-input-box"> <input id="apt" type="text" class="dara-form__input js-input"> <label for="apt" class="dara-form__label">Apt/Suite</label>
+                <div class="dara-form__helper">This is not valid</div>
+              </div>
+            </div>
+            <div class="dara-form__row">
+              <div class="dara-form__field js-input-box"> <input id="city" type="text" class="dara-form__input js-input"> <label for="city" class="dara-form__label">City</label>
+                <div class="dara-form__helper">This is not valid</div>
+              </div>
+              <div class="dara-form__field js-input-box"> <input id="state" type="text" class="dara-form__input js-input"> <label for="state" class="dara-form__label">State</label>
+                <div class="dara-form__helper">This is not valid</div>
+              </div>
+              <div class="dara-form__field js-input-box"> <input id="zip" type="text" class="dara-form__input js-input"> <label for="zip" class="dara-form__label">ZIP</label>
+                <div class="dara-form__helper">This is not valid</div>
+              </div>
+            </div>
+            <div class="dara-form__row">
+              <div class="dara-form__field js-input-box"> <input id="tel" type="tel" class="dara-form__input js-input"> <label for="tel" class="dara-form__label">Phone <small>(optional)</small></label>
+                <div class="dara-form__helper">This is not valid</div>
+              </div>
+            </div>
+          </div> <a href="#" class="dara-button dara-button--update mt-2">Update Address</a> </div>
+      </div>
+      <!-- end Modal -->
       <!-- begin footer -->
       <footer class="dara-footer">
         <div class="dara-footer__in">

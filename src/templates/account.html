@@ -63,14 +63,14 @@ mobCheckout: false
 
 	<section class="dara-checkout">
 		<form>
-			<div class="dara-checkout__in">
+			<div class="dara-checkout__in dara-checkout__in--one-card">
 				<div class="dara-checkout__bl dara-checkout__bl--ship">
 					<!-- begin CARD -->
 					<div class="dara-checkout-card dara-checkout-card--no-padding-b dara-checkout-card--auto-height">
 						<div class="dara-checkout-card__title dara-checkout-card__title--sm-margin-b">Next shipment</div>
 						<div class="dara-checkout-card__date text-center">May 5th</div>
 						{% for field in fields %}
-						<a href="#" class="dara-field">
+						<a href="#" class="dara-field js-show-account-pane">
 							<div class="dara-field__title">{{ field.title }} {% if field.plan %}<button class="dara-field__cancel dara-button dara-button--cancel">Cancel</button>{% endif %}</div>
 							{% if field.info %}
 								{% if field.plan %}
@@ -93,31 +93,32 @@ mobCheckout: false
 					</div>
 					<!-- end CARD -->
 				</div>
-				<div class="dara-checkout__bl dara-checkout__bl--account">
-					<!-- begin CARD -->
-					<div class="dara-checkout-card dara-checkout-card--auto-height">
-						<div class="dara-checkout-card__title dara-checkout-card__title--with-pad text-center">			Change shipping address
-							<a href="#" class="dara-checkout-card__close">Close</a>
-						</div>
-						<div class="dara-form">
-							{% for row in form %}
-							<div class="dara-form__row">
-								{% for item in row.row %}
-								<div class="dara-form__field js-input-box{% if item.state %} {{ item.state }}{% endif %}">
-									<input id="{{ item.id }}" type="{{ item.type | default('text') }}" class="dara-form__input js-input" {% if item.value %}value="{{ item.value }}"{% endif %}>
-									<label for="{{ item.id }}" class="dara-form__label">{{ item.name | safe }}</label>
-									<div class="dara-form__helper">{{ item.helper | default('This is not valid') }}</div>
-								</div>
-								{% endfor %}
-							</div>
-							{% endfor %}
-						</div>
-						<a href="#" class="dara-button dara-button--update mt-2">Update Address</a>
-					</div>
-					<!-- end CARD -->
-				</div>
+
 			</div>
 		</form>
 	</section>
+	<!-- begin Modal -->
+	<div class="dara-account-modal js-modal">
+		<div class="dara-checkout-card dara-checkout-card--modal dara-checkout-card--full-height">
+			<a href="#" class="dara-checkout-card__close js-close-modal">{{ mixins.icon('close') }}</a>
+			<div class="dara-checkout-card__title dara-checkout-card__title--with-pad text-center">			Change shipping address
+			</div>
+			<div class="dara-form">
+				{% for row in form %}
+				<div class="dara-form__row">
+					{% for item in row.row %}
+					<div class="dara-form__field js-input-box{% if item.state %} {{ item.state }}{% endif %}">
+						<input id="{{ item.id }}" type="{{ item.type | default('text') }}" class="dara-form__input js-input" {% if item.value %}value="{{ item.value }}"{% endif %}>
+						<label for="{{ item.id }}" class="dara-form__label">{{ item.name | safe }}</label>
+						<div class="dara-form__helper">{{ item.helper | default('This is not valid') }}</div>
+					</div>
+					{% endfor %}
+				</div>
+				{% endfor %}
+			</div>
+			<a href="#" class="dara-button dara-button--update mt-2">Update Address</a>
+		</div>
+	</div>
+	<!-- end Modal -->
 {% endblock %}
 

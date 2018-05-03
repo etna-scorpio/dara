@@ -6,7 +6,7 @@
     <title>Products list</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover">
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" media="all" href="css/app.css" /> </head>
@@ -37,27 +37,28 @@
             <div class="row">
               <div class="col">
                 <div class="dara-filter__in">
-                  <div class="dara-filter__search-box"> <i class="dara-filter__search-ico js-search-icon"></i> <input type="text" class="dara-filter__search js-search">
+                  <div class="dara-filter__search-box js-search-box"> <i class="dara-filter__search-ico js-search-loop"></i> <input type="text" class="dara-filter__search js-search">
                     <ul class="dara-filter__search-list js-search-autocomplete">
                       <li><a href="#" class="dara-filter__search-link">Maca root</a></li>
                       <li><a href="#" class="dara-filter__search-link">Magnesium</a></li>
                       <li><a href="#" class="dara-filter__search-link">Manganese</a></li>
-                    </ul>
-                  </div>
+                    </ul> <button class="dara-filter__search-close js-search-close">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button> </div>
                   <div class="dara-filter-dropdown js-filter-dropdown"> <a href="#" class="dara-filter-dropdown__link js-filter-dropdown-link">Filter <i class="dara-filter-dropdown__arrow-down"></i></a>
                     <ul class="dara-filter-dropdown__list js-filter-dropdown-list">
                       <li class="dara-filter-dropdown__option"> <span>Filter by:</span> <a href="#" class="dara-filter-dropdown__clear js-filter-dropdown-hide">Clear</a> </li>
                       <li class="dara-filter-dropdown__option"> <span>My Formulation</span>
-                        <div class="dara-radio"> <input class="dara-radio__input" type="radio" name="category" value="my-formulation" checked> <span class="dara-radio__dot"></span> </div>
+                        <div class="dara-radio"> <input class="dara-radio__input js-filter-radio" type="radio" name="category" value="my-formulation" checked> <span class="dara-radio__dot"></span> </div>
                       </li>
                       <li class="dara-filter-dropdown__option"> <span>Vitamins</span>
-                        <div class="dara-radio"> <input class="dara-radio__input" type="radio" name="category" value="vitamins"> <span class="dara-radio__dot"></span> </div>
+                        <div class="dara-radio"> <input class="dara-radio__input js-filter-radio" type="radio" name="category" value="vitamins"> <span class="dara-radio__dot"></span> </div>
                       </li>
                       <li class="dara-filter-dropdown__option"> <span>Minerals</span>
-                        <div class="dara-radio"> <input class="dara-radio__input" type="radio" name="category" value="minerals"> <span class="dara-radio__dot"></span> </div>
+                        <div class="dara-radio"> <input class="dara-radio__input js-filter-radio" type="radio" name="category" value="minerals"> <span class="dara-radio__dot"></span> </div>
                       </li>
                       <li class="dara-filter-dropdown__option"> <span>Botanicals</span>
-                        <div class="dara-radio"> <input class="dara-radio__input" type="radio" name="category" value="botanicals"> <span class="dara-radio__dot"></span> </div>
+                        <div class="dara-radio"> <input class="dara-radio__input js-filter-radio" type="radio" name="category" value="botanicals"> <span class="dara-radio__dot"></span> </div>
                       </li>
                     </ul>
                   </div>

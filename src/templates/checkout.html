@@ -49,7 +49,7 @@ mobCheckout: false
 		}]
 	}, {
 		row: [{
-			type: 'cvv',
+			type: 'text',
 			name: 'Card Details'
 		}]
 	}] %}
@@ -91,8 +91,7 @@ mobCheckout: false
 						</div>
 						<div class="dara-checkout-card__note">
 							{{ mixins.icon('lock') }}
-							<span class="d-none d-md-inline">All transactions secured and encrypted</span>
-							<span class="d-md-none">Payment information safely stored with Stripe</span>
+							<span>All transactions secured and encrypted</span>
 						</div>
 					</div>
 					<!-- end ACCOUNT CARD -->
@@ -132,25 +131,29 @@ mobCheckout: false
 									{% endfor %}
 								</div>
 							</div>
-							<div class="dara-total__button-wrap">
-								<div class="dara-total__button-el text-right">
-									<a href="#" class="dara-total__button dara-total__button--checkout dara-button dara-button--checkout">
-										<span class="d-none d-md-inline">PLACE ORDER</span>
-										<span class="d-md-none">CHECKOUT</span>
-									</a>
+							<div class="dara-total__button-container is-error">
+								<div class="dara-total__helper">Your card was declined. Your request was in live mode, but used a known test card.</div>
+								<div class="dara-total__button-row">
+									<div class="dara-total__button-el text-right">
+										<button class="dara-total__button dara-total__button--checkout dara-button dara-button--checkout" type="submit">
+											<span class="d-none d-md-inline">PLACE ORDER</span>
+											<span class="d-md-none">CHECKOUT</span>
+										</button>
+									</div>
+									<div class="dara-total__button-el text-left">
+										<button class="dara-total__button dara-total__button--buy dara-button" type="button"><span>Buy with</span><i class="dara-icon dara-icon-apple"></i></button>
+									</div>
 								</div>
-								<div class="dara-total__button-el text-left">
-									<a href="#" class="dara-total__button dara-total__button--buy dara-button"><span>Buy with</span><i class="dara-icon dara-icon-apple"></i></a>
-								</div>
+								<p class="dara-total__note">By making a purchase, you accept the Terms of Service. Your subscription will automatically renew and your credit card will be charged the subscription fee. </p>
 							</div>
-						</div>
-						<div class="dara-checkout-card__note dara-checkout-card__note--margin-b">
-							{{ mixins.icon('truck') }}
-							<span>Ships next business day</span>
-						</div>
-						<div class="dara-checkout-card__note dara-checkout-card__note--last">
-							{{ mixins.icon('paper-plane') }}
-							<span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span>
+							<div class="dara-checkout-card__note dara-checkout-card__note--margin-b">
+								{{ mixins.icon('truck') }}
+								<span>Ships next business day</span>
+							</div>
+							<div class="dara-checkout-card__note dara-checkout-card__note--last">
+								{{ mixins.icon('reminder') }}
+								<span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span>
+							</div>
 						</div>
 					</div>
 					<!-- end SHIP CARD -->

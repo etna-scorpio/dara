@@ -6,7 +6,7 @@
     <title>Checkout</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover">
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" media="all" href="css/app.css" /> </head>
@@ -87,12 +87,12 @@
                     </div>
                   </div>
                   <div class="dara-form__row">
-                    <div class="dara-form__field js-input-box"> <input id="" type="cvv" class="dara-form__input js-input"> <label for="" class="dara-form__label">Card Details</label>
+                    <div class="dara-form__field js-input-box"> <input id="" type="text" class="dara-form__input js-input"> <label for="" class="dara-form__label">Card Details</label>
                       <div class="dara-form__helper">This is not valid</div>
                     </div>
                   </div>
                 </div>
-                <div class="dara-checkout-card__note"> <svg class="icon icon-lock"><use xlink:href="img/sprite.svg#icon-lock"></use></svg> <span class="d-none d-md-inline">All transactions secured and encrypted</span> <span class="d-md-none">Payment information safely stored with Stripe</span>                  </div>
+                <div class="dara-checkout-card__note"> <svg class="icon icon-lock"><use xlink:href="img/sprite.svg#icon-lock"></use></svg> <span>All transactions secured and encrypted</span> </div>
               </div>
               <!-- end ACCOUNT CARD -->
             </div>
@@ -165,16 +165,20 @@
                       </div>
                     </div>
                   </div>
-                  <div class="dara-total__button-wrap">
-                    <div class="dara-total__button-el text-right"> <a href="#" class="dara-total__button dara-total__button--checkout dara-button dara-button--checkout">
-										<span class="d-none d-md-inline">PLACE ORDER</span>
-										<span class="d-md-none">CHECKOUT</span>
-									</a> </div>
-                    <div class="dara-total__button-el text-left"> <a href="#" class="dara-total__button dara-total__button--buy dara-button"><span>Buy with</span><i class="dara-icon dara-icon-apple"></i></a> </div>
+                  <div class="dara-total__button-container is-error">
+                    <div class="dara-total__helper">Your card was declined. Your request was in live mode, but used a known test card.</div>
+                    <div class="dara-total__button-row">
+                      <div class="dara-total__button-el text-right"> <button class="dara-total__button dara-total__button--checkout dara-button dara-button--checkout" type="submit">
+											<span class="d-none d-md-inline">PLACE ORDER</span>
+											<span class="d-md-none">CHECKOUT</span>
+										</button> </div>
+                      <div class="dara-total__button-el text-left"> <button class="dara-total__button dara-total__button--buy dara-button" type="button"><span>Buy with</span><i class="dara-icon dara-icon-apple"></i></button> </div>
+                    </div>
+                    <p class="dara-total__note">By making a purchase, you accept the Terms of Service. Your subscription will automatically renew and your credit card will be charged the subscription fee. </p>
                   </div>
+                  <div class="dara-checkout-card__note dara-checkout-card__note--margin-b"> <svg class="icon icon-truck"><use xlink:href="img/sprite.svg#icon-truck"></use></svg> <span>Ships next business day</span> </div>
+                  <div class="dara-checkout-card__note dara-checkout-card__note--last"> <svg class="icon icon-reminder"><use xlink:href="img/sprite.svg#icon-reminder"></use></svg> <span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span> </div>
                 </div>
-                <div class="dara-checkout-card__note dara-checkout-card__note--margin-b"> <svg class="icon icon-truck"><use xlink:href="img/sprite.svg#icon-truck"></use></svg> <span>Ships next business day</span> </div>
-                <div class="dara-checkout-card__note dara-checkout-card__note--last"> <svg class="icon icon-paper-plane"><use xlink:href="img/sprite.svg#icon-paper-plane"></use></svg> <span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span> </div>
               </div>
               <!-- end SHIP CARD -->
             </div>

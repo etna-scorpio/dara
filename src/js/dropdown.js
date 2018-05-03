@@ -1,27 +1,50 @@
 import $ from 'jquery';
 
+var BODY = $('body');
 var filter = $('.js-dara-filter');
 var dropdown = '.js-filter-dropdown';
 var dropdownLink = $('.js-filter-dropdown-link');
 var dropdownHide = $('.js-filter-dropdown-hide');
+var dropdownRadiobox = $('.js-filter-radio');
 
 showDropdown();
-hideDropdown();
+clearDropdown();
 
 function showDropdown() {
   dropdownLink.click(function(e) {
     e.preventDefault();
     $(this).closest(dropdown).addClass('is-open');
-    $('body').addClass('is-overlay');
+    BODY.addClass('is-overlay');
     filter.addClass('is-overlay');
   });
 }
 
-function hideDropdown() {
+function hideDropdown(el) {
+  if (el) {
+    el.closest(dropdown).removeClass('is-open');
+  } else {
+    $(dropdown).removeClass('is-open');
+  }
+  BODY.removeClass('is-overlay');
+  filter.removeClass('is-overlay');
+}
+
+function clearDropdown() {
   dropdownHide.click(function(e) {
     e.preventDefault();
-    $(this).closest(dropdown).removeClass('is-open');
-    $('body').removeClass('is-overlay');
-    filter.removeClass('is-overlay');
+    let item = $(this);
+
+    dropdownRadiobox.each(function(index,item) {
+      if( $(item).prop('checked') ) $(item).prop('checked', false);
+    });
+
+    hideDropdown(item);
+
   });
 }
+
+BODY.click(function(e) {
+  if ( !e.target.closest('.js-filter-dropdown') && $(dropdown).hasClass('is-open')) {
+    hideDropdown();
+  }
+});
