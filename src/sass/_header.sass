@@ -48,7 +48,7 @@
 			position: absolute
 			top: 50%
 			left: 15px
-			margin-top: -5px
+			margin-top: -10px
 			line-height: 1
 	&__logo
 		display: inline-block
@@ -107,16 +107,17 @@
 	overflow: auto
 	transform: translate3d(-100%, 0, 0)
 	transition: transform 0.3s ease-in
-	&.is-active
-		transform: translate3d(0,0,0)
 	+rmin(500)
 		width: 300px
+	&.is-active
+		transform: translate3d(0,0,0)
 	&__in
 		padding: 20px
 	&__close
 		display: inline-block
-		width: 20px
 		margin-bottom: 40px
+		font-size: 16px
+		stroke: #fff
 	&__option
 		margin-bottom: 20px
 	&__link
