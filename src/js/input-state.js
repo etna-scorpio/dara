@@ -1,20 +1,19 @@
 import $ from 'jquery';
 
-var input = $('.js-input');
+var inputData = $('.js-input-data');
 
-moveInputLabelUp();
-moveInputLabelDown();
+moveInputLabelUp(inputData);
+moveInputLabelDown(inputData);
 
-function moveInputLabelUp() {
-  input.on('focus', function() {
-  	console.log($(this), $(this).parent());
+function moveInputLabelUp(el) {
+  el.on('focus', function() {
     $(this).parent().addClass('is-active');
   });
 }
 
-function moveInputLabelDown() {
-  input.on('blur', function(e) {
-    if ($(e.target).val().length === 0) {
+function moveInputLabelDown(el) {
+  el.on('blur', function() {
+    if (!$(this).val()) {
     	$(this).parent().removeClass('is-active');
     }
   });

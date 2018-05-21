@@ -1,8 +1,10 @@
+.dara-category-wrapper
+	padding-top: 40px
+
+
 .dara-category
 	padding-top: 19px
 	+av-medium
-	&--pad
-		padding-top: 82px
 	&--gray
 		padding-top: 40px
 		background: #F5F9FC
@@ -28,7 +30,7 @@
 		position: relative
 		height: 100%
 		min-height: 440px
-		padding: 15px 0 40px
+		padding: 15px 0 74px
 		background: #FFF
 		border-radius: 5px
 		border: 1px solid #ddd
@@ -74,57 +76,3 @@
 		color: #D6D5D5
 		&:hover
 			color: darken(#D6D5D5, 10%)
-	&__details
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 14px
-		display: flex
-		max-width: 208px
-		margin: 0 auto
-		text-align: center
-		justify-content: space-between
-		align-items: center
-	&__calc
-		font-size: 14px
-		line-height: 1
-	&__ico
-		width: 30px
-		height: 30px
-		border: 1px solid #dadada
-		border-radius: 50%
-		background: none
-		+vertical
-		transition: border-color 0.2s ease
-		&:focus,
-		&.is-focused
-			border-color: #000
-			outline: none
-		&:disabled,
-		&.is-disabled
-			cursor: not-allowed
-			border-color: #dadada
-			background: none
-			.dara-icon
-				color: #ddd
-	&__val
-		+av-medium
-		font-size: 14px
-		color: #9B9B9B
-		line-height: 1.357
-		letter-spacing: -0.5px
-	&__num
-		+av-demibold
-		font-size: 28px
-		line-height: 0.9
-		letter-spacing: -0.65px
-	.dara-icon
-		display: inline-block
-		vertical-align: middle
-		color: #4a4a4a
-	.dara-icon-minus
-		width: 10px
-		height: 2px
-	.dara-icon-plus
-		width: 10px
-		height: 10px

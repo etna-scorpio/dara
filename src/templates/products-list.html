@@ -6,8 +6,7 @@ filter: true
 
 {% block content %}
 	{% set productList = [{
-		title: 'Vitamins',
-		mod: 'dara-category--pad'
+		title: 'Vitamins'
 	},{
 		title: 'Minerals',
 		mod: 'dara-category--gray'
@@ -16,73 +15,76 @@ filter: true
 		mod: 'dara-category--blue'
 	}] %}
 
-	{% for category in productList %}
-	<section class="dara-category{% if category.mod %} {{ category.mod }}{% endif %}">
-		<div class="dara-l-center dara-l-center--sm">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col">
-						<h3 class="dara-title-h3">{{ category.title }}</h3>
-						<p class="dara-category__p">Vitamins are compounds of essential nutrients that our bodies need for healthy functioning. They are found in the foods we eat and, in the case of vitamin D, the sun we absorb.</p>
-						<p class="dara-category__p">Most vitamin supplements on the market are in 'isolate' form, where the capsule contains only the isolated compound. We ferment ours to convert them into a complex form, where they resemble the vitamins you get from real food and are easier to digest.</p>
+	<div class="dara-category-wrapper">
+		{% for category in productList %}
+		<section class="dara-category{% if category.mod %} {{ category.mod }}{% endif %}">
+			<div class="dara-l-center dara-l-center--sm">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<h3 class="dara-title-h3">{{ category.title }}</h3>
+							<p class="dara-category__p">Vitamins are compounds of essential nutrients that our bodies need for healthy functioning. They are found in the foods we eat and, in the case of vitamin D, the sun we absorb.</p>
+							<p class="dara-category__p">Most vitamin supplements on the market are in 'isolate' form, where the capsule contains only the isolated compound. We ferment ours to convert them into a complex form, where they resemble the vitamins you get from real food and are easier to digest.</p>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="dara-category__cards">
-							<div class="row align-items-stretch">
-								{% for i in range(0,8) %}
-								<div class="col-12 col-md-6">
-									<div class="dara-category-card">
-										<div class="dara-category-card__in">
-											<div class="text-right">
-												<a href="#" class="dara-category-card__link">learn more</a>
-											</div>
-											<h3 class="dara-category-card__title dara-title-h3">Vitamins</h3>
-											<div class="dara-category-card__pic"></div>
-											<div class="dara-category-card__info">
-												{% if loop.first %}
-													Lorem ipsum dolor sit amet
-												{% else %}
-												From organic <a href="#" class="dara-category-card__highlight">Acerola cherries</a> (whole fruit) and <a href="#" class="dara-category-card__highlight">Camu Camu</a> (spray dried whole fruit). Our Vitamin C is highly bio-available.
-												{% endif %}
-												<div class="dara-category-card__details">
+					<div class="row">
+						<div class="col">
+							<div class="dara-category__cards">
+								<div class="row align-items-stretch">
+									{% for i in range(0,8) %}
+									<div class="col-12 col-md-6">
+										<div class="dara-category-card">
+											<div class="dara-category-card__in">
+												<div class="text-right">
+													<a href="#" class="dara-category-card__link">learn more</a>
+												</div>
+												<h3 class="dara-category-card__title dara-title-h3">Vitamins</h3>
+												<div class="dara-category-card__pic"></div>
+												<div class="dara-category-card__info">
 													{% if loop.first %}
-													<button type="button" class="dara-category-card__ico">
-														<i class="dara-icon dara-icon-minus">
-															<svg viewBox="0 0 12 2" enable-background="new 0 0 12 2">
-																<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M1,1h10"/>
-															</svg>
-														</i>
-													</button>
-													<div class="dara-category-card__calc">
-														<div class="dara-category-card__val">320% daily value</div>
-														<div class="dara-category-card__num">1,000 mg</div>
-														<div><a href="#" class="dara-category-card__highlight">remove</a></div>
-													</div>
-													<button type="button" class="dara-category-card__ico">
-														<i class="dara-icon dara-icon-plus">
-															<svg x="0px" y="0px" viewBox="1 1 10 10" enable-background="new 1 1 10 10">
-															<path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M2,6h8"/>
-															<path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6,2v8"/>
-															</svg>
-														</i>
-													</button>
+														From organic Acerola cherries (whole fruit) and Camu Camu (spray dried whole fruit). Our Vitamin C is highly bio-available.
 													{% else %}
-													<button type="button" class="dara-category-card__button dara-button">Add</button>
+													From organic <a href="#" class="dara-category-card__highlight">Acerola cherries</a> (whole fruit) and <a href="#" class="dara-category-card__highlight">Camu Camu</a> (spray dried whole fruit). Our Vitamin C is highly bio-available.
 													{% endif %}
+													<div class="dara-dosage dara-dosage--absolute js-dosage">
+														{% if loop.first %}
+														<button type="button" class="dara-dosage__ico js-change-dosage">
+															<i class="dara-icon dara-icon-minus">
+																<svg viewBox="0 0 12 2" enable-background="new 0 0 12 2">
+																	<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M1,1h10"/>
+																</svg>
+															</i>
+														</button>
+														<div class="dara-dosage__calc">
+															<div class="dara-dosage__val">320% daily value</div>
+															<div class="dara-dosage__num">1,000 mg</div>
+															<div><a href="#" class="dara-dosage__highlight">remove</a></div>
+														</div>
+														<button type="button" class="dara-dosage__ico js-change-dosage">
+															<i class="dara-icon dara-icon-plus">
+																<svg x="0px" y="0px" viewBox="1 1 10 10" enable-background="new 1 1 10 10">
+																<path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M2,6h8"/>
+																<path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6,2v8"/>
+																</svg>
+															</i>
+														</button>
+														<div class="dara-dosage__price-for-item js-price-for-item">$32,50</div>
+														{% else %}
+														<button type="button" class="dara-category-card__button dara-button">Add</button>
+														{% endif %}
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+									{% endfor %}
 								</div>
-								{% endfor %}
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	{% endfor %}
+		</section>
+		{% endfor %}
+	</div>
 {% endblock %}

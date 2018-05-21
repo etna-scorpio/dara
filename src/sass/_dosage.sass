@@ -1,0 +1,78 @@
+.dara-dosage
+	display: flex
+	text-align: center
+	justify-content: center
+	align-items: center
+	&--absolute
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 14px
+	&__calc
+		margin: 0 7px
+		font-size: 14px
+		line-height: 1
+	&__ico
+		width: 30px
+		height: 30px
+		border: 1px solid #dadada
+		border-radius: 50%
+		background: none
+		+vertical
+		transition: border-color 0.2s ease
+		&:focus
+			outline: none
+		&:hover
+			border-color: #000
+		&:disabled,
+		&.is-disabled
+			cursor: not-allowed
+			border-color: #dadada
+			background: none
+			.dara-icon
+				color: #ddd
+	&__val
+		+av-medium
+		font-size: 14px
+		color: #9B9B9B
+		line-height: 1.357
+		letter-spacing: -0.5px
+	&__num
+		+av-demibold
+		font-size: 28px
+		line-height: 0.9
+		letter-spacing: -0.65px
+	&__price-for-item
+		position: absolute
+		top: 50%
+		right: 7px
+		margin-top: -19px
+		padding: 10px 0
+		+av-medium
+		font-size: 15px
+		color: #5DA609
+		background: #FFF
+		line-height: 1.375
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.2s ease, visibility 0.2s ease
+		+rmin(768)
+			right: 11px
+		&.is-visible
+		 opacity: 1
+		 visibility: visible
+	&__highlight
+		color: #FE0066
+		&:hover,
+		&:visited
+			color: #FE0066
+	.dara-icon
+		display: inline-block
+		vertical-align: middle
+		color: #4a4a4a
+	.dara-icon-minus
+		width: 10px
+		height: 2px
+	.dara-icon-plus
+		width: 10px
+		height: 10px
