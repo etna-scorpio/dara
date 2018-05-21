@@ -9,6 +9,7 @@
 		right: 0
 		bottom: 14px
 	&__calc
+		min-width: 145px
 		margin: 0 7px
 		font-size: 14px
 		line-height: 1
@@ -23,6 +24,8 @@
 		&:focus
 			outline: none
 		&:hover
+			border-color: #B7B7B7
+		&:active
 			border-color: #000
 		&:disabled,
 		&.is-disabled
@@ -41,7 +44,7 @@
 		+av-demibold
 		font-size: 28px
 		line-height: 0.9
-		letter-spacing: -0.65px
+		letter-spacing: -1.55px
 	&__price-for-item
 		position: absolute
 		top: 50%
@@ -51,7 +54,6 @@
 		+av-medium
 		font-size: 15px
 		color: #5DA609
-		background: #FFF
 		line-height: 1.375
 		opacity: 0
 		visibility: hidden
@@ -59,8 +61,8 @@
 		+rmin(768)
 			right: 11px
 		&.is-visible
-		 opacity: 1
-		 visibility: visible
+			opacity: 1
+			visibility: visible
 	&__highlight
 		color: #FE0066
 		&:hover,
