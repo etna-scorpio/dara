@@ -38,7 +38,7 @@ filter: true
 												<div class="text-right">
 													<a href="#" class="dara-category-card__link">learn more</a>
 												</div>
-												<h3 class="dara-category-card__title dara-title-h3"><a href="#" class="dara-category-card__highlight">Vitamins</a></h3>
+												<h3 class="dara-category-card__title dara-title-h3"><a href="#" class="dara-category-card__title-link">Vitamins</a></h3>
 												<div class="dara-category-card__pic"></div>
 												<div class="dara-category-card__info">
 													{% if loop.first %}
@@ -48,7 +48,7 @@ filter: true
 													{% endif %}
 													<div class="dara-dosage dara-dosage--absolute">
 														{% if loop.first %}
-														<button type="button" class="dara-dosage__ico">
+														<button type="button" class="dara-dosage__ico" ontouchstart>
 															<i class="dara-icon dara-icon-minus">
 																<svg viewBox="0 0 12 2" enable-background="new 0 0 12 2">
 																	<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M1,1h10"/>
@@ -60,7 +60,7 @@ filter: true
 															<div class="dara-dosage__num">1,000 mg</div>
 															<div><a href="#" class="dara-dosage__highlight">remove</a></div>
 														</div>
-														<button type="button" class="dara-dosage__ico">
+														<button type="button" class="dara-dosage__ico" ontouchstart>
 															<i class="dara-icon dara-icon-plus">
 																<svg x="0px" y="0px" viewBox="1 1 10 10" enable-background="new 1 1 10 10">
 																<path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M2,6h8"/>

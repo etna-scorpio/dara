@@ -106,68 +106,6 @@
 		margin: 30px -20px 5px
 
 
-
-.dara-form
-	&__row
-		display: flex
-		margin: 0 -5px
-	&__field
-		position: relative
-		flex-basis: 100%
-		margin: 0 5px 10px
-		&.is-active
-			.dara-form__label
-				top: 12px
-		&.is-error
-			.dara-form__input,
-			.dara-form__select
-				border-color: #E34F30
-			.dara-form__helper
-				display: block
-	&__label
-		position: absolute
-		top: 50%
-		left: 9px
-		margin: -6px 0 0
-		text-transform: uppercase
-		+av-demibold
-		font-size: 12px
-		color: #868686
-		line-height: 1
-		letter-spacing: -0.16px
-		transition: top 0.1s linear
-		small
-			font-size: 12px
-			text-transform: none
-	&__input
-		display: block
-		width: 100%
-		padding: 23px 9px 24px
-		+av-demibold
-		font-size: 12px
-		border: 1px solid #ddd
-		line-height: 1
-		letter-spacing: -0.16px
-		transition: border-color 0.2s ease
-		border-radius: 3px
-	&__helper
-		display: none
-		position: absolute
-		left: 9px
-		bottom: 4px
-		+av-demibold
-		font-size: 12px
-		color: #E34F30
-	&__select
-		width: 100%
-		height: 100%
-		+av-demibold
-		padding: 10px 4px
-		border: 1px solid #ddd
-		border-radius: 3px
-		font-size: 12px
-
-
 .dara-checkout-product
 	display: flex
 	align-items: flex-end
@@ -202,9 +140,10 @@
 
 
 .dara-total
-	max-width: 100%
 	margin: 0 auto
 	letter-spacing: -0.16px
+	+rmin(1024)
+		max-width: 337px
 	&__in
 		margin: 0 -15px 5px
 	&__el
@@ -231,10 +170,10 @@
 	&__button-row
 		display: flex
 		justify-content: center
-		margin: 10px -5px
+		margin: 10px -7.5px
 	&__button-el
 		flex-basis: 100%
-		margin: 0 5px
+		margin: 0 7.5px
 	&__button
 		width: 100%
 		max-width: 143px
@@ -274,11 +213,14 @@
 		padding: 3.5px 20px
 		+av-demibold
 		font-size: 12px
-		color: #fff
 		background: #F5A623
+		color: #fff
 		line-height: 1.33
 		opacity: 0
 		visibility: hidden
+		+rmin(1024)
+			margin: 0 -23px
+			padding: 3.5px 23px
 		&:before,
 		&:after
 			content: ""
@@ -291,52 +233,10 @@
 .dara-icon-apple
 	display: inline-block
 	vertical-align: middle
-	width: 50px
-	height: 22px
+	width: 48px
+	height: 20px
 	background: url(../img/apple.svg) top center no-repeat
 	background-size: contain
 	+rmin(385)
 		width: 54px
 		height: 26px
-
-
-.dara-field
-	position: relative
-	display: block
-	text-decoration: none
-	margin: 0 -20px
-	padding: 18px 57px 18px 22px
-	+av-demibold
-	font-size: 12px
-	line-height: 1.33
-	color: #868686
-	border-top: 2px solid #f2f2f2
-	letter-spacing: -0.16px
-	&:hover
-		text-decoration: none
-		color: #868686
-	&__title
-		text-transform: uppercase
-		+av-bold
-		color: #000
-	&__info
-		margin-top: 5px
-		&--flex
-			display: flex
-			max-width: 100%
-			justify-content: space-between
-	&__el
-		max-width: 120px
-	&__arrow
-		position: absolute
-		top: 50%
-		right: 21px
-		margin-top: -10px
-		font-size: 20px
-	&__icon
-		color: #4a4a4a
-		font-size: 16px
-		vertical-align: middle
-		line-height: 1
-	&__cancel
-		margin-left: 14px
