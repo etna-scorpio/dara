@@ -15,7 +15,7 @@
   <body>
 
     <!-- BEGIN content -->
-    <div class="dara-out">
+    <div class="dara-out{% if pageTopPadding === false %} dara-out--no-padding{% endif %}">
       {% include 'partials/_header.html' %}
       {% block content %}{% endblock %}
       {% include 'partials/_footer.html' %}

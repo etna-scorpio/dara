@@ -6,12 +6,12 @@ var startButton = $('.js-dara-button-start');
 var logo = $('.js-dara-header-logo');
 
 changeHeaderBg();
-moveLogo();
+// moveLogo();
 if (startButton.length > 0) showHeaderStartButton();
 
 win.scroll(function() {
   changeHeaderBg();
-  moveLogo();
+  // moveLogo();
   if (startButton.length > 0) showHeaderStartButton();
 });
 

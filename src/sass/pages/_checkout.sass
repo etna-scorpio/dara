@@ -63,7 +63,6 @@
 			margin-bottom: 3px
 	&__note
 		position: relative
-		max-width: 286px
 		margin: 20px 0 12px
 		padding: 9px 0 0 44px
 		+av-demibold
@@ -71,6 +70,8 @@
 		color: #868686
 		line-height: 1.3
 		letter-spacing: -0.16px
+		+rmin(1024)
+			max-width: 286px
 		&--last
 			margin-bottom: 0
 			padding-top: 0

@@ -13,12 +13,34 @@
 			padding: 11px 25px 5px
 	&.is-active
 		background: #FFF
+		.dara-header__logo svg path
+			fill: #4a4a4a
+		.dara-header__menu-ico svg path
+			stroke: #4a4a4a
+		.dara-header-list__item
+			&:not(.dara-header-list__item--sign)
+				color: #4a4a4a
+				&:hover,
+				&:visited
+					color: #4a4a4a
 	&.is-start
 		.dara-button--header-start
 			opacity: 1
 			visibility: visible
 	&--white-bg
 		background: #fff
+	&--no-bg
+		background: none
+		.dara-header__logo svg path,
+			fill: #fff
+		.dara-header__menu-ico svg path
+			stroke: #fff
+		.dara-header-list__item
+			&:not(.dara-header-list__item--sign)
+				color: #FFF
+				&:hover,
+				&:visited
+					color: #FFF
 	&__checkout
 		display: none
 		font-size: 0
@@ -50,6 +72,8 @@
 			left: 15px
 			margin-top: -10px
 			line-height: 1
+		svg
+			vertical-align: middle
 	&__logo
 		display: inline-block
 		width: 76px
@@ -59,7 +83,8 @@
 			+rmin(768)
 				width: 125px
 				transform: translate3d(0, 82px, 0)
-		img
+		img,
+		svg
 			display: block
 			width: 100%
 
