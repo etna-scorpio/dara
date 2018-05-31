@@ -12,20 +12,13 @@
 	+rmin(768)
 		align-items: center
 		min-height: 642px
+		background-position: 42% 50%
 		background-image: url(../img/home-bg.jpg)
-	&--overlay
-		&:before
-			content: ""
-			position: absolute
-			z-index: 1
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			background: rgba(0,0,0,.15)
+	+rmin(1100)
+		background-position: 0% 50%
 	&__wrap
 		min-height: 100%
-		max-width: 1225px
+		max-width: 1300px
 		margin: 0 auto
 		padding: 0 15px
 		+rmin(768)
@@ -42,7 +35,7 @@
 			display: block
 			max-width: 500px
 		+rmin(1100)
-			max-width: 740px
+			max-width: 720px
 	&__head
 		margin-bottom: 50px
 		+av-medium
@@ -53,7 +46,7 @@
 		font-size: 30px
 		letter-spacing: -0.2px
 		line-height: 1.16
-		+rmin(1100)
+		+rmin(1200)
 			margin-bottom: 9px
 			font-size: 52px
 			letter-spacing: -0.43px
@@ -63,7 +56,7 @@
 		font-size: 20px
 		letter-spacing: -0.56px
 		line-height: 1.2
-		+rmin(1100)
+		+rmin(1200)
 			font-size: 24px
 			line-height: 1.375
 		br
