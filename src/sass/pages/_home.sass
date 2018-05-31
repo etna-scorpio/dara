@@ -7,7 +7,7 @@
 	color: #FFF
 	background-image: url(../img/home-bg-mobile.jpg)
 	+cover
-	+rmin(500)
+	+rmin(576)
 		background-image: url(../img/home-bg-tablet.jpg)
 	+rmin(768)
 		align-items: center
@@ -25,6 +25,9 @@
 			background: rgba(0,0,0,.15)
 	&__wrap
 		min-height: 100%
+		max-width: 1225px
+		margin: 0 auto
+		padding: 0 15px
 		+rmin(768)
 			min-height: auto
 	&__bl
@@ -40,8 +43,6 @@
 			max-width: 500px
 		+rmin(1100)
 			max-width: 740px
-		+rmin(1600)
-			margin: 0 auto
 	&__head
 		margin-bottom: 50px
 		+av-medium
