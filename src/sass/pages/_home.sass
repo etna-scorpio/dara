@@ -74,6 +74,7 @@
 		margin: 0 auto
 		padding: 0 15px
 	&__title
+		text-transform: capitalize
 		font-size: 29px
 		margin-bottom: 0
 	&__head
@@ -96,37 +97,13 @@
 	letter-spacing: -0.19px
 	&__img
 		width: 100%
-		max-width: 240px
-		height: 240px
+		max-width: 208px
+		height: 208px
 		margin: 0 auto 31px
-		background: #D8D8D8
-		border: 1px solid #979797
-		+cover
-		+vertical
+		object-fit: contain
+		font-size: 'object-fit: contain'
 		+rmin(768)
-			margin-bottom: 39px
-		+rmin(992)
-			width: 200px
-			height: 200px
-		+rmin(1024)
-			width: 220px
-			height: 220px
-			padding-bottom: 0
-		+rmin(1200)
-			width: 240px
-			height: 240px
-		span
-			display: inline-block
-			vertical-align: middle
-			+av-demibold
-			font-size: 30px
-			line-height: 1
-			+rmin(992)
-				font-size: 25px
-			+rmin(1024)
-				font-size: 28px
-			+rmin(1200)
-				font-size: 30px
+			margin-bottom: 36px
 	&__title
 		margin-bottom: 6px
 		text-transform: uppercase
@@ -165,24 +142,34 @@
 		display: inline-block
 		vertical-align: middle
 		&--quality
-			+s(quality)
+			.icon
+				font-size: 45px
 		&--transparency
-			+s(transparency)
+			.icon
+				font-size: 49px
 		&--usa
 			+s(usa)
 		&--sustainability
-			+s(sustainability)
+			.icon
+				font-size: 50px
 		&--flask
-			+s(flask)
+			display: inline-block
+			width: 50px
+			height: 57px
+			background: url(../img/flask.svg)
+			background-size: contain
 		&--gmo
-			+s(gmo)
+			.icon
+				font-size: 47px
 		&--vegan
-			+s(vegan)
+			.icon
+				font-size: 48px
 		&--gluten-free
-			+s(gluten-free)
+			.icon
+				font-size: 47px
 	&__pic
 		height: 65px
-		margin-bottom: 13px
+		margin-bottom: 5px
 		+vertical
 	&__text
 		+av-medium

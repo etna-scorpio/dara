@@ -1,5 +1,6 @@
 ---
 title: Product page
+header: initialWhite
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -84,7 +85,6 @@ title: Product page
 							</div>
 							<div class="col-md-7">
 								<div class="dara-composition__cert">
-									<h4 class="dara-title-h4">Third-party Certifications:</h4>
 									{% set cert = ['Organic', 'Non GMO', 'Gluten Free', 'Vegan', 'Kosher'] %}
 									<div class="dara-cert">
 										{% for certBl in cert %}

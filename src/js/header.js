@@ -3,7 +3,7 @@ import $ from 'jquery';
 var win = $(window);
 var header = $('.js-dara-header');
 var startButton = $('.js-dara-button-start');
-var logo = $('.js-dara-header-logo');
+// var logo = $('.js-dara-header-logo');
 
 changeHeaderBg();
 // moveLogo();
@@ -27,15 +27,15 @@ function changeHeaderBg() {
   }
 }
 
-function moveLogo() {
-  if (logo.length) {
-    if (win.scrollTop() === 0) {
-      logo.addClass('dara-header__logo--move');
-    } else {
-      logo.removeClass('dara-header__logo--move');
-    }
-  }
-}
+// function moveLogo() {
+//   if (logo.length) {
+//     if (win.scrollTop() === 0) {
+//       logo.addClass('dara-header__logo--move');
+//     } else {
+//       logo.removeClass('dara-header__logo--move');
+//     }
+//   }
+// }
 
 function showHeaderStartButton() {
   var startButtonPos = startButton.offset().top + startButton.outerHeight();

@@ -31,7 +31,7 @@ header: 'noBg'
 				<div class="row">
 					<div class="col">
 						<div class="dara-subscription__head">
-							<p class="dara-subscription__title dara-title-h1">How subscriptions work</p>
+							<p class="dara-subscription__title dara-title-h1">How it works</p>
 							<p>Receive a monthly supply of your custom blend of premium ingredients in powder form</p>
 						</div>
 					</div>
@@ -54,11 +54,7 @@ header: 'noBg'
 					{% for step in steps %}
 					<div class="col-sm-12 col-md-6 col-lg-3">
 						<div class="dara-step">
-							{% if loop.first %}
-							<div class="dara-step__img" style="background-image: url(https://picsum.photos/200/300)"></div>
-							{% else %}
-							<div class="dara-step__img"><span>step {{ loop.index }}</span></div>
-							{% endif %}
+							<img class="dara-step__img" src="img/step_{{loop.index}}.svg" alt="step_{{loop.index}}">
 							<div class="dara-step__info">
 								<div class="dara-step__title">{{ step.title }}</div>
 								<p>{{ step.text }}</p>
@@ -78,13 +74,13 @@ header: 'noBg'
 									icon: 'transparency',
 									text: 'Full Transparency'
 								}, {
-									icon: 'usa',
+									symbol: 'usa',
 									text: 'Made in the USA'
 								}, {
 									icon: 'sustainability',
 									text: 'Sustainable Packaging'
 								}, {
-									icon: 'flask',
+									symbol: 'flask',
 									text: 'No Additives'
 								}, {
 									icon: 'gmo',
@@ -101,7 +97,11 @@ header: 'noBg'
 								<div class="col-6 col-sm-6 col-md-4 col-lg-3">
 									<div class="dara-feature">
 										<div class="dara-feature__pic">
-											<i class="dara-feature__icon dara-feature__icon--{{ feature.icon }}"></i>
+											{% if feature.symbol %}
+											<i class="dara-feature__icon dara-feature__icon--{{ feature.symbol }}"></i>
+											{% else %}
+											<span class="dara-feature__icon dara-feature__icon--{{ feature.icon }}">{{ mixins.icon(feature.icon) }}</span>
+											{% endif %}
 										</div>
 										<p class="dara-feature__text">{{ feature.text }}</p>
 									</div>
