@@ -1,0 +1,41 @@
+<div class="dara-filter js-dara-filter">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<div class="dara-filter__in">
+					<form class="dara-filter__form">
+						<div class="dara-filter__search-box js-search-box">
+							<i class="dara-filter__search-ico js-search-loop"></i>
+							<input type="text" class="dara-filter__search js-search">
+							<ul class="dara-filter__search-list js-search-autocomplete">
+								<li><a href="#" class="dara-filter__search-link">Maca root</a></li>
+								<li><a href="#" class="dara-filter__search-link">Magnesium</a></li>
+								<li><a href="#" class="dara-filter__search-link">Manganese</a></li>
+							</ul>
+							<button type="button" class="dara-filter__search-close js-search-close">{{ mixins.icon('close') }}</button>
+						</div>
+					</form>
+					<div class="dara-filter-dropdown js-filter-dropdown">
+						<a href="#" class="dara-filter-dropdown__link js-filter-dropdown-link">Filter <i class="dara-filter-dropdown__arrow-down"></i></a>
+						<ul class="dara-filter-dropdown__list js-filter-dropdown-list">
+							<li class="dara-filter-dropdown__option">
+								<span>Filter by:</span>
+								<a href="#" class="dara-filter-dropdown__clear js-filter-dropdown-hide">Clear</a>
+							</li>
+							{% set radio = ['My Formulation', 'Vitamins', 'Minerals', 'Botanicals'] %}
+							{% for item in radio %}
+							<li class="dara-filter-dropdown__option">
+								<span>{{ item }}</span>
+								<div class="dara-radio">
+									<input class="dara-radio__input js-filter-radio" type="radio" name="category" value="{{ item | lower | replace(' ', '-') }}"{% if loop.first %} checked{% endif %}>
+									<span class="dara-radio__dot"></span>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

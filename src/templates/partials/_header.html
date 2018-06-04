@@ -4,14 +4,15 @@
 			<div class="row">
 				{% if title === 'Checkout' %}
 				<div class="col">
-					<a href="#" class="dara-header__menu-ico dara-header__menu-ico--absolute d-md-none js-dara-show-menu-btn">{{ mixins.icon('hamburger') }}</a>
+					<a href="#" class="dara-header__menu-ico dara-header__menu-ico--absolute d-md-none js-dara-show-menu-btn">
+						<svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+							<path d="M0 1H15" transform="translate(1.5 7.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+							<path d="M0 1H15" transform="translate(1.5 14.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+						</svg>
+					</a>
 					<div class="text-center text-md-left">
-						<a href="/" class="dara-header__logo">
-							<svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-								<path d="M0 1H15" transform="translate(1.5 7.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-								<path d="M0 1H15" transform="translate(1.5 14.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-							</svg>
+						<a href="/" class="dara-header__logo"><img src="img/logo.svg" alt="dara"></svg>
 						</a>
 					</div>
 				</div>
@@ -104,47 +105,7 @@
 		</div>
 	</div>
 	{% if filter === true %}
-	<div class="dara-filter js-dara-filter">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col">
-					<div class="dara-filter__in">
-						<form class="dara-filter__form">
-							<div class="js-search-box">
-								<i class="dara-filter__search-ico js-search-loop"></i>
-								<input type="text" class="dara-filter__search js-search">
-								<ul class="dara-filter__search-list js-search-autocomplete">
-									<li><a href="#" class="dara-filter__search-link">Maca root</a></li>
-									<li><a href="#" class="dara-filter__search-link">Magnesium</a></li>
-									<li><a href="#" class="dara-filter__search-link">Manganese</a></li>
-								</ul>
-								<button type="button" class="dara-filter__search-close js-search-close">{{ mixins.icon('close') }}</button>
-							</div>
-						</form>
-						<div class="dara-filter-dropdown js-filter-dropdown">
-							<a href="#" class="dara-filter-dropdown__link js-filter-dropdown-link">Filter <i class="dara-filter-dropdown__arrow-down"></i></a>
-							<ul class="dara-filter-dropdown__list js-filter-dropdown-list">
-								<li class="dara-filter-dropdown__option">
-									<span>Filter by:</span>
-									<a href="#" class="dara-filter-dropdown__clear js-filter-dropdown-hide">Clear</a>
-								</li>
-								{% set radio = ['My Formulation', 'Vitamins', 'Minerals', 'Botanicals'] %}
-								{% for item in radio %}
-								<li class="dara-filter-dropdown__option">
-									<span>{{ item }}</span>
-									<div class="dara-radio">
-										<input class="dara-radio__input js-filter-radio" type="radio" name="category" value="{{ item | lower | replace(' ', '-') }}"{% if loop.first %} checked{% endif %}>
-										<span class="dara-radio__dot"></span>
-									</div>
-								</li>
-								{% endfor %}
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		{% include 'partials/_filter.html' %}
 	{% endif %}
 </header>
 <nav class="dara-menu js-dara-menu">

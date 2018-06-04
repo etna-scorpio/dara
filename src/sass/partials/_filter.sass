@@ -24,19 +24,21 @@
 		position: relative
 		flex-basis: 648px
 		margin-right: 22px
+	&__search-box
+		transition: background 0.2s ease
+		&.is-active
+			background: #FFF
+			.dara-filter__search
+				opacity: 1
+				visibility: visible
 	&__search
 		display: block
 		width: 100%
 		padding: 2px 28px 4px 30px
 		font-size: 16px
 		+av-medium
-		background: #FFF
 		opacity: 0
 		visibility: hidden
-		transition: opacity 0.2s ease, visibility 0.2s ease
-		&.is-visible
-			opacity: 1
-			visibility: visible
 	&__search-ico
 		position: absolute
 		z-index: 1
