@@ -66,47 +66,49 @@ header: 'noBg'
 				<div class="row">
 					<div class="col">
 						<div class="dara-features">
-							<div class="row">
-								{% set features = [{
-									icon: 'quality',
-									text: 'Premium Quality'
-								}, {
-									icon: 'transparency',
-									text: 'Full Transparency'
-								}, {
-									icon: 'made-in-california',
-									text: 'Made in the California'
-								}, {
-									icon: 'sustainability',
-									text: 'Sustainable Packaging'
-								}, {
-									symbol: 'flask',
-									text: 'No Additives'
-								}, {
-									icon: 'gmo',
-									text: 'Non GMO'
-								}, {
-									icon: 'vegan',
-									text: 'Vegan'
-								}, {
-									icon: 'gluten-free',
-									text: 'Gluten & Allergen Free'
-								}] %}
+							<div class="dara-features__in">
+								<div class="row">
+									{% set features = [{
+										icon: 'quality',
+										text: 'Premium Quality'
+									}, {
+										icon: 'transparency',
+										text: 'Full Transparency'
+									}, {
+										icon: 'made-in-california',
+										text: 'Made in the California'
+									}, {
+										icon: 'sustainability',
+										text: 'Sustainable Packaging'
+									}, {
+										symbol: 'flask',
+										text: 'No Additives'
+									}, {
+										icon: 'gmo',
+										text: 'Non GMO'
+									}, {
+										icon: 'vegan',
+										text: 'Vegan'
+									}, {
+										icon: 'gluten-free',
+										text: 'Gluten & Allergen Free'
+									}] %}
 
-								{% for feature in features %}
-								<div class="col-6 col-sm-6 col-md-4 col-lg-3">
-									<div class="dara-feature">
-										<div class="dara-feature__pic">
-											{% if feature.symbol %}
-											<i class="dara-feature__icon dara-feature__icon--{{ feature.symbol }}"></i>
-											{% else %}
-											<span class="dara-feature__icon dara-feature__icon--{{ feature.icon }}">{{ mixins.icon(feature.icon) }}</span>
-											{% endif %}
+									{% for feature in features %}
+									<div class="col-6 col-sm-6 col-md-4 col-lg-3">
+										<div class="dara-feature">
+											<div class="dara-feature__pic">
+												{% if feature.symbol %}
+												<i class="dara-feature__icon dara-feature__icon--{{ feature.symbol }}"></i>
+												{% else %}
+												<span class="dara-feature__icon dara-feature__icon--{{ feature.icon }}">{{ mixins.icon(feature.icon) }}</span>
+												{% endif %}
+											</div>
+											<p class="dara-feature__text">{{ feature.text }}</p>
 										</div>
-										<p class="dara-feature__text">{{ feature.text }}</p>
 									</div>
+									{% endfor %}
 								</div>
-								{% endfor %}
 							</div>
 						</div>
 					</div>

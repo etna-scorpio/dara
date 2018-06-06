@@ -9,13 +9,13 @@ var closeIcon = $('.js-search-close');
 
 if (search.length) {
   toggleSearchField();
+  clearSearchField();
 
   BODY.click(function(e) {
-    if ( search.val().length <= 0
-				 && !e.target.closest(searchBox)
-				 && $(searchBox).hasClass('is-active')) {
-      console.log('body click');
+    if (!e.target.closest(searchBox) && $(searchBox).hasClass('is-active')) {
       hideSearchField();
+      hideAutocomplete();
+      closeIcon.hide();
     }
   });
 }
@@ -30,20 +30,13 @@ search.on('keyup', function() {
   }
 });
 
-// search.on('blur', function() {
-//   if($(this).val().length < 1) {
-//     hideSearchField();
-//     hideAutocomplete();
-//   }
-// });
-
 function toggleSearchField() {
   searchIcon.click(function() {
     $(searchBox).toggleClass('is-active');
     if ($(searchBox).hasClass('is-active')) {
       search.focus();
+      if(search.val().length > 0) closeIcon.show();
     } else {
-      search.val('');
       closeIcon.hide();
       hideAutocomplete();
     }
@@ -62,4 +55,11 @@ function hideSearchField() {
   $(searchBox).removeClass('is-active');
 }
 
-
+function clearSearchField() {
+  closeIcon.click(function() {
+    search.val('');
+    search.focus();
+    closeIcon.hide();
+    hideAutocomplete();
+  });
+}
