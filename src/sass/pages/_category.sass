@@ -33,7 +33,6 @@
 		padding: 15px 0 74px
 		background: #FFF
 		border-radius: 5px
-		// border: 1px solid #ddd
 	&__title
 		text-align: center
 		margin-bottom: 14px
@@ -43,16 +42,16 @@
 		&:hover
 			color: #000
 	&__pic
-		width: 100%
-		width: 250px
-		height: 250px
+		width: 220px
+		height: 220px
 		margin: 0 auto
 		background: #d8d8d8
+		+rmin(768)
+			width: 250px
+			height: 250px
 	&__img
 		display: block
 		max-width: 100%
-		// object-fit: cover
-		// font-family: 'object-fit: cover;'
 	&__info
 		margin-top: 21px
 		padding: 0 20px 0 18px
