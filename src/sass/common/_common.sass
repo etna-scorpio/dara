@@ -2,11 +2,24 @@
 @import titles
 @import button
 
+
 body
 	min-width: 320px
 	+av
 	background: #f2f2f2
 	color: #000
+	&.body--mob-bg-white
+		background: #FFF
+		+rmin(1024)
+			background: #f2f2f2
+	&.is-overlay
+		&:before
+			display: block
+			z-index: 10
+	&.is-overflow
+		overflow: hidden
+		&:before
+			display: block
 	&:before
 		content: ""
 		display: none
@@ -17,14 +30,6 @@ body
 		right: 0
 		bottom: 0
 		background: rgba(#9B9B9B, 0.33)
-	&.is-overlay
-		&:before
-			display: block
-			z-index: 10
-	&.is-overflow
-		overflow: hidden
-		&:before
-			display: block
 
 
 .dara-out
@@ -49,3 +54,24 @@ body
 	bottom: 0
 	+rmin(1025)
 		display: none
+
+.dara-link
+	color: #FE0066
+	border-bottom: 1px solid transparent
+	&:hover
+		text-decoration: none
+		color: #FE0066
+		border-bottom-color: currentColor
+
+
+.owl-dots
+	text-align: center
+
+.owl-dot
+	width: 7px
+	height: 7px
+	background: #B7B7B7
+	margin: 5px
+	border-radius: 50%
+	&.active
+		background: #000

@@ -1,0 +1,46 @@
+---
+title: Step 7
+bodyClass: body--mob-bg-white
+header: dara-header--white-bg dara-header--mob-sm-height
+headerHelpIcon: true
+mobCheckout: false
+footer: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<section class="dara-quiz">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<div class="dara-quiz__title">Alright! Let’s get your personalized blend.</div>
+				<div class="dara-quiz-item">
+					<div class="dara-form">
+						<div class="dara-form__row dara-form__row--md-margin-b">
+							<div class="dara-form__field js-input-box">
+								<input id="email" type="email" class="dara-form__input js-input-data">
+								<label for="email" class="dara-form__label">Email</label>
+								<div class="dara-form__helper">This is not valid</div>
+							</div>
+						</div>
+						<div class="dara-form__row">
+							<div class="dara-form__field">
+								<div class="dara-checkbox">
+									<input id="check" type="checkbox">
+									<label for="check" class="dara-checkbox__label">I agree to the <a href="#" class="dara-link">terms of service</a></label>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="dara-quiz__button-wrap">
+					<div class="dara-quiz__button-row">
+						<div class="dara-quiz__button">
+							<button type="button" class="dara-button dara-button--quiz" disabled>Next</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

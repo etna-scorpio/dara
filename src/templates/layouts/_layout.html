@@ -12,13 +12,13 @@
     <link rel="stylesheet" media="all" href="css/app.css" />
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
-  <body>
+  <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 
     <!-- BEGIN content -->
     <div class="dara-out{% if pageTopPadding === false %} dara-out--no-padding{% endif %}">
       {% include 'partials/_header.html' %}
       {% block content %}{% endblock %}
-      {% include 'partials/_footer.html' %}
+      {% if footer !== false %}{% include 'partials/_footer.html' %}{% endif %}
     </div>
     <!-- END content -->
 

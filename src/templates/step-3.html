@@ -1,0 +1,60 @@
+---
+title: Step 3
+bodyClass: body--mob-bg-white
+header: dara-header--white-bg dara-header--mob-sm-height
+headerHelpIcon: true
+mobCheckout: false
+footer: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% set checkbox = [{
+	col: ['HIGH CHOLESTEROL', 'PRE DIABETES', 'HYPOTHYROIDISM', 'ADRENAL FATIGUE', 'HYPERTENSION']
+}, {
+	col: ['DIABETES', 'ARTHRITIS', 'ANEMIA', 'HYPERTENSION', 'FIBRYOMIALGIA']
+}, {
+	col: ['CONSTIPATION', 'PRE DIABETES', 'HYPOTHYROIDISM', 'ADRENAL FATIGUE', 'HYPERTENSION']
+}]  %}
+
+<section class="dara-quiz">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<div class="dara-quiz__title">Any specific health issues you’d like to improve</div>
+				<div class="dara-quiz__carousel">
+					<div class="owl-carousel owl-theme js-step-carousel">
+						{% for i in range(0,3) %}
+						  {% for list in checkbox %}
+						  {% set col_number = loop.index %}
+							<div class="dara-quiz-item dara-quiz-item--md-w">
+								{% for item in list.col  %}
+								<div class="dara-quiz__el">
+									<div class="dara-checkbox dara-checkbox--framed">
+										<input id="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" type="checkbox">
+										<label for="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" class="dara-checkbox__label">{{ item | lower }}</label>
+										<span class="dara-checkbox__active-bg"></span>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+							{% endfor %}
+						{% endfor %}
+					</div>
+				</div>
+				<div class="dara-quiz__button-wrap">
+					<div class="dara-quiz__button-row">
+						<div class="dara-quiz__button">
+							<button type="button" class="dara-button dara-button--quiz-done">Done</button>
+						</div>
+						<div class="dara-quiz__button">
+							<button type="button" class="dara-button dara-button--quiz">Next</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

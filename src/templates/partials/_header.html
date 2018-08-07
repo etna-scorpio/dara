@@ -1,4 +1,4 @@
-<header class="dara-header{% if header === 'initialWhite' %} dara-header--white-bg{% elif header === 'noBg' %} dara-header--no-bg{% endif %} js-dara-header">
+<header class="dara-header {% if header %} {{ header }} {% endif %} js-dara-header">
 	<div class="dara-header__in">
 		<div class="container-fluid">
 			<div class="row">
@@ -92,12 +92,8 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="dara-header__checkout text-right">
-							<div class="dara-header__info">
-								<div class="dara-header__price">$99.99/mo</div>
-								<small class="dara-header__note">One month supply (30 servings)</small>
-							</div>
-							<a href="#" class="dara-button dara-button--checkout">Checkout</a>
+						<div class="text-right">
+							{% if headerHelpIcon %} <a href="#" class="dara-header__help-ico">{{ mixins.icon('help') }}</a> {% endif %}
 						</div>
 					</div>
 				{% endif %}

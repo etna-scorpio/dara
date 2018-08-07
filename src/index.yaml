@@ -11,3 +11,17 @@ PageList:
   ready: 100
 - file: account.html
   ready: 100
+- file: step-1.html
+  ready: 100
+- file: step-2.html
+  ready: 100
+- file: step-3.html
+  ready: 100
+- file: step-4.html
+  ready: 100
+- file: step-5.html
+  ready: 100
+- file: step-6.html
+  ready: 100
+- file: step-7.html
+  ready: 100

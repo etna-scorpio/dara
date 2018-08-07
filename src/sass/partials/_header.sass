@@ -6,11 +6,6 @@
 	right: 0
 	background: #F2F2F2
 	transition: background 0.2s ease
-	&__in
-		min-height: 57px
-		padding: 11px 5px 5px
-		+rmin(1100)
-			padding: 11px 25px 5px
 	&.is-active
 		background: #FFF
 		.dara-header__logo svg path
@@ -47,6 +42,29 @@
 				&:hover,
 				&:visited
 					color: #FFF
+	&--mob-sm-height
+		border-bottom: 1px solid #F2F2F2
+		+rmin(1024)
+			border-bottom-color: transparent
+		.dara-header__in
+			min-height: 40px
+			padding: 2px 5px
+			+rmin(1024)
+				min-height: 57px
+				padding: 11px 5px 5px
+			+rmin(1100)
+				padding: 11px
+		.dara-header__logo
+			width: 52px
+			margin-top: 8px
+			+rmin(1024)
+				width: 76px
+				margin-top: 3px
+	&__in
+		min-height: 57px
+		padding: 11px 5px 5px
+		+rmin(1100)
+			padding: 11px 25px 5px
 	&__checkout
 		display: none
 		font-size: 0
@@ -86,6 +104,15 @@
 			vertical-align: middle
 			width: 16px
 			height: 17px
+	&__help-ico
+		display: inline-block
+		margin-top: 7px
+		font-size: 20px
+		color: #4A4A4A
+		line-height: 0.7
+		+tr(color 0.2s ease)
+		&:hover
+			color: lighten(#4A4A4A, 20%)
 	&__logo
 		display: inline-block
 		width: 76px
