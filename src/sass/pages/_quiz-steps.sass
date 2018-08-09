@@ -1,28 +1,32 @@
 .dara-quiz
 	max-width: 760px
 	margin: 0 auto
-	padding: 83px 0 20px
-	+rmin(767)
-		padding-top: 20px
-	+rmin(1024)
-		padding-top: 60px
+	padding-bottom: 20px
+	+rmin(768)
+		padding-top: 28px
 	&__title
-		display: none
 		max-width: 650px
-		margin: 0 auto 32px
+		margin: 0 auto 10px
 		text-align: center
-		+op-bold
-		font-size: 27px
-		line-height: 1.375
-		letter-spacing: 1.14px
+		+op-semibold
+		font-size: 22px
+		line-height: 1.363
+		letter-spacing: 0.78px
 		+rmin(768)
-			display: block
+			max-width: 550px
+			margin-bottom: 32px
+			+op-bold
+			font-size: 27px
+			letter-spacing: 1.14px
+			line-height: 1.375
 		+rmin(1024)
 			max-width: 745px
 			font-size: 32px
 	&__button-wrap
 		max-width: 335px
 		margin: 20px auto 0
+		&--md-margin-t
+			margin-top: 15px
 	&__button-row
 		display: flex
 		margin: 0 -5px
@@ -31,10 +35,13 @@
 		margin: 0 5px
 	&__el
 		margin-bottom: 24px
+		&:last-child
+			margin-bottom: 0
 	&__carousel
+		max-width: 500px
 		margin: 0 auto
-		&--max-w
-			max-width: 560px
+		&--sm-max-w
+			max-width: 370px
 
 
 .dara-quiz-item
