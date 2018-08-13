@@ -1,20 +1,24 @@
 import $ from 'jquery';
-import 'owl.carousel';
+import 'slick-carousel';
 
 $(document).ready(function() {
-  $('.js-step-carousel').owlCarousel({
-  	margin: 20,
+  $('.js-step-carousel').slick({
     dots: true,
-    mouseDrag: false,
-    responsiveRefreshRate: 100,
-  	responsive:{
-  		0:{
-  			items: 1
-  		},
-  		600:{
-  			items: 2
-  		}
-  	}
+    arrows: false,
+    draggable: false,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
   });
-});
 
+});

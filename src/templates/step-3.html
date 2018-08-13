@@ -23,26 +23,24 @@ footer: false
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
-				<div class="dara-quiz__title">Any specific health issues you’d like to improve?</div>
-				<div class="dara-quiz__carousel">
-					<div class="owl-carousel owl-theme js-step-carousel">
-						{% for i in range(0,2) %}
-						  {% for list in checkbox %}
-						  {% set col_number = loop.index %}
-							<div class="dara-quiz-item dara-quiz-item--md-w">
-								{% for item in list.col  %}
-								<div class="dara-quiz__el">
-									<div class="dara-checkbox dara-checkbox--framed">
-										<input id="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" type="checkbox">
-										<label for="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" class="dara-checkbox__label">{{ item | lower }}</label>
-										<span class="dara-checkbox__active-bg"></span>
-									</div>
+				<div class="dara-quiz__title"><span>Any specific health issues you’d like to improve?</span></div>
+				<div class="dara-quiz__carousel js-step-carousel">
+					{% for i in range(0,2) %}
+						{% for list in checkbox %}
+						{% set col_number = loop.index %}
+						<div class="dara-quiz-item dara-quiz-item--md-max-w">
+							{% for item in list.col  %}
+							<div class="dara-quiz__el">
+								<div class="dara-checkbox dara-checkbox--framed">
+									<input id="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" type="checkbox">
+									<label for="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" class="dara-checkbox__label">{{ item | lower }}</label>
+									<span class="dara-checkbox__active-bg"></span>
 								</div>
-								{% endfor %}
 							</div>
 							{% endfor %}
+						</div>
 						{% endfor %}
-					</div>
+					{% endfor %}
 				</div>
 				<div class="dara-quiz__button-wrap dara-quiz__button-wrap--md-margin-t">
 					<div class="dara-quiz__button-row">

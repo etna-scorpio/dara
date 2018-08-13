@@ -23,26 +23,24 @@ footer: false
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
-				<div class="dara-quiz__title">What are your main health goals?</div>
-				<div class="dara-quiz__carousel dara-quiz__carousel--max-w">
-					<div class="owl-carousel owl-theme js-step-carousel">
-						{% for i in range(0,2) %}
-						  {% for list in checkbox %}
-						  {% set col_number = loop.index %}
-							<div class="dara-quiz-item dara-quiz-item--sm-max-w">
-								{% for item in list.col  %}
-								<div class="dara-quiz__el">
-									<div class="dara-checkbox dara-checkbox--framed">
-										<input id="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" type="checkbox">
-										<label for="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" class="dara-checkbox__label">{{ item | lower }}</label>
-										<span class="dara-checkbox__active-bg"></span>
-									</div>
+				<div class="dara-quiz__title"><span>What are your main health goals?</span></div>
+				<div class="dara-quiz__carousel dara-quiz__carousel--sm-max-w js-step-carousel">
+					{% for i in range(0,2) %}
+					  {% for list in checkbox %}
+					  {% set col_number = loop.index %}
+						<div class="dara-quiz-item dara-quiz-item--sm-max-w">
+							{% for item in list.col  %}
+							<div class="dara-quiz__el">
+								<div class="dara-checkbox dara-checkbox--framed">
+									<input id="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" type="checkbox">
+									<label for="{{ item | lower | replace(' ', '-') }}-sheet{{ i }}-col{{ col_number }}-index{{ loop.index }}" class="dara-checkbox__label">{{ item | lower }}</label>
+									<span class="dara-checkbox__active-bg"></span>
 								</div>
-								{% endfor %}
 							</div>
 							{% endfor %}
+						</div>
 						{% endfor %}
-					</div>
+					{% endfor %}
 				</div>
 				<div class="dara-quiz__button-wrap dara-quiz__button-wrap--md-margin-t">
 					<div class="dara-quiz__button-row">
