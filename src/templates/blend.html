@@ -1,0 +1,161 @@
+---
+title: Blend
+daraOutMod: dara-out--md-padding
+header: dara-header--white-bg dara-header--mob-sm-height
+headerHelpIcon: true
+footer: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<section class="dara-blend">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<div class="dara-blend__center">
+					<div class="dara-special-title dara-special-title--more-spacing"><span>Jane, your personal blend is ready for review!</span></div>
+					<div class="dara-blend__bl">
+						<div class="dara-tile">
+							<div class="dara-tile__head">
+								<h5 class="dara-title-h5 text-uppercase dara-tile__title">Each serving</h5>
+								<a href="#" class="dara-link dara-link--arrow dara-tile__link"><span>Nutrition facts</span>{{ mixins.icon('arrow-right') }}</a>
+							</div>
+
+							{% set nutritionList = [{
+								title: 'protein',
+								quantity: '24<span class="dara-nutrition__unit">g</span>',
+								percentage: '50%'
+							}, {
+								title: 'carb',
+								quantity: '11<span class="dara-nutrition__unit">g</span>',
+								percentage: '50%'
+							}, {
+								title: 'fat',
+								quantity: '11<span class="dara-nutrition__unit">g</span>',
+								percentage: '8%'
+							}, {
+								title: 'sugars',
+								quantity: '0<span class="dara-nutrition__unit">g</span>',
+								percentage: ''
+							}, {
+								title: 'fiber',
+								quantity: '9<span class="dara-nutrition__unit">g</span>',
+								percentage: '7%'
+							}] %}
+
+							<div class="dara-tile__in">
+								<div class="row justify-content-center">
+									<div class="col-xs-12 col-md-7">
+										<div class="dara-nutrition">
+											<div class="row">
+												<div class="col d-flex justify-content-center flex-wrap">
+													<div class="dara-nutrition__quantity dara-nutrition__quantity--lg-font">
+														55<span class="dara-nutrition__unit">g</span>
+													</div>
+													<div class="dara-nutrition__quantity dara-nutrition__quantity--lg-font">
+														210<span class="dara-nutrition__unit">cals</span>
+													</div>
+												</div>
+											</div>
+											<hr class="nutrition__line">
+											<div class="row">
+												{% for item in nutritionList %}
+												<div class="col mb-2">
+													<div class="dara-nutrition__title">{{ item.title }}</div>
+													<div class="dara-nutrition__quantity">{{ item.quantity | safe }}<div class="dara-nutrition__percentage">{{ item.percentage }}</div></div>
+												</div>
+												{% endfor %}
+											</div>
+											<div id="range-slider" class="range-slider"></div>
+											<div class="row align-items-center">
+												<div class="col-8">
+													<ul class="dara-nutrition__list">
+														<li>All natural ingredients</li>
+														<li>No added sugar</li>
+														<li>No additives</li>
+													</ul>
+												</div>
+												<div class="col-4 d-md-none text-center">
+													<img class="dara-nutrition__preview" src="img/foodcanwhite.png" alt="">
+												</div>
+											</div>
+											<small class="dara-nutrition__note">*Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</small>
+										</div>
+									</div>
+									<div class="col-md-5 d-none d-md-block text-right">
+										<img src="img/foodcanwhite-big.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dara-blend__bl">
+						<div class="dara-tile">
+							<div class="dara-tile__head">
+								<h5 class="dara-title-h5 text-uppercase dara-tile__title">INGREDIENTS</h5>
+								<a href="#" class="dara-link dara-link--arrow dara-tile__link"><span>More</span>{{ mixins.icon('arrow-right') }}</a>
+							</div>
+
+							{% set list = [{
+								title: 'Proteins',
+								text: 'Brown rice • Pea protein • Oat flour'
+							}, {
+								title: 'Superfoods',
+								text: 'Ashwagandha • Eleuthero • Ginseng Cinnamon • Tulsi • Bacopa • Rhodiola Gymnema • Kanna • Ginger • Astragalus Acai • Acerola'
+							}, {
+								title: 'Vitamins',
+								text: 'Vitamin D3 • Vitamin B12 • Thiamin • Folate Vitamin K2'
+							}, {
+								title: 'Minerals',
+								text: 'Chromium • Magnesium • Selenium • Zinc'
+							}] %}
+
+							<ul class="dara-tile__list">
+								{% for option in list %}
+								<li class="dara-tile__option">
+									<p class="dara-tile__option-name">{{ option.title }}</p>
+									<p>{{ option.text }}</p>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					<div class="dara-blend__bl">
+						<div class="dara-collapse">
+							<div class="dara-collapse__title js-dara-collapse-bar">Suggested use <i class="dara-collapse__icon"></i></div>
+							<div class="dara-collapse__content js-dara-collapse-content">
+								<p>Blend or shake 1 scoop of your personalized blend with 8 to 12oz of water, milk, your smoothie or shake.</p>
+								<p>Great with almond, coconut or oat milk.</p>
+								<div class="row align-items-center">
+									<div class="col-md-6 order-md-2">
+										<img class="dara-collapse__img img-fluid" src="img/step_3.svg" alt="">
+									</div>
+									<div class="col-md-6">
+										<ul class="dara-collapse__list">
+											<li class="dara-collapse__option">
+												<i class="dara-collapse__list-icon dara-collapse__list-icon--frost"></i><span>Keep refrigerated after mixing</span>
+											</li>
+											<li class="dara-collapse__option">
+												<i class="dara-collapse__list-icon dara-collapse__list-icon--calendar"></i><span>Consume within 2 days</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="dara-collapse">
+							<div class="dara-collapse__title js-dara-collapse-bar">Advanced customisation <i class="dara-collapse__icon"></i></div>
+							<div class="dara-collapse__content js-dara-collapse-content">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis autem magnam illum, blanditiis est praesentium ut officiis a ex expedita. Voluptatum voluptatem rerum reiciendis beatae enim, iusto fugiat dolorem perferendis.</p>
+							</div>
+						</div>
+					</div>
+					<div class="dara-blend__bl">
+						<a href="#" class="dara-button dara-button--full-w">Update options</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

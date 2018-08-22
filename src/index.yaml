@@ -25,3 +25,5 @@ PageList:
   ready: 100
 - file: step-7.html
   ready: 100
+- file: blend.html
+  ready: 100

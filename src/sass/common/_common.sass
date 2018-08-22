@@ -47,14 +47,6 @@ body
 		padding: 0 6px
 
 
-.dara-mobile-checkout
-	position: fixed
-	left: 0
-	right: 0
-	bottom: 0
-	+rmin(1025)
-		display: none
-
 .dara-link
 	color: #FE0066
 	border-bottom: 1px solid transparent
@@ -62,7 +54,17 @@ body
 		text-decoration: none
 		color: #FE0066
 		border-bottom-color: currentColor
-
+	&--arrow
+		border-bottom: none
+		&:hover
+			span
+				border-bottom-color: currentColor
+		span
+			vertical-align: -1px
+			border-bottom: 1px solid transparent
+		.icon
+			vertical-align: middle
+			line-height: 0.7
 
 .slick-slider
 	.slick-dots
@@ -81,3 +83,31 @@ body
 					background: #B7B7B7
 	.slick-slide
 		text-align: center
+
+
+.range-slider
+	max-width: 286px
+	margin: 32px auto 24px
+	&.noUi-target
+		background: #E6E6E6
+		border: none
+		box-shadow: none
+		border-radius: 100px
+	&.noUi-horizontal
+		height: 8px
+		.noUi-handle
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			border: none
+			box-shadow: 0 -2px 4px 0 rgba(140, 140, 140, 0.2), 0 2px 4px 0 rgba(140, 140, 140, 0.2),
+			2px 0 4px 0 rgba(140, 140, 140, 0.1), -2px 0 4px 0 rgba(140, 140, 140, 0.1)
+			&:before,
+			&:after
+				display: none
+	.noUi-connect
+		background: #FE0066
+
+
+html:not([dir=rtl]) .range-slider.noUi-horizontal .noUi-handle
+	right: -7px

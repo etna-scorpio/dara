@@ -18,7 +18,8 @@
     <div class="dara-out{% if daraOutMod %} {{ daraOutMod }}{% endif %}">
       {% include 'partials/_header.html' %}
       {% block content %}{% endblock %}
-      {% if footer !== false %}{% include 'partials/_footer.html' %}{% endif %}
+      {% include 'partials/_mobile-checkout.html' %}
+      {% include 'partials/_footer.html' %}
     </div>
     <!-- END content -->
 
