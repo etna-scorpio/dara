@@ -1,4 +1,4 @@
-.dara-mobile-checkout
+.dara-fixed-checkout
 	position: fixed
 	z-index: 5
 	left: 0
@@ -9,9 +9,17 @@
 	color: #fff
 	overflow: hidden
 	+rmin(375)
-		padding: 9px 26px
+		padding: 13px 26px
 	+rmin(1025)
-		display: none
+		&:not(.dara-fixed-checkout--desktop-visible)
+			display: none
+	&--desktop-visible
+		+rmin(768)
+			.dara-fixed-checkout__in
+				justify-content: center
+			.dara-fixed-checkout__bl
+				&:first-child
+					margin: 0 20px
 	&__in
 		display: flex
 		margin: 0 -10px
@@ -32,7 +40,7 @@
 			margin-bottom: 0
 	&__num
 		font-size: 24px
-		line-height: 1.375
+		line-height: 1.1
 	&__price
 		text-transform: none
 		font-size: 14px

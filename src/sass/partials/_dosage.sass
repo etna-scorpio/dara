@@ -3,13 +3,6 @@
 	text-align: center
 	justify-content: center
 	align-items: center
-	&--margin-top
-		margin-top: -12px
-	&--absolute
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 14px
 	&__calc
 		min-width: 145px
 		margin: 0 7px
@@ -38,35 +31,18 @@
 			.dara-icon
 				color: #ddd
 	&__val
-		+av-medium
+		+br-medium
 		font-size: 14px
 		color: #9B9B9B
 		line-height: 1.357
 		letter-spacing: -0.5px
 	&__num
-		+av-demibold
+		+br-bold
 		font-size: 28px
 		line-height: 0.9
 		letter-spacing: -1.55px
-	&__price-for-item
-		position: absolute
-		top: 50%
-		right: 7px
-		margin-top: -19px
-		padding: 10px 0
-		+av-medium
-		font-size: 15px
-		color: #5DA609
-		line-height: 1.375
-		opacity: 0
-		visibility: hidden
-		transition: opacity 0.2s ease, visibility 0.2s ease
-		+rmin(768)
-			right: 11px
-		&.is-visible
-			opacity: 1
-			visibility: visible
 	&__highlight
+		+br-medium
 		color: #FE0066
 		&:hover,
 		&:visited

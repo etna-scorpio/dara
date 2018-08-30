@@ -6,6 +6,8 @@ import './input-state.js';
 import './account-modal.js';
 import './fit-images.js';
 import './step-carousel.js';
+import './product-carousel.js';
 import './range-slider.js';
 import './accordion.js';
+import './add-ingredients.js';
 // import './dosage.js';

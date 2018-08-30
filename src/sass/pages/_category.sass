@@ -1,74 +1,119 @@
 .dara-category-wrapper
 	padding-top: 40px
+	margin-bottom: 140px
+	+rmin(1025)
+		margin-bottom: 70px
 
 
 .dara-category
-	padding-top: 19px
-	+av-medium
-	&--gray
-		padding-top: 40px
-		background: #F5F9FC
-	&--blue
-		padding: 40px 0 10px
-		background: #F5FCF7
-	&__p
-		margin-bottom: 1.2rem
-	&__cards
-		margin-top: 4px
+	overflow: hidden
+	+rmin(768)
+		overflow: initial
+	&__in
+		margin: 0 -15px
 		+rmin(768)
-			margin: 4px -4px 0
+			margin: auto
+	&__title
+		margin-bottom: 0
+		padding: 2px 20px
+		background: #000
+		color: #FFF
+		letter-spacing: -0.29px
 
 
 .dara-category-card
-	max-width: 360px
-	margin: 0 auto
-	height: 100%
-	padding-bottom: 40px
-	+rmin(768)
-		margin: 0 4px
-	&__in
-		position: relative
-		height: 100%
-		min-height: 440px
-		padding: 15px 0 74px
-		background: #FFF
-		border-radius: 5px
-	&__title
-		text-align: center
-		margin-bottom: 14px
-		padding: 0 10px
-	&__title-link
+	position: relative
+	display: flex
+	align-items: center
+	padding: 14px 10px 16px
+	color: #000
+	background: #FFF
+	border-bottom: 1px solid #f2f2f2
+	&:hover
+		text-decoration: none
 		color: #000
-		&:hover
-			color: #000
-	&__pic
-		width: 220px
-		height: 220px
-		margin: 0 auto
-		background: #d8d8d8
-		+rmin(768)
-			width: 250px
-			height: 250px
+	&:last-child
+		border-bottom: none
+	&__bl
+		margin: 0 10px
+		&--mob-absolute
+			position: absolute
+			top: 14px
+			right: 5px
+			margin: 0
+			+rmin(500)
+				position: static
 	&__img
 		display: block
-		max-width: 100%
+		max-width: 70px
+		background: #d8d8d8
+		+rmin(375)
+			max-width: 90px
 	&__info
-		margin-top: 21px
-		padding: 0 20px 0 18px
-		+av-medium
+		+br
 		font-size: 16px
-		line-height: 1.375
-	&__highlight
+		line-height: 1.14
+	&__title
+		padding-right: 70px
+		margin-bottom: 11px
+		+op-bold
+		font-size: 14px
+		line-height: 1.2
+		letter-spacing: -0.11px
+		+rmin(500)
+			padding-right: 0
+
+
+
+.dara-category-proportion
+	+rmin(500)
+		min-width: 100px
+		margin-left: 30px
+	&__num
+		+br-medium
+		font-size: 16px
+		line-height: 1
+		letter-spacing: -0.13px
 		color: #FE0066
-		&:hover,
-		&:visited
-			color: #FE0066
-	&__button
-		display: block
-		width: 100%
-		max-width: 133px
-		font-size: 16px
-		margin: 14px auto 12px
-		padding: 3px 10px
-		text-align: center
-		+av-medium
+		+rmin(500)
+			font-size: 18px
+		.icon
+			vertical-align: -1px
+			+rmin(500)
+				margin-left: 5px
+	&__add
+		display: none
+		position: relative
+		width: 20px
+		height: 20px
+		margin: -2px 15px 0 0
+		background: #FE0066
+		border-radius: 50%
+		+rmin(500)
+			margin: -2px auto 0
+			width: 30px
+			height: 30px
+		&.is-visible
+			display: block
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			border-radius: 5px
+			background: #FFF
+		&:before
+			width: 2px
+			height: 10px
+			margin: -5px 0 0 -1px
+			+rmin(500)
+				height: 12px
+				margin-top: -6px
+		&:after
+			width: 10px
+			height: 2px
+			margin: -1px 0 0 -5px
+			+rmin(500)
+				width: 12px
+				margin-left: -6px

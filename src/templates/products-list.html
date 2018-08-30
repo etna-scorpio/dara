@@ -1,81 +1,82 @@
 ---
 title: Products list
 filter: true
+daraOutMod: dara-out--special-padding
+header: dara-header--white-bg dara-header--mob-sm-height
+headerHelpIcon: true
+backIcon: true
+footer: false
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 	{% set productList = [{
-		title: 'Vitamins'
+		title: 'Vitamins',
+		products: [{
+			name: 'Baoab Fruit',
+			img: 'baobab',
+			text: 'Baobab powder is especially rich in fibre content, and acts as a prebiotic, which helps to maintain healthy microflora in the intestines. This powder also contains antioxidants, protein, and vitamin A, C and B6.',
+			dosage: '1,000 mg'
+		}, {
+			name: 'Wild Blueberry',
+			img: 'blueberry',
+			text: '100 grams of wild bilberries on average contain about 40 mg of vitamin C, as well as B vitamins and other beneficial substances. Wild blueberries are also very good for our eyes, specifically due to their antioxidant content, and bilberries also improve our digestion.',
+			dosage: '1,000 mg'
+		}, {
+			name: 'Vitamin C',
+			img: 'vitamin-c',
+			text: 'Acerola cherry is one of the most nutritionally dense superfruits with one of the highest levels of vitamin C and antioxidants of any food source.',
+			dosage: '180 mg',
+			status: false
+		}]
 	},{
-		title: 'Minerals',
-		mod: 'dara-category--gray'
-	}, {
-		title: 'Botanicals',
-		mod: 'dara-category--blue'
+		title: 'Superfoods',
+		products: [{
+			name: 'Açai Berry',
+			img: 'acai',
+			text: 'Pure organic Açaí berry powder, loaded with antioxidants, essential amino acids, and full of monounsaturated and polyunsaturated fatty acids.',
+			dosage: '180 mg'
+		}, {
+			name: 'Ginger',
+			img: 'ginger',
+			text: 'Pure organic ginger root powder, used for thousands of years as a powerful anti-inflamatory.',
+			dosage: '400 mg'
+		}]
 	}] %}
 
 	<div class="dara-category-wrapper">
 		{% for category in productList %}
-		<section class="dara-category{% if category.mod %} {{ category.mod }}{% endif %}">
+		<section class="dara-category">
 			<div class="dara-l-center dara-l-center--sm">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col">
-							<h3 class="dara-title-h3">{{ category.title }}</h3>
-							<p class="dara-category__p">Vitamins are compounds of essential nutrients that our bodies need for healthy functioning. They are found in the foods we eat and, in the case of vitamin D, the sun we absorb.</p>
-							<p class="dara-category__p">Most vitamin supplements on the market are in 'isolate' form, where the capsule contains only the isolated compound. We ferment ours to convert them into a complex form, where they resemble the vitamins you get from real food and are easier to digest.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<div class="dara-category__cards">
-								<div class="row align-items-stretch">
-									{% for i in range(0,8) %}
-									<div class="col-12 col-md-6">
-										<div class="dara-category-card">
-											<div class="dara-category-card__in">
-												<h3 class="dara-category-card__title dara-title-h3"><a href="#" class="dara-category-card__title-link">Vitamins</a></h3>
-												<div class="dara-category-card__pic">
-													<img class="dara-category-card__img" src="img/product-img.jpg" alt="">
-												</div>
-												<div class="dara-category-card__info">
-													{% if loop.first %}
-														From organic Acerola cherries (whole fruit) and Camu Camu (spray dried whole fruit). Our Vitamin C is highly bio-available.
-													{% else %}
-													From organic <a href="#" class="dara-category-card__highlight">Acerola cherries</a> (whole fruit) and <a href="#" class="dara-category-card__highlight">Camu Camu</a> (spray dried whole fruit). Our Vitamin C is highly bio-available.
-													{% endif %}
-													<div class="dara-dosage dara-dosage--absolute">
-														{% if loop.first %}
-														<button type="button" class="dara-dosage__ico" ontouchstart>
-															<i class="dara-icon dara-icon-minus">
-																<svg viewBox="0 0 12 2" enable-background="new 0 0 12 2">
-																	<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M1,1h10"/>
-																</svg>
-															</i>
-														</button>
-														<div class="dara-dosage__calc">
-															<div class="dara-dosage__val">320% daily value</div>
-															<div class="dara-dosage__num">1,000 mg</div>
-															<div><a href="#" class="dara-dosage__highlight">remove</a></div>
-														</div>
-														<button type="button" class="dara-dosage__ico" ontouchstart>
-															<i class="dara-icon dara-icon-plus">
-																<svg x="0px" y="0px" viewBox="1 1 10 10" enable-background="new 1 1 10 10">
-																<path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M2,6h8"/>
-																<path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6,2v8"/>
-																</svg>
-															</i>
-														</button>
-														<div class="dara-dosage__price-for-item js-price-for-item is-visible">$32,50</div>
-														{% else %}
-														<button type="button" class="dara-category-card__button dara-button">Add</button>
-														{% endif %}
-													</div>
-												</div>
+							<div class="dara-category__in">
+								<h5 class="dara-title-h5 dara-category__title">{{ category.title }}</h5>
+								<div class="dara-category__cards">
+									{% for item in category.products %}
+									<a href="#" class="dara-category-card">
+										<div class="dara-category-card__bl">
+											<img class="dara-category-card__img" src="img/{{ item.img }}.png" alt="{{ item.img }}">
+										</div>
+										<div class="dara-category-card__bl">
+											<div class="dara-category-card__info">
+												<div class="dara-category-card__title">{{ item.name }}</div>
+												<div class="dara-category-card__text">{{ item.text }}</div>
 											</div>
 										</div>
-									</div>
+										<div class="dara-category-card__bl dara-category-card__bl--mob-absolute">
+											<div class="dara-category-proportion">
+												<div class="dara-category-proportion__num">
+													<span>{{ item.dosage }}</span>
+													{{ mixins.icon('arrow-right') }}
+												</div>
+												{% if item.status == false %}
+												<i class="dara-category-proportion__add js-ingredient-add-button"></i>
+												{% endif %}
+											</div>
+										</div>
+									</a>
 									{% endfor %}
 								</div>
 							</div>

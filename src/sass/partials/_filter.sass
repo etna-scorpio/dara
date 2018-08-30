@@ -1,7 +1,8 @@
 .dara-filter
 	position: relative
-	background: #DDD
-	padding: 6px 0
+	background: #f2f2f2
+	padding: 5px 0
+	min-height: 40px
 	&.is-overlay
 		&:before
 			content: ""
@@ -14,12 +15,20 @@
 			z-index: 1
 		.dara-filter__search
 			background: none
+	&__container
+		position: relative
+		max-width: 800px
+		margin: 0 auto
 	&__in
 		display: flex
 		justify-content: space-between
 		align-items: center
-		max-width: 766px
-		margin: 0 auto
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.2s ease, visibility 0.2s ease
+		&.is-visible
+			opacity: 1
+			visibility: visible
 	&__form
 		position: relative
 		flex-basis: 648px
@@ -87,12 +96,9 @@
 			outline: none
 
 
-
 .dara-filter-dropdown
 	position: relative
 	min-width: 70px
-	+rmin(576)
-		margin-right: 27px
 	&.is-open
 		.dara-filter-dropdown__list
 			display: block
@@ -156,7 +162,7 @@
 
 
 
-.dara-radio
+.dara-filter-radio
 	position: relative
 	width: 20px
 	height: 20px
@@ -184,3 +190,46 @@
 		margin: -5px 0 0 -5px
 		background: #FE0066
 		border-radius: 50%
+
+
+.dara-filter-preview
+	position: absolute
+	top: 0
+	left: 20px
+	min-height: 30px
+	display: flex
+	align-items: center
+	text-transform: uppercase
+	+br-bold
+	font-size: 12px
+	color: #000
+	letter-spacing: 0.83px
+	line-height: 1.4
+	&:hover
+		text-decoration: none
+		color: #000
+	&__icon
+		position: relative
+		display: inline-block
+		width: 25px
+		height: 25px
+		margin: -2px 0 0 10px
+		background: #FFF
+		border-radius: 50%
+		border: 0.5px solid #dadada
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			border-radius: 5px
+			background: #FE0066
+		&:before
+			width: 2px
+			height: 10px
+			margin: -5px 0 0 -1px
+		&:after
+			width: 10px
+			height: 2px
+			margin: -1px 0 0 -5px
