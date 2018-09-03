@@ -47,7 +47,7 @@
 			min-height: 40px
 			padding: 2px 5px
 			border-bottom: 1px solid #F2F2F2
-			+rmin(1024)
+			+rmin(1025)
 				min-height: 57px
 				border-bottom-color: transparent
 				padding: 11px 5px 5px
@@ -56,7 +56,7 @@
 		.dara-header__logo
 			width: 52px
 			margin-top: 8px
-			+rmin(1024)
+			+rmin(1025)
 				width: 76px
 				margin-top: 3px
 	&__in
@@ -66,25 +66,30 @@
 			padding: 11px 25px 5px
 	&__checkout
 		display: none
-		font-size: 0
-		+rmin(1025)
-			display: block
-	&__info
-		display: none
-		vertical-align: top
 		margin-right: 10px
 		+rmin(1025)
-			display: inline-block
+			display: flex
+			align-items: center
+		+rmin(1100)
+			margin-right: 20px
+	&__info
+		display: none
+		min-width: 200px
+		margin-right: 10px
+		line-height: 0.8
+		+br-medium
+		+rmin(1025)
+			display: block
+		+rmin(1100)
 			margin-right: 20px
 	&__price
-		+av-medium
 		font-size: 22px
 		color: #000
 		letter-spacing: -0.31px
 		line-height: 1
 	&__note
 		font-size: 13px
-		color: #1567AE
+		color: #1078EE
 		letter-spacing: -0.18px
 	&__menu-ico
 		display: inline-block
@@ -131,6 +136,12 @@
 		svg
 			display: block
 			width: 100%
+	&__bl
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		text-align: right
+
 
 
 .dara-header-list
