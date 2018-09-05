@@ -7,6 +7,7 @@ $(document).ready(function() {
     arrows: false,
     draggable: false,
     infinite: false,
+    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     customPaging : function(slider, i) {
