@@ -1,0 +1,27 @@
+---
+title: Nutrition
+filter: true
+daraOutMod: dara-out--special-padding
+header: dara-header--white-bg dara-header--mob-sm-height
+headerHelpIcon: true
+backIcon: true
+footer: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<section class="dara-nutrition">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<div class="dara-tile">
+					<div class="dara-tile__head">
+						<h5 class="dara-title-h5 text-uppercase dara-tile__title">Nutrition facts</h5>
+						<a href="#" class="dara-link dara-link--arrow dara-tile__link"><span>Amino Acids Profile</span>{{ mixins.icon('arrow-right') }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

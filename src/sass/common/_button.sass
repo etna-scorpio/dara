@@ -93,6 +93,14 @@
 		letter-spacing: 0.83px
 		background: #FFF
 		color: #FE0066
+		+rmin(500)
+			&:hover
+				background: #FFF
+				color: #FE0066
+				span
+					border-bottom-color: #FE0066
+			span
+				border-bottom: 1px solid transparent
 	&--outline
 		padding: 3px 11.5px
 		+br-bold

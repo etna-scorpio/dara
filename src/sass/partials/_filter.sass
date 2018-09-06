@@ -17,8 +17,9 @@
 			background: none
 	&__container
 		position: relative
-		max-width: 800px
+		max-width: 790px
 		margin: 0 auto
+		padding: 0 20px 0 14px
 	&__in
 		display: flex
 		justify-content: space-between
@@ -178,7 +179,7 @@
 		height: 100%
 		opacity: 0
 		&:checked
-			+ .dara-radio__dot
+			+ .dara-filter-radio__dot
 				display: block
 	&__dot
 		display: none
@@ -195,7 +196,7 @@
 .dara-filter-preview
 	position: absolute
 	top: 0
-	left: 20px
+	left: 5px
 	min-height: 30px
 	display: flex
 	align-items: center
@@ -205,6 +206,8 @@
 	color: #000
 	letter-spacing: 0.83px
 	line-height: 1.4
+	+rmin(768)
+		left: 20px
 	&:hover
 		text-decoration: none
 		color: #000
