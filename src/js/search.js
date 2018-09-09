@@ -15,7 +15,7 @@ if (search.length) {
     if (!e.target.closest(searchBox) && $(searchBox).hasClass('is-active')) {
       hideSearchField();
       hideAutocomplete();
-      closeIcon.hide();
+      closeIcon.removeClass('is-active');
     }
   });
 }
@@ -23,10 +23,10 @@ if (search.length) {
 search.on('keyup', function() {
   if($(this).val().length > 0) {
     showAutocomplete();
-    closeIcon.show();
+    closeIcon.addClass('is-active');
   } else {
     hideAutocomplete();
-    closeIcon.hide();
+    closeIcon.removeClass('is-active');
   }
 });
 
@@ -35,9 +35,9 @@ function toggleSearchField() {
     $(searchBox).toggleClass('is-active');
     if ($(searchBox).hasClass('is-active')) {
       search.focus();
-      if(search.val().length > 0) closeIcon.show();
+      if(search.val().length > 0) closeIcon.addClass('is-active');
     } else {
-      closeIcon.hide();
+      closeIcon.removeClass('is-active');
       hideAutocomplete();
     }
   });
@@ -59,7 +59,7 @@ function clearSearchField() {
   closeIcon.click(function() {
     search.val('');
     search.focus();
-    closeIcon.hide();
+    closeIcon.removeClass('is-active');
     hideAutocomplete();
   });
 }

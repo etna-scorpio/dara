@@ -1,6 +1,5 @@
 ---
 title: Nutrition
-filter: true
 daraOutMod: dara-out--special-padding
 header: dara-header--white-bg dara-header--mob-sm-height
 headerHelpIcon: true
@@ -10,14 +9,204 @@ footer: false
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-<section class="dara-nutrition">
+<section class="dara-component">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
-				<div class="dara-tile">
-					<div class="dara-tile__head">
-						<h5 class="dara-title-h5 text-uppercase dara-tile__title">Nutrition facts</h5>
-						<a href="#" class="dara-link dara-link--arrow dara-tile__link"><span>Amino Acids Profile</span>{{ mixins.icon('arrow-right') }}</a>
+				<div class="dara-component__center">
+					<div class="dara-tile">
+						<div class="dara-tile__head mb-0">
+							<h5 class="dara-title-h5 text-uppercase dara-tile__title">Nutrition facts</h5>
+							<a href="#" class="dara-link dara-link--arrow dara-tile__link"><span>Amino Acids Profile</span>{{ mixins.icon('arrow-right') }}</a>
+						</div>
+						<div class="dara-tile__in dara-tile__in--sm-w">
+							{% set table = [{
+								row: [{
+									title: '<b><i>Calories</i></b>',
+									amount: '210'
+								}, {
+									title: '<b><i>Total fat</i></b>',
+									amount: '2.5g',
+									percent: '4%'
+								}, {
+									tab: true,
+									title: '<i>Saturated fat</i>',
+									amount: '9g',
+									percent: '0%'
+								}, {
+									tab: true,
+									title: '<i>Trans fat</i>',
+									amount: '0g',
+									percent: '0%'
+								}, {
+									title: '<b><i>Cholesterol</i></b>',
+									percent: '0%'
+								}, {
+									title: '<b><i>Sodium</i></b>',
+									amount: '0mg',
+									percent: '0%'
+								}, {
+									title: '<b><i>Total Carbohydrate</i></b>',
+									amount: '11g',
+									percent: '10%'
+								}, {
+									tab: true,
+									title: '<i>Dietary Fiber</i>',
+									amount: '14g',
+									percent: '56%'
+								}, {
+									tab: true,
+									title: '<i>Sugars</i>',
+									amount: '0g',
+									percent: '0%'
+								}, {
+									dbltab: true,
+									title: '<i>Added Sugars</i>',
+									amount: '0g'
+								}, {
+									title: '<b><i>Protein</i></b>',
+									amount: '24g',
+									percent: '48%'
+								}]
+							}, {
+								row: [{
+									title: '<b><i>Vitamin A</i></b>',
+									amount: '24g',
+									percent: '100%'
+								}, {
+									title: '<b><i>Vitamin C</i></b>',
+									amount: '90mg',
+									percent: '100%'
+								}, {
+									title: '<b><i>Vitamin E</i></b>',
+									amount: '4mg',
+									percent: '100%'
+								}, {
+									title: '<b><i>Vitamin K2 </i></b><small class="dara-table__small">(as Menaquinone-7)</small>',
+									amount: '60mcg',
+									percent: '100%'
+								},{
+									title: '<b><i>Thiamine </i></b><small class="dara-table__small">(as Thiamin HCL)</small>',
+									amount: '24g',
+									percent: '100%'
+								},{
+									title: '<b><i>Riboflavin </i></b><small class="dara-table__small">(as Pyridoxal-5’-Phosphate)</small>',
+									amount: '90mg',
+									percent: '100%'
+								}, {
+									title: '<b><i>Vitamin E</i></b>',
+									amount: '4mg',
+									percent: '100%'
+								},{
+									title: '<b><i>Folate </i></b><p class="dara-table__small">(as 6S-5-Methyltetrahydrofolate acid, glucosamine salt)</p>',
+									amount: '90mg',
+									percent: '100%'
+								},{
+									title: '<b><i>Thiamine </i></b><small class="dara-table__small">(as Thiamin HCL)</small>',
+									amount: '24g',
+									percent: '100%'
+								},{
+									title: '<b><i>Riboflavin </i></b><small class="dara-table__small">(as Riboflavin-5’-Phosphate sodium)</small>',
+									amount: '19mg',
+									percent: '100%'
+								},{
+									title: '<b><i>Vitamin E</i></b>',
+									amount: '4mg',
+									percent: '100%'
+								}]
+							}, {
+								row: [{
+									title: '<b><i>Yellow Pea Protein °</i></b>',
+									amount: '18g',
+									percent: '**',
+									percentTextCenter: true
+								}, {
+									title: '<b><i>Brown Rice Protein °</i></b>',
+									amount: '12g',
+									percent: '**',
+									percentTextCenter: true
+								}, {
+									title: '<b><i>Whole Oats Fiber °</i></b>',
+									amount: '3g',
+									percent: '**',
+									percentTextCenter: true
+								}, {
+									title: '<b><i>Psyllium Husk Powder °</i></b>',
+									amount: '5g',
+									percent: '**',
+									percentTextCenter: true
+								}, {
+									title: '<b><i>Coconut MCT Oil Powder °</i></b>',
+									amount: '12g',
+									percent: '**',
+									percentTextCenter: true
+								}, {
+									title: '<b><i>Ashwagandha Root Powder °</i></b>',
+									amount: '1,200mg',
+									percent: '**',
+									percentTextCenter: true
+								}, {
+									rowMod: 'dara-table__row--border',
+									title: '<b><i>Acerola Cherry Powder °</i></b>',
+									amount: '90mg',
+									percent: '**',
+									percentTextCenter: true
+								}]
+							}] %}
+
+
+							<!-- begin nutrition table -->
+							<div class="dara-table">
+								<div class="dara-table__head">
+									<div class="dara-table__title">Nutrition Facts</div>
+									<div class="dara-table__subtitle">
+										<p>Servings Per Container 30</p>
+										<p>Serving Size 1 Level Scoop (55g)</p>
+									</div>
+								</div>
+								<div class="dara-table__body">
+									<!-- begin table section -->
+									<div class="dara-table__section dara-table__section--heading">
+										<div class="dara-table__row dara-table__row--heading text-center">
+											<div class="dara-table__col dara-table__col--main"></div>
+											<div class="dara-table__col dara-table__col--heading dara-table__col--w84">Amount Per Serving</div>
+											<div class="dara-table__col dara-table__col--heading dara-table__col--w59">% Daily Value</div>
+										</div>
+									</div>
+									<!-- end table section -->
+									{% for section in table %}
+									<!-- begin table section -->
+									<div class="dara-table__section">
+										{% for row in section.row %}
+										<div class="dara-table__row{% if row.rowMod %} {{ row.rowMod }}{% endif %}">
+											<div class="dara-table__col dara-table__col--main">
+												{% if row.tab %}
+													<span class="dara-table__tab">{{ row.title | safe }}</span>
+												{% elif row.dbltab %}
+													<span class="dara-table__tab dara-table__tab--dbl">{{ row.title | safe }}</span>
+												{% else %}
+													{{ row.title | safe }}
+												{% endif %}
+											</div>
+											<div class="dara-table__col dara-table__col--w53">{{ row.amount }}</div>
+											<div class="dara-table__col dara-table__col--w53 {% if row.percentTextCenter %}text-center{% else %}text-right{% endif %}"><b><i>{{ row.percent }}</i></b></div>
+										</div>
+										{% endfor %}
+									</div>
+									<!-- end table section -->
+									{% endfor %}
+									<div class="dara-table__footer">
+										<p>° Organic</p>
+										<p>* Percent Daily Values based on a 2,000 calorie diet.</p>
+										<p>** Percentage Daily Value not established.</p>
+									</div>
+								</div>
+							</div>
+							<!-- end nutrition table -->
+							<div class="dara-tile__note">
+								<b>Other ingredients:</b> Non-GMO Tapioca Maltodextrin, Non-GMO Maltodextrin, Citric Acid, and Tocopherols.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
