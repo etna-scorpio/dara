@@ -33,6 +33,8 @@
 		position: relative
 		flex-basis: 648px
 		margin-right: 22px
+		+rmin(768)
+			margin-left: 14px
 	&__search-box
 		transition: background 0.2s ease
 		&.is-active
@@ -85,10 +87,12 @@
 	&__search-close
 		display: none
 		position: absolute
-		top: 50%
-		right: 9px
+		top: 0
+		right: 0
+		width: 30px
+		height: 30px
+		padding-top: 1px
 		font-size: 10px
-		margin-top: -5px
 		stroke: #B7B7B7
 		background: none
 		line-height: 1
@@ -101,6 +105,8 @@
 .dara-filter-dropdown
 	position: relative
 	min-width: 70px
+	+rmin(768)
+		margin-right: 20px
 	&.is-open
 		.dara-filter-dropdown__list
 			display: block
