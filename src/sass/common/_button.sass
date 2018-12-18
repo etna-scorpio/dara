@@ -7,7 +7,7 @@
 	+av-bold
 	font-size: 20px
 	color: #FFF
-	background: #FE0066
+	background: #167A65
 	letter-spacing: -0.24px
 	border-radius: 5px
 	+nosel
@@ -15,7 +15,7 @@
 	&:hover
 		text-decoration: none
 		color: #FFF
-		background: darken(#FE0066, 5%)
+		background: darken(#167A65, 5%)
 	&--checkout
 		padding: 4.5px 16.5px
 		+br-bold
@@ -25,9 +25,13 @@
 		&:hover
 			background: darken(#1078EE, 5%)
 	&--start
+		border-radius: 20px
 		width: 100%
-		max-width: 256px
-		+av-medium
+		max-width: 150px
+		padding: 8px
+		+gilroy-bold
+		font-size: 16px
+		letter-spacing: 0.07px
 	&--header-start
 		position: absolute
 		top: 50%
@@ -108,3 +112,8 @@
 		line-height: 1.375
 		letter-spacing: 0.59px
 		border: 1px solid #fff
+		background: none
+		&:hover,
+		&:focus
+			background: #FFF
+			color: #FE0066

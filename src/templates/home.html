@@ -9,15 +9,18 @@ header: dara-header--no-bg
 {% block content %}
 	<!-- begin dara-hero -->
 	<section class="dara-hero">
-		<div class="container-fluid">
-			<div class="row dara-hero__wrap">
-				<div class="col text-center">
-					<div class="dara-hero__bl">
-						<div class="dara-hero__head">
-							<p class="dara-hero__title">Build Your Dream Supplement</p>
-							<p class="dara-hero__subtitle">Full customization.<br/> Premium ingredients.<br/> Amazing prices.</p>
+		<div class="dara-hero__wrap">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col text-center">
+						<div class="dara-hero__bl">
+							<div class="dara-hero__head">
+								<p class="dara-hero__title">Build your dream <span>supplement</span></p>
+								<p class="dara-hero__subtitle">Get a personalized blend of supplements, functional foods, and proteins custom made for you with the finest ingredients.</p>
+							</div>
+							<a href="#" class="dara-button dara-button--start js-dara-button-start">Get started</a>
 						</div>
-						<a href="#" class="dara-button dara-button--start js-dara-button-start">Get started</a>
+						<img class="dara-hero__img" src="img/home.png" alt="home background">
 					</div>
 				</div>
 			</div>
@@ -31,28 +34,25 @@ header: dara-header--no-bg
 				<div class="row">
 					<div class="col">
 						<div class="dara-subscription__head">
-							<p class="dara-subscription__title dara-title-h1">How it works</p>
-							<p>Receive a monthly supply of your custom blend of premium ingredients in powder form</p>
+							<p class="dara-subscription__welcome">WELCOME TO BLEND</p>
+							<p class="dara-subscription__title">Receive a monthly supply of your personalized blend in powder form.</p>
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row justify-content-center">
 					{% set steps = [{
-						title: 'CHOOSE',
-						text: 'Select ingredients and dosages from a highly curated library'
+						title: 'PERSONALIZE',
+						text: 'Tell us your health goals and needs, and see your recommended blend. Adjust at will.'
 					}, {
 						title: 'RECEIVE',
-						text: 'Made to order and shipped free next business day'
+						text: 'We custom make 30 servings of your blend, and ship it free next business day.'
 					}, {
 						title: 'ENJOY',
-						text: 'Drink with water, juice or a smoothie. Store in a beautiful stainless steel canister'
-					}, {
-						title: 'REFINE',
-						text: 'Change your formulation or cancel anytime'
+						text: 'Drink with a smoothie or your favorite beverage. Store in the provided stainless steel canister'
 					}] %}
 
 					{% for step in steps %}
-					<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="col-sm-12 col-md-4 col-lg-4">
 						<div class="dara-step">
 							<img class="dara-step__img" src="img/step_{{loop.index}}.svg" alt="step_{{loop.index}}">
 							<div class="dara-step__info">
@@ -63,60 +63,131 @@ header: dara-header--no-bg
 					</div>
 					{% endfor %}
 				</div>
-				<div class="row">
-					<div class="col">
-						<div class="dara-features">
-							<div class="dara-features__in">
-								<div class="row">
-									{% set features = [{
-										icon: 'quality',
-										text: 'Premium Quality'
-									}, {
-										icon: 'transparency',
-										text: 'Full Transparency'
-									}, {
-										icon: 'made-in-california',
-										text: 'Made in the California'
-									}, {
-										icon: 'sustainability',
-										text: 'Sustainable Packaging'
-									}, {
-										symbol: 'flask',
-										text: 'No Additives'
-									}, {
-										icon: 'gmo',
-										text: 'Non GMO'
-									}, {
-										icon: 'vegan',
-										text: 'Vegan'
-									}, {
-										icon: 'gluten-free',
-										text: 'Gluten & Allergen Free'
-									}] %}
-
-									{% for feature in features %}
-									<div class="col-6 col-sm-6 col-md-4 col-lg-3">
-										<div class="dara-feature">
-											<div class="dara-feature__pic">
-												{% if feature.symbol %}
-												<i class="dara-feature__icon dara-feature__icon--{{ feature.symbol }}"></i>
-												{% else %}
-												<span class="dara-feature__icon dara-feature__icon--{{ feature.icon }}">{{ mixins.icon(feature.icon) }}</span>
-												{% endif %}
-											</div>
-											<p class="dara-feature__text">{{ feature.text }}</p>
-										</div>
-									</div>
+			</div>
+		</div>
+	</section>
+	<!-- end dara-subscription -->
+	{% set dataAbout = [{
+		desc: 'Personalized',
+		title: 'Exactly what you need.<br> No more, no less.',
+		text: '<p>Tell us about yourself and we will suggest an optimal blend for your unique health goals and needs.</p>',
+		list: ['Designed and made just for you', 'Fully customizable', 'Made to order']
+	}, {
+		desc: 'PREMIUM',
+		title: 'Made with the world’s finest ingredients.',
+		text: '<p>Our proteins and functional foods are pure, plant-based, organic, and minimally processed. </p><p>Our vitamins, minerals and supplements are selected for their proven, cleanest and most bio-active forms.</p><p>We don’t add fillers, binders, preservatives, “natural” or artificial flavors, colors or anything else.</p>',
+		changeOrder: true
+	}, {
+		desc: 'transparent',
+		title: 'Know what you’re putting in your body.',
+		text: '<p>We share all the information on our ingredients, going way beyond regulatory obligations. Easily see what’s inside each ingredient, where it came from, and how much of it is in your blend.</p>'
+	}] %}
+	<!-- begin dara-about -->
+	<div class="dara-about">
+		<section class="dara-about__section">
+			<div class="container-fluid">
+				{% for item in dataAbout %}
+				<div class="row align-items-stretch">
+ 					<div class="col-12 col-md-6{% if item.changeOrder %} order-md-2{% endif %}">
+						<div class="dara-about__bl dara-about__bl--text">
+							<div class="dara-about__in">
+								<div class="dara-about__desc">{{ item.desc }}</div>
+								<div class="dara-about__title">{{ item.title | safe }}</div>
+								<div class="dara-about__text">{{ item.text | safe }}</div>
+								{% if item.list %}
+								<ul class="dara-checklist">
+									{% for option in item.list %}
+										<li class="dara-checklist__option">{{ option }}</li>
 									{% endfor %}
-								</div>
+								</ul>
+								{% endif %}
 							</div>
 						</div>
+					</div>
+					<div class="col-12 col-md-6{% if item.changeOrder %} order-md-1{% endif %}">
+						<div class="dara-about__bl dara-about__bl--img">
+							<img class="dara-about__img" src="img/about-pic{{ loop.index }}.jpg" alt="about">
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</section>
+	</div>
+	<!-- end dara-about -->
+	<!-- begin dara-feature -->
+	<div class="dara-feature">
+		<div class="dara-feature__in">
+			<div class="dara-feature__head">
+				<div class="dara-feature__desc">SIMPLE</div>
+				<div class="dara-feature__title">One scoop. Done.</div>
+				<div class="dara-feature__subtitle">One scoop a day with a smoothie or your favorite beverage.</div>
+			</div>
+			<div class="dara-feature__list text-center">
+				<ul class="dara-checklist dara-checklist--horizontal">
+					<li class="dara-checklist__option">Easy to drink</li>
+					<li class="dara-checklist__option">No more pills</li>
+					<li class="dara-checklist__option">Delicious taste</li>
+				</ul>
+			</div>
+			<img class="dara-feature__img img-fluid" src="img/feature-pic.jpg" alt="feature" />
+			<div class="dara-feature__head">
+				<div class="dara-feature__desc">HONEST</div>
+				<div class="dara-feature__title">Fair prices. No middlemen.</div>
+				<div class="dara-feature__subtitle">Amazing pricing with free shipping and returns.</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					{% set steps = [{
+						img: 'money',
+						title: 'FROM $29.90/MO'
+					}, {
+						img: 'truck',
+						title: 'FREE NEXT DAY SHIPPING',
+						text: 'All orders ship free next business day.'
+					}, {
+						img: 'handshake',
+						title: 'CANCEL ANYTIME',
+						text: 'Pause or cancel your subscription anytime.'
+					}] %}
+
+					{% for step in steps %}
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<div class="dara-step">
+							<div class="dara-step__pic">
+								<i class="dara-step__icon dara-step__icon--{{step.img}}"></i>
+							</div>
+							<div class="dara-step__info">
+								<div class="dara-step__title">{{ step.title }}</div>
+								{% if step.text %}<p>{{ step.text }}</p>{% endif %}
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end dara-feature -->
+	<!-- begin dara-hero -->
+	<section class="dara-hero dara-hero--sm-padding">
+		<div class="dara-hero__wrap">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col text-center">
+						<div class="dara-hero__bl">
+							<div class="dara-hero__head">
+								<div class="dara-hero__desc">RESPONSIBLE</div>
+								<p class="dara-hero__title">We love ingredients,<br> not plastic.</p>
+								<p class="dara-hero__subtitle">Our packaging is kraft paper based with net-zero emissions (thru carbon offsets). It’s recyclable, backyard compostable, and biodegradable. On your first shipment you get a free beautiful stainless steel canister to keep your blend in.</p>
+							</div>
+							<a href="#" class="dara-button dara-button--start js-dara-button-start">Get started</a>
+						</div>
+						<img class="dara-hero__img" src="img/home.png" alt="home background">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- end dara-subscription -->
-	{% include 'partials/_faq.html' %}
-
+	<!-- end dara-hero -->
 {% endblock %}

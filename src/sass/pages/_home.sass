@@ -1,181 +1,352 @@
 .dara-hero
 	position: relative
-	display: flex
-	align-items: stretch
-	padding: 75px 0
-	min-height: 667px
-	color: #FFF
-	background-image: url(../img/home-bg-mobile.jpg)
-	+cover
-	+rmin(575)
-		background-image: url(../img/home-bg-tablet.jpg)
+	padding: 100px 0 15px
+	color: #000
+	overflow: hidden
 	+rmin(768)
-		align-items: center
-		min-height: 642px
-		background-position: 42% 50%
-		background-image: url(../img/home-bg.jpg)
-	+rmin(1100)
-		background-position: 0% 50%
+		padding: 175px 0 15px
+	&.dara-hero--sm-padding
+		padding: 50px 0 70px
+		+rmin(1200)
+			padding: 75px 0 80px
 	&__wrap
-		min-height: 100%
-		max-width: 1300px
+		max-width: 1437px
 		margin: 0 auto
-		padding: 0 15px
-		+rmin(768)
-			min-height: auto
 	&__bl
 		position: relative
-		z-index: 1
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: space-between
-		min-height: 100%
-		+rmin(768)
-			display: block
-			max-width: 500px
-		+rmin(1100)
-			max-width: 720px
+		max-width: 1020px
+		margin: 0 auto 60px
 	&__head
-		margin-bottom: 50px
-		+av-medium
-		letter-spacing: -0.24px
-	&__title
-		margin-bottom: 14px
-		+av-demibold
-		font-size: 30px
-		letter-spacing: -0.2px
-		line-height: 1.16
-		+rmin(1200)
-			margin-bottom: 9px
-			font-size: 52px
-			letter-spacing: -0.43px
-			line-height: 1.365
-	&__subtitle
-		+av-medium
-		font-size: 20px
-		letter-spacing: -0.56px
-		line-height: 1.2
-		+rmin(1200)
+		margin-bottom: 30px
+		+gilroy-medium
+		font-size: 16px
+		line-height: 1.08
+		+rmin(576)
+			margin-bottom: 44px
 			font-size: 24px
-			line-height: 1.375
-		br
-			+rmin(576)
-				display: none
+		+rmin(1200)
+			font-size: 26px
+	&__title
+		margin-bottom: 15px
+		+caslon-semibold
+		font-size: 38px
+		letter-spacing: -3px
+		line-height: 1.1
+		+rmin(576)
+			margin-bottom: 7px
+			font-size: 45px
+			line-height: 1.16
+		+rmin(1200)
+			font-size: 70px
+		span
+			color: #167A65
+	&__subtitle
+		max-width: 730px
+		margin: 0 auto
+	&__desc
+		margin-bottom: 25px
+		text-transform: uppercase
+		+gilroy-bold
+		font-size: 16px
+		color: #167A65
+		line-height: 1.375
+		letter-spacing: 1.71px
+		+rmin(1200)
+			margin-bottom: 55px
+	&__img
+		position: relative
+		display: block
+		left: 50%
+		width: 500px
+		margin: 0 auto
+		transform: translateX(-50%)
+		+rmin(576)
+			position: static
+			width: auto
+			max-width: 100%
+			transform: translateX(0)
 
 
 .dara-subscription
-	padding: 50px 0 30px
-	background: #F5F9FC
-	+rmin(768)
-		padding: 56px 0 43px
+	margin-bottom: 40px
+	padding: 0 10px
+	+rmin(1200)
+		padding: 0 40px
 	&__in
-		max-width: 1225px
+		max-width: 1360px
 		margin: 0 auto
-		padding: 0 15px
-	&__title
-		text-transform: capitalize
-		font-size: 29px
-		margin-bottom: 0
-	&__head
-		max-width: 492px
-		margin: 0 auto 39px
-		text-align: center
-		+av-medium
-		font-size: 20px
-		letter-spacing: -0.45px
+		padding: 40px 0
+		background: #FFF
 		+rmin(768)
-			margin-bottom: 55px
+			padding: 50px 15px
+		+rmin(1200)
+			padding: 64px 15px 97px
+	&__title
+		margin-bottom: 0
+		+caslon-semibold
+		font-size: 31px
+		letter-spacing: -2.14px
+		line-height: 1.08
+		+rmin(768)
+			font-size: 40px
+		+rmin(1200)
+			font-size: 50px
+	&__head
+		max-width: 760px
+		margin: 0 auto 35px
+		text-align: center
+		+rmin(768)
+			margin-bottom: 69px
+	&__welcome
+		margin-bottom: 30px
+		+gilroy-bold
+		text-transform: uppercase
+		font-size: 16px
+		color: #167A65
+		letter-spacing: 1.71px
+		+rmin(768)
+			margin-bottom: 38px
 
 
 .dara-step
-	margin-bottom: 45px
+	max-width: 300px
+	margin: 0 auto 30px
 	text-align: center
-	+av-medium
-	font-size: 16px
-	line-height: 1.375
-	letter-spacing: -0.19px
+	+gilroy-medium
+	font-size: 15px
+	+rmin(1200)
+		font-size: 16px
 	&__img
 		width: 100%
-		max-width: 208px
-		height: 208px
+		max-width: 100px
+		height: 100px
 		margin: 0 auto 31px
 		object-fit: contain
 		font-size: 'object-fit: contain'
 		+rmin(768)
 			margin-bottom: 36px
+	&__pic
+		display: flex
+		min-height: 100px
+		justify-content: center
+		align-items: center
+		+rmin(768)
+			min-height: 160px
+	&__icon
+		display: inline-block
+		background-repeat: no-repeat
+		background-size: contain
+		&--money
+			width: 47px
+			height: 54px
+			background-image: url(../img/money.png)
+		&--truck
+			width: 61px
+			height: 27px
+			background-image: url(../img/truck.png)
+		&--handshake
+			width: 60px
+			height: 51px
+			background-image: url(../img/handshake.png)
 	&__title
 		margin-bottom: 6px
 		text-transform: uppercase
-		+av-bold
+		+gilroy-bold
+		color: #167A65
 		font-size: 14px
-		line-height: 1.35
-		letter-spacing: 1.5px
-	&__info
-		max-width: 296px
-		margin: 0 auto
-
-
-.dara-features
-	position: relative
-	padding-top: 45px
-	&:before
-		content: ""
-		position: absolute
-		top: 0
-		left: 9px
-		right: 9px
-		border-top: 1px solid #D8D8D8
+		line-height: 1.375
+		letter-spacing: 1.71px
 		+rmin(768)
-			left: 0
-			right: 0
-	&__in
-		max-width: 855px
+			font-size: 16px
+	&__info
+		max-width: 275px
 		margin: 0 auto
+		line-height: 1.625
+
+
+.dara-about
+	max-width: 1440px
+	margin: 0 auto 40px
+	background: #fff
+	color: #181818
+	overflow: hidden
+	&__section
+		margin: 0 -15px
+	&__bl
+		+rmin(768)
+			height: 100%
+			min-height: 400px
+		+rmin(1200)
+			display: flex
+			min-height: 600px
+		&--text
+			display: flex
+			align-items: center
+			height: 100%
+			padding: 40px 15px
+			+rmin(768)
+				padding: 40px 20px
+		&--img
+			position: relative
+			margin: 0 -15px
+			+rmin(1200)
+				align-items: stretch
+	&__in
+		max-width: 430px
+		margin: 0 auto
+		text-align: center
+		+rmin(768)
+			text-align: left
+		+rmin(1200)
+			max-width: 470px
+	&__img
+		display: block
+		width: 100%
+		object-fit: cover
+		font-family: 'object-fit: cover;'
+		+rmin(768)
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+		+rmin(1200)
+			position: static
+	&__desc
+		margin-bottom: 30px
+		text-transform: uppercase
+		+gilroy-bold
+		font-size: 16px
+		color: #167A65
+		line-height: 1.375
+		letter-spacing: 1.71px
+		+rmin(1200)
+			margin-bottom: 44px
+	&__title
+		margin-bottom: 14px
+		+caslon-semibold
+		font-size: 30px
+		line-height: 1.08
+		+rmin(768)
+			font-size: 40px
+		+rmin(1200)
+			font-size: 50px
+	&__text
+		max-width: 509px
+		+gilroy-medium
+		font-size: 15px
+		+rmin(768)
+			font-size: 16px
+		+rmin(1200)
+			font-size: 18px
+		&:not(:last-child)
+			margin-bottom: 30px
+			+rmin(1200)
+				margin-bottom: 57px
+		p
+			margin-bottom: 22px
+			&:last-child
+				margin-bottom: 0
 
 
 .dara-feature
-	margin-bottom: 26px
-	text-align: center
-	&__icon
-		display: inline-block
-		vertical-align: middle
-		&--quality
-			.icon
-				font-size: 45px
-		&--transparency
-			.icon
-				font-size: 49px
-		&--sustainability
-			.icon
-				font-size: 50px
-		&--made-in-california
-			.icon
-				font-size: 56px
-		&--flask
-			display: inline-block
-			width: 50px
-			height: 57px
-			background: url(../img/flask.svg)
-			background-size: contain
-		&--gmo
-			.icon
-				font-size: 47px
-		&--vegan
-			.icon
-				font-size: 48px
-		&--gluten-free
-			.icon
-				font-size: 47px
-	&__pic
-		height: 65px
-		margin-bottom: 5px
-		+vertical
-		margin-bottom: 0
-	&__text
-		+av-medium
-		font-size: 16px
-		letter-spacing: -0.25px
-		line-height: 1
+	padding: 0 10px
+	color: #181818
+	+rmin(1200)
+		padding: 0 40px
+	&__in
+		max-width: 1360px
+		margin: 0 auto
+		padding: 45px 15px 30px
+		background: #FFF
 		+rmin(768)
-			+av-demibold
+			padding: 45px 15px 55px
+	&__head
+		margin-bottom: 30px
+		text-align: center
+		+rmin(1200)
+			margin-bottom: 51px
+	&__desc
+		text-transform: uppercase
+		margin-bottom: 20px
+		+gilroy-bold
+		font-size: 16px
+		color: #167A65
+		line-height: 1.375
+		letter-spacing: 1.71px
+		+rmin(1200)
+			margin-bottom: 43px
+	&__title
+		margin-bottom: 20px
+		+caslon-semibold
+		font-size: 37px
+		line-height: 1.08
+		letter-spacing: -2.04px
+		+rmin(768)
+			font-size: 45px
+		+rmin(1200)
+			margin-bottom: 28px
+			font-size: 50px
+	&__subtitle
+		+gilroy-medium
+		font-size: 15px
+		+rmin(768)
+			font-size: 18px
+	&__list
+		max-width: 1000px
+		margin: 0 auto 40px
+		+rmin(1200)
+			margin-bottom: 60px
+	&__img
+		margin-bottom: 40px
+		+rmin(768)
+			margin-bottom: 87px
+
+
+
+.dara-checklist
+	max-width: 235px
+	margin: 0 auto
+	text-align: left
+	+gilroy-bold
+	font-size: 18px
+	color: #167A65
+	line-height: 1.2
+	+rmin(768)
+		max-width: 100%
+		margin: auto
+		font-size: 20px
+	+rmin(1200)
+		font-size: 25px
+	&--horizontal
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+	&__option
+		position: relative
+		margin-bottom: 10px
+		padding-left: 35px
+		+rmin(768)
+			margin-bottom: 18px
+			padding-left: 55px
+		&:before
+			content: ""
+			position: absolute
+			top: 4px
+			left: 0
+			width: 20px
+			height: 14px
+			background: url(../img/check-green.svg) 0 0 no-repeat
+			background-size: contain
+			+rmin(768)
+				width: 22px
+				height: 16px
+			+rmin(1200)
+				top: 8px
+		&:last-child
+			margin-bottom: 0
+
+
+
+
+
+

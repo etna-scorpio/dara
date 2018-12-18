@@ -15,12 +15,6 @@
 			&:hover,
 			&:visited
 				color: #000
-		.dara-header-list__item
-			&:not(.dara-header-list__item--sign)
-				color: #000
-				&:hover,
-				&:visited
-					color: #000
 	&.is-start
 		.dara-button--header-start
 			opacity: 1
@@ -28,20 +22,9 @@
 	&--white-bg
 		background: #fff
 	&--no-bg
-		background: none
-		.dara-header__logo svg path,
-			fill: #fff
-		.dara-header__menu-ico
-			color: #fff
-			&:hover,
-			&:visited
-				color: #FFF
-		.dara-header-list__item
-			&:not(.dara-header-list__item--sign)
-				color: #FFF
-				&:hover,
-				&:visited
-					color: #FFF
+		background: #FFF
+		+rmin(768)
+			background: none
 	&--mob-sm-height
 		.dara-header__in
 			min-height: 40px
@@ -130,6 +113,21 @@
 			+rmin(768)
 				width: 125px
 				transform: translate3d(0, 82px, 0)
+		&--text
+			width: auto
+			margin-top: 5px
+			+caslon
+			font-size: 33px
+			color: #167A65
+			letter-spacing: -2.51px
+			line-height: 0.85
+			+rmin(576)
+				margin-top: 0
+				font-size: 44px
+			&:hover,
+			&:focus
+				text-decoration: none
+				color: #167A65
 		img,
 		svg
 			display: block
@@ -156,18 +154,17 @@
 			margin-right: 0
 	&__item
 		display: inline-block
+		+gilroy-bold
 		font-size: 16px
-		color: #000
-		border-bottom: 1px solid transparent
+		color: #181818
+		transition: color 0.2s ease
 		&:hover,
-		&:visited
+		&:visited,
+		&:focus
 			text-decoration: none
-			color: #000
-			border-bottom-color: currentColor
+			color: #167A65
 		&--active
-			color: #9b9b9b
-			&:hover
-				border-bottom-color: transparent
+			color: #167A65
 		&--sign
 			color: #FE0066
 			&:hover,
@@ -181,7 +178,7 @@
 	top: 0
 	bottom: 0
 	width: 100%
-	background: #313131
+	background: #167A65
 	overflow: auto
 	transform: translate3d(-100%, 0, 0)
 	transition: transform 0.3s ease-in
@@ -191,13 +188,22 @@
 		transform: translate3d(0,0,0)
 	&__in
 		padding: 20px
-	&__close
-		display: inline-block
+	&__top
+		position: relative
 		margin-bottom: 40px
+		padding: 0 20px
+		text-align: center
+	&__close
+		position: absolute
+		top: 50%
+		right: 0
 		font-size: 16px
 		stroke: #fff
+		line-height: 0.7
+		transform: translateY(-50%)
 	&__option
 		margin-bottom: 20px
+		+gilroy-bold
 	&__link
 		color: #FFF
 		font-size: 17px
@@ -205,3 +211,13 @@
 		&:visited
 			text-decoration: none
 			color: #FFF
+	&__logo
+		+caslon
+		font-size: 33px
+		color: #fff
+		letter-spacing: -2.51px
+		line-height: 0.7
+		&:hover,
+		&:focus
+			text-decoration: none
+			color: #fff
