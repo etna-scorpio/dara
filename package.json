@@ -71,6 +71,7 @@
     "webpack-bundle-analyzer": "^1.5.3"
   },
   "dependencies": {
+    "bootstrap": "^4.1.3",
     "nouislider": "^11.1.0",
     "owl.carousel": "^2.3.4",
     "slick-carousel": "^1.8.1"

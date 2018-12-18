@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover">
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" media="all" href="css/app.css" /> </head>
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
 
   <body class="body--bg-white">
     <!-- BEGIN content -->
@@ -18,22 +19,31 @@
         <div class="dara-header__in">
           <div class="container-fluid">
             <div class="row">
-              <div class="col"> <a href="#" class="dara-header__menu-ico js-dara-show-menu-btn">
-							<svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-								<path d="M0 1H15" transform="translate(1.5 7.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-								<path d="M0 1H15" transform="translate(1.5 14.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-							</svg>
-						</a> </div>
               <div class="col">
-                <div class="text-center"> <a href="/" class="dara-header__logo"><img src="img/logo.svg" alt="dara"></a> </div>
+                <a href="#" class="dara-header__menu-ico js-dara-show-menu-btn">
+                  <svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+                    <path d="M0 1H15" transform="translate(1.5 7.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+                    <path d="M0 1H15" transform="translate(1.5 14.5)" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+                  </svg>
+                </a>
+              </div>
+              <div class="col">
+                <div class="text-center">
+                  <a href="/" class="dara-header__logo"><img src="img/logo.svg" alt="dara"></a>
+                </div>
               </div>
               <div class="col">
                 <div class="dara-header__bl">
-                  <div class="dara-header__el"> </div>
-                  <div class="dara-header__el"> <a href="#" class="dara-header__help-ico">
-<svg class="icon icon-help"><use xlink:href="img/sprite.svg#icon-help"></use></svg>
-</a> </div>
+                  <div class="dara-header__el">
+                  </div>
+                  <div class="dara-header__el">
+                    <a href="#" class="dara-header__help-ico">
+                      <svg class="icon icon-help">
+                        <use xlink:href="img/sprite.svg#icon-help"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -43,9 +53,13 @@
       <nav class="dara-menu js-dara-menu">
         <div class="dara-menu__in">
           <div class="dara-menu__top">
-            <div class="dara-menu__logo">blend</div> <a href="#" class="dara-menu__close js-dara-close-menu-btn">
-<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-</a> </div>
+            <div class="dara-menu__logo">blend</div>
+            <a href="#" class="dara-menu__close js-dara-close-menu-btn">
+              <svg class="icon icon-close">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </a>
+          </div>
           <ul class="dara-menu__list">
             <li class="dara-menu__option"><a href="#" class="dara-menu__link">Home</a></li>
             <li class="dara-menu__option"><a href="#" class="dara-menu__link">Ingredients</a></li>
@@ -66,111 +80,235 @@
               <div class="dara-quiz__carousel dara-quiz__carousel--sm-max-w js-step-carousel">
                 <div class="dara-quiz-item dara-quiz-item--sm-max-w">
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="brain-sheet0-col1-index1" type="checkbox"> <label for="brain-sheet0-col1-index1" class="dara-checkbox__label">brain</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="brain-sheet0-col1-index1" type="checkbox">
+                      <label for="brain-sheet0-col1-index1" class="dara-checkbox__label">brain</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="energy-sheet0-col1-index2" type="checkbox"> <label for="energy-sheet0-col1-index2" class="dara-checkbox__label">energy</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="energy-sheet0-col1-index2" type="checkbox">
+                      <label for="energy-sheet0-col1-index2" class="dara-checkbox__label">energy</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="sleep-sheet0-col1-index3" type="checkbox"> <label for="sleep-sheet0-col1-index3" class="dara-checkbox__label">sleep</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="sleep-sheet0-col1-index3" type="checkbox">
+                      <label for="sleep-sheet0-col1-index3" class="dara-checkbox__label">sleep</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="stress-sheet0-col1-index4" type="checkbox"> <label for="stress-sheet0-col1-index4" class="dara-checkbox__label">stress</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="stress-sheet0-col1-index4" type="checkbox">
+                      <label for="stress-sheet0-col1-index4" class="dara-checkbox__label">stress</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="mood-sheet0-col1-index5" type="checkbox"> <label for="mood-sheet0-col1-index5" class="dara-checkbox__label">mood</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                </div>
-                <div class="dara-quiz-item dara-quiz-item--sm-max-w">
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="immunity-sheet0-col2-index1" type="checkbox"> <label for="immunity-sheet0-col2-index1" class="dara-checkbox__label">immunity</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="detox-sheet0-col2-index2" type="checkbox"> <label for="detox-sheet0-col2-index2" class="dara-checkbox__label">detox</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="joints-sheet0-col2-index3" type="checkbox"> <label for="joints-sheet0-col2-index3" class="dara-checkbox__label">joints</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="digestion-sheet0-col2-index4" type="checkbox"> <label for="digestion-sheet0-col2-index4" class="dara-checkbox__label">digestion</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="eyes-sheet0-col2-index5" type="checkbox"> <label for="eyes-sheet0-col2-index5" class="dara-checkbox__label">eyes</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                </div>
-                <div class="dara-quiz-item dara-quiz-item--sm-max-w">
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="healthy-aging-sheet0-col3-index1" type="checkbox"> <label for="healthy-aging-sheet0-col3-index1" class="dara-checkbox__label">healthy aging</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="heart-sheet0-col3-index2" type="checkbox"> <label for="heart-sheet0-col3-index2" class="dara-checkbox__label">heart</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="skin-sheet0-col3-index3" type="checkbox"> <label for="skin-sheet0-col3-index3" class="dara-checkbox__label">skin</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="bones-sheet0-col3-index4" type="checkbox"> <label for="bones-sheet0-col3-index4" class="dara-checkbox__label">bones</label> <span class="dara-checkbox__active-bg"></span> </div>
-                  </div>
-                  <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="beauty-sheet0-col3-index5" type="checkbox"> <label for="beauty-sheet0-col3-index5" class="dara-checkbox__label">beauty</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="mood-sheet0-col1-index5" type="checkbox">
+                      <label for="mood-sheet0-col1-index5" class="dara-checkbox__label">mood</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                 </div>
                 <div class="dara-quiz-item dara-quiz-item--sm-max-w">
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="brain-sheet1-col1-index1" type="checkbox"> <label for="brain-sheet1-col1-index1" class="dara-checkbox__label">brain</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="immunity-sheet0-col2-index1" type="checkbox">
+                      <label for="immunity-sheet0-col2-index1" class="dara-checkbox__label">immunity</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="energy-sheet1-col1-index2" type="checkbox"> <label for="energy-sheet1-col1-index2" class="dara-checkbox__label">energy</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="detox-sheet0-col2-index2" type="checkbox">
+                      <label for="detox-sheet0-col2-index2" class="dara-checkbox__label">detox</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="sleep-sheet1-col1-index3" type="checkbox"> <label for="sleep-sheet1-col1-index3" class="dara-checkbox__label">sleep</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="joints-sheet0-col2-index3" type="checkbox">
+                      <label for="joints-sheet0-col2-index3" class="dara-checkbox__label">joints</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="stress-sheet1-col1-index4" type="checkbox"> <label for="stress-sheet1-col1-index4" class="dara-checkbox__label">stress</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="digestion-sheet0-col2-index4" type="checkbox">
+                      <label for="digestion-sheet0-col2-index4" class="dara-checkbox__label">digestion</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="mood-sheet1-col1-index5" type="checkbox"> <label for="mood-sheet1-col1-index5" class="dara-checkbox__label">mood</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="eyes-sheet0-col2-index5" type="checkbox">
+                      <label for="eyes-sheet0-col2-index5" class="dara-checkbox__label">eyes</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                 </div>
                 <div class="dara-quiz-item dara-quiz-item--sm-max-w">
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="immunity-sheet1-col2-index1" type="checkbox"> <label for="immunity-sheet1-col2-index1" class="dara-checkbox__label">immunity</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="healthy-aging-sheet0-col3-index1" type="checkbox">
+                      <label for="healthy-aging-sheet0-col3-index1" class="dara-checkbox__label">healthy aging</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="detox-sheet1-col2-index2" type="checkbox"> <label for="detox-sheet1-col2-index2" class="dara-checkbox__label">detox</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="heart-sheet0-col3-index2" type="checkbox">
+                      <label for="heart-sheet0-col3-index2" class="dara-checkbox__label">heart</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="joints-sheet1-col2-index3" type="checkbox"> <label for="joints-sheet1-col2-index3" class="dara-checkbox__label">joints</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="skin-sheet0-col3-index3" type="checkbox">
+                      <label for="skin-sheet0-col3-index3" class="dara-checkbox__label">skin</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="digestion-sheet1-col2-index4" type="checkbox"> <label for="digestion-sheet1-col2-index4" class="dara-checkbox__label">digestion</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="bones-sheet0-col3-index4" type="checkbox">
+                      <label for="bones-sheet0-col3-index4" class="dara-checkbox__label">bones</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="eyes-sheet1-col2-index5" type="checkbox"> <label for="eyes-sheet1-col2-index5" class="dara-checkbox__label">eyes</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="beauty-sheet0-col3-index5" type="checkbox">
+                      <label for="beauty-sheet0-col3-index5" class="dara-checkbox__label">beauty</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                 </div>
                 <div class="dara-quiz-item dara-quiz-item--sm-max-w">
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="healthy-aging-sheet1-col3-index1" type="checkbox"> <label for="healthy-aging-sheet1-col3-index1" class="dara-checkbox__label">healthy aging</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="brain-sheet1-col1-index1" type="checkbox">
+                      <label for="brain-sheet1-col1-index1" class="dara-checkbox__label">brain</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="heart-sheet1-col3-index2" type="checkbox"> <label for="heart-sheet1-col3-index2" class="dara-checkbox__label">heart</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="energy-sheet1-col1-index2" type="checkbox">
+                      <label for="energy-sheet1-col1-index2" class="dara-checkbox__label">energy</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="skin-sheet1-col3-index3" type="checkbox"> <label for="skin-sheet1-col3-index3" class="dara-checkbox__label">skin</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="sleep-sheet1-col1-index3" type="checkbox">
+                      <label for="sleep-sheet1-col1-index3" class="dara-checkbox__label">sleep</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="bones-sheet1-col3-index4" type="checkbox"> <label for="bones-sheet1-col3-index4" class="dara-checkbox__label">bones</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="stress-sheet1-col1-index4" type="checkbox">
+                      <label for="stress-sheet1-col1-index4" class="dara-checkbox__label">stress</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                   <div class="dara-quiz__el">
-                    <div class="dara-checkbox dara-checkbox--framed"> <input id="beauty-sheet1-col3-index5" type="checkbox"> <label for="beauty-sheet1-col3-index5" class="dara-checkbox__label">beauty</label> <span class="dara-checkbox__active-bg"></span> </div>
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="mood-sheet1-col1-index5" type="checkbox">
+                      <label for="mood-sheet1-col1-index5" class="dara-checkbox__label">mood</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="dara-quiz-item dara-quiz-item--sm-max-w">
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="immunity-sheet1-col2-index1" type="checkbox">
+                      <label for="immunity-sheet1-col2-index1" class="dara-checkbox__label">immunity</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="detox-sheet1-col2-index2" type="checkbox">
+                      <label for="detox-sheet1-col2-index2" class="dara-checkbox__label">detox</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="joints-sheet1-col2-index3" type="checkbox">
+                      <label for="joints-sheet1-col2-index3" class="dara-checkbox__label">joints</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="digestion-sheet1-col2-index4" type="checkbox">
+                      <label for="digestion-sheet1-col2-index4" class="dara-checkbox__label">digestion</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="eyes-sheet1-col2-index5" type="checkbox">
+                      <label for="eyes-sheet1-col2-index5" class="dara-checkbox__label">eyes</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="dara-quiz-item dara-quiz-item--sm-max-w">
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="healthy-aging-sheet1-col3-index1" type="checkbox">
+                      <label for="healthy-aging-sheet1-col3-index1" class="dara-checkbox__label">healthy aging</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="heart-sheet1-col3-index2" type="checkbox">
+                      <label for="heart-sheet1-col3-index2" class="dara-checkbox__label">heart</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="skin-sheet1-col3-index3" type="checkbox">
+                      <label for="skin-sheet1-col3-index3" class="dara-checkbox__label">skin</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="bones-sheet1-col3-index4" type="checkbox">
+                      <label for="bones-sheet1-col3-index4" class="dara-checkbox__label">bones</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
+                  </div>
+                  <div class="dara-quiz__el">
+                    <div class="dara-checkbox dara-checkbox--framed">
+                      <input id="beauty-sheet1-col3-index5" type="checkbox">
+                      <label for="beauty-sheet1-col3-index5" class="dara-checkbox__label">beauty</label>
+                      <span class="dara-checkbox__active-bg"></span>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="dara-quiz__button-wrap dara-quiz__button-wrap--md-margin-t">
                 <div class="dara-quiz__button-row">
-                  <div class="dara-quiz__button"> <button type="button" class="dara-button dara-button--quiz-done">Done</button> </div>
-                  <div class="dara-quiz__button"> <button type="button" class="dara-button dara-button--quiz">Next</button> </div>
+                  <div class="dara-quiz__button">
+                    <button type="button" class="dara-button dara-button--quiz-done">Done</button>
+                  </div>
+                  <div class="dara-quiz__button">
+                    <button type="button" class="dara-button dara-button--quiz">Next</button>
+                  </div>
                 </div>
               </div>
             </div>
