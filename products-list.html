@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover">
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" media="all" href="css/app.css" /> </head>
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
 
   <body>
     <!-- BEGIN content -->
@@ -18,18 +19,29 @@
         <div class="dara-header__in">
           <div class="container-fluid">
             <div class="row">
-              <div class="col"> <a href="#" class="dara-header__back-ico">
-<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-</a> </div>
               <div class="col">
-                <div class="text-center"> <a href="/" class="dara-header__logo"><img src="img/logo.svg" alt="dara"></a> </div>
+                <a href="#" class="dara-header__back-ico">
+                  <svg class="icon icon-arrow-left">
+                    <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="col">
+                <div class="text-center">
+                  <a href="/" class="dara-header__logo"><img src="img/logo.svg" alt="dara"></a>
+                </div>
               </div>
               <div class="col">
                 <div class="dara-header__bl">
-                  <div class="dara-header__el"> </div>
-                  <div class="dara-header__el"> <a href="#" class="dara-header__help-ico">
-<svg class="icon icon-help"><use xlink:href="img/sprite.svg#icon-help"></use></svg>
-</a> </div>
+                  <div class="dara-header__el">
+                  </div>
+                  <div class="dara-header__el">
+                    <a href="#" class="dara-header__help-ico">
+                      <svg class="icon icon-help">
+                        <use xlink:href="img/sprite.svg#icon-help"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -39,35 +51,62 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col">
-                <div class="dara-filter__container"> <a href="#" class="dara-filter-preview js-filter-add-ingredients">
-						<span>INGREDIENTS</span>
-						<i class="dara-filter-preview__icon"></i>
-					</a>
+                <div class="dara-filter__container">
+                  <a href="#" class="dara-filter-preview js-filter-add-ingredients">
+                    <span>INGREDIENTS</span>
+                    <i class="dara-filter-preview__icon"></i>
+                  </a>
                   <div class="dara-filter__in js-filter">
                     <form class="dara-filter__form">
-                      <div class="dara-filter__search-box js-search-box"> <i class="dara-filter__search-ico js-search-loop"></i> <input type="text" class="dara-filter__search js-search">
+                      <div class="dara-filter__search-box js-search-box">
+                        <i class="dara-filter__search-ico js-search-loop"></i>
+                        <input type="text" class="dara-filter__search js-search">
                         <ul class="dara-filter__search-list js-search-autocomplete">
                           <li><a href="#" class="dara-filter__search-link">Maca root</a></li>
                           <li><a href="#" class="dara-filter__search-link">Magnesium</a></li>
                           <li><a href="#" class="dara-filter__search-link">Manganese</a></li>
-                        </ul> <button type="button" class="dara-filter__search-close js-search-close">
-<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-</button> </div>
+                        </ul>
+                        <button type="button" class="dara-filter__search-close js-search-close">
+                          <svg class="icon icon-close">
+                            <use xlink:href="img/sprite.svg#icon-close"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </form>
-                    <div class="dara-filter-dropdown js-filter-dropdown"> <a href="#" class="dara-filter-dropdown__link js-filter-dropdown-link">Filter <i class="dara-filter-dropdown__arrow-down"></i></a>
+                    <div class="dara-filter-dropdown js-filter-dropdown">
+                      <a href="#" class="dara-filter-dropdown__link js-filter-dropdown-link">Filter <i class="dara-filter-dropdown__arrow-down"></i></a>
                       <ul class="dara-filter-dropdown__list js-filter-dropdown-list">
-                        <li class="dara-filter-dropdown__option"> <span>Filter by:</span> <a href="#" class="dara-filter-dropdown__clear js-filter-dropdown-hide">Clear</a> </li>
-                        <li class="dara-filter-dropdown__option"> <span>My Formulation</span>
-                          <div class="dara-filter-radio"> <input class="dara-filter-radio__input js-filter-radio" type="radio" name="category" value="my-formulation" checked> <span class="dara-filter-radio__dot"></span> </div>
+                        <li class="dara-filter-dropdown__option">
+                          <span>Filter by:</span>
+                          <a href="#" class="dara-filter-dropdown__clear js-filter-dropdown-hide">Clear</a>
                         </li>
-                        <li class="dara-filter-dropdown__option"> <span>Vitamins</span>
-                          <div class="dara-filter-radio"> <input class="dara-filter-radio__input js-filter-radio" type="radio" name="category" value="vitamins"> <span class="dara-filter-radio__dot"></span> </div>
+                        <li class="dara-filter-dropdown__option">
+                          <span>My Formulation</span>
+                          <div class="dara-filter-radio">
+                            <input class="dara-filter-radio__input js-filter-radio" type="radio" name="category" value="my-formulation" checked>
+                            <span class="dara-filter-radio__dot"></span>
+                          </div>
                         </li>
-                        <li class="dara-filter-dropdown__option"> <span>Minerals</span>
-                          <div class="dara-filter-radio"> <input class="dara-filter-radio__input js-filter-radio" type="radio" name="category" value="minerals"> <span class="dara-filter-radio__dot"></span> </div>
+                        <li class="dara-filter-dropdown__option">
+                          <span>Vitamins</span>
+                          <div class="dara-filter-radio">
+                            <input class="dara-filter-radio__input js-filter-radio" type="radio" name="category" value="vitamins">
+                            <span class="dara-filter-radio__dot"></span>
+                          </div>
                         </li>
-                        <li class="dara-filter-dropdown__option"> <span>Botanicals</span>
-                          <div class="dara-filter-radio"> <input class="dara-filter-radio__input js-filter-radio" type="radio" name="category" value="botanicals"> <span class="dara-filter-radio__dot"></span> </div>
+                        <li class="dara-filter-dropdown__option">
+                          <span>Minerals</span>
+                          <div class="dara-filter-radio">
+                            <input class="dara-filter-radio__input js-filter-radio" type="radio" name="category" value="minerals">
+                            <span class="dara-filter-radio__dot"></span>
+                          </div>
+                        </li>
+                        <li class="dara-filter-dropdown__option">
+                          <span>Botanicals</span>
+                          <div class="dara-filter-radio">
+                            <input class="dara-filter-radio__input js-filter-radio" type="radio" name="category" value="botanicals">
+                            <span class="dara-filter-radio__dot"></span>
+                          </div>
                         </li>
                       </ul>
                     </div>
@@ -81,9 +120,13 @@
       <nav class="dara-menu js-dara-menu">
         <div class="dara-menu__in">
           <div class="dara-menu__top">
-            <div class="dara-menu__logo">blend</div> <a href="#" class="dara-menu__close js-dara-close-menu-btn">
-<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-</a> </div>
+            <div class="dara-menu__logo">blend</div>
+            <a href="#" class="dara-menu__close js-dara-close-menu-btn">
+              <svg class="icon icon-close">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </a>
+          </div>
           <ul class="dara-menu__list">
             <li class="dara-menu__option"><a href="#" class="dara-menu__link">Home</a></li>
             <li class="dara-menu__option"><a href="#" class="dara-menu__link">Ingredients</a></li>
@@ -106,7 +149,9 @@
                     <h5 class="dara-title-h5 dara-category__title">Vitamins</h5>
                     <div class="dara-category__cards">
                       <a href="#" class="dara-category-card">
-                        <div class="dara-category-card__bl"> <img class="dara-category-card__img" src="img/baobab.png" alt="baobab"> </div>
+                        <div class="dara-category-card__bl">
+                          <img class="dara-category-card__img" src="img/baobab.png" alt="baobab">
+                        </div>
                         <div class="dara-category-card__bl dara-category-card__bl--info">
                           <div class="dara-category-card__info">
                             <div class="dara-category-card__title">Baoab Fruit</div>
@@ -115,27 +160,40 @@
                         </div>
                         <div class="dara-category-card__bl dara-category-card__bl--mob-absolute">
                           <div class="dara-category-proportion">
-                            <div class="dara-category-proportion__num"> <span>1,000 mg</span> <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg> </div>
+                            <div class="dara-category-proportion__num">
+                              <span>1,000 mg</span>
+                              <svg class="icon icon-arrow-right">
+                                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </a>
                       <a href="#" class="dara-category-card">
-                        <div class="dara-category-card__bl"> <img class="dara-category-card__img" src="img/blueberry.png" alt="blueberry"> </div>
+                        <div class="dara-category-card__bl">
+                          <img class="dara-category-card__img" src="img/blueberry.png" alt="blueberry">
+                        </div>
                         <div class="dara-category-card__bl dara-category-card__bl--info">
                           <div class="dara-category-card__info">
                             <div class="dara-category-card__title">Wild Blueberry</div>
-                            <div class="dara-category-card__text">100 grams of wild bilberries on average contain about 40 mg of vitamin C, as well as B vitamins and other beneficial substances. Wild blueberries are also very good for our eyes, specifically due to their antioxidant content,
-                              and bilberries also improve our digestion.</div>
+                            <div class="dara-category-card__text">100 grams of wild bilberries on average contain about 40 mg of vitamin C, as well as B vitamins and other beneficial substances. Wild blueberries are also very good for our eyes, specifically due to their antioxidant content, and bilberries also improve our digestion.</div>
                           </div>
                         </div>
                         <div class="dara-category-card__bl dara-category-card__bl--mob-absolute">
                           <div class="dara-category-proportion">
-                            <div class="dara-category-proportion__num"> <span>1,000 mg</span> <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg> </div>
+                            <div class="dara-category-proportion__num">
+                              <span>1,000 mg</span>
+                              <svg class="icon icon-arrow-right">
+                                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </a>
                       <a href="#" class="dara-category-card">
-                        <div class="dara-category-card__bl"> <img class="dara-category-card__img" src="img/vitamin-c.png" alt="vitamin-c"> </div>
+                        <div class="dara-category-card__bl">
+                          <img class="dara-category-card__img" src="img/vitamin-c.png" alt="vitamin-c">
+                        </div>
                         <div class="dara-category-card__bl dara-category-card__bl--info">
                           <div class="dara-category-card__info">
                             <div class="dara-category-card__title">Vitamin C</div>
@@ -144,7 +202,14 @@
                         </div>
                         <div class="dara-category-card__bl dara-category-card__bl--mob-absolute">
                           <div class="dara-category-proportion">
-                            <div class="dara-category-proportion__num"> <span>180 mg</span> <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg> </div> <i class="dara-category-proportion__add js-ingredient-add-button"></i> </div>
+                            <div class="dara-category-proportion__num">
+                              <span>180 mg</span>
+                              <svg class="icon icon-arrow-right">
+                                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                              </svg>
+                            </div>
+                            <i class="dara-category-proportion__add js-ingredient-add-button"></i>
+                          </div>
                         </div>
                       </a>
                     </div>
@@ -163,7 +228,9 @@
                     <h5 class="dara-title-h5 dara-category__title">Superfoods</h5>
                     <div class="dara-category__cards">
                       <a href="#" class="dara-category-card">
-                        <div class="dara-category-card__bl"> <img class="dara-category-card__img" src="img/acai.png" alt="acai"> </div>
+                        <div class="dara-category-card__bl">
+                          <img class="dara-category-card__img" src="img/acai.png" alt="acai">
+                        </div>
                         <div class="dara-category-card__bl dara-category-card__bl--info">
                           <div class="dara-category-card__info">
                             <div class="dara-category-card__title">Açai Berry</div>
@@ -172,12 +239,19 @@
                         </div>
                         <div class="dara-category-card__bl dara-category-card__bl--mob-absolute">
                           <div class="dara-category-proportion">
-                            <div class="dara-category-proportion__num"> <span>180 mg</span> <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg> </div>
+                            <div class="dara-category-proportion__num">
+                              <span>180 mg</span>
+                              <svg class="icon icon-arrow-right">
+                                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </a>
                       <a href="#" class="dara-category-card">
-                        <div class="dara-category-card__bl"> <img class="dara-category-card__img" src="img/ginger.png" alt="ginger"> </div>
+                        <div class="dara-category-card__bl">
+                          <img class="dara-category-card__img" src="img/ginger.png" alt="ginger">
+                        </div>
                         <div class="dara-category-card__bl dara-category-card__bl--info">
                           <div class="dara-category-card__info">
                             <div class="dara-category-card__title">Ginger</div>
@@ -186,7 +260,12 @@
                         </div>
                         <div class="dara-category-card__bl dara-category-card__bl--mob-absolute">
                           <div class="dara-category-proportion">
-                            <div class="dara-category-proportion__num"> <span>400 mg</span> <svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg> </div>
+                            <div class="dara-category-proportion__num">
+                              <span>400 mg</span>
+                              <svg class="icon icon-arrow-right">
+                                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -214,7 +293,9 @@
             </div>
           </div>
           <div class="dara-fixed-checkout__bl">
-            <div class="dara-fixed-checkout__btn"> <a href="#" class="dara-button dara-button--outline">Checkout</a> </div>
+            <div class="dara-fixed-checkout__btn">
+              <a href="#" class="dara-button dara-button--outline">Checkout</a>
+            </div>
           </div>
         </div>
       </div>
