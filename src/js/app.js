@@ -10,4 +10,5 @@ import './product-carousel.js';
 import './range-slider.js';
 import './accordion.js';
 import './add-ingredients.js';
+import './detect-safari.js';
 // import './dosage.js';

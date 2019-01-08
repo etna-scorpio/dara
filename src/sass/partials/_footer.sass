@@ -9,14 +9,16 @@
 		+rmin(768)
 			padding-bottom: 20px
 	&__logo
-		+caslon
-		font-size: 34px
-		color: #167A65
-		letter-spacing: -1.94px
+		display: inline-block
+		width: 100%
+		max-width: 90px
+		margin-bottom: 25px
 		&:hover,
 		&:focus
 			text-decoration: none
 			color: #167A65
+		+rmin(768)
+			margin-bottom: 41px
 	&__title
 		margin-bottom: 30px
 		+gilroy-bold
@@ -53,13 +55,17 @@
 	flex-wrap: wrap
 	margin-bottom: 30px
 	+gilroy-medium
-	font-size: 11px
+	font-size: 10px
 	line-height: 2
 	letter-spacing: 1.18px
+	+rmin(576)
+		font-size: 11px
 	+rmin(768)
 		margin-bottom: 0
 	&__option
-		margin-right: 20px
+		margin-right: 7px
+		+rmin(576)
+			margin-right: 20px
 	&__link
 		color: #000
 		&:hover,
@@ -94,19 +100,18 @@
 	+rmin(768)
 		margin-bottom: 70px
 	&__option
-		margin-right: 20px
+		margin-right: 10px
 	&__link
 		display: inline-block
 		width: 24px
 		height: 24px
-		background-color: #C6C6C6
 		line-height: 1
 		+vertical
 		white-space: nowrap
 		&:hover,
 		&:focus
 			.icon
-				fill: #fff
+				fill: darken(#167A65, 5%)
 	.icon
 		vertical-align: middle
 		font-size: 20px

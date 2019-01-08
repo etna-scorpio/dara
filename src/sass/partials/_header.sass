@@ -8,8 +8,12 @@
 	transition: background 0.2s ease
 	&.is-active
 		background: #FFF
-		.dara-header__logo svg path
-			fill: #000
+		.dara-header__logo
+			svg path
+				fill: #000
+			&--big
+				svg path
+					fill: #167a65
 		.dara-header__menu-ico
 			color: #000
 			&:hover,
@@ -113,21 +117,12 @@
 			+rmin(768)
 				width: 125px
 				transform: translate3d(0, 82px, 0)
-		&--text
-			width: auto
-			margin-top: 5px
-			+caslon
-			font-size: 33px
-			color: #167A65
-			letter-spacing: -2.51px
-			line-height: 0.85
+		&--big
+			width: 90px
+			fill: #167A65
 			+rmin(576)
-				margin-top: 0
-				font-size: 44px
-			&:hover,
-			&:focus
-				text-decoration: none
-				color: #167A65
+				width: 118px
+				margin-top: -2px
 		img,
 		svg
 			display: block
@@ -159,7 +154,6 @@
 		color: #181818
 		transition: color 0.2s ease
 		&:hover,
-		&:visited,
 		&:focus
 			text-decoration: none
 			color: #167A65
@@ -212,12 +206,8 @@
 			text-decoration: none
 			color: #FFF
 	&__logo
-		+caslon
-		font-size: 33px
-		color: #fff
-		letter-spacing: -2.51px
-		line-height: 0.7
-		&:hover,
-		&:focus
-			text-decoration: none
-			color: #fff
+		max-width: 90px
+		margin: 0 auto
+		svg path
+			fill: #fff
+
