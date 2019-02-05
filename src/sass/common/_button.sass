@@ -33,19 +33,20 @@
 		font-size: 16px
 		letter-spacing: 0.07px
 	&--header-start
-		position: absolute
-		top: 50%
-		right: 100%
-		margin-top: -15px
-		padding: 8px 20px
+		margin-top: 1px
+		padding: 9px 10px 7px
+		border-radius: 20px
 		+av-medium
 		font-size: 14px
 		opacity: 0
 		visibility: hidden
 		line-height: 1
 		transition: opacity 0.2s linear, visibility 0.2s linear
-		+rmin(768)
-			padding: 8px 33.5px
+		+rmin(500)
+			position: static
+			margin-top: 0
+		+rmin(1025)
+			padding: 9px 10px 7px
 	&--update
 		width: 100%
 		padding: 13px 10px

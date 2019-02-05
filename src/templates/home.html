@@ -106,7 +106,11 @@ header: dara-header--no-bg
 					</div>
 					<div class="col-12 col-md-6{% if item.changeOrder %} order-md-1{% endif %}">
 						<div class="dara-about__bl dara-about__bl--img">
+							{% if loop.last %}
+							<img class="dara-about__img" src="img/about-pic3.jpg" alt="about">
+							{% else %}
 							<img class="dara-about__img" src="img/about-pic{{ loop.index }}.jpg" alt="about">
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -118,60 +122,62 @@ header: dara-header--no-bg
 	<!-- begin dara-feature -->
 	<div class="dara-feature">
 		<div class="dara-feature__in">
-			<div class="dara-feature__head">
-				<div class="dara-feature__desc">SIMPLE</div>
-				<div class="dara-feature__title">One scoop. Done.</div>
-				<div class="dara-feature__subtitle">One scoop a day with a smoothie or your favorite beverage.</div>
-			</div>
-			<div class="dara-feature__list text-center">
-				<ul class="dara-checklist dara-checklist--horizontal">
-					<li class="dara-checklist__option">Easy to drink</li>
-					<li class="dara-checklist__option">No more pills</li>
-					<li class="dara-checklist__option">Delicious taste</li>
-				</ul>
-			</div>
-			<img class="dara-feature__img img-fluid" src="img/feature-pic.jpg" alt="feature" />
-			<div class="dara-feature__head">
-				<div class="dara-feature__desc">HONEST</div>
-				<div class="dara-feature__title">Fair prices. No middlemen.</div>
-				<div class="dara-feature__subtitle">Amazing pricing with free shipping and returns.</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row justify-content-center">
-					{% set steps = [{
-						img: 'money',
-						title: 'FROM $29.90/MO',
-						text: 'Starting at $29.90/month, you will be surprised by your savings.'
-					}, {
-						img: 'truck',
-						title: 'FREE NEXT DAY SHIPPING',
-						text: 'All orders ship free next business day.'
-					}, {
-						img: 'handshake',
-						title: 'CANCEL ANYTIME',
-						text: 'Pause or cancel your subscription anytime.'
-					}] %}
+			<div class="dara-feature__center">
+				<div class="dara-feature__head">
+					<div class="dara-feature__desc">SIMPLE</div>
+					<div class="dara-feature__title">One scoop. Done.</div>
+					<div class="dara-feature__subtitle">One scoop a day with a smoothie or your favorite beverage.</div>
+				</div>
+				<div class="dara-feature__list text-center">
+					<ul class="dara-checklist dara-checklist--horizontal">
+						<li class="dara-checklist__option">Easy to drink</li>
+						<li class="dara-checklist__option">No more pills</li>
+						<li class="dara-checklist__option">Delicious taste</li>
+					</ul>
+				</div>
+				<img class="dara-feature__img img-fluid" src="img/feature-pic.jpg" alt="feature" />
+				<div class="dara-feature__head">
+					<div class="dara-feature__desc">HONEST</div>
+					<div class="dara-feature__title">Fair prices. No middlemen.</div>
+					<div class="dara-feature__subtitle">Amazing pricing with free shipping and returns.</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row justify-content-center">
+						{% set steps = [{
+							img: 'money',
+							title: 'FROM $29.90/MO',
+							text: 'Starting at $29.90/month, you will be surprised by your savings.'
+						}, {
+							img: 'truck',
+							title: 'FREE NEXT DAY SHIPPING',
+							text: 'All orders ship free next business day.'
+						}, {
+							img: 'handshake',
+							title: 'CANCEL ANYTIME',
+							text: 'Pause or cancel your subscription anytime.'
+						}] %}
 
-					{% for step in steps %}
-					<div class="col-sm-12 col-md-4 col-lg-4">
-						<div class="dara-step">
-							<div class="dara-step__pic">
-								<i class="dara-step__icon dara-step__icon--{{step.img}}"></i>
-							</div>
-							<div class="dara-step__info">
-								<div class="dara-step__title">{{ step.title }}</div>
-								{% if step.text %}<p>{{ step.text }}</p>{% endif %}
+						{% for step in steps %}
+						<div class="col-sm-12 col-md-4 col-lg-4">
+							<div class="dara-step">
+								<div class="dara-step__pic">
+									<i class="dara-step__icon dara-step__icon--{{step.img}}"></i>
+								</div>
+								<div class="dara-step__info">
+									<div class="dara-step__title">{{ step.title }}</div>
+									{% if step.text %}<p>{{ step.text }}</p>{% endif %}
+								</div>
 							</div>
 						</div>
+						{% endfor %}
 					</div>
-					{% endfor %}
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end dara-feature -->
 	<!-- begin dara-hero -->
-	<section class="dara-hero dara-hero--sm-padding">
+	<section class="dara-hero dara-hero--pink-bg dara-hero--no-padding-bottom">
 		<div class="dara-hero__wrap">
 			<div class="container-fluid">
 				<div class="row">
@@ -184,7 +190,9 @@ header: dara-header--no-bg
 							</div>
 							<a href="#" class="dara-button dara-button--start js-dara-button-start">Get started</a>
 						</div>
-						<img class="dara-hero__img" src="img/home.png" alt="home background">
+						<div class="dara-hero__img-wrap">
+							<img class="dara-hero__img" src="img/blend-package2.png" alt="home background">
+						</div>
 					</div>
 				</div>
 			</div>
