@@ -8,19 +8,21 @@ header: dara-header--no-bg
 
 {% block content %}
 	<!-- begin dara-hero -->
-	<section class="dara-hero">
+	<section class="dara-hero dara-hero--blue-bg">
 		<div class="dara-hero__wrap">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col text-center">
 						<div class="dara-hero__bl">
 							<div class="dara-hero__head">
-								<p class="dara-hero__title">Build your dream <span>supplement</span></p>
+								<p class="dara-hero__title">A days nutrients in one scoop.</p>
 								<p class="dara-hero__subtitle">Get a personalized blend of supplements, functional foods, and proteins custom made for you with the finest ingredients.</p>
 							</div>
-							<a href="#" class="dara-button dara-button--start js-dara-button-start">Get started</a>
+							<a href="#" class="dara-button dara-button--start dara-button--grow-font js-dara-button-start">Get started</a>
 						</div>
-						<img class="dara-hero__img" src="img/home.png" alt="home background">
+						<div class="dara-hero__img-wrap">
+							<img class="dara-hero__img" src="img/blend-main.png" alt="home background">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -30,38 +32,40 @@ header: dara-header--no-bg
 	<!-- begin dara-subscription -->
 	<section class="dara-subscription">
 		<div class="dara-subscription__in">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col">
-						<div class="dara-subscription__head">
-							<p class="dara-subscription__welcome">WELCOME TO BLEND</p>
-							<p class="dara-subscription__title">Receive a monthly supply of your personalized blend in powder form.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row justify-content-center">
-					{% set steps = [{
-						title: 'PERSONALIZE',
-						text: 'Tell us your health goals and needs, and see your recommended blend. Adjust at will.'
-					}, {
-						title: 'RECEIVE',
-						text: 'We custom make 30 servings of your blend, and ship it free next business day.'
-					}, {
-						title: 'ENJOY',
-						text: 'Drink with a smoothie or your favorite beverage. Store in the provided stainless steel canister'
-					}] %}
-
-					{% for step in steps %}
-					<div class="col-sm-12 col-md-4 col-lg-4">
-						<div class="dara-step">
-							<img class="dara-step__img" src="img/step_{{loop.index}}.svg" alt="step_{{loop.index}}">
-							<div class="dara-step__info">
-								<div class="dara-step__title">{{ step.title }}</div>
-								<p>{{ step.text }}</p>
+			<div class="dara-subscription__center">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<div class="dara-subscription__head">
+								<p class="dara-subscription__welcome">WELCOME TO BLEND</p>
+								<p class="dara-subscription__title">Receive a monthly supply of your personalized blend in powder form.</p>
 							</div>
 						</div>
 					</div>
-					{% endfor %}
+					<div class="row justify-content-center">
+						{% set steps = [{
+							title: 'PERSONALIZE',
+							text: 'Tell us your health goals and needs, and see your recommended blend. Adjust at will.'
+						}, {
+							title: 'RECEIVE',
+							text: 'We custom make 30 servings of your blend, and ship it free next business day.'
+						}, {
+							title: 'ENJOY',
+							text: 'Drink with a smoothie or your favorite beverage. Store in the provided stainless steel canister'
+						}] %}
+
+						{% for step in steps %}
+						<div class="col-sm-12 col-md-4 col-lg-4">
+							<div class="dara-step">
+								<img class="dara-step__img" src="img/step_{{loop.index}}.svg" alt="step_{{loop.index}}">
+								<div class="dara-step__info">
+									<div class="dara-step__title">{{ step.title }}</div>
+									<p>{{ step.text }}</p>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -177,7 +181,7 @@ header: dara-header--no-bg
 	</div>
 	<!-- end dara-feature -->
 	<!-- begin dara-hero -->
-	<section class="dara-hero dara-hero--pink-bg dara-hero--no-padding-bottom">
+	<section class="dara-hero dara-hero--pink-bg dara-hero--special-padding">
 		<div class="dara-hero__wrap">
 			<div class="container-fluid">
 				<div class="row">
@@ -188,10 +192,10 @@ header: dara-header--no-bg
 								<p class="dara-hero__title">We love ingredients,<br> not plastic.</p>
 								<p class="dara-hero__subtitle dara-hero__subtitle--sm">Our packaging is kraft paper based with net-zero emissions (thru carbon offsets). It’s recyclable, backyard compostable, and biodegradable. On your first shipment you get a free beautiful stainless steel canister to keep your blend in.</p>
 							</div>
-							<a href="#" class="dara-button dara-button--start js-dara-button-start">Get started</a>
+							<a href="#" class="dara-button dara-button--start dara-button--grow-font js-dara-button-start">Get started</a>
 						</div>
-						<div class="dara-hero__img-wrap">
-							<img class="dara-hero__img" src="img/blend-package2.png" alt="home background">
+						<div class="dara-hero__img-wrap dara-hero__img-wrap--more-margin">
+							<img class="dara-hero__img dara-hero__img--smaller-width" src="img/blend-package.png" alt="home background">
 						</div>
 					</div>
 				</div>

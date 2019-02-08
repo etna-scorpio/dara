@@ -19,12 +19,16 @@
 			color: #167A65
 		+rmin(768)
 			margin-bottom: 41px
+		+rmin(1200)
+			+css-lock(90, 110, 1200, 1920, max-width)
 	&__title
 		margin-bottom: 30px
 		+gilroy-bold
 		font-size: 25px
 		color: #167A65
 		line-height: 1.2
+		+rmin(1200)
+			+css-lock(25, 28, 1200, 1920)
 	&__form
 		margin-bottom: 20px
 	&__row
@@ -92,6 +96,8 @@
 		&:focus
 			text-decoration: none
 			color: #167A65
+		+rmin(1200)
+			+css-lock(16, 18, 1200, 1920)
 
 
 .dara-social

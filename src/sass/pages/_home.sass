@@ -1,25 +1,29 @@
 .dara-hero
 	position: relative
-	padding: 100px 0 15px
+	z-index: 0
+	padding-top: 100px
 	color: #000
 	overflow: hidden
 	+rmin(768)
-		padding: 175px 0 15px
-	&.dara-hero--no-padding-bottom
-		padding: 50px 0 0
+		padding-top: 175px
+	&.dara-hero--special-padding
+		padding: 50px 0 56px
 		+rmin(1200)
-			padding: 75px 0 0
+			padding: 75px 0 56px
 	&.dara-hero--pink-bg
-		z-index: 0
-		background: #FDF4EB
-		+g(#fdf4eb, #f3ece6)
+		background-color: #FDF4EB
+		background-image: linear-gradient(#FDF4EB, #fcf5eb, #f7f2ee, #f0e9e3)
+	&.dara-hero--blue-bg
+		background: #e4f8ff
 	&__wrap
 		max-width: 1440px
 		margin: 0 auto
 	&__bl
 		position: relative
 		max-width: 1020px
-		margin: 0 auto 60px
+		margin: 0 auto 50px
+		+rmin(576)
+			margin: 0 auto
 	&__head
 		margin-bottom: 30px
 		padding: 0 25px
@@ -38,7 +42,10 @@
 			font-size: 45px
 			line-height: 1.16
 		+rmin(1200)
-			font-size: 70px
+			margin-bottom: 20px
+			+css-lock(70, 75, 1200, 1920)
+			br
+				display: none
 		span
 			color: #167A65
 	&__subtitle
@@ -51,10 +58,14 @@
 			font-size: 16px
 		+rmin(576)
 			font-size: 20px
-			line-height: 1.3
+			line-height: 1.44
+		+rmin(1200)
+			+css-lock(697, 1000, 1200, 1920, max-width)
+			+css-lock(20, 25, 1200, 1920)
 		&--sm
 			+rmin(576)
 				font-size: 18px
+				+css-lock(18, 22, 1200, 1920)
 	&__desc
 		margin-bottom: 25px
 		text-transform: uppercase
@@ -64,20 +75,23 @@
 		line-height: 1.375
 		letter-spacing: 1.71px
 		+rmin(1200)
+			+css-lock(16, 20, 1200, 1920)
 			margin-bottom: 55px
 	&__img-wrap
 		position: relative
 		z-index: -1
-		margin: -120px -15px 0
-		+rmin(1200)
-			margin: -150px -15px 0
-		+rmin(1360)
-			margin: -220px -15px 0
+		margin: 0 -15px
+		+rmin(1025)
+			margin: -60px -15px 0
+		&--more-margin
+			margin: 0 -15px 0
+			+rmin(1025)
+				margin: -50px -15px 0
 	&__img
 		position: relative
 		display: block
 		left: 50%
-		width: 500px
+		width: 600px
 		margin: 0 auto
 		transform: translateX(-50%)
 		+rmin(576)
@@ -85,16 +99,20 @@
 			width: auto
 			max-width: 100%
 			transform: translateX(0)
-
+		&--smaller-width
+			+rmin(1200)
+				max-width: 90%
 
 .dara-subscription
-	margin: 0 15px 40px
-	background: #FFF
+	padding: 0 15px 40px
+	background: #e4f8ff
 	+rmin(768)
-		margin: 0 40px 40px
+		padding: 0 40px 40px
 	&__in
+		background: #FFF
+	&__center
 		margin: 0 auto
-		max-width: 1046px
+		max-width: 1700px
 		padding: 30px 15px
 		+rmin(768)
 			padding: 50px 15px
@@ -109,13 +127,15 @@
 		+rmin(768)
 			font-size: 40px
 		+rmin(1200)
-			font-size: 50px
+			+css-lock(50, 65, 1200, 1920)
 	&__head
 		max-width: 760px
 		margin: 0 auto 35px
 		text-align: center
 		+rmin(768)
 			margin-bottom: 69px
+		+rmin(1200)
+			+css-lock(760, 900, 1200, 1920, max-width)
 	&__welcome
 		margin-bottom: 30px
 		+gilroy-bold
@@ -125,6 +145,8 @@
 		letter-spacing: 1.71px
 		+rmin(768)
 			margin-bottom: 38px
+		+rmin(1200)
+			+css-lock(16, 20, 1200, 1920)
 
 
 .dara-step
@@ -134,7 +156,7 @@
 	+gilroy-medium
 	font-size: 15px
 	+rmin(1200)
-		font-size: 16px
+		+css-lock(16, 18, 1200, 1920)
 	&__img
 		width: 100%
 		max-width: 100px
@@ -176,11 +198,15 @@
 		line-height: 1.375
 		letter-spacing: 1.71px
 		+rmin(768)
-			font-size: 18px
+			font-size: 16px
+		+rmin(1200)
+			+css-lock(16, 20, 1200, 1920)
 	&__info
 		max-width: 275px
 		margin: 0 auto
 		line-height: 1.625
+		+rmin(1200)
+			+css-lock(275, 320, 1200, 1920, max-width)
 
 
 .dara-about
@@ -215,7 +241,7 @@
 		+rmin(768)
 			text-align: left
 		+rmin(1200)
-			max-width: 470px
+			+css-lock(470, 650, 1200, 1920, max-width)
 	&__img
 		display: block
 		width: 100%
@@ -238,6 +264,7 @@
 		letter-spacing: 1.71px
 		+rmin(1200)
 			margin-bottom: 44px
+			+css-lock(16, 20, 1200, 1920)
 	&__title
 		margin-bottom: 14px
 		+caslon-semibold
@@ -246,7 +273,7 @@
 		+rmin(768)
 			font-size: 40px
 		+rmin(1200)
-			font-size: 50px
+			+css-lock(50, 65, 1200, 1920)
 	&__text
 		max-width: 509px
 		+gilroy-medium
@@ -254,7 +281,8 @@
 		+rmin(768)
 			font-size: 16px
 		+rmin(1200)
-			font-size: 18px
+			+css-lock(509, 600, 1200, 1920, max-width)
+			+css-lock(18, 24, 1200, 1920)
 		&:not(:last-child)
 			margin-bottom: 30px
 			+rmin(1200)
@@ -294,6 +322,7 @@
 		letter-spacing: 1.71px
 		+rmin(1200)
 			margin-bottom: 43px
+			+css-lock(16, 18, 1200, 1920)
 	&__title
 		margin-bottom: 20px
 		+caslon-semibold
@@ -304,12 +333,14 @@
 			font-size: 45px
 		+rmin(1200)
 			margin-bottom: 28px
-			font-size: 50px
+			+css-lock(50, 65, 1200, 1920)
 	&__subtitle
 		+gilroy-medium
 		font-size: 15px
 		+rmin(768)
 			font-size: 18px
+		+rmin(1200)
+			+css-lock(18, 22, 1200, 1920)
 	&__list
 		max-width: 1000px
 		margin: 0 auto 40px
@@ -335,7 +366,7 @@
 		margin: auto
 		font-size: 20px
 	+rmin(1200)
-		font-size: 25px
+		+css-lock(25, 30, 1200, 1920)
 	&--horizontal
 		display: flex
 		flex-wrap: wrap

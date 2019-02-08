@@ -46,9 +46,10 @@
 				margin-top: 3px
 	&__in
 		min-height: 57px
-		max-width: 1167px
 		margin: 0 auto
 		padding: 11px 0 5px
+		+rmin(1200)
+			padding: 11px 150px 5px
 	&__checkout
 		display: none
 		margin-right: 10px
@@ -120,6 +121,9 @@
 		&--big
 			width: 90px
 			fill: #167A65
+			+rmin(1200)
+				+css-lock(3, -1, 1200, 1920, margin-top)
+				+css-lock(90, 110, 1200, 1920, width)
 		img,
 		svg
 			display: block
@@ -155,6 +159,8 @@
 		&:focus
 			text-decoration: none
 			color: #167A65
+		+rmin(1200)
+			+css-lock(16, 18, 1200, 1920)
 		&--active
 			color: #167A65
 		&--sign
