@@ -34,6 +34,8 @@
 		letter-spacing: 0.07px
 	&--grow-font
 		+rmin(1200)
+			border-radius: 30px
+			+css-lock(150, 180, 1200, 1920, max-width)
 			+css-lock(16, 20, 1200, 1920)
 	&--header-start
 		margin-top: 1px
@@ -47,9 +49,9 @@
 		transition: opacity 0.2s linear, visibility 0.2s linear
 		+rmin(500)
 			position: static
+		+rmin(1200)
 			margin-top: 0
-		+rmin(1025)
-			padding: 9px 10px 7px
+			padding: 10px 17px 9px
 	&--update
 		width: 100%
 		padding: 13px 10px

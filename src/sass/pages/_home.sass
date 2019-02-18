@@ -13,8 +13,8 @@
 	&.dara-hero--pink-bg
 		background-color: #FDF4EB
 		background-image: linear-gradient(#FDF4EB, #fcf5eb, #f7f2ee, #f0e9e3)
-	&.dara-hero--blue-bg
-		background: #e4f8ff
+	&.dara-hero--green-bg
+		background: #D0E4DB
 	&__wrap
 		max-width: 1440px
 		margin: 0 auto
@@ -24,6 +24,8 @@
 		margin: 0 auto 50px
 		+rmin(576)
 			margin: 0 auto
+		+rmin(1200)
+			+css-lock(1020, 1100, 1200, 1920, max-width)
 	&__head
 		margin-bottom: 30px
 		padding: 0 25px
@@ -42,8 +44,8 @@
 			font-size: 45px
 			line-height: 1.16
 		+rmin(1200)
-			margin-bottom: 20px
-			+css-lock(70, 75, 1200, 1920)
+			+css-lock(15, 30, 1200, 1920, margin-bottom)
+			+css-lock(70, 85, 1200, 1920)
 			br
 				display: none
 		span
@@ -61,7 +63,7 @@
 			line-height: 1.44
 		+rmin(1200)
 			+css-lock(697, 1000, 1200, 1920, max-width)
-			+css-lock(20, 25, 1200, 1920)
+			+css-lock(20, 30, 1200, 1920)
 		&--sm
 			+rmin(576)
 				font-size: 18px
@@ -127,7 +129,7 @@
 		+rmin(768)
 			font-size: 40px
 		+rmin(1200)
-			+css-lock(50, 65, 1200, 1920)
+			+css-lock(50, 70, 1200, 1920)
 	&__head
 		max-width: 760px
 		margin: 0 auto 35px
@@ -135,7 +137,7 @@
 		+rmin(768)
 			margin-bottom: 69px
 		+rmin(1200)
-			+css-lock(760, 900, 1200, 1920, max-width)
+			+css-lock(760, 1000, 1200, 1920, max-width)
 	&__welcome
 		margin-bottom: 30px
 		+gilroy-bold
@@ -146,7 +148,8 @@
 		+rmin(768)
 			margin-bottom: 38px
 		+rmin(1200)
-			+css-lock(16, 20, 1200, 1920)
+			+css-lock(38, 50, 1200, 1920, margin-bottom)
+			+css-lock(16, 23, 1200, 1920)
 
 
 .dara-step
@@ -156,7 +159,7 @@
 	+gilroy-medium
 	font-size: 15px
 	+rmin(1200)
-		+css-lock(16, 18, 1200, 1920)
+		+css-lock(16, 20, 1200, 1920)
 	&__img
 		width: 100%
 		max-width: 100px
@@ -200,7 +203,8 @@
 		+rmin(768)
 			font-size: 16px
 		+rmin(1200)
-			+css-lock(16, 20, 1200, 1920)
+			+css-lock(6, 10, 1200, 1920, margin-bottom)
+			+css-lock(16, 23, 1200, 1920)
 	&__info
 		max-width: 275px
 		margin: 0 auto
