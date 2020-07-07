@@ -62,7 +62,7 @@
     "husky": "^0.13.2",
     "jquery": "^3.5.1",
     "lint-staged": "^4.0.2",
-    "lodash": "^4.3.0",
+    "lodash": "^4.17.13",
     "lost": "^7.1.0",
     "object-fit-images": "^3.2.3",
     "postcss-csso": "^2.0.0",
