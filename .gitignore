@@ -22,6 +22,7 @@ Thumbs.db
 nbproject
 *.sublime-project
 *.sublime-workspace
+*.code-workspace
 .idea
 
 # Folders to ignore
@@ -30,3 +31,4 @@ nbproject
 _tmp
 node_modules
 bower_components
+
