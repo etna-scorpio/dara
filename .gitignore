@@ -24,6 +24,7 @@ nbproject
 *.sublime-workspace
 *.code-workspace
 .idea
+*.vscode
 
 # Folders to ignore
 .sass-cache

@@ -4,6 +4,9 @@
 		margin: 0 -5px 10px
 		&--md-margin-b
 			margin-bottom: 24px
+		&--no-negative-margin
+			margin-left: 0
+			margin-right: 0
 	&__field
 		position: relative
 		flex-basis: 100%
@@ -32,6 +35,8 @@
 		small
 			font-size: 12px
 			text-transform: none
+		&--bold
+			+gilroy-bold
 	&__input
 		display: block
 		width: 100%
@@ -43,6 +48,8 @@
 		letter-spacing: -0.16px
 		transition: border-color 0.2s ease
 		border-radius: 3px
+		&--no-border
+			border: none
 	&__helper
 		display: none
 		position: absolute
@@ -64,7 +71,27 @@
 		background-repeat: no-repeat
 		border: 1px solid #ddd
 		border-radius: 3px
-
+	&__link
+		+gilroy-bold
+		font-size: 12px
+		letter-spacing: 1.13px
+	&__button
+		width: 100%
+		padding: 15px 10px 14px
+		text-transform: uppercase
+		+gilroy
+		font-size: 18px
+		background: #008489
+		color: #fff
+		border-radius: 4px
+		letter-spacing: -0.2px
+		line-height: 1.2
+		&:focus
+			outline: #008489
+	&__txt-bold
+		+gilroy-bold
+		font-size: 12px
+		letter-spacing: 1.13px
 
 .dara-field
 	position: relative

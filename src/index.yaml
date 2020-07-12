@@ -29,3 +29,5 @@ PageList:
   ready: 100
 - file: nutrition.html
   ready: 100
+- file: login.html
+  ready: 100

@@ -1,0 +1,77 @@
+---
+title: Login
+daraOutMod: dara-out--flex
+fixedCheckout: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block header %}
+  <header class="dara-header dara-header--white-bg dara-header--simple js-dara-header">
+    <div class="dara-header__in">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="text-center">
+              <a href="/" class="dara-header__logo dara-header__logo--only js-dara-header-logo">
+                {% include 'partials/_svg_logo.svg' %}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <main class="content">
+    <div class="auth">
+      <div class="auth__inner">
+        <h5 class="auth__title">SIGN IN TO YOUR ACCOUNT</h5>
+        <form class="dara-form">
+          <div class="dara-form__row">
+            <div class="dara-form__field js-input-box is-error is-active">
+              <input type="text" class="dara-form__input dara-form__input--no-border js-input-data">
+              <label for="name" class="dara-form__label dara-form__label--bold">Full Name</label>
+              <div class="dara-form__helper">Please type a name</div>
+            </div>
+          </div>
+          <div class="dara-form__row">
+            <div class="dara-form__field js-input-box">
+              <input type="password" class="dara-form__input dara-form__input--no-border js-input-data">
+              <label for="name" class="dara-form__label dara-form__label--bold">Password</label>
+            </div>
+          </div>
+          <div class="dara-form__row dara-form__row--no-negative-margin justify-content-between">
+            <div class="dara-checkbox dara-checkbox--small-check dara-checkbox--bold">
+              <input id="check" type="checkbox">
+              <label for="check" class="dara-checkbox__label">Remember me</a>
+            </label>
+            </div>
+            <a href="#" class="dara-form__link text-right pl-2">Forgot your password?</a>
+          </div>
+          <div class="dara-form__row dara-form__row--no-negative-margin dara-form__row--md-margin-b">
+            <button class="dara-form__button" type="submit">Sign in</button>
+          </div>
+          <div>
+            <span class="dara-form__txt-bold">New to Blend?</span>
+            <a href="#" class="dara-form__link">Get started now</a>
+          </div>
+      </div>
+    </div>
+  </form>
+</div>
+</main>
+{% endblock %}
+
+{% block footer %}
+<footer class="dara-footer dara-footer--no-bg">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="dara-footer__terms text-center">© Blend Contact	Privacy & Terms </div>
+    </div>
+  </div>
+</div>
+</footer>
+{% endblock %}

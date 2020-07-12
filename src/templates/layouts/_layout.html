@@ -16,10 +16,10 @@
 
     <!-- BEGIN content -->
     <div class="dara-out{% if daraOutMod %} {{ daraOutMod }}{% endif %}">
-      {% include 'partials/_header.html' %}
+      {% block header %}{% include 'partials/_header.html' %}{% endblock %}
       {% block content %}{% endblock %}
       {% include 'partials/_fixed-checkout.html' %}
-      {% include 'partials/_footer.html' %}
+      {% block footer %}{% include 'partials/_footer.html' %}{% endblock %}
     </div>
     <!-- END content -->
 
