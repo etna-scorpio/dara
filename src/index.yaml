@@ -31,3 +31,5 @@ PageList:
   ready: 100
 - file: login.html
   ready: 100
+- file: reset.html
+  ready: 100
