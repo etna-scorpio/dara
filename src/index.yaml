@@ -33,3 +33,5 @@ PageList:
   ready: 100
 - file: reset.html
   ready: 100
+- file: new-password.html
+  ready: 100
