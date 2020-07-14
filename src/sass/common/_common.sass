@@ -1,15 +1,14 @@
+$brand-color: #008489
+
 @import fonts
 @import titles
 @import button
 
-
 body
 	min-width: 320px
 	+gilroy
-	background: #E8E8E8
+	background: #F7F9FA
 	color: #000
-	&.body--bg-white
-		background: #FFF
 	&.is-overlay
 		&:before
 			display: block
@@ -57,11 +56,11 @@ body
 
 
 .dara-link
-	color: #FE0066
+	color: $brand-color
 	border-bottom: 1px solid transparent
 	&:hover
 		text-decoration: none
-		color: #FE0066
+		color: $brand-color
 		border-bottom-color: currentColor
 	&--arrow
 		border-bottom: none
@@ -115,7 +114,7 @@ body
 			&:after
 				display: none
 	.noUi-connect
-		background: #FE0066
+		background: $brand-color
 
 
 html:not([dir=rtl]) .range-slider.noUi-horizontal .noUi-handle

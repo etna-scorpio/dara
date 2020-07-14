@@ -9,7 +9,6 @@
 	letter-spacing: -0.32px
 	&--framed
 		min-height: 100px
-		border: 1px solid #ddd
 		border-radius: 2px
 		padding: 9px 14px
 		background: #FFF
@@ -36,7 +35,7 @@
 			margin: -7.5px 0 0 4px
 			opacity: 0
 			visibility: hidden
-			background: #FE0066
+			background: $brand-color
 			transition: opacity 0.2s ease, visibility 0.2s ease
 	&__active-bg
 		position: absolute
@@ -45,7 +44,7 @@
 		left: 0
 		right: 0
 		bottom: 0
-		background: #F2F2F2
+		background: #EAEAEA
 		opacity: 0
 		visibility: hidden
 		transition: opacity 0.2s ease, visibility 0.2s ease
@@ -91,7 +90,6 @@
 				top: 5px
 				transform: none
 	&--framed
-		border: 1px solid #ddd
 		border-radius: 6px
 		text-transform: uppercase
 		text-align: center
@@ -152,7 +150,7 @@
 		opacity: 0
 		visibility: hidden
 		border-radius: 6px
-		background: #F2F2F2
+		background: #EAEAEA
 	input
 		position: absolute
 		opacity: 0
@@ -160,8 +158,8 @@
 		&:checked
 			~ .dara-checkbox__label
 				&:before
-					background: #FE0066
-					border-color: #FE0066
+					background: $brand-color
+					border-color: $brand-color
 				&:after
 					display: block
 			~ .dara-checkbox__active-bg

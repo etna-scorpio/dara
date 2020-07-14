@@ -12,9 +12,14 @@
 		+rmin(768)
 			left: 0
 			right: 0
+	&:first-child
+		border-radius: 5px 5px 0 0
 	&:last-child
-			&:before
-				display: none
+		border-radius: 0 0 5px 5px
+		&:before
+			display: none
+	&:only-child
+		border-radius: 5px
 	&__title
 		position: relative
 		padding: 20px 15px
@@ -43,7 +48,7 @@
 		&:after
 			content: ""
 			position: absolute
-			background: #FE0066
+			background: $brand-color
 		&:before
 			top: 0
 			left: 50%
