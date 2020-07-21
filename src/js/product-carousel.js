@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 $(document).ready(function() {
-  $('.js-dara-product-carousel').slick({
+  $('.js-product-carousel').slick({
     dots: true,
     arrows: false,
     draggable: false,

@@ -1,4 +1,4 @@
-.dara-header
+.header
 	position: fixed
 	z-index: 10
 	top: 0
@@ -8,19 +8,19 @@
 	transition: background 0.2s ease
 	&.is-active
 		background: #FFF
-		.dara-header__logo
+		.header__logo
 			svg path
 				fill: #000
 			&--big
 				svg path
 					fill: #167a65
-		.dara-header__menu-ico
+		.header__menu-ico
 			color: #000
 			&:hover,
 			&:visited
 				color: #000
 	&.is-start
-		.dara-button--header-start
+		.button--header-start
 			opacity: 1
 			visibility: visible
 	&--white-bg
@@ -30,7 +30,7 @@
 		+rmin(768)
 			background: none
 	&--mob-sm-height
-		.dara-header__in
+		.header__in
 			min-height: 40px
 			padding: 2px 5px
 			border-bottom: 1px solid #F2F2F2
@@ -38,14 +38,14 @@
 				min-height: 57px
 				border-bottom-color: transparent
 				padding: 11px 5px 5px
-		.dara-header__logo
+		.header__logo
 			width: 52px
 			margin-top: 8px
 			+rmin(1025)
 				width: 76px
 				margin-top: 3px
 	&--simple
-		.dara-header__in
+		.header__in
 			padding: 10px 5px 6px
 	&__in
 		min-height: 57px
@@ -141,7 +141,7 @@
 
 
 
-.dara-header-list
+.header-list
 	margin-bottom: 0
 	padding-top: 5px
 	&--with-button
@@ -175,7 +175,7 @@
 				color: $brand-color
 
 
-.dara-menu
+.menu
 	position: fixed
 	z-index: 12
 	top: 0

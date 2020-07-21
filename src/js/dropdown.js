@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 var BODY = $('body');
-var filter = $('.js-dara-filter');
+var filter = $('.js-filter');
 var dropdown = '.js-filter-dropdown';
 var dropdownLink = $('.js-filter-dropdown-link');
 var dropdownHide = $('.js-filter-dropdown-hide');

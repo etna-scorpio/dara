@@ -1,7 +1,7 @@
 ---
 title: Step 7
-daraOutMod: dara-out--md-padding
-header: dara-header--white-bg dara-header--mob-sm-height
+outMod: out--md-padding
+header: header--white-bg header--mob-sm-height
 headerHelpIcon: true
 fixedCheckout: false
 footer: false
@@ -9,33 +9,33 @@ footer: false
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-<section class="dara-quiz">
+<section class="quiz">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
-				<div class="dara-special-title"><span>Alright! Let’s get your personalized blend.</span></div>
-				<div class="dara-quiz-item">
-					<div class="dara-form">
-						<div class="dara-form__row dara-form__row--md-margin-b">
-							<div class="dara-form__field js-input-box">
-								<input id="email" type="email" class="dara-form__input js-input-data">
-								<label for="email" class="dara-form__label">Email</label>
-								<div class="dara-form__helper">This is not valid</div>
+				<div class="special-title"><span>Alright! Let’s get your personalized blend.</span></div>
+				<div class="quiz-item">
+					<div class="form">
+						<div class="form__row form__row--md-margin-b">
+							<div class="form__field js-input-box">
+								<input id="email" type="email" class="form__input js-input-data">
+								<label for="email" class="form__label">Email</label>
+								<div class="form__helper">This is not valid</div>
 							</div>
 						</div>
-						<div class="dara-form__row">
-							<div class="dara-form__field">
-								<div class="dara-checkbox">
+						<div class="form__row">
+							<div class="form__field">
+								<div class="checkbox">
 									<input id="check" type="checkbox">
-									<label for="check" class="dara-checkbox__label">I agree to the <a href="#" class="dara-link">terms of service</a></label>
+									<label for="check" class="checkbox__label">I agree to the <a href="#" class="link">terms of service</a></label>
 								</div>
 							</div>
 						</div>
 				</div>
-				<div class="dara-quiz__button-wrap">
-					<div class="dara-quiz__button-row">
-						<div class="dara-quiz__button">
-							<button type="button" class="dara-button dara-button--quiz" disabled>Next</button>
+				<div class="quiz__button-wrap">
+					<div class="quiz__button-row">
+						<div class="quiz__button">
+							<button type="button" class="button button--quiz" disabled>Next</button>
 						</div>
 					</div>
 				</div>

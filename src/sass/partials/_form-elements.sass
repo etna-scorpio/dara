@@ -1,4 +1,4 @@
-.dara-radiobox
+.radiobox
 	position: relative
 	z-index: 0
 	display: flex
@@ -53,8 +53,8 @@
 		opacity: 0
 		visibility: hidden
 		&:checked
-			~ .dara-radiobox__label:after,
-			~ .dara-radiobox__active-bg
+			~ .radiobox__label:after,
+			~ .radiobox__active-bg
 				opacity: 1
 				visibility: visible
 	p
@@ -62,7 +62,7 @@
 			margin-bottom: 0
 
 
-.dara-checkbox
+.checkbox
 	position: relative
 	z-index: 0
 	font-size: 14px
@@ -75,7 +75,7 @@
 		color: #000
 		letter-spacing: 1.13px
 	&--small-check
-		.dara-checkbox__label
+		.checkbox__label
 			margin-bottom: 0
 			padding-left: 19px
 			&:before
@@ -99,7 +99,7 @@
 		font-size: 16px
 		line-height: 1.375
 		letter-spacing: -0.29px
-		.dara-checkbox__label
+		.checkbox__label
 			display: block
 			padding: 13px 10px
 			margin-bottom: 0
@@ -156,12 +156,12 @@
 		opacity: 0
 		visibility: hidden
 		&:checked
-			~ .dara-checkbox__label
+			~ .checkbox__label
 				&:before
 					background: $brand-color
 					border-color: $brand-color
 				&:after
 					display: block
-			~ .dara-checkbox__active-bg
+			~ .checkbox__active-bg
 				visibility: visible
 				opacity: 1

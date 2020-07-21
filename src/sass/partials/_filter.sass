@@ -1,4 +1,4 @@
-.dara-filter
+.filter
 	position: relative
 	background: #F7F9FA
 	padding: 5px 0
@@ -13,7 +13,7 @@
 			bottom: 0
 			background: rgba(#9B9B9B, 0.33)
 			z-index: 1
-		.dara-filter__search
+		.filter__search
 			background: none
 	&__container
 		position: relative
@@ -39,7 +39,7 @@
 		transition: background 0.2s ease
 		&.is-active
 			background: #FFF
-			.dara-filter__search
+			.filter__search
 				opacity: 1
 				visibility: visible
 	&__search
@@ -102,13 +102,13 @@
 			display: block
 
 
-.dara-filter-dropdown
+.filter-dropdown
 	position: relative
 	min-width: 70px
 	+rmin(768)
 		margin-right: 20px
 	&.is-open
-		.dara-filter-dropdown__list
+		.filter-dropdown__list
 			display: block
 	&__list
 		display: none
@@ -169,7 +169,7 @@
 			color: $brand-color
 
 
-.dara-filter-radio
+.filter-radio
 	position: relative
 	width: 20px
 	height: 20px
@@ -185,7 +185,7 @@
 		height: 100%
 		opacity: 0
 		&:checked
-			+ .dara-filter-radio__dot
+			+ .filter-radio__dot
 				display: block
 	&__dot
 		display: none
@@ -199,7 +199,7 @@
 		border-radius: 50%
 
 
-.dara-filter-preview
+.filter-preview
 	position: absolute
 	top: 0
 	left: 5px

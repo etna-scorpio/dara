@@ -1,11 +1,11 @@
 ---
 title: Products list
 filter: true
-daraOutMod: dara-out--special-padding
-header: dara-header--white-bg dara-header--mob-sm-height
+outMod: out--special-padding
+header: header--white-bg header--mob-sm-height
 headerHelpIcon: true
 backIcon: true
-fixedCheckoutMod: dara-fixed-checkout--desktop-visible
+fixedCheckoutMod: fixed-checkout--desktop-visible
 footer: false
 ---
 {% extends "layouts/_layout.html" %}
@@ -45,35 +45,35 @@ footer: false
 		}]
 	}] %}
 
-	<div class="dara-category-wrapper">
+	<div class="category-wrapper">
 		{% for category in productList %}
-		<section class="dara-category">
-			<div class="dara-l-center dara-l-center--sm">
+		<section class="category">
+			<div class="l-center l-center--sm">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col">
-							<div class="dara-category__in">
-								<h5 class="dara-title-h5 dara-category__title">{{ category.title }}</h5>
-								<div class="dara-category__cards">
+							<div class="category__in">
+								<h5 class="title-h5 category__title">{{ category.title }}</h5>
+								<div class="category__cards">
 									{% for item in category.products %}
-									<a href="#" class="dara-category-card">
-										<div class="dara-category-card__bl">
-											<img class="dara-category-card__img" src="img/{{ item.img }}.png" alt="{{ item.img }}">
+									<a href="#" class="category-card">
+										<div class="category-card__bl">
+											<img class="category-card__img" src="img/{{ item.img }}.png" alt="{{ item.img }}">
 										</div>
-										<div class="dara-category-card__bl dara-category-card__bl--info">
-											<div class="dara-category-card__info">
-												<div class="dara-category-card__title">{{ item.name }}</div>
-												<div class="dara-category-card__text">{{ item.text }}</div>
+										<div class="category-card__bl category-card__bl--info">
+											<div class="category-card__info">
+												<div class="category-card__title">{{ item.name }}</div>
+												<div class="category-card__text">{{ item.text }}</div>
 											</div>
 										</div>
-										<div class="dara-category-card__bl dara-category-card__bl--mob-absolute">
-											<div class="dara-category-proportion">
-												<div class="dara-category-proportion__num">
+										<div class="category-card__bl category-card__bl--mob-absolute">
+											<div class="category-proportion">
+												<div class="category-proportion__num">
 													<span>{{ item.dosage }}</span>
 													{{ mixins.icon('arrow-right') }}
 												</div>
 												{% if item.status == false %}
-												<i class="dara-category-proportion__add js-ingredient-add-button"></i>
+												<i class="category-proportion__add js-ingredient-add-button"></i>
 												{% endif %}
 											</div>
 										</div>

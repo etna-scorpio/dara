@@ -1,9 +1,9 @@
 import $ from 'jquery';
 
 var win = $(window);
-var header = $('.js-dara-header');
-var startButton = $('.js-dara-button-start');
-// var logo = $('.js-dara-header-logo');
+var header = $('.js-header');
+var startButton = $('.js-button-start');
+// var logo = $('.js-header-logo');
 
 changeHeaderBg();
 // moveLogo();
@@ -30,9 +30,9 @@ function changeHeaderBg() {
 // function moveLogo() {
 //   if (logo.length) {
 //     if (win.scrollTop() === 0) {
-//       logo.addClass('dara-header__logo--move');
+//       logo.addClass('header__logo--move');
 //     } else {
-//       logo.removeClass('dara-header__logo--move');
+//       logo.removeClass('header__logo--move');
 //     }
 //   }
 // }

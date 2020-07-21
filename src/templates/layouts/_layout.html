@@ -15,7 +15,7 @@
   <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 
     <!-- BEGIN content -->
-    <div class="dara-out{% if daraOutMod %} {{ daraOutMod }}{% endif %}">
+    <div class="out{% if outMod %} {{ outMod }}{% endif %}">
       {% block header %}{% include 'partials/_header.html' %}{% endblock %}
       {% block content %}{% endblock %}
       {% include 'partials/_fixed-checkout.html' %}

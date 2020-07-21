@@ -1,10 +1,10 @@
-<header class="dara-header {% if header %} {{ header }} {% endif %} js-dara-header">
-	<div class="dara-header__in">
+<header class="header {% if header %} {{ header }} {% endif %} js-header">
+	<div class="header__in">
 		<div class="container-fluid">
 			<div class="row">
 				{% if title === 'Checkout' %}
 				<div class="col">
-					<a href="#" class="dara-header__menu-ico dara-header__menu-ico--absolute d-md-none js-dara-show-menu-btn">
+					<a href="#" class="header__menu-ico header__menu-ico--absolute d-md-none js-show-menu-btn">
 						<svg viewBox="0 0 18 17" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
 							<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" strokeWidth="2"
 							strokeLinecap="square" />
@@ -15,17 +15,17 @@
 						</svg>
 					</a>
 					<div class="text-center text-md-left">
-						<a href="/" class="dara-header__logo"><img src="img/logo.svg" alt="dara"></svg>
+						<a href="/" class="header__logo"><img src="img/logo.svg" alt="logo"></svg>
 						</a>
 					</div>
 				</div>
 				{% elif title === 'Home' %}
 					<div class="col">
-						<ul class="dara-header-list d-md-flex" hidden>
-							<li class="dara-header-list__option"><a href="#" class="dara-header-list__item">How it works</a></li>
-							<li class="dara-header-list__option"><a href="#" class="dara-header-list__item">Our story</a></li>
+						<ul class="header-list d-md-flex" hidden>
+							<li class="header-list__option"><a href="#" class="header-list__item">How it works</a></li>
+							<li class="header-list__option"><a href="#" class="header-list__item">Our story</a></li>
 						</ul>
-						<a href="#" class="dara-header__menu-ico d-md-none js-dara-show-menu-btn">
+						<a href="#" class="header__menu-ico d-md-none js-show-menu-btn">
 							<svg viewBox="0 0 18 17" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
 								<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" strokeWidth="2"
 								strokeLinecap="square" />
@@ -38,34 +38,34 @@
 					</div>
 					<div class="col">
 						<div class="text-center">
-							<a href="/" class="dara-header__logo dara-header__logo--big js-dara-header-logo">
+							<a href="/" class="header__logo header__logo--big js-header-logo">
 								{% include 'partials/_svg_logo.svg' %}
 							</a>
 						</div>
 					</div>
 					<div class="col">
-						<ul class="dara-header-list dara-header-list--with-button">
-							<li class="dara-header-list__option mr-0 mr-md-3 mr-lg-4">
-								<a href="#" class="dara-button dara-button--header-start dara-button--grow-font">
+						<ul class="header-list header-list--with-button">
+							<li class="header-list__option mr-0 mr-md-3 mr-lg-4">
+								<a href="#" class="button button--header-start button--grow-font">
 									<span class="d-sm-none">Start</span>
 									<span class="d-none d-sm-inline">Get Started</span>
 								</a>
 							</li>
-							<li class="dara-header-list__option d-md-block" hidden>
-								<a href="#" class="dara-header-list__item">Help</a>
+							<li class="header-list__option d-md-block" hidden>
+								<a href="#" class="header-list__item">Help</a>
 							</li>
-							<li class="dara-header-list__option d-md-block" hidden>
-								<a href="#" class="dara-header-list__item">Log In</a>
+							<li class="header-list__option d-md-block" hidden>
+								<a href="#" class="header-list__item">Log In</a>
 							</li>
 						</ul>
 					</div>
 				{% elif title === 'Account' %}
 					<div class="col">
-						<ul class="dara-header-list d-md-flex" hidden>
-							<li class="dara-header-list__option"><span class="dara-header-list__item dara-header-list__item--active">Home</span></li>
-							<li class="dara-header-list__option"><a href="#" class="dara-header-list__item">Ingredients</a></li>
+						<ul class="header-list d-md-flex" hidden>
+							<li class="header-list__option"><span class="header-list__item header-list__item--active">Home</span></li>
+							<li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
 						</ul>
-						<a href="#" class="dara-header__menu-ico d-md-none js-dara-show-menu-btn">
+						<a href="#" class="header__menu-ico d-md-none js-show-menu-btn">
 							<svg viewBox="0 0 18 17" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
 								<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" strokeWidth="2"
 								strokeLinecap="square" />
@@ -78,21 +78,21 @@
 					</div>
 					<div class="col">
 						<div class="text-center">
-							<a href="/" class="dara-header__logo"><img src="img/logo.svg" alt="dara"></a>
+							<a href="/" class="header__logo"><img src="img/logo.svg" alt="dara"></a>
 						</div>
 					</div>
 					<div class="col">
-						<ul class="dara-header-list dara-header-list--with-button">
-							<li class="dara-header-list__option d-md-block" hidden><a href="#" class="dara-header-list__item">Support</a></li>
-							<li class="dara-header-list__option d-md-block" hidden><a href="#" class="dara-header-list__item dara-header-list__item--sign">Sign Out</a></li>
+						<ul class="header-list header-list--with-button">
+							<li class="header-list__option d-md-block" hidden><a href="#" class="header-list__item">Support</a></li>
+							<li class="header-list__option d-md-block" hidden><a href="#" class="header-list__item header-list__item--sign">Sign Out</a></li>
 						</ul>
 					</div>
 				{% else %}
 					<div class="col">
 						{% if backIcon %}
-						<a href="#" class="dara-header__back-ico">{{ mixins.icon('arrow-left') }}</a>
+						<a href="#" class="header__back-ico">{{ mixins.icon('arrow-left') }}</a>
 						{% else %}
-						<a href="#" class="dara-header__menu-ico js-dara-show-menu-btn">
+						<a href="#" class="header__menu-ico js-show-menu-btn">
 							<svg viewBox="0 0 18 17" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
 								<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" strokeWidth="2"
 								strokeLinecap="square" />
@@ -106,26 +106,26 @@
 					</div>
 					<div class="col">
 						<div class="text-center">
-							<a href="/" class="dara-header__logo"><img src="img/logo.svg" alt="dara"></a>
+							<a href="/" class="header__logo"><img src="img/logo.svg" alt="dara"></a>
 						</div>
 					</div>
 					<div class="col">
-						<div class="dara-header__bl">
-							<div class="dara-header__el">
+						<div class="header__bl">
+							<div class="header__el">
 								{# {% if checkoutHeaderInfo %}
-								<div class="dara-header__checkout">
-									<div class="dara-header__info">
-										<div class="dara-header__price">$99.99/mo</div>
-										<small class="dara-header__note">One month supply (30 servings)</small>
+								<div class="header__checkout">
+									<div class="header__info">
+										<div class="header__price">$99.99/mo</div>
+										<small class="header__note">One month supply (30 servings)</small>
 									</div>
 									<div>
-										<a href="#" class="dara-button dara-button--checkout">Checkout</a>
+										<a href="#" class="button button--checkout">Checkout</a>
 									</div>
 								</div>
 								{% endif %} #}
 							</div>
-							<div class="dara-header__el">
-								{% if headerHelpIcon %} <a href="#" class="dara-header__help-ico">{{ mixins.icon('help') }}</a> {% endif %}
+							<div class="header__el">
+								{% if headerHelpIcon %} <a href="#" class="header__help-ico">{{ mixins.icon('help') }}</a> {% endif %}
 							</div>
 						</div>
 					</div>
@@ -137,29 +137,29 @@
 		{% include 'partials/_filter.html' %}
 	{% endif %}
 </header>
-<nav class="dara-menu js-dara-menu">
-	<div class="dara-menu__in">
-		<div class="dara-menu__top">
+<nav class="menu js-menu">
+	<div class="menu__in">
+		<div class="menu__top">
 			{% if title === 'Home' %}
-			<div class="dara-menu__logo">{% include 'partials/_svg_logo.svg' %}</div>
+			<div class="menu__logo">{% include 'partials/_svg_logo.svg' %}</div>
 			{% endif %}
-			<a href="#" class="dara-menu__close js-dara-close-menu-btn">{{ mixins.icon('close') }}</a>
+			<a href="#" class="menu__close js-close-menu-btn">{{ mixins.icon('close') }}</a>
 		</div>
-		<ul class="dara-menu__list">
+		<ul class="menu__list">
 			{% if title === 'Home' %}
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">How It Works</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Our Story</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Help</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Login</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">How It Works</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Our Story</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Help</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Login</a></li>
 			{% else %}
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Home</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Ingredients</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">FAQ</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Accesibility</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Terms Of Service</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Privacy Policy</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Legal Stuff</a></li>
-			<li class="dara-menu__option"><a href="#" class="dara-menu__link">Join The Team</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Home</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">FAQ</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Accesibility</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Terms Of Service</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Privacy Policy</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Legal Stuff</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Join The Team</a></li>
 			{% endif %}
 		</ul>
 	</div>

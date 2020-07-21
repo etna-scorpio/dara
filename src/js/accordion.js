@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-var collapseTitle = $('.js-dara-collapse-bar'),
-  collapseContent = $('.js-dara-collapse-content');
+var collapseTitle = $('.js-product-collapse-bar'),
+  collapseContent = $('.js-product-collapse-content');
 
 
 function slideToggleContent() {

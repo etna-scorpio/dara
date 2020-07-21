@@ -1,6 +1,6 @@
 ---
 title: Account
-header: dara-header--white-bg
+header: header--white-bg
 fixedCheckout: false
 ---
 {% extends "layouts/_layout.html" %}
@@ -62,33 +62,33 @@ fixedCheckout: false
 	}] %}
 
 
-	<section class="dara-checkout">
+	<section class="checkout">
 		<form>
-			<div class="dara-checkout__in dara-checkout__in--one-card">
-				<div class="dara-checkout__bl dara-checkout__bl--ship">
+			<div class="checkout__in checkout__in--one-card">
+				<div class="checkout__bl checkout__bl--ship">
 					<!-- begin CARD -->
-					<div class="dara-checkout-card dara-checkout-card--no-padding-b dara-checkout-card--auto-height">
-						<div class="dara-checkout-card__title dara-checkout-card__title--sm-margin-b">Next shipment</div>
-						<div class="dara-checkout-card__date text-center">May 5th</div>
+					<div class="checkout-card checkout-card--no-padding-b checkout-card--auto-height">
+						<div class="checkout-card__title checkout-card__title--sm-margin-b">Next shipment</div>
+						<div class="checkout-card__date text-center">May 5th</div>
 						{% for field in fields %}
-						<a href="#" class="dara-field js-show-account-pane">
-							<div class="dara-field__title">{{ field.title }} {% if field.plan %}<button class="dara-field__cancel dara-button dara-button--cancel">Cancel</button>{% endif %}</div>
+						<a href="#" class="field js-show-account-pane">
+							<div class="field__title">{{ field.title }} {% if field.plan %}<button class="field__cancel button button--cancel">Cancel</button>{% endif %}</div>
 							{% if field.info %}
 								{% if field.plan %}
-								<div class="dara-field__info dara-field__info--flex">
-									<div class="dara-field__el">{{ field.info }}</div>
-									<div class="dara-field__el">$29.90</div>
+								<div class="field__info field__info--flex">
+									<div class="field__el">{{ field.info }}</div>
+									<div class="field__el">$29.90</div>
 								</div>
 								{% else %}
-								<div class="dara-field__info">
-									<div class="dara-field__el">
-										{% if field.icon %} <span class="dara-field__icon">{{ mixins.icon(field.icon) }}</span> {% endif %}
+								<div class="field__info">
+									<div class="field__el">
+										{% if field.icon %} <span class="field__icon">{{ mixins.icon(field.icon) }}</span> {% endif %}
 										{{ field.info}}
 									</div>
 								</div>
 								{% endif %}
 							{% endif %}
-							<span class="dara-field__arrow">{{ mixins.icon('arrow-right') }}</span>
+							<span class="field__arrow">{{ mixins.icon('arrow-right') }}</span>
 						</a>
 						{% endfor %}
 					</div>
@@ -99,18 +99,18 @@ fixedCheckout: false
 		</form>
 	</section>
 	<!-- begin Modal -->
-	<div class="dara-account-modal js-modal">
-		<div class="dara-checkout-card dara-checkout-card--modal dara-checkout-card--full-height">
-			<a href="#" class="dara-checkout-card__close js-close-modal">{{ mixins.icon('close') }}</a>
-			<div class="dara-checkout-card__title dara-checkout-card__title--with-pad text-center">			Change shipping address
+	<div class="account-modal js-modal">
+		<div class="checkout-card checkout-card--modal checkout-card--full-height">
+			<a href="#" class="checkout-card__close js-close-modal">{{ mixins.icon('close') }}</a>
+			<div class="checkout-card__title checkout-card__title--with-pad text-center">			Change shipping address
 			</div>
-			<div class="dara-form">
+			<div class="form">
 				{% for row in form %}
-				<div class="dara-form__row">
+				<div class="form__row">
 					{% for item in row.row %}
-					<div class="dara-form__field js-input-box{% if item.state %} {{ item.state }}{% endif %}">
+					<div class="form__field js-input-box{% if item.state %} {{ item.state }}{% endif %}">
 						{% if item.select %}
-						<select class="dara-form__select js-input-data" name="{{ item.id }}" id="{{ item.id }}">
+						<select class="form__select js-input-data" name="{{ item.id }}" id="{{ item.id }}">
 							<option value="" selected disabled hidden></option>
 							<option value="AL" > AL </option>
 							<option value="AK" > AK </option>
@@ -173,16 +173,16 @@ fixedCheckout: false
 							<option value="AP" > AP </option>
 						</select>
 						{% else %}
-						<input id="{{ item.id }}" type="{{ item.type | default('text') }}" class="dara-form__input js-input-data" {% if item.value %}value="{{ item.value }}"{% endif %}>
+						<input id="{{ item.id }}" type="{{ item.type | default('text') }}" class="form__input js-input-data" {% if item.value %}value="{{ item.value }}"{% endif %}>
 						{% endif %}
-						<label for="{{ item.id }}" class="dara-form__label">{{ item.name | safe }}</label>
-						<div class="dara-form__helper">{{ item.helper | default('This is not valid') }}</div>
+						<label for="{{ item.id }}" class="form__label">{{ item.name | safe }}</label>
+						<div class="form__helper">{{ item.helper | default('This is not valid') }}</div>
 					</div>
 					{% endfor %}
 				</div>
 				{% endfor %}
 			</div>
-			<a href="#" class="dara-button dara-button--update mt-2">Update Address</a>
+			<a href="#" class="button button--update mt-2">Update Address</a>
 		</div>
 	</div>
 	<!-- end Modal -->

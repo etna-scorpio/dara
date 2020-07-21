@@ -1,44 +1,44 @@
 ---
 title: Home
 fixedCheckout: false
-daraOutMod: dara-out--no-padding
-header: dara-header--no-bg
+outMod: out--no-padding
+header: header--no-bg
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	<!-- begin dara-hero -->
-	<section class="dara-hero dara-hero--green-bg">
-		<div class="dara-hero__wrap">
+	<!-- begin hero -->
+	<section class="hero hero--green-bg">
+		<div class="hero__wrap">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col text-center">
-						<div class="dara-hero__bl">
-							<div class="dara-hero__head">
-								<p class="dara-hero__title">A days nutrients in one scoop.</p>
-								<p class="dara-hero__subtitle">Get a personalized blend of supplements, functional foods, and proteins custom made for you with the finest ingredients.</p>
+						<div class="hero__bl">
+							<div class="hero__head">
+								<p class="hero__title">A days nutrients in one scoop.</p>
+								<p class="hero__subtitle">Get a personalized blend of supplements, functional foods, and proteins custom made for you with the finest ingredients.</p>
 							</div>
-							<a href="#" class="dara-button dara-button--start dara-button--grow-font js-dara-button-start">Get started</a>
+							<a href="#" class="button button--start button--grow-font js-button-start">Get started</a>
 						</div>
-						<div class="dara-hero__img-wrap">
-							<img class="dara-hero__img" src="img/blend-main.png" alt="home background">
+						<div class="hero__img-wrap">
+							<img class="hero__img" src="img/blend-main.png" alt="home background">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- end dara-hero -->
-	<!-- begin dara-subscription -->
-	<section class="dara-subscription">
-		<div class="dara-subscription__in">
-			<div class="dara-subscription__center">
+	<!-- end hero -->
+	<!-- begin subscription -->
+	<section class="subscription">
+		<div class="subscription__in">
+			<div class="subscription__center">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col">
-							<div class="dara-subscription__head">
-								<p class="dara-subscription__welcome">WELCOME TO BLEND</p>
-								<p class="dara-subscription__title">Receive a monthly supply of your personalized blend in powder form.</p>
+							<div class="subscription__head">
+								<p class="subscription__welcome">WELCOME TO BLEND</p>
+								<p class="subscription__title">Receive a monthly supply of your personalized blend in powder form.</p>
 							</div>
 						</div>
 					</div>
@@ -56,10 +56,10 @@ header: dara-header--no-bg
 
 						{% for step in steps %}
 						<div class="col-sm-12 col-md-4 col-lg-4">
-							<div class="dara-step">
-								<img class="dara-step__img" src="img/step_{{loop.index}}.svg" alt="step_{{loop.index}}">
-								<div class="dara-step__info">
-									<div class="dara-step__title">{{ step.title }}</div>
+							<div class="step">
+								<img class="step__img" src="img/step_{{loop.index}}.svg" alt="step_{{loop.index}}">
+								<div class="step__info">
+									<div class="step__title">{{ step.title }}</div>
 									<p>{{ step.text }}</p>
 								</div>
 							</div>
@@ -70,7 +70,7 @@ header: dara-header--no-bg
 			</div>
 		</div>
 	</section>
-	<!-- end dara-subscription -->
+	<!-- end subscription -->
 	{% set dataAbout = [{
 		desc: 'Personalized',
 		title: 'Exactly what you need.<br> No more, no less.',
@@ -86,22 +86,22 @@ header: dara-header--no-bg
 		title: 'Know what you’re putting in your body.',
 		text: '<p>We share all the information on our ingredients, going way beyond regulatory obligations. Easily see what’s inside each ingredient, where it came from, and how much of it is in your blend.</p>'
 	}] %}
-	<!-- begin dara-about -->
-	<div class="dara-about">
-		<section class="dara-about__section">
+	<!-- begin about -->
+	<div class="about">
+		<section class="about__section">
 			<div class="container-fluid">
 				{% for item in dataAbout %}
 				<div class="row align-items-stretch">
  					<div class="col-12 col-md-6{% if item.changeOrder %} order-md-2{% endif %}">
-						<div class="dara-about__bl dara-about__bl--text">
-							<div class="dara-about__in">
-								<div class="dara-about__desc">{{ item.desc }}</div>
-								<div class="dara-about__title">{{ item.title | safe }}</div>
-								<div class="dara-about__text">{{ item.text | safe }}</div>
+						<div class="about__bl about__bl--text">
+							<div class="about__in">
+								<div class="about__desc">{{ item.desc }}</div>
+								<div class="about__title">{{ item.title | safe }}</div>
+								<div class="about__text">{{ item.text | safe }}</div>
 								{% if item.list %}
-								<ul class="dara-checklist">
+								<ul class="checklist">
 									{% for option in item.list %}
-										<li class="dara-checklist__option">{{ option }}</li>
+										<li class="checklist__option">{{ option }}</li>
 									{% endfor %}
 								</ul>
 								{% endif %}
@@ -109,11 +109,11 @@ header: dara-header--no-bg
 						</div>
 					</div>
 					<div class="col-12 col-md-6{% if item.changeOrder %} order-md-1{% endif %}">
-						<div class="dara-about__bl dara-about__bl--img">
+						<div class="about__bl about__bl--img">
 							{% if loop.last %}
-							<img class="dara-about__img" src="img/about-pic3.jpg" alt="about">
+							<img class="about__img" src="img/about-pic3.jpg" alt="about">
 							{% else %}
-							<img class="dara-about__img" src="img/about-pic{{ loop.index }}.jpg" alt="about">
+							<img class="about__img" src="img/about-pic{{ loop.index }}.jpg" alt="about">
 							{% endif %}
 						</div>
 					</div>
@@ -122,28 +122,28 @@ header: dara-header--no-bg
 			</div>
 		</section>
 	</div>
-	<!-- end dara-about -->
-	<!-- begin dara-feature -->
-	<div class="dara-feature">
-		<div class="dara-feature__in">
-			<div class="dara-feature__center">
-				<div class="dara-feature__head">
-					<div class="dara-feature__desc">SIMPLE</div>
-					<div class="dara-feature__title">One scoop. Done.</div>
-					<div class="dara-feature__subtitle">One scoop a day with a smoothie or your favorite beverage.</div>
+	<!-- end about -->
+	<!-- begin feature -->
+	<div class="feature">
+		<div class="feature__in">
+			<div class="feature__center">
+				<div class="feature__head">
+					<div class="feature__desc">SIMPLE</div>
+					<div class="feature__title">One scoop. Done.</div>
+					<div class="feature__subtitle">One scoop a day with a smoothie or your favorite beverage.</div>
 				</div>
-				<div class="dara-feature__list text-center">
-					<ul class="dara-checklist dara-checklist--horizontal">
-						<li class="dara-checklist__option">Easy to drink</li>
-						<li class="dara-checklist__option">No more pills</li>
-						<li class="dara-checklist__option">Delicious taste</li>
+				<div class="feature__list text-center">
+					<ul class="checklist checklist--horizontal">
+						<li class="checklist__option">Easy to drink</li>
+						<li class="checklist__option">No more pills</li>
+						<li class="checklist__option">Delicious taste</li>
 					</ul>
 				</div>
-				<img class="dara-feature__img img-fluid" src="img/feature-pic.jpg" alt="feature" />
-				<div class="dara-feature__head">
-					<div class="dara-feature__desc">HONEST</div>
-					<div class="dara-feature__title">Fair prices. No middlemen.</div>
-					<div class="dara-feature__subtitle">Amazing pricing with free shipping and returns.</div>
+				<img class="feature__img img-fluid" src="img/feature-pic.jpg" alt="feature" />
+				<div class="feature__head">
+					<div class="feature__desc">HONEST</div>
+					<div class="feature__title">Fair prices. No middlemen.</div>
+					<div class="feature__subtitle">Amazing pricing with free shipping and returns.</div>
 				</div>
 				<div class="container-fluid">
 					<div class="row justify-content-center">
@@ -163,12 +163,12 @@ header: dara-header--no-bg
 
 						{% for step in steps %}
 						<div class="col-sm-12 col-md-4 col-lg-4">
-							<div class="dara-step">
-								<div class="dara-step__pic">
-									<i class="dara-step__icon dara-step__icon--{{step.img}}"></i>
+							<div class="step">
+								<div class="step__pic">
+									<i class="step__icon step__icon--{{step.img}}"></i>
 								</div>
-								<div class="dara-step__info">
-									<div class="dara-step__title">{{ step.title }}</div>
+								<div class="step__info">
+									<div class="step__title">{{ step.title }}</div>
 									{% if step.text %}<p>{{ step.text }}</p>{% endif %}
 								</div>
 							</div>
@@ -179,28 +179,28 @@ header: dara-header--no-bg
 			</div>
 		</div>
 	</div>
-	<!-- end dara-feature -->
-	<!-- begin dara-hero -->
-	<section class="dara-hero dara-hero--pink-bg dara-hero--special-padding">
-		<div class="dara-hero__wrap">
+	<!-- end feature -->
+	<!-- begin hero -->
+	<section class="hero hero--pink-bg hero--special-padding">
+		<div class="hero__wrap">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col text-center">
-						<div class="dara-hero__bl">
-							<div class="dara-hero__head">
-								<div class="dara-hero__desc">RESPONSIBLE</div>
-								<p class="dara-hero__title">We love ingredients,<br> not plastic.</p>
-								<p class="dara-hero__subtitle dara-hero__subtitle--sm">Our packaging is kraft paper based with net-zero emissions (thru carbon offsets). It’s recyclable, backyard compostable, and biodegradable. On your first shipment you get a free beautiful stainless steel canister to keep your blend in.</p>
+						<div class="hero__bl">
+							<div class="hero__head">
+								<div class="hero__desc">RESPONSIBLE</div>
+								<p class="hero__title">We love ingredients,<br> not plastic.</p>
+								<p class="hero__subtitle hero__subtitle--sm">Our packaging is kraft paper based with net-zero emissions (thru carbon offsets). It’s recyclable, backyard compostable, and biodegradable. On your first shipment you get a free beautiful stainless steel canister to keep your blend in.</p>
 							</div>
-							<a href="#" class="dara-button dara-button--start dara-button--grow-font js-dara-button-start">Get started</a>
+							<a href="#" class="button button--start button--grow-font js-button-start">Get started</a>
 						</div>
-						<div class="dara-hero__img-wrap dara-hero__img-wrap--more-margin">
-							<img class="dara-hero__img dara-hero__img--smaller-width" src="img/blend-package.png" alt="home background">
+						<div class="hero__img-wrap hero__img-wrap--more-margin">
+							<img class="hero__img hero__img--smaller-width" src="img/blend-package.png" alt="home background">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- end dara-hero -->
+	<!-- end hero -->
 {% endblock %}
