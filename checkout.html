@@ -14,7 +14,7 @@
 
   <body>
     <!-- BEGIN content -->
-    <div class="out">
+    <div class="out out--flex">
       <header class="header  header--white-bg  js-header">
         <div class="header__in">
           <div class="container-fluid">
@@ -57,247 +57,249 @@
           </ul>
         </div>
       </nav>
-      <section class="checkout">
-        <form>
-          <div class="checkout__in">
-            <div class="checkout__bl checkout__bl--account">
-              <!-- begin ACCOUNT CARD -->
-              <div class="checkout-card">
-                <div class="checkout-card__title">YOUR ACCOUNT</div>
-                <div class="form">
-                  <div class="form__row">
-                    <div class="form__field js-input-box is-error is-active">
-                      <input id="email" type="email" class="form__input js-input-data" value="jdoe@gmail.coom">
-                      <label for="email" class="form__label">Email</label>
-                      <div class="form__helper">This is not a valid email address</div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__field js-input-box is-active">
-                      <input id="name" type="text" class="form__input js-input-data" value="Jane Doe">
-                      <label for="name" class="form__label">Full Name</label>
-                      <div class="form__helper">This is not valid</div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__field js-input-box">
-                      <input id="address" type="text" class="form__input js-input-data">
-                      <label for="address" class="form__label">Address</label>
-                      <div class="form__helper">This is not valid</div>
-                    </div>
-                    <div class="form__field js-input-box">
-                      <input id="apt" type="text" class="form__input js-input-data">
-                      <label for="apt" class="form__label">Apt/Suite</label>
-                      <div class="form__helper">This is not valid</div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__field js-input-box">
-                      <input id="city" type="text" class="form__input js-input-data">
-                      <label for="city" class="form__label">City</label>
-                      <div class="form__helper">This is not valid</div>
-                    </div>
-                    <div class="form__field js-input-box">
-                      <select class="form__select js-input-data" name="state" id="state">
-                        <option value="" selected disabled hidden></option>
-                        <option value="AL"> AL </option>
-                        <option value="AK"> AK </option>
-                        <option value="AZ"> AZ </option>
-                        <option value="AR"> AR </option>
-                        <option value="CA"> CA </option>
-                        <option value="CO"> CO </option>
-                        <option value="CT"> CT </option>
-                        <option value="DE"> DE </option>
-                        <option value="DC"> DC </option>
-                        <option value="FL"> FL </option>
-                        <option value="GA"> GA </option>
-                        <option value="HI"> HI </option>
-                        <option value="ID"> ID </option>
-                        <option value="IL"> IL </option>
-                        <option value="IN"> IN </option>
-                        <option value="IA"> IA </option>
-                        <option value="KS"> KS </option>
-                        <option value="KY"> KY </option>
-                        <option value="LA"> LA </option>
-                        <option value="ME"> ME </option>
-                        <option value="MD"> MD </option>
-                        <option value="MA"> MA </option>
-                        <option value="MI"> MI </option>
-                        <option value="MN"> MN </option>
-                        <option value="MS"> MS </option>
-                        <option value="MO"> MO </option>
-                        <option value="MT"> MT </option>
-                        <option value="NE"> NE </option>
-                        <option value="NV"> NV </option>
-                        <option value="NH"> NH </option>
-                        <option value="NJ"> NJ </option>
-                        <option value="NM"> NM </option>
-                        <option value="NY"> NY </option>
-                        <option value="NC"> NC </option>
-                        <option value="ND"> ND </option>
-                        <option value="OH"> OH </option>
-                        <option value="OK"> OK </option>
-                        <option value="OR"> OR </option>
-                        <option value="PA"> PA </option>
-                        <option value="PR"> PR </option>
-                        <option value="RI"> RI </option>
-                        <option value="SC"> SC </option>
-                        <option value="SD"> SD</option>
-                        <option value="TN"> TN</option>
-                        <option value="TX"> TX</option>
-                        <option value="UT"> UT</option>
-                        <option value="VT"> VT </option>
-                        <option value="VA"> VA</option>
-                        <option value="WA"> WA</option>
-                        <option value="WV"> WV </option>
-                        <option value="WI"> WI </option>
-                        <option value="WY"> WY </option>
-                        <option value="GU"> GU </option>
-                        <option value="AS"> AS </option>
-                        <option value="MP"> MP </option>
-                        <option value="VI"> VI </option>
-                        <option value="AA"> AA </option>
-                        <option value="AE"> AE </option>
-                        <option value="AP"> AP </option>
-                      </select>
-                      <label for="state" class="form__label">State</label>
-                      <div class="form__helper">This is not valid</div>
-                    </div>
-                    <div class="form__field js-input-box">
-                      <input id="zip" type="text" class="form__input js-input-data">
-                      <label for="zip" class="form__label">ZIP</label>
-                      <div class="form__helper">This is not valid</div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__field js-input-box">
-                      <input id="tel" type="tel" class="form__input js-input-data">
-                      <label for="tel" class="form__label">Phone <small>(optional)</small></label>
-                      <div class="form__helper">This is not valid</div>
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__field js-input-box">
-                      <input id="" type="text" class="form__input js-input-data">
-                      <label for="" class="form__label">Card Details</label>
-                      <div class="form__helper">This is not valid</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="checkout-card__note">
-                  <svg class="icon icon-lock">
-                    <use xlink:href="img/sprite.svg#icon-lock"></use>
-                  </svg>
-                  <span>All transactions secured and encrypted</span>
-                </div>
-              </div>
-              <!-- end ACCOUNT CARD -->
-            </div>
-            <div class="checkout__bl checkout__bl--ship">
-              <!-- begin SHIP CARD -->
-              <div class="checkout-card">
-                <div class="checkout-card__title">SHIPS NEXT BUSINESS DAY</div>
-                <div class="checkout-product">
-                  <div class="checkout-product__el checkout-product__el--img">
-                    <img class="checkout-product__img" src="img/foodcanwhite.png" alt="img">
-                  </div>
-                  <div class="checkout-product__el">
-                    <div class="checkout-product__desc">
-                      <p class="checkout-product__title">Custom supplement</p>
-                      <p>30 daily servings</p>
-                      <p>free stainless steel canister</p>
-                    </div>
-                    <div class="checkout-product__price">$29.90</div>
-                  </div>
-                </div>
-                <hr>
-                <div class="total">
-                  <div class="total__in">
-                    <div class="container-fluid">
-                      <div class="row justify-content-between">
-                        <div class="col">
-                          <div class="total__el">
-                            <div class="total__title">SUBTOTAL</div>
-                          </div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="total__el">
-                            <div class="total__price">$29.90</div>
-                          </div>
-                        </div>
+      <main class="content">
+        <section class="checkout">
+          <form>
+            <div class="checkout__in">
+              <div class="checkout__bl checkout__bl--account">
+                <!-- begin ACCOUNT CARD -->
+                <div class="checkout-card">
+                  <div class="checkout-card__title">YOUR ACCOUNT</div>
+                  <div class="form">
+                    <div class="form__row">
+                      <div class="form__field js-input-box is-error is-active">
+                        <input id="email" type="email" class="form__input js-input-data" value="jdoe@gmail.coom">
+                        <label for="email" class="form__label">Email</label>
+                        <div class="form__helper">This is not a valid email address</div>
                       </div>
-                      <div class="row justify-content-between">
-                        <div class="col">
-                          <div class="total__el">
-                            <div class="total__title">Shipping</div>
-                          </div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="total__el">
-                            <div class="total__price">Free</div>
-                          </div>
-                        </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field js-input-box is-active">
+                        <input id="name" type="text" class="form__input js-input-data" value="Jane Doe">
+                        <label for="name" class="form__label">Full Name</label>
+                        <div class="form__helper">This is not valid</div>
                       </div>
-                      <div class="row justify-content-between">
-                        <div class="col">
-                          <div class="total__el">
-                            <div class="total__title">Tax</div>
-                          </div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="total__el">
-                            <div class="total__price">$0.00</div>
-                          </div>
-                        </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field js-input-box">
+                        <input id="address" type="text" class="form__input js-input-data">
+                        <label for="address" class="form__label">Address</label>
+                        <div class="form__helper">This is not valid</div>
                       </div>
-                      <div class="row justify-content-between">
-                        <div class="col">
-                          <div class="total__el total__el--final">
-                            <div class="total__title">Today&#39;s total</div>
-                          </div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="total__el total__el--final">
-                            <div class="total__price">$29.90</div>
-                          </div>
-                        </div>
+                      <div class="form__field js-input-box">
+                        <input id="apt" type="text" class="form__input js-input-data">
+                        <label for="apt" class="form__label">Apt/Suite</label>
+                        <div class="form__helper">This is not valid</div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field js-input-box">
+                        <input id="city" type="text" class="form__input js-input-data">
+                        <label for="city" class="form__label">City</label>
+                        <div class="form__helper">This is not valid</div>
+                      </div>
+                      <div class="form__field js-input-box">
+                        <select class="form__select js-input-data" name="state" id="state">
+                          <option value="" selected disabled hidden></option>
+                          <option value="AL"> AL </option>
+                          <option value="AK"> AK </option>
+                          <option value="AZ"> AZ </option>
+                          <option value="AR"> AR </option>
+                          <option value="CA"> CA </option>
+                          <option value="CO"> CO </option>
+                          <option value="CT"> CT </option>
+                          <option value="DE"> DE </option>
+                          <option value="DC"> DC </option>
+                          <option value="FL"> FL </option>
+                          <option value="GA"> GA </option>
+                          <option value="HI"> HI </option>
+                          <option value="ID"> ID </option>
+                          <option value="IL"> IL </option>
+                          <option value="IN"> IN </option>
+                          <option value="IA"> IA </option>
+                          <option value="KS"> KS </option>
+                          <option value="KY"> KY </option>
+                          <option value="LA"> LA </option>
+                          <option value="ME"> ME </option>
+                          <option value="MD"> MD </option>
+                          <option value="MA"> MA </option>
+                          <option value="MI"> MI </option>
+                          <option value="MN"> MN </option>
+                          <option value="MS"> MS </option>
+                          <option value="MO"> MO </option>
+                          <option value="MT"> MT </option>
+                          <option value="NE"> NE </option>
+                          <option value="NV"> NV </option>
+                          <option value="NH"> NH </option>
+                          <option value="NJ"> NJ </option>
+                          <option value="NM"> NM </option>
+                          <option value="NY"> NY </option>
+                          <option value="NC"> NC </option>
+                          <option value="ND"> ND </option>
+                          <option value="OH"> OH </option>
+                          <option value="OK"> OK </option>
+                          <option value="OR"> OR </option>
+                          <option value="PA"> PA </option>
+                          <option value="PR"> PR </option>
+                          <option value="RI"> RI </option>
+                          <option value="SC"> SC </option>
+                          <option value="SD"> SD</option>
+                          <option value="TN"> TN</option>
+                          <option value="TX"> TX</option>
+                          <option value="UT"> UT</option>
+                          <option value="VT"> VT </option>
+                          <option value="VA"> VA</option>
+                          <option value="WA"> WA</option>
+                          <option value="WV"> WV </option>
+                          <option value="WI"> WI </option>
+                          <option value="WY"> WY </option>
+                          <option value="GU"> GU </option>
+                          <option value="AS"> AS </option>
+                          <option value="MP"> MP </option>
+                          <option value="VI"> VI </option>
+                          <option value="AA"> AA </option>
+                          <option value="AE"> AE </option>
+                          <option value="AP"> AP </option>
+                        </select>
+                        <label for="state" class="form__label">State</label>
+                        <div class="form__helper">This is not valid</div>
+                      </div>
+                      <div class="form__field js-input-box">
+                        <input id="zip" type="text" class="form__input js-input-data">
+                        <label for="zip" class="form__label">ZIP</label>
+                        <div class="form__helper">This is not valid</div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field js-input-box">
+                        <input id="tel" type="tel" class="form__input js-input-data">
+                        <label for="tel" class="form__label">Phone <small>(optional)</small></label>
+                        <div class="form__helper">This is not valid</div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field js-input-box">
+                        <input id="" type="text" class="form__input js-input-data">
+                        <label for="" class="form__label">Card Details</label>
+                        <div class="form__helper">This is not valid</div>
                       </div>
                     </div>
                   </div>
-                  <div class="total__button-container is-error">
-                    <div class="total__helper">Your card was declined. Your request was in live mode, but used a known test card.</div>
-                    <div class="total__button-row">
-                      <div class="total__button-el text-right">
-                        <button class="total__button total__button--checkout button button--checkout" type="submit">
-                          <span class="d-none d-md-inline">PLACE ORDER</span>
-                          <span class="d-md-none">CHECKOUT</span>
-                        </button>
-                      </div>
-                      <div class="total__button-el text-left">
-                        <button class="total__button total__button--buy button" type="button"><span>Buy with</span><i class="icon icon-apple"></i></button>
-                      </div>
-                    </div>
-                    <p class="total__note">By making a purchase, you accept the Terms of Service. Your subscription will automatically renew and your credit card will be charged the subscription fee. </p>
-                  </div>
-                  <div class="checkout-card__note checkout-card__note--margin-b">
-                    <svg class="icon icon-truck">
-                      <use xlink:href="img/sprite.svg#icon-truck"></use>
+                  <div class="checkout-card__note">
+                    <svg class="icon icon-lock">
+                      <use xlink:href="img/sprite.svg#icon-lock"></use>
                     </svg>
-                    <span>Ships next business day</span>
-                  </div>
-                  <div class="checkout-card__note checkout-card__note--last">
-                    <svg class="icon icon-reminder">
-                      <use xlink:href="img/sprite.svg#icon-reminder"></use>
-                    </svg>
-                    <span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span>
+                    <span>All transactions secured and encrypted</span>
                   </div>
                 </div>
+                <!-- end ACCOUNT CARD -->
               </div>
-              <!-- end SHIP CARD -->
+              <div class="checkout__bl checkout__bl--ship">
+                <!-- begin SHIP CARD -->
+                <div class="checkout-card">
+                  <div class="checkout-card__title">SHIPS NEXT BUSINESS DAY</div>
+                  <div class="checkout-product">
+                    <div class="checkout-product__el checkout-product__el--img">
+                      <img class="checkout-product__img" src="img/foodcanwhite.png" alt="img">
+                    </div>
+                    <div class="checkout-product__el">
+                      <div class="checkout-product__desc">
+                        <p class="checkout-product__title">Custom supplement</p>
+                        <p>30 daily servings</p>
+                        <p>free stainless steel canister</p>
+                      </div>
+                      <div class="checkout-product__price">$29.90</div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="total">
+                    <div class="total__in">
+                      <div class="container-fluid">
+                        <div class="row justify-content-between">
+                          <div class="col">
+                            <div class="total__el">
+                              <div class="total__title">SUBTOTAL</div>
+                            </div>
+                          </div>
+                          <div class="col text-right">
+                            <div class="total__el">
+                              <div class="total__price">$29.90</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-between">
+                          <div class="col">
+                            <div class="total__el">
+                              <div class="total__title">Shipping</div>
+                            </div>
+                          </div>
+                          <div class="col text-right">
+                            <div class="total__el">
+                              <div class="total__price">Free</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-between">
+                          <div class="col">
+                            <div class="total__el">
+                              <div class="total__title">Tax</div>
+                            </div>
+                          </div>
+                          <div class="col text-right">
+                            <div class="total__el">
+                              <div class="total__price">$0.00</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-between">
+                          <div class="col">
+                            <div class="total__el total__el--final">
+                              <div class="total__title">Today&#39;s total</div>
+                            </div>
+                          </div>
+                          <div class="col text-right">
+                            <div class="total__el total__el--final">
+                              <div class="total__price">$29.90</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="total__button-container is-error">
+                      <div class="total__helper">Your card was declined. Your request was in live mode, but used a known test card.</div>
+                      <div class="total__button-row">
+                        <div class="total__button-el text-right">
+                          <button class="total__button total__button--checkout button button--checkout" type="submit">
+                            <span class="d-none d-md-inline">PLACE ORDER</span>
+                            <span class="d-md-none">CHECKOUT</span>
+                          </button>
+                        </div>
+                        <div class="total__button-el text-left">
+                          <button class="total__button total__button--buy button" type="button"><span>Buy with</span><i class="icon icon-apple"></i></button>
+                        </div>
+                      </div>
+                      <p class="total__note">By making a purchase, you accept the Terms of Service. Your subscription will automatically renew and your credit card will be charged the subscription fee. </p>
+                    </div>
+                    <div class="checkout-card__note checkout-card__note--margin-b">
+                      <svg class="icon icon-truck">
+                        <use xlink:href="img/sprite.svg#icon-truck"></use>
+                      </svg>
+                      <span>Ships next business day</span>
+                    </div>
+                    <div class="checkout-card__note checkout-card__note--last">
+                      <svg class="icon icon-reminder">
+                        <use xlink:href="img/sprite.svg#icon-reminder"></use>
+                      </svg>
+                      <span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- end SHIP CARD -->
+              </div>
             </div>
-          </div>
-        </form>
-      </section>
+          </form>
+        </section>
+      </main>
       <!-- begin footer -->
       <footer class="footer">
         <div class="footer__in">
@@ -308,7 +310,7 @@
                     <defs>
                       <style>
                         .cls-1 {
-                          fill: #167a65
+                          fill: #008489
                         }
 
                       </style>
