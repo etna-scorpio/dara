@@ -13,10 +13,6 @@ body
 		&:before
 			display: block
 			z-index: 10
-	&.is-overflow
-		overflow: hidden
-		&:before
-			display: block
 	&.is-safari
 		.button--start
 			padding: 10px 8px 6px
@@ -33,13 +29,11 @@ body
 
 
 .out
-	padding-top: 57px
+	padding-top: 40px
+	+rmin(991)
+		padding-top: 74px
 	&--md-padding
 		padding-top: 40px
-	&--special-padding
-		padding-top: 40px
-		+rmin(1025)
-			padding-top: 57px
 	&--no-padding
 		padding-top: 0
 	&--flex

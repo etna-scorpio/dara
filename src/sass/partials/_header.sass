@@ -8,17 +8,6 @@
 	transition: background 0.2s ease
 	&.is-active
 		background: #FFF
-		.header__logo
-			svg path
-				fill: #000
-			&--big
-				svg path
-					fill: #008489
-		.header__menu-ico
-			color: #000
-			&:hover,
-			&:visited
-				color: #000
 	&.is-start
 		.button--header-start
 			opacity: 1
@@ -29,30 +18,17 @@
 		background: #FFF
 		+rmin(768)
 			background: none
-	&--mob-sm-height
-		.header__in
-			min-height: 40px
-			padding: 2px 5px
-			border-bottom: 1px solid #F2F2F2
-			+rmin(1025)
-				min-height: 57px
-				border-bottom-color: transparent
-				padding: 11px 5px 5px
-		.header__logo
-			width: 52px
-			margin-top: 8px
-			+rmin(1025)
-				width: 76px
-				margin-top: 3px
-	&--simple
-		.header__in
-			padding: 10px 5px 6px
 	&__in
-		min-height: 57px
+		display: flex
+		align-items: center
+		min-height: 40px
 		margin: 0 auto
-		padding: 11px 0 5px
+		line-height: 1
+		+rmin(991)
+			min-height: 74px
 		+rmin(1200)
-			padding: 11px 150px 13px
+			+css-lock(80, 180, 1200, 1440, padding-left)
+			+css-lock(80, 180, 1200, 1440, padding-right)
 	&__checkout
 		display: none
 		margin-right: 10px
@@ -82,11 +58,7 @@
 		letter-spacing: -0.18px
 	&__menu-ico
 		display: inline-block
-		margin-top: 4px
-		color: #000
-		&:hover,
-		&:visited
-			color: #000
+		stroke: #000
 		&--absolute
 			position: absolute
 			top: 50%
@@ -106,29 +78,13 @@
 		+tr(color 0.2s ease)
 		&:hover
 			color: lighten(#4A4A4A, 20%)
-	&__back-ico
-		display: inline-block
-		margin-top: 11px
-		font-size: 13px
-		stroke: $brand-color
-		line-height: 0.7
 	&__logo
 		display: inline-block
-		width: 76px
-		margin-top: 3px
+		width: 69px
 		transition: all 0.2s ease
-		&--move
-			+rmin(768)
-				width: 125px
-				transform: translate3d(0, 82px, 0)
-		&--big
-			width: 90px
-			fill: #008489
-			+rmin(1200)
-				+css-lock(3, 5, 1200, 1920, margin-top)
-				+css-lock(90, 110, 1200, 1920, width)
-		&--only
-			width: 106px
+		fill: $brand-color
+		+rmin(991)
+			width: 94px
 		img,
 		svg
 			display: block
@@ -143,17 +99,19 @@
 
 .header-list
 	margin-bottom: 0
-	padding-top: 5px
 	&--with-button
-		padding-top: 2px
 		display: flex
 		justify-content: flex-end
 		align-items: center
 	&__option
 		position: relative
-		margin-right: 20px
+		margin-right: 50px
 		&:last-child
 			margin-right: 0
+		&--button
+			margin-right: 0
+			+rmin(991)
+				margin-right: 50px
 	&__item
 		display: block
 		+gilroy-bold
@@ -163,60 +121,115 @@
 		&:hover,
 		&:focus
 			text-decoration: none
-			color: #008489
+			color: $brand-color
+			.icon
+				fill: $brand-color
 		+rmin(1200)
 			+css-lock(16, 18, 1200, 1920)
 		&--active
-			color: #008489
+			color: $brand-color
 		&--sign
 			color: $brand-color
 			&:hover,
 			&:visited
 				color: $brand-color
+		.icon-account
+			font-size: 30px
+			transition: fill 0.2s ease
+
+
+.header-dropdown
+	display: none
+	position: absolute
+	top: 100%
+	right: 0
+	width: 233px
+	padding: 20px
+	margin-top: 33px
+	background: #fff
+	box-shadow: 0px 2px 4px rgba(183, 183, 183, 0.345007)
+	border-radius: 5px
+	&:before
+		content: ''
+		position: absolute
+		top: -4px
+		right: 8px
+		width: 17px
+		height: 20px
+		border-radius: 5px
+		background: #fff
+		+rotate(45)
+	&.is-visible
+		+rmin(991)
+			display: block
+	&__option
+		margin-bottom: 16px
+		+gilroy-bold
+		font-size: 16px
+		line-height: 1.25
+		&--name
+			margin: 0 -20px 20px
+			padding: 0 20px 20px
+			border-bottom: 1px solid #f2f2f2
+		&:last-child
+			margin-bottom: 0
+	&__link
+		color: $brand-color
+		&:hover,
+		&:visited
+			color: $brand-color
 
 
 .menu
+	display: none
 	position: fixed
 	z-index: 12
-	top: 0
-	bottom: 0
-	width: 100%
-	background: #008489
+	top: 56px
+	left: 15px
+	right: 15px
+	background: #fff
 	overflow: auto
-	transform: translate3d(-100%, 0, 0)
-	transition: transform 0.3s ease-in
-	+rmin(500)
-		width: 300px
+	border-radius: 5px
+	box-shadow: 0 0 23px 2px rgba(0, 0, 0, 0.5)
+	&--signed
+		.menu__list
+			padding-top: 18px
+		.menu__close
+			top: 23px
 	&.is-active
-		transform: translate3d(0,0,0)
+		display: block
+		+rmin(991)
+			display: none
 	&__in
-		padding: 20px
-	&__top
 		position: relative
-		margin-bottom: 40px
-		padding: 0 20px
-		text-align: center
+	&__top
+		padding: 20px 40px 15px 20px
+		+gilroy-bold
+		font-size: 16px
+		border-bottom: 1px solid #F2F2F2
+		line-height: 1.25
 	&__close
 		position: absolute
-		top: 50%
-		right: 0
-		font-size: 16px
-		stroke: #fff
+		top: 20px
+		right: 20px
+		font-size: 14px
 		line-height: 0.7
-		transform: translateY(-50%)
+	&__list
+		margin-bottom: 0
+		padding: 40px 20px 20px
 	&__option
-		margin-bottom: 20px
+		margin-bottom: 16px
 		+gilroy-bold
+		&:last-child
+			margin-bottom: 0
 	&__link
-		color: #FFF
-		font-size: 17px
+		color: $brand-color
+		font-size: 16px
+		line-height: 1.25
 		&:hover,
 		&:visited
 			text-decoration: none
-			color: #FFF
-	&__logo
-		max-width: 90px
-		margin: 0 auto
-		svg path
-			fill: #fff
-
+			color: $brand-color
+	&__sign
+		padding: 20px
+		background: #F6FAF8

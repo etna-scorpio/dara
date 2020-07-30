@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-arrow-left" viewBox="0 0 18 13">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-account" viewBox="0 0 30 30">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0c8.27 0 15 6.73 15 15 0 4.604-2.09 8.726-5.365 11.48a.238.238 0 0 1-.025.023A14.927 14.927 0 0 1 15 30a14.927 14.927 0 0 1-9.61-3.497.233.233 0 0 1-.025-.023C2.089 23.726 0 19.604 0 15 0 6.73 6.73 0 15 0zm0 1.915C7.784 1.915 1.915 7.785 1.915 15c0 3.377 1.32 6.43 3.427 8.753.663-3.892 2.798-6.632 5.982-7.793-1.442-1.11-2.388-2.834-2.388-4.79A6.07 6.07 0 0 1 15 5.106a6.07 6.07 0 0 1 6.064 6.064c0 1.956-.946 3.68-2.388 4.79 3.184 1.161 5.319 3.9 5.982 7.793 2.107-2.324 3.427-5.376 3.427-8.753 0-7.216-5.87-13.085-13.085-13.085zm-4.149 9.255A4.154 4.154 0 0 1 15 7.021a4.154 4.154 0 0 1 4.149 4.15A4.154 4.154 0 0 1 15 15.318a4.154 4.154 0 0 1-4.149-4.149zM15 17.234c-4.701 0-7.547 2.963-7.915 8.115C9.29 27.04 12.013 28.085 15 28.085s5.71-1.045 7.915-2.736c-.368-5.152-3.214-8.115-7.915-8.115z"/>
+</symbol><symbol id="icon-arrow-left" viewBox="0 0 18 13">
     <path d="M1.5 6.5h15" stroke-width="1.5" stroke-linecap="round"/>
     <path d="M1.5 6.5l4.95 4.95" stroke-width="1.5" stroke-linecap="round"/>
     <path d="M1.5 6.5l4.95-4.95" stroke-width="1.5" stroke-linecap="round"/>
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 12 20">
     <path d="M3.716 3.79L9.729 10l-6.014 6.208a.774.774 0 0 0 0 1.07.719.719 0 0 0 1.038 0l6.532-6.743a.773.773 0 0 0 0-1.07L4.753 2.721a.72.72 0 0 0-1.039 0 .774.774 0 0 0 .002 1.07z"/>
-</symbol><symbol id="icon-close" viewBox="0 0 12 12">
-    <g stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M1 1l10 10"/>
-        <path d="M11 1L1 11"/>
-    </g>
+</symbol><symbol id="icon-close" viewBox="0 0 14 14">
+    <path d="M.636 12.38L12.95.063l.985.986L1.62 13.364l-.985-.985z"/>
+    <path d="M1.62.064L13.937 12.38l-.985.985L.636 1.05 1.62.064z"/>
 </symbol><symbol id="icon-hamburger" viewBox="0 0 18 17">
-    <path d="M1.5 1.5h15" stroke-width="2" stroke-linecap="square"/>
-    <path d="M1.5 8.5h15" stroke-width="2" stroke-linecap="square"/>
-    <path d="M1.5 15.5h15" stroke-width="2" stroke-linecap="square"/>
+    <path d="M1.5 1.5h15"/>
+    <path d="M1.5 8.5h15"/>
+    <path d="M1.5 15.5h15"/>
 </symbol><symbol id="icon-help" viewBox="0 0 20 20">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.486 4.486 0 10 0s10 4.486 10 10-4.486 10-10 10S0 15.514 0 10zm18.333 0A8.32 8.32 0 0 0 10 1.667 8.32 8.32 0 0 0 1.667 10 8.32 8.32 0 0 0 10 18.333 8.32 8.32 0 0 0 18.333 10zM10 5a3.344 3.344 0 0 0-3.333 3.333h1.666c0-.93.736-1.666 1.667-1.666s1.667.735 1.667 1.666c0 .638-.41 1.205-1.016 1.407l-.338.104a1.684 1.684 0 0 0-1.146 1.588V12.5h1.666v-1.068l.339-.104a3.172 3.172 0 0 0 2.161-2.995C13.333 6.501 11.833 5 10 5zm-.833 10v-1.667h1.666V15H9.167z" fill="currentColor"/>
 </symbol><symbol id="icon-input-arrow" viewBox="0 0.2 19 10.5">

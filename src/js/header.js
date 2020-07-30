@@ -3,7 +3,6 @@ import $ from 'jquery';
 var win = $(window);
 var header = $('.js-header');
 var startButton = $('.js-button-start');
-// var logo = $('.js-header-logo');
 
 changeHeaderBg();
 // moveLogo();
@@ -26,16 +25,6 @@ function changeHeaderBg() {
     header.removeClass('is-active');
   }
 }
-
-// function moveLogo() {
-//   if (logo.length) {
-//     if (win.scrollTop() === 0) {
-//       logo.addClass('header__logo--move');
-//     } else {
-//       logo.removeClass('header__logo--move');
-//     }
-//   }
-// }
 
 function showHeaderStartButton() {
   var startButtonPos = startButton.offset().top + startButton.outerHeight();

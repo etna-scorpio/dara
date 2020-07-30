@@ -7,12 +7,10 @@ var menu = $('.js-menu');
 
 function showMenu() {
   menu.addClass('is-active');
-  BODY.addClass('is-overflow');
 }
 
 function hideMenu() {
   menu.removeClass('is-active');
-  BODY.removeClass('is-overflow');
 }
 
 showMenuBtn.click(function(e) {

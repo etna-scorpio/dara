@@ -12,7 +12,7 @@ fixedCheckout: false
         <div class="row">
           <div class="col">
             <div class="text-center">
-              <a href="/" class="header__logo header__logo--only js-header-logo">
+              <a href="/" class="header__logo js-header-logo">
                 {% include 'partials/_svg_logo.svg' %}
               </a>
             </div>
@@ -25,7 +25,7 @@ fixedCheckout: false
 
 {% block content %}
   <main class="content">
-    <div class="auth" hidden>
+    <div class="auth">
       <div class="auth__inner">
         <h5 class="auth__title">RESET YOUR PASSWORD</h5>
         <form class="form">
@@ -35,7 +35,7 @@ fixedCheckout: false
           <div class="form__row">
             <div class="form__field js-input-box is-error is-active">
               <input type="email" class="form__input js-input-data">
-              <label for="email" class="form__label form__label--bold">Email</label>
+              <label for="email" class="form__label">Email</label>
               <div class="form__helper">Please type an email</div>
             </div>
           </div>
@@ -49,7 +49,7 @@ fixedCheckout: false
         </form>
       </div>
     </div>
-    <div class="auth">
+    <div class="auth" hidden>
       <div class="auth__inner">
         <h5 class="auth__title">RESET YOUR PASSWORD</h5>
         <form class="form">

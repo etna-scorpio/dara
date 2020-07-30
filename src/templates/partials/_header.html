@@ -1,133 +1,79 @@
 <header class="header {% if header %} {{ header }} {% endif %} js-header">
 	<div class="header__in">
 		<div class="container-fluid">
-			<div class="row">
-				{% if title === 'Checkout' %}
-				<div class="col">
-					<a href="#" class="header__menu-ico header__menu-ico--absolute d-md-none js-show-menu-btn">
-						<svg viewBox="0 0 18 17" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
-							<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" strokeWidth="2"
-							strokeLinecap="square" />
-							<path	d="M0 1H15" transform="translate(1.5 7.5)" stroke="currentColor"
-							strokeWidth="2" strokeLinecap="square" />
-							<path d="M0 1H15" transform="translate(1.5 14.5)" stroke="currentColor"
-							strokeWidth="2" strokeLinecap="square" />
-						</svg>
-					</a>
-					<div class="text-center text-md-left">
-						<a href="/" class="header__logo"><img src="img/logo.svg" alt="logo"></svg>
-						</a>
-					</div>
-				</div>
-				{% elif title === 'Home' %}
-					<div class="col">
-						<ul class="header-list d-md-flex" hidden>
-							<li class="header-list__option"><a href="#" class="header-list__item">How it works</a></li>
-							<li class="header-list__option"><a href="#" class="header-list__item">Our story</a></li>
+			<div class="row align-items-center">
+				{% if headerState !== 'sign in' %}
+					<div class="col-4 col-lg-5">
+						<ul class="header-list d-lg-flex" hidden>
+							<li class="header-list__option"><a href="#" class="header-list__item">About Us</a></li>
+							<li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
+							<li class="header-list__option"><a href="#" class="header-list__item">My Blend</a></li>
 						</ul>
-						<a href="#" class="header__menu-ico d-md-none js-show-menu-btn">
-							<svg viewBox="0 0 18 17" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
-								<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" strokeWidth="2"
-								strokeLinecap="square" />
-								<path	d="M0 1H15" transform="translate(1.5 7.5)" stroke="currentColor"
-								strokeWidth="2" strokeLinecap="square" />
-								<path d="M0 1H15" transform="translate(1.5 14.5)" stroke="currentColor"
-								strokeWidth="2" strokeLinecap="square" />
-							</svg>
+						<a href="#" class="header__menu-ico d-lg-none js-show-menu-btn">
+							{{ mixins.icon('hamburger') }}
 						</a>
 					</div>
-					<div class="col">
-						<div class="text-center">
-							<a href="/" class="header__logo header__logo--big js-header-logo">
-								{% include 'partials/_svg_logo.svg' %}
-							</a>
-						</div>
+					<div class="col-4 col-lg-2 text-center">
+						<a href="/" class="header__logo js-header-logo">
+							{% include 'partials/_svg_logo.svg' %}
+						</a>
 					</div>
-					<div class="col">
+					<div class="col-4 col-lg-5">
 						<ul class="header-list header-list--with-button">
-							<li class="header-list__option mr-0 mr-md-3 mr-lg-4">
+							<li class="header-list__option header-list__option--button">
 								<a href="#" class="button button--header-start button--grow-font">
 									<span class="d-sm-none">Start</span>
 									<span class="d-none d-sm-inline">Get Started</span>
 								</a>
 							</li>
-							<li class="header-list__option d-md-block" hidden>
-								<a href="#" class="header-list__item">Help</a>
+							<li class="header-list__option d-lg-block" hidden>
+								<a href="#" class="header-list__item">Support</a>
 							</li>
-							<li class="header-list__option d-md-block" hidden>
-								<a href="#" class="header-list__item">Log In</a>
+							<li class="header-list__option d-lg-block" hidden>
+								<a href="#" class="header-list__item">Sign In</a>
 							</li>
-						</ul>
-					</div>
-				{% elif title === 'Account' %}
-					<div class="col">
-						<ul class="header-list d-md-flex" hidden>
-							<li class="header-list__option"><span class="header-list__item header-list__item--active">Home</span></li>
-							<li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
-						</ul>
-						<a href="#" class="header__menu-ico d-md-none js-show-menu-btn">
-							<svg viewBox="0 0 18 17" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
-								<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" strokeWidth="2"
-								strokeLinecap="square" />
-								<path	d="M0 1H15" transform="translate(1.5 7.5)" stroke="currentColor"
-								strokeWidth="2" strokeLinecap="square" />
-								<path d="M0 1H15" transform="translate(1.5 14.5)" stroke="currentColor"
-								strokeWidth="2" strokeLinecap="square" />
-							</svg>
-						</a>
-					</div>
-					<div class="col">
-						<div class="text-center">
-							<a href="/" class="header__logo"><img src="img/logo.svg" alt="dara"></a>
-						</div>
-					</div>
-					<div class="col">
-						<ul class="header-list header-list--with-button">
-							<li class="header-list__option d-md-block" hidden><a href="#" class="header-list__item">Support</a></li>
-							<li class="header-list__option d-md-block" hidden><a href="#" class="header-list__item header-list__item--sign">Sign Out</a></li>
 						</ul>
 					</div>
 				{% else %}
-					<div class="col">
-						{% if backIcon %}
-						<a href="#" class="header__back-ico">{{ mixins.icon('arrow-left') }}</a>
-						{% else %}
-						<a href="#" class="header__menu-ico js-show-menu-btn">
-							<svg viewBox="0 0 18 17" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
-								<path d="M0 1H15" transform="translate(1.5 0.5)" stroke="currentColor" strokeWidth="2"
-								strokeLinecap="square" />
-								<path	d="M0 1H15" transform="translate(1.5 7.5)" stroke="currentColor"
-								strokeWidth="2" strokeLinecap="square" />
-								<path d="M0 1H15" transform="translate(1.5 14.5)" stroke="currentColor"
-								strokeWidth="2" strokeLinecap="square" />
-							</svg>
+						<div class="col-4 col-lg-5">
+						<ul class="header-list d-lg-flex" hidden>
+							<li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
+							<li class="header-list__option"><a href="#" class="header-list__item">My Blend</a></li>
+						</ul>
+						<a href="#" class="header__menu-ico d-lg-none js-show-menu-btn">
+							{{ mixins.icon('hamburger') }}
 						</a>
-						{% endif %}
 					</div>
-					<div class="col">
-						<div class="text-center">
-							<a href="/" class="header__logo"><img src="img/logo.svg" alt="dara"></a>
-						</div>
+					<div class="col-4 col-lg-2 text-center">
+						<a href="/" class="header__logo js-header-logo">
+							{% include 'partials/_svg_logo.svg' %}
+						</a>
 					</div>
-					<div class="col">
-						<div class="header__bl">
-							<div class="header__el">
-								{# {% if checkoutHeaderInfo %}
-								<div class="header__checkout">
-									<div class="header__info">
-										<div class="header__price">$99.99/mo</div>
-										<small class="header__note">One month supply (30 servings)</small>
-									</div>
-									<div>
-										<a href="#" class="button button--checkout">Checkout</a>
-									</div>
+					<div class="col-4 col-lg-5">
+						<ul class="header-list d-lg-flex align-items-center justify-content-end" hidden>
+							<li class="header-list__option">
+								<a href="#" class="header-list__item">Item 3</a>
+							</li>
+							<li class="header-list__option">
+								<a href="#" class="header-list__item">Item 2</a>
+							</li>
+							<li class="header-list__option">
+								<a href="#" class="header-list__item">Item 1</a>
+							</li>
+							<li class="header-list__option">
+								<div class="js-header-dropdown">
+									<a href="#" class="header-list__item js-header-dropdown-link">
+										{{ mixins.icon('account') }}
+									</a>
+									<ul class="header-dropdown js-header-dropdown-list">
+										<li class="header-dropdown__option header-dropdown__option--name">Julian</li>
+										<li class="header-dropdown__option"><a href="#" class="header-dropdown__link">Account</a></li>
+										<li class="header-dropdown__option"><a href="#" class="header-dropdown__link">Support</a></li>
+										<li class="header-dropdown__option"><a href="#" class="header-dropdown__link">Sign out</a></li>
+									</ul>
 								</div>
-								{% endif %} #}
-							</div>
-							<div class="header__el">
-								{% if headerHelpIcon %} <a href="#" class="header__help-ico">{{ mixins.icon('help') }}</a> {% endif %}
-							</div>
-						</div>
+							</li>
+						</ul>
 					</div>
 				{% endif %}
 			</div>
@@ -137,30 +83,31 @@
 		{% include 'partials/_filter.html' %}
 	{% endif %}
 </header>
-<nav class="menu js-menu">
-	<div class="menu__in">
-		<div class="menu__top">
-			{% if title === 'Home' %}
-			<div class="menu__logo">{% include 'partials/_svg_logo.svg' %}</div>
-			{% endif %}
+<nav class="menu menu--signed js-menu">
+	{% if headerState !== 'sign in' %}
+		<div class="menu__in">
 			<a href="#" class="menu__close js-close-menu-btn">{{ mixins.icon('close') }}</a>
+			<ul class="menu__list">
+				<li class="menu__option"><a href="#" class="menu__link">About Us</a></li>
+				<li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
+				<li class="menu__option"><a href="#" class="menu__link">My Blend</a></li>
+				<li class="menu__option"><a href="#" class="menu__link">Support</a></li>
+			</ul>
 		</div>
-		<ul class="menu__list">
-			{% if title === 'Home' %}
-			<li class="menu__option"><a href="#" class="menu__link">How It Works</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Our Story</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Help</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Login</a></li>
-			{% else %}
-			<li class="menu__option"><a href="#" class="menu__link">Home</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">FAQ</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Accesibility</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Terms Of Service</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Privacy Policy</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Legal Stuff</a></li>
-			<li class="menu__option"><a href="#" class="menu__link">Join The Team</a></li>
-			{% endif %}
-		</ul>
-	</div>
+		<div class="menu__sign text-center">
+			<a href="#" class="button button--header-sign-in">Sign In</a>
+		</div>
+	{% else %}
+		<div class="menu__in">
+			<a href="#" class="menu__close js-close-menu-btn">{{ mixins.icon('close') }}</a>
+			<div class="menu__top">Julian</div>
+			<ul class="menu__list">
+				<li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
+				<li class="menu__option"><a href="#" class="menu__link">My Blend</a></li>
+				<li class="menu__option"><a href="#" class="menu__link">Account</a></li>
+				<li class="menu__option"><a href="#" class="menu__link">Support</a></li>
+				<li class="menu__option"><a href="#" class="menu__link">Sign out</a></li>
+			</ul>
+		</div>
+	{% endif %}
 </nav>

@@ -1,7 +1,8 @@
 import './menu.js';
 import './header.js';
 import './search.js';
-import './dropdown.js';
+import './header-dropdown.js';
+import './filter-dropdown.js';
 import './input-state.js';
 import './account-modal.js';
 import './fit-images.js';
