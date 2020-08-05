@@ -83,21 +83,8 @@
 		{% include 'partials/_filter.html' %}
 	{% endif %}
 </header>
+{% if headerState === 'sign in' %}
 <nav class="menu menu--signed js-menu">
-	{% if headerState !== 'sign in' %}
-		<div class="menu__in">
-			<a href="#" class="menu__close js-close-menu-btn">{{ mixins.icon('close') }}</a>
-			<ul class="menu__list">
-				<li class="menu__option"><a href="#" class="menu__link">About Us</a></li>
-				<li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
-				<li class="menu__option"><a href="#" class="menu__link">My Blend</a></li>
-				<li class="menu__option"><a href="#" class="menu__link">Support</a></li>
-			</ul>
-		</div>
-		<div class="menu__sign text-center">
-			<a href="#" class="button button--header-sign-in">Sign In</a>
-		</div>
-	{% else %}
 		<div class="menu__in">
 			<a href="#" class="menu__close js-close-menu-btn">{{ mixins.icon('close') }}</a>
 			<div class="menu__top">Julian</div>
@@ -109,5 +96,20 @@
 				<li class="menu__option"><a href="#" class="menu__link">Sign out</a></li>
 			</ul>
 		</div>
-	{% endif %}
 </nav>
+{% else %}
+<nav class="menu js-menu">
+	<div class="menu__in">
+		<a href="#" class="menu__close js-close-menu-btn">{{ mixins.icon('close') }}</a>
+		<ul class="menu__list">
+			<li class="menu__option"><a href="#" class="menu__link">About Us</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Ingredients</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">My Blend</a></li>
+			<li class="menu__option"><a href="#" class="menu__link">Support</a></li>
+		</ul>
+		<div class="menu__sign text-center">
+			<a href="#" class="button button--header-sign-in">Sign In</a>
+		</div>
+	</div>
+</nav>
+{% endif %}
