@@ -6,44 +6,58 @@
 
 
 .category
-	overflow: hidden
-	+rmin(768)
-		overflow: initial
+	margin-bottom: 20px
+	// overflow: hidden
+	// +rmin(768)
+		// overflow: initial
+	&:last-child
+		margin-bottom: 0
 	&__in
 		margin: 0 -15px
+		background: #fff
 		+rmin(768)
 			margin: auto
 	&__title
+		text-transform: uppercase
 		margin-bottom: 0
-		padding: 3px 20px
-		background: #000
-		color: #FFF
-		letter-spacing: -0.29px
-		line-height: 1
+		font-size: 12px
+		padding: 10px 20px 0
+		letter-spacing: 0.828px
+		line-height: 1.25
 
 
 .category-card
 	position: relative
 	display: flex
 	align-items: center
-	padding: 14px 10px 16px
+	padding: 14px 20px 16px
 	color: #000
-	background: #FFF
 	border-bottom: 1px solid #f2f2f2
 	&:hover
 		text-decoration: none
 		color: #000
+	&:first-child
+		padding-top: 8px
+		.category-card__bl--dosage
+			top: 8px
 	&:last-child
 		border-bottom: none
 	&__bl
 		margin: 0 10px
-		&--mob-absolute
+		&:first-child
+			margin-left: 0
+		&--dosage
 			position: absolute
 			top: 14px
-			right: 5px
+			right: 20px
+			bottom: 16px
 			margin: 0
 			+rmin(500)
-				position: static
+				position: relative
+				top: auto
+				right: auto
+				bottom: auto
+				align-self: stretch
 		&--info
 			flex-basis: calc(100% - 70px)
 			+rmin(375)
@@ -51,6 +65,8 @@
 			+rmin(500)
 				margin-right: 30px
 				flex-basis: calc(100% - 200px)
+		&--info-full-w
+			margin-right: 30px
 	&__img
 		display: block
 		width: 70px
@@ -76,36 +92,47 @@
 			margin-bottom: 11px
 			font-size: 16px
 			line-height: 1.1
+	&__desc
+		display: flex
+		color: #000
+		&:hover,
+		&:active
+			text-decoration: none
+			color: #000
 
 
 
 .category-proportion
+	white-space: nowrap
+	text-align: right
 	+rmin(500)
 		min-width: 100px
 	&__num
 		+gilroy-medium
 		font-size: 16px
 		line-height: 1
-		letter-spacing: -0.13px
+		letter-spacing: -0.128px
 		color: $brand-color
-		+rmin(500)
-			font-size: 18px
 		.icon
 			vertical-align: -1px
-			+rmin(500)
-				margin-left: 5px
+			fill: $brand-color
+			font-size: 13px
 	&__add
 		display: none
 		position: relative
 		width: 20px
 		height: 20px
-		margin: -2px 15px 0 0
+		margin-top: -2px
 		background: $brand-color
 		border-radius: 50%
+		transition: background 0.2s ease
+		&:hover
+			background: darken($brand-color, 5%)
 		+rmin(500)
-			margin: -2px auto 0
 			width: 30px
 			height: 30px
+			margin-top: 0
+			margin-left: auto
 		&.is-visible
 			display: block
 		&:before,
@@ -130,3 +157,5 @@
 			+rmin(500)
 				width: 12px
 				margin-left: -6px
+	&__link
+		display: inline-block
