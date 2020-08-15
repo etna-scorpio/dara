@@ -77,12 +77,27 @@ externalFooter: true
 			<form>
 				<div class="checkout__in">
 					<div class="checkout__bl checkout__bl--account">
+						<!-- begin EXPRESS CHECKOUT -->
+						<div class="checkout-card checkout-card">
+							<div class="checkout-card__title">EXPRESS CHECKOUT</div>
+							<div class="checkout-card__buttons">
+								<button class="button checkout-card__button button--apple-pay" type="button"><i class="icon icon-apple"></i></button>
+							</div>
+						</div>
+						<!-- end EXPRESS CHECKOUT -->
 						<!-- begin ACCOUNT CARD -->
 						<div class="checkout-card">
-							<div class="checkout-card__title">YOUR ACCOUNT</div>
+							<div class="checkout-card__row">
+								<div class="checkout-card__title mb-0">PAY WITH CARD</div>
+								<div class="checkout-card__sign-in">
+									<span class="d-none d-md-inline">Already have an account?</span>
+									<span class="d-md-none">Account?</span>
+									<a href="#">Sign in</a>
+								</div>
+							</div>
 							<div class="form">
 								{% for row in form %}
-								<div class="form__row">
+								<div class="form__row{% if loop.last %} form__row--md-margin-b{% endif %}">
 									{% for item in row.row %}
 									<div class="form__field js-input-box{% if item.state %} {{ item.state }}{% endif %}">
 										{% if item.select %}
@@ -157,10 +172,14 @@ externalFooter: true
 									{% endfor %}
 								</div>
 								{% endfor %}
-							</div>
-							<div class="checkout-card__note">
-								{{ mixins.icon('lock') }}
-								<span>All transactions secured and encrypted</span>
+								<div class="form__row">
+									<button class="button button--checkout" type="submit">
+										PLACE ORDER
+									</button>
+								</div>
+								<div class="form__row mb-0">
+									<p class="checkout-card__comment">By making a purchase, you accept the <a href="#">Terms of Service</a> and Privacy.</p>
+								</div>
 							</div>
 						</div>
 						<!-- end ACCOUNT CARD -->
@@ -168,59 +187,62 @@ externalFooter: true
 					<div class="checkout__bl checkout__bl--ship">
 						<!-- begin SHIP CARD -->
 						<div class="checkout-card">
-							<div class="checkout-card__title">SHIPS NEXT BUSINESS DAY</div>
-							<div class="checkout-product">
-								<div class="checkout-product__el checkout-product__el--img">
-									<img class="checkout-product__img" src="img/foodcanwhite.png" alt="img">
-								</div>
-								<div class="checkout-product__el">
-									<div class="checkout-product__desc">
-										<p class="checkout-product__title">Custom supplement</p>
-										<p>30 daily servings</p>
-										<p>free stainless steel canister</p>
+							<div class="checkout-card__in">
+								<div class="checkout-card__title">SHIPS NEXT BUSINESS DAY</div>
+								<div class="checkout-product">
+									<div class="checkout-product__el checkout-product__el--img">
+										<img class="checkout-product__img" src="img/foodcanwhite.png" alt="img">
 									</div>
-									<div class="checkout-product__price">$29.90</div>
+									<div class="checkout-product__el">
+										<div class="checkout-product__desc">
+											<p class="checkout-product__title">Custom supplement</p>
+											<p>30 daily servings</p>
+											<p>free stainless steel canister</p>
+										</div>
+										<div class="checkout-product__price">$29.90</div>
+									</div>
 								</div>
-							</div>
-							<hr>
-							<div class="total">
-								<div class="total__in">
-									<div class="container-fluid">
-										{% for item in total %}
-											<div class="row justify-content-between">
-												<div class="col">
-													<div class="total__el{% if item.elMod %} {{ item.elMod }}{% endif %}"><div class="total__title">{{ item.title }}</div></div>
+								<hr>
+								<div class="total">
+									<div class="total__in">
+										<div class="container-fluid">
+											{% for item in total %}
+												<div class="row justify-content-between">
+													<div class="col">
+														<div class="total__el{% if item.elMod %} {{ item.elMod }}{% endif %}"><div class="total__title">{{ item.title }}</div></div>
+													</div>
+													<div class="col text-right">
+														<div class="total__el{% if item.elMod %} {{ item.elMod }}{% endif %}">
+															<div class="total__price">{{ item.price }}</div>
+														</div>
+													</div>
 												</div>
-												<div class="col text-right">
-													<div class="total__el{% if item.elMod %} {{ item.elMod }}{% endif %}">
-														<div class="total__price">{{ item.price }}</div>
+											{% endfor %}
+											<div class="row">
+												<div class="col">
+													<div class="coupon">
+														<input class="coupon__input" type="text" placeholder="Coupon Code">
+														<div class="coupon__button">
+															<button class="button button--coupon">Apply</button>
+														</div>
 													</div>
 												</div>
 											</div>
-										{% endfor %}
-									</div>
-								</div>
-								<div class="total__button-container is-error">
-									<div class="total__helper">Your card was declined. Your request was in live mode, but used a known test card.</div>
-									<div class="total__button-row">
-										<div class="total__button-el text-right">
-											<button class="total__button total__button--checkout button button--checkout" type="submit">
-												<span class="d-none d-md-inline">PLACE ORDER</span>
-												<span class="d-md-none">CHECKOUT</span>
-											</button>
-										</div>
-										<div class="total__button-el text-left">
-											<button class="total__button total__button--buy button" type="button"><span>Buy with</span><i class="icon icon-apple"></i></button>
 										</div>
 									</div>
-									<p class="total__note">By making a purchase, you accept the Terms of Service. Your subscription will automatically renew and your credit card will be charged the subscription fee. </p>
 								</div>
-								<div class="checkout-card__note checkout-card__note--margin-b">
-									{{ mixins.icon('truck') }}
+							</div>
+							<div class="checkout-card__notes">
+								<div class="checkout-card__note checkout-card__note--margin-b mt-0">
+									<span class="checkout-card__note-ico">
+										{{ mixins.icon('truck') }}
+									</span>
 									<span>Ships next business day</span>
 								</div>
 								<div class="checkout-card__note checkout-card__note--last">
-									{{ mixins.icon('reminder') }}
+									<span class="checkout-card__note-ico">
+										{{ mixins.icon('reminder') }}
+									</span>
 									<span>You’ll receive a reminder email before each shipment so you have enough time to change your formulation or cancel</span>
 								</div>
 							</div>

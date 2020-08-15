@@ -54,13 +54,21 @@
 		+gilroy-medium
 		font-size: 11px
 		line-height: 1.2
-	&__terms
+	&__list
+		display: flex
+		justify-content: center
 		padding-bottom: 25px
+	&__option
+		margin-right: 25px
+	&__link
+		color: #868686
 		+gilroy-bold
 		font-size: 16px
-		color: #868686
 		letter-spacing: -0.16px
-
+		&:hover,
+		&:focus
+			text-decoration: none
+			color: $brand-color
 
 .copyright
 	display: flex

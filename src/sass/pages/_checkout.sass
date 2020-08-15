@@ -20,22 +20,34 @@
 			+rmin(1025)
 				width: 479px
 		&--ship
+			display: flex
+			order: -1
 			+rmin(1025)
 				width: 385px
+				order: initial
+			.checkout-card
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				margin: 0 auto
+				+rmin(1025)
+					margin: 0
 
 
 .checkout-card
 	width: 100%
 	max-width: 479px
-	min-height: 591px
 	margin: 0 auto
 	padding: 20px 20px 23px
 	background: #FFF
-	// border: 1px solid #ddd
 	border-radius: 5px
 	+rmin(1025)
 		width: 100%
 		margin: auto
+	&:not(:only-child)
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
 	&--auto-height
 		position: relative
 		min-height: auto
@@ -61,10 +73,14 @@
 			padding: 0 10px
 		&--sm-margin-b
 			margin-bottom: 3px
+	&__notes
+		display: none
+		+rmin(1025)
+			display: block
 	&__note
 		position: relative
 		margin: 20px 0 12px
-		padding: 9px 0 0 34px
+		padding: 9px 0 0 46px
 		+gilroy-medium
 		font-size: 12px
 		color: #008489
@@ -77,13 +93,15 @@
 			padding-top: 0
 		&--margin-b
 			margin-bottom: 30px
-		.icon
-			position: absolute
-			display: inline-block
-			top: 50%
-			left: 0
-			margin-top: -15px
-			font-size: 30px
+	&__note-ico
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: -15px
+		font-size: 30px
+		width: 30px
+		text-align: center
+		line-height: 0.9
 	&__close
 		position: absolute
 		display: block
@@ -102,6 +120,43 @@
 		color: #008489
 		letter-spacing: 1.13px
 		line-height: 1.36
+	&__comment
+		margin-bottom: 0
+		padding: 0 5px
+		+gilroy-medium
+		font-size: 12px
+		color: #B9B7B7
+		line-height: 1.3
+		a
+			text-decoration: underline
+			color: inherit
+			&:hover,
+			&:visited,
+			&:focus
+				color: inherit
+			&:hover
+				text-decoration: none
+	&__buttons
+		margin: 0 -5px
+		+rmin(768)
+			display: flex
+	&__button
+		display: block
+		width: 100%
+		margin: 0 5px 10px
+		&:last-child
+			margin-bottom: 0
+		+rmin(768)
+			width: auto
+			flex-basis: 100%
+			margin-bottom: 0
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 20px
+		font-size: 14px
+		color: #4a4a4a
 	hr
 		margin: 30px -20px 5px
 
@@ -165,74 +220,29 @@
 				letter-spacing: 0.9px
 	&__title
 		text-transform: uppercase
-	&__button-container
-		&.is-error
-			.total__helper
-				opacity: 1
-				visibility: visible
-	&__button-row
-		display: flex
-		justify-content: center
-		margin: 10px -7.5px
-	&__button-el
-		flex-basis: 100%
-		margin: 0 7.5px
-	&__button
-		width: 100%
-		max-width: 143px
-		font-size: 14px
-		line-height: 1.38
-		letter-spacing: -0.22px
-		+rmin(375)
-			font-size: 18px
-		+rmin(768)
-			max-width: 161px
-		&--checkout
-			padding: 14px 10px 12px
-			+gilroy-medium
-		&--buy
-			text-transform: none
-			padding: 12px 5px
-			+gilroy
-			background: #000
-			color: #FFF
-			letter-spacing: -0.24px
-			&:hover
-				background: #000
-				color: #FFF
-			span
-				display: inline-block
-				vertical-align: middle
-				+rmin(375)
-					padding-right: 5px
-	&__note
-		+gilroy-medium
-		font-size: 12px
-		color: #B9B7B7
-		line-height: 1.3
 	&__price
 		letter-spacing: 0.8px
-	&__helper
-		position: relative
-		margin: 0 -20px
-		padding: 3.5px 20px
-		+gilroy-medium
-		font-size: 12px
-		background: #F5A623
-		color: #fff
-		line-height: 1.33
-		opacity: 0
-		visibility: hidden
-		+rmin(1025)
-			margin: 0 -23px
-			padding: 3.5px 23px
-		&:before,
-		&:after
-			content: ""
-			position: absolute
-			top: 0
-			bottom: 0
-			background: #F5A623
+	// &__helper
+	// 	position: relative
+	// 	margin: 0 -20px
+	// 	padding: 3.5px 20px
+	// 	+gilroy-medium
+	// 	font-size: 12px
+	// 	background: #F5A623
+	// 	color: #fff
+	// 	line-height: 1.33
+	// 	opacity: 0
+	// 	visibility: hidden
+	// 	+rmin(1025)
+	// 		margin: 0 -23px
+	// 		padding: 3.5px 23px
+	// 	&:before,
+	// 	&:after
+	// 		content: ""
+	// 		position: absolute
+	// 		top: 0
+	// 		bottom: 0
+	// 		background: #F5A623
 
 
 .icon-apple
@@ -247,3 +257,20 @@
 		height: 26px
 
 
+.coupon
+	display: flex
+	margin-top: 20px
+	+rmin(1025)
+		margin-top: 25px
+	&__input
+		flex-basis: 100%
+		margin-right: 10px
+		border: 1px solid #ddd
+		padding: 2px 9px
+		border-radius: 3px
+		+placeholder
+			text-transform: uppercase
+			text-align: center
+			font-size: 12px
+			color: #868686
+			letter-spacing: -0.165px
