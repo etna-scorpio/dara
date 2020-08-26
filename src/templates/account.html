@@ -1,6 +1,7 @@
 ---
 title: Account
 header: header--white-bg
+outMod: out--flex
 fixedCheckout: false
 ---
 {% extends "layouts/_layout.html" %}
@@ -61,8 +62,8 @@ fixedCheckout: false
 		title: 'ORDER HISTORY'
 	}] %}
 
-
-	<section class="checkout">
+<main class="content justify-content-start">
+	<section class="checkout flex-grow-1">
 		<form>
 			<div class="checkout__in checkout__in--one-card">
 				<div class="checkout__bl checkout__bl--ship">
@@ -186,5 +187,6 @@ fixedCheckout: false
 		</div>
 	</div>
 	<!-- end Modal -->
+</main>
 {% endblock %}
 
