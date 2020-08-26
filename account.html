@@ -14,7 +14,7 @@
 
   <body>
     <!-- BEGIN content -->
-    <div class="out">
+    <div class="out out--flex">
       <header class="header  header--white-bg  js-header">
         <div class="header__in">
           <div class="container-fluid">
@@ -85,205 +85,207 @@
           </div>
         </div>
       </nav>
-      <section class="checkout">
-        <form>
-          <div class="checkout__in checkout__in--one-card">
-            <div class="checkout__bl checkout__bl--ship">
-              <!-- begin CARD -->
-              <div class="checkout-card checkout-card--no-padding-b checkout-card--auto-height">
-                <div class="checkout-card__title checkout-card__title--sm-margin-b">Next shipment</div>
-                <div class="checkout-card__date text-center">May 5th</div>
-                <a href="#" class="field js-show-account-pane">
-                  <div class="field__title">SHIPPING ADDRESS </div>
-                  <div class="field__info">
-                    <div class="field__el"> 555 Wellness Way Mill Valley, CA 94941 </div>
-                  </div>
-                  <span class="field__arrow">
-                    <svg class="icon icon-arrow-right">
-                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                    </svg>
-                  </span>
-                </a>
-                <a href="#" class="field js-show-account-pane">
-                  <div class="field__title">YOUR PLAN <button class="field__cancel button button--cancel">Cancel</button></div>
-                  <div class="field__info field__info--flex">
-                    <div class="field__el">Custom supplement 30 daily servings</div>
-                    <div class="field__el">$29.90</div>
-                  </div>
-                  <span class="field__arrow">
-                    <svg class="icon icon-arrow-right">
-                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                    </svg>
-                  </span>
-                </a>
-                <a href="#" class="field js-show-account-pane">
-                  <div class="field__title">PAYMENT METHOD </div>
-                  <div class="field__info">
-                    <div class="field__el">
-                      <span class="field__icon">
-                        <svg class="icon icon-mastercard">
-                          <use xlink:href="img/sprite.svg#icon-mastercard"></use>
-                        </svg>
-                      </span> *1633 07/18 </div>
-                  </div>
-                  <span class="field__arrow">
-                    <svg class="icon icon-arrow-right">
-                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                    </svg>
-                  </span>
-                </a>
-                <a href="#" class="field js-show-account-pane">
-                  <div class="field__title">EMAIL </div>
-                  <div class="field__info">
-                    <div class="field__el"> jdoe@gmail.com </div>
-                  </div>
-                  <span class="field__arrow">
-                    <svg class="icon icon-arrow-right">
-                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                    </svg>
-                  </span>
-                </a>
-                <a href="#" class="field js-show-account-pane">
-                  <div class="field__title">PASSWORD </div>
-                  <span class="field__arrow">
-                    <svg class="icon icon-arrow-right">
-                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                    </svg>
-                  </span>
-                </a>
-                <a href="#" class="field js-show-account-pane">
-                  <div class="field__title">ORDER HISTORY </div>
-                  <span class="field__arrow">
-                    <svg class="icon icon-arrow-right">
-                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                    </svg>
-                  </span>
-                </a>
+      <main class="content justify-content-start">
+        <section class="checkout flex-grow-1">
+          <form>
+            <div class="checkout__in checkout__in--one-card">
+              <div class="checkout__bl checkout__bl--ship">
+                <!-- begin CARD -->
+                <div class="checkout-card checkout-card--no-padding-b checkout-card--auto-height">
+                  <div class="checkout-card__title checkout-card__title--sm-margin-b">Next shipment</div>
+                  <div class="checkout-card__date text-center">May 5th</div>
+                  <a href="#" class="field js-show-account-pane">
+                    <div class="field__title">SHIPPING ADDRESS </div>
+                    <div class="field__info">
+                      <div class="field__el"> 555 Wellness Way Mill Valley, CA 94941 </div>
+                    </div>
+                    <span class="field__arrow">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#" class="field js-show-account-pane">
+                    <div class="field__title">YOUR PLAN <button class="field__cancel button button--cancel">Cancel</button></div>
+                    <div class="field__info field__info--flex">
+                      <div class="field__el">Custom supplement 30 daily servings</div>
+                      <div class="field__el">$29.90</div>
+                    </div>
+                    <span class="field__arrow">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#" class="field js-show-account-pane">
+                    <div class="field__title">PAYMENT METHOD </div>
+                    <div class="field__info">
+                      <div class="field__el">
+                        <span class="field__icon">
+                          <svg class="icon icon-mastercard">
+                            <use xlink:href="img/sprite.svg#icon-mastercard"></use>
+                          </svg>
+                        </span> *1633 07/18 </div>
+                    </div>
+                    <span class="field__arrow">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#" class="field js-show-account-pane">
+                    <div class="field__title">EMAIL </div>
+                    <div class="field__info">
+                      <div class="field__el"> jdoe@gmail.com </div>
+                    </div>
+                    <span class="field__arrow">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#" class="field js-show-account-pane">
+                    <div class="field__title">PASSWORD </div>
+                    <span class="field__arrow">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#" class="field js-show-account-pane">
+                    <div class="field__title">ORDER HISTORY </div>
+                    <span class="field__arrow">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <!-- end CARD -->
               </div>
-              <!-- end CARD -->
             </div>
+          </form>
+        </section>
+        <!-- begin Modal -->
+        <div class="account-modal js-modal">
+          <div class="checkout-card checkout-card--modal checkout-card--full-height">
+            <a href="#" class="checkout-card__close js-close-modal">
+              <svg class="icon icon-close">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </a>
+            <div class="checkout-card__title checkout-card__title--with-pad text-center"> Change shipping address </div>
+            <div class="form">
+              <div class="form__row">
+                <div class="form__field js-input-box is-active is-error">
+                  <input id="name" type="text" class="form__input js-input-data">
+                  <label for="name" class="form__label">Full Name</label>
+                  <div class="form__helper">Please type a name</div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__field js-input-box">
+                  <input id="address" type="text" class="form__input js-input-data">
+                  <label for="address" class="form__label">Address</label>
+                  <div class="form__helper">This is not valid</div>
+                </div>
+                <div class="form__field js-input-box">
+                  <input id="apt" type="text" class="form__input js-input-data">
+                  <label for="apt" class="form__label">Apt/Suite</label>
+                  <div class="form__helper">This is not valid</div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__field js-input-box">
+                  <input id="city" type="text" class="form__input js-input-data">
+                  <label for="city" class="form__label">City</label>
+                  <div class="form__helper">This is not valid</div>
+                </div>
+                <div class="form__field js-input-box">
+                  <select class="form__select js-input-data" name="state" id="state">
+                    <option value="" selected disabled hidden></option>
+                    <option value="AL"> AL </option>
+                    <option value="AK"> AK </option>
+                    <option value="AZ"> AZ </option>
+                    <option value="AR"> AR </option>
+                    <option value="CA"> CA </option>
+                    <option value="CO"> CO </option>
+                    <option value="CT"> CT </option>
+                    <option value="DE"> DE </option>
+                    <option value="DC"> DC </option>
+                    <option value="FL"> FL </option>
+                    <option value="GA"> GA </option>
+                    <option value="HI"> HI </option>
+                    <option value="ID"> ID </option>
+                    <option value="IL"> IL </option>
+                    <option value="IN"> IN </option>
+                    <option value="IA"> IA </option>
+                    <option value="KS"> KS </option>
+                    <option value="KY"> KY </option>
+                    <option value="LA"> LA </option>
+                    <option value="ME"> ME </option>
+                    <option value="MD"> MD </option>
+                    <option value="MA"> MA </option>
+                    <option value="MI"> MI </option>
+                    <option value="MN"> MN </option>
+                    <option value="MS"> MS </option>
+                    <option value="MO"> MO </option>
+                    <option value="MT"> MT </option>
+                    <option value="NE"> NE </option>
+                    <option value="NV"> NV </option>
+                    <option value="NH"> NH </option>
+                    <option value="NJ"> NJ </option>
+                    <option value="NM"> NM </option>
+                    <option value="NY"> NY </option>
+                    <option value="NC"> NC </option>
+                    <option value="ND"> ND </option>
+                    <option value="OH"> OH </option>
+                    <option value="OK"> OK </option>
+                    <option value="OR"> OR </option>
+                    <option value="PA"> PA </option>
+                    <option value="PR"> PR </option>
+                    <option value="RI"> RI </option>
+                    <option value="SC"> SC </option>
+                    <option value="SD"> SD</option>
+                    <option value="TN"> TN</option>
+                    <option value="TX"> TX</option>
+                    <option value="UT"> UT</option>
+                    <option value="VT"> VT </option>
+                    <option value="VA"> VA</option>
+                    <option value="WA"> WA</option>
+                    <option value="WV"> WV </option>
+                    <option value="WI"> WI </option>
+                    <option value="WY"> WY </option>
+                    <option value="GU"> GU </option>
+                    <option value="AS"> AS </option>
+                    <option value="MP"> MP </option>
+                    <option value="VI"> VI </option>
+                    <option value="AA"> AA </option>
+                    <option value="AE"> AE </option>
+                    <option value="AP"> AP </option>
+                  </select>
+                  <label for="state" class="form__label">State</label>
+                  <div class="form__helper">This is not valid</div>
+                </div>
+                <div class="form__field js-input-box">
+                  <input id="zip" type="text" class="form__input js-input-data">
+                  <label for="zip" class="form__label">ZIP</label>
+                  <div class="form__helper">This is not valid</div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__field js-input-box">
+                  <input id="tel" type="tel" class="form__input js-input-data">
+                  <label for="tel" class="form__label">Phone <small>(optional)</small></label>
+                  <div class="form__helper">This is not valid</div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="button button--update mt-2">Update Address</a>
           </div>
-        </form>
-      </section>
-      <!-- begin Modal -->
-      <div class="account-modal js-modal">
-        <div class="checkout-card checkout-card--modal checkout-card--full-height">
-          <a href="#" class="checkout-card__close js-close-modal">
-            <svg class="icon icon-close">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </a>
-          <div class="checkout-card__title checkout-card__title--with-pad text-center"> Change shipping address </div>
-          <div class="form">
-            <div class="form__row">
-              <div class="form__field js-input-box is-active is-error">
-                <input id="name" type="text" class="form__input js-input-data">
-                <label for="name" class="form__label">Full Name</label>
-                <div class="form__helper">Please type a name</div>
-              </div>
-            </div>
-            <div class="form__row">
-              <div class="form__field js-input-box">
-                <input id="address" type="text" class="form__input js-input-data">
-                <label for="address" class="form__label">Address</label>
-                <div class="form__helper">This is not valid</div>
-              </div>
-              <div class="form__field js-input-box">
-                <input id="apt" type="text" class="form__input js-input-data">
-                <label for="apt" class="form__label">Apt/Suite</label>
-                <div class="form__helper">This is not valid</div>
-              </div>
-            </div>
-            <div class="form__row">
-              <div class="form__field js-input-box">
-                <input id="city" type="text" class="form__input js-input-data">
-                <label for="city" class="form__label">City</label>
-                <div class="form__helper">This is not valid</div>
-              </div>
-              <div class="form__field js-input-box">
-                <select class="form__select js-input-data" name="state" id="state">
-                  <option value="" selected disabled hidden></option>
-                  <option value="AL"> AL </option>
-                  <option value="AK"> AK </option>
-                  <option value="AZ"> AZ </option>
-                  <option value="AR"> AR </option>
-                  <option value="CA"> CA </option>
-                  <option value="CO"> CO </option>
-                  <option value="CT"> CT </option>
-                  <option value="DE"> DE </option>
-                  <option value="DC"> DC </option>
-                  <option value="FL"> FL </option>
-                  <option value="GA"> GA </option>
-                  <option value="HI"> HI </option>
-                  <option value="ID"> ID </option>
-                  <option value="IL"> IL </option>
-                  <option value="IN"> IN </option>
-                  <option value="IA"> IA </option>
-                  <option value="KS"> KS </option>
-                  <option value="KY"> KY </option>
-                  <option value="LA"> LA </option>
-                  <option value="ME"> ME </option>
-                  <option value="MD"> MD </option>
-                  <option value="MA"> MA </option>
-                  <option value="MI"> MI </option>
-                  <option value="MN"> MN </option>
-                  <option value="MS"> MS </option>
-                  <option value="MO"> MO </option>
-                  <option value="MT"> MT </option>
-                  <option value="NE"> NE </option>
-                  <option value="NV"> NV </option>
-                  <option value="NH"> NH </option>
-                  <option value="NJ"> NJ </option>
-                  <option value="NM"> NM </option>
-                  <option value="NY"> NY </option>
-                  <option value="NC"> NC </option>
-                  <option value="ND"> ND </option>
-                  <option value="OH"> OH </option>
-                  <option value="OK"> OK </option>
-                  <option value="OR"> OR </option>
-                  <option value="PA"> PA </option>
-                  <option value="PR"> PR </option>
-                  <option value="RI"> RI </option>
-                  <option value="SC"> SC </option>
-                  <option value="SD"> SD</option>
-                  <option value="TN"> TN</option>
-                  <option value="TX"> TX</option>
-                  <option value="UT"> UT</option>
-                  <option value="VT"> VT </option>
-                  <option value="VA"> VA</option>
-                  <option value="WA"> WA</option>
-                  <option value="WV"> WV </option>
-                  <option value="WI"> WI </option>
-                  <option value="WY"> WY </option>
-                  <option value="GU"> GU </option>
-                  <option value="AS"> AS </option>
-                  <option value="MP"> MP </option>
-                  <option value="VI"> VI </option>
-                  <option value="AA"> AA </option>
-                  <option value="AE"> AE </option>
-                  <option value="AP"> AP </option>
-                </select>
-                <label for="state" class="form__label">State</label>
-                <div class="form__helper">This is not valid</div>
-              </div>
-              <div class="form__field js-input-box">
-                <input id="zip" type="text" class="form__input js-input-data">
-                <label for="zip" class="form__label">ZIP</label>
-                <div class="form__helper">This is not valid</div>
-              </div>
-            </div>
-            <div class="form__row">
-              <div class="form__field js-input-box">
-                <input id="tel" type="tel" class="form__input js-input-data">
-                <label for="tel" class="form__label">Phone <small>(optional)</small></label>
-                <div class="form__helper">This is not valid</div>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="button button--update mt-2">Update Address</a>
         </div>
-      </div>
-      <!-- end Modal -->
+        <!-- end Modal -->
+      </main>
       <!-- begin footer -->
       <footer class="footer">
         <div class="footer__in">
