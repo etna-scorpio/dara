@@ -61,14 +61,26 @@
 				align-items: center
 				align-self: stretch
 		&--info
-			flex-basis: calc(100% - 70px)
-			+rmin(375)
-				flex-basis: calc(100% - 100px)
 			+rmin(500)
 				margin-right: 30px
-				flex-basis: calc(100% - 200px)
 		&--info-full-w
-			margin-right: 30px
+			margin-right: 130px
+			+rmin(768)
+				margin-right: 30px
+		&--dosage-add
+			position: absolute
+			top: 14px
+			right: 20px
+			bottom: 16px
+			margin: 0
+			+rmin(768)
+				position: relative
+				top: auto
+				right: auto
+				bottom: auto
+				display: flex
+				align-items: center
+				align-self: stretch
 	&__img
 		display: block
 		width: 70px
@@ -130,7 +142,7 @@
 		transition: background 0.2s ease
 		&:hover
 			background: darken($brand-color, 5%)
-		+rmin(500)
+		+rmin(768)
 			width: 30px
 			height: 30px
 			margin-top: 0
