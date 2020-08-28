@@ -52,61 +52,52 @@
 
 
 .nutrition
-	max-width: 500px
-	margin: 0 auto
-	+gilroy-medium
-	+rmin(768)
-		max-width: 400px
-	&__line
-		margin: 8px 0 17px
 	&__title
+		margin-top: 4px
 		margin-bottom: 0
-		text-transform: uppercase
+		+gilroy-medium
 		font-size: 12px
-		color: #4a4a4a
-		letter-spacing: 0.31px
+		color: #000
+		letter-spacing: 1.491px
+		line-height: 1.21
+		+rmin(375)
+			font-size: 16px
 	&__quantity
 		display: inline-block
-		font-size: 24px
+		+gilroy-medium
+		font-size: 20px
 		color: $brand-color
 		line-height: 1.375
 		letter-spacing: 0.71px
+		+rmin(375)
+			font-size: 24px
 		&--lg-font
 			margin: 0 30px
-			font-size: 36px
+			font-size: 30px
 			letter-spacing: 0.85px
+			+rmin(375)
+				font-size: 36px
 			.nutrition__unit
 				font-size: 20px
-	&__preview
-		width: 100%
-		max-width: 71px
-	&__list
-		margin-bottom: 0
-		letter-spacing: 0.81px
-		li
-			position: relative
-			padding-left: 12px
-			line-height: 1.375
-			&:before
-				content: ""
-				position: absolute
-				top: 9px
-				left: 0
-				width: 8px
-				height: 7px
-				background: url(../img/check-green.svg) 0 0 no-repeat
-				background-size: contain
+		&:not(.nutrition__quantity--lg-font)
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 50px
+			height: 50px
+			background: rgba($brand-color, 0.05)
+			border-radius: 50%
+			+rmin(375)
+				width: 62px
+				height: 62px
+	&__bl
+		display: flex
+		justify-content: center
+	&__col
+		margin: 0 5px
+	&__el
+		display: flex
+		flex-direction: column
+		align-items: center
 	&__unit
 		font-size: 14px
-	&__percentage
-		text-align: center
-		+gilroy-medium
-		font-size: 12px
-		color: #4a4a4a
-		letter-spacing: 0.31px
-	&__note
-		display: inline-block
-		margin-top: 30px
-		font-size: 10px
-		line-height: 1.4
-		letter-spacing: 0.85px

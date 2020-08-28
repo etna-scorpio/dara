@@ -45,46 +45,39 @@ footer: false
 							}] %}
 
 							<div class="tile__in">
-								<div class="row justify-content-center">
-									<div class="col-xs-12 col-md-7">
-										<div class="nutrition">
-											<div class="row">
-												<div class="col d-flex justify-content-center flex-wrap">
-													<div class="nutrition__quantity nutrition__quantity--lg-font">
-														55<span class="nutrition__unit">g</span>
-													</div>
-													<div class="nutrition__quantity nutrition__quantity--lg-font">
-														210<span class="nutrition__unit">cals</span>
-													</div>
+								<div class="row">
+									<div class="col nutrition">
+										<div class="row">
+											<div class="col d-flex justify-content-center flex-wrap">
+												<div class="nutrition__quantity nutrition__quantity--lg-font">
+													55<span class="nutrition__unit">g</span>
+												</div>
+												<div class="nutrition__quantity nutrition__quantity--lg-font">
+													210<span class="nutrition__unit">cals</span>
 												</div>
 											</div>
-											<hr class="nutrition__line">
-											<div class="row">
-												{% for item in nutritionList %}
-												<div class="col mb-2">
-													<div class="nutrition__title">{{ item.title }}</div>
-													<div class="nutrition__quantity">{{ item.quantity | safe }}<div class="nutrition__percentage">{{ item.percentage }}</div></div>
-												</div>
-												{% endfor %}
-											</div>
-											<div id="range-slider" class="range-slider"></div>
-											<div class="row align-items-center">
-												<div class="col-8">
-													<ul class="nutrition__list">
-														<li>All natural ingredients</li>
-														<li>No added sugar</li>
-														<li>No additives</li>
-													</ul>
-												</div>
-												<div class="col-4 d-md-none text-center">
-													<img class="nutrition__preview" src="img/foodcanwhite.png" alt="">
-												</div>
-											</div>
-											<small class="nutrition__note">*Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</small>
 										</div>
-									</div>
-									<div class="col-md-5 d-none d-md-block text-right">
-										<img src="img/foodcanwhite-big.png" alt="">
+										<div class="row">
+											<div class="col">
+												<div id="range-slider" class="range-slider"></div>
+											</div>
+										</div>
+										<div class="row justify-content-center">
+											<div class="col">
+												<div class="nutrition__bl">
+													{% for item in nutritionList %}
+													<div class="nutrition__col">
+														<div class="nutrition__el">
+															<div class="nutrition__quantity">
+																<div>{{ item.quantity | safe }}</div>
+															</div>
+															<div class="nutrition__title">{{ item.title }}</div>
+														</div>
+													</div>
+													{% endfor %}
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
