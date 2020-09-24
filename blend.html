@@ -91,8 +91,8 @@
             <div class="col">
               <div class="blend__center">
                 <div class="special-title special-title--more-spacing"><span>Jane, your personal blend is ready for review!</span></div>
-                <div class="blend__bl">
-                  <div class="tile">
+                <div class="blend__bl mb-0">
+                  <div class="tile mb-0">
                     <div class="tile__head">
                       <h5 class="title-h5 text-uppercase tile__title">Each serving</h5>
                       <a href="#" class="link link--arrow tile__link"><span>Nutrition facts</span>
@@ -168,35 +168,194 @@
                     </div>
                   </div>
                 </div>
-                <div class="blend__bl">
-                  <div class="tile">
-                    <div class="tile__head">
-                      <h5 class="title-h5 text-uppercase tile__title">INGREDIENTS</h5>
-                      <a href="#" class="link link--arrow tile__link"><span>More</span>
-                        <svg class="icon icon-arrow-right">
-                          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                        </svg>
+                <div class="blend__bl mb-0">
+                  <div class="filter filter--in-content js-filter">
+                    <div class="filter__container">
+                      <a href="#" class="filter-preview js-filter-add-ingredients">
+                        <span>INGREDIENTS</span>
+                        <i class="filter-preview__icon"></i>
                       </a>
+                      <div class="filter__in js-filter">
+                        <form class="filter__form">
+                          <div class="filter__search-box js-search-box">
+                            <i class="filter__search-ico js-search-loop"></i>
+                            <input type="text" class="filter__search js-search">
+                            <ul class="filter__search-list js-search-autocomplete">
+                              <li><a href="#" class="filter__search-link">Maca root</a></li>
+                              <li><a href="#" class="filter__search-link">Magnesium</a></li>
+                              <li><a href="#" class="filter__search-link">Manganese</a></li>
+                            </ul>
+                            <button type="button" class="filter__search-close js-search-close">
+                              <svg class="icon icon-close">
+                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </form>
+                        <div class="filter-dropdown js-filter-dropdown">
+                          <a href="#" class="filter-dropdown__link js-filter-dropdown-link">Filter <i class="filter-dropdown__arrow-down"></i></a>
+                          <ul class="filter-dropdown__list js-filter-dropdown-list">
+                            <li class="filter-dropdown__option">
+                              <span>Filter by:</span>
+                              <a href="#" class="filter-dropdown__clear js-filter-dropdown-hide">Clear</a>
+                            </li>
+                            <li class="filter-dropdown__option">
+                              <span>My Formulation</span>
+                              <div class="filter-radio">
+                                <input class="filter-radio__input js-filter-radio" type="radio" name="category" value="my-formulation" checked>
+                                <span class="filter-radio__dot"></span>
+                              </div>
+                            </li>
+                            <li class="filter-dropdown__option">
+                              <span>Vitamins</span>
+                              <div class="filter-radio">
+                                <input class="filter-radio__input js-filter-radio" type="radio" name="category" value="vitamins">
+                                <span class="filter-radio__dot"></span>
+                              </div>
+                            </li>
+                            <li class="filter-dropdown__option">
+                              <span>Minerals</span>
+                              <div class="filter-radio">
+                                <input class="filter-radio__input js-filter-radio" type="radio" name="category" value="minerals">
+                                <span class="filter-radio__dot"></span>
+                              </div>
+                            </li>
+                            <li class="filter-dropdown__option">
+                              <span>Botanicals</span>
+                              <div class="filter-radio">
+                                <input class="filter-radio__input js-filter-radio" type="radio" name="category" value="botanicals">
+                                <span class="filter-radio__dot"></span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <ul class="tile__list">
-                      <li class="tile__option">
-                        <p class="tile__option-name">Proteins</p>
-                        <p>Brown rice • Pea protein • Oat flour</p>
-                      </li>
-                      <li class="tile__option">
-                        <p class="tile__option-name">Superfoods</p>
-                        <p>Ashwagandha • Eleuthero • Ginseng Cinnamon • Tulsi • Bacopa • Rhodiola Gymnema • Kanna • Ginger • Astragalus Acai • Acerola</p>
-                      </li>
-                      <li class="tile__option">
-                        <p class="tile__option-name">Vitamins</p>
-                        <p>Vitamin D3 • Vitamin B12 • Thiamin • Folate Vitamin K2</p>
-                      </li>
-                      <li class="tile__option">
-                        <p class="tile__option-name">Minerals</p>
-                        <p>Chromium • Magnesium • Selenium • Zinc</p>
-                      </li>
-                    </ul>
                   </div>
+                </div>
+                <div class="blend__bl">
+                  <section class="category">
+                    <div class="category__in m-0">
+                      <h5 class="title-h5 category__title">Vitamins</h5>
+                      <div class="category__cards">
+                        <a href="#" class="category-card">
+                          <div class="category-card__bl">
+                            <img class="category-card__img" src="img/baobab.png" alt="baobab">
+                          </div>
+                          <div class="category-card__bl category-card__bl--info">
+                            <div class="category-card__info">
+                              <div class="category-card__title">Baoab Fruit</div>
+                              <div class="category-card__text">Baobab powder is especially rich in fibre content, and acts as a prebiotic, which helps to maintain healthy microflora in the intestines. This powder also contains antioxidants, protein, and vitamin A, C and B6.</div>
+                            </div>
+                          </div>
+                          <div class="category-card__bl category-card__bl--dosage">
+                            <div class="category-proportion">
+                              <div class="category-proportion__num">
+                                <span>1,000 mg</span>
+                                <svg class="icon icon-arrow-right">
+                                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#" class="category-card">
+                          <div class="category-card__bl">
+                            <img class="category-card__img" src="img/blueberry.png" alt="blueberry">
+                          </div>
+                          <div class="category-card__bl category-card__bl--info">
+                            <div class="category-card__info">
+                              <div class="category-card__title">Wild Blueberry</div>
+                              <div class="category-card__text">100 grams of wild bilberries on average contain about 40 mg of vitamin C, as well as B vitamins and other beneficial substances. Wild blueberries are also very good for our eyes, specifically due to their antioxidant content, and bilberries also improve our digestion.</div>
+                            </div>
+                          </div>
+                          <div class="category-card__bl category-card__bl--dosage">
+                            <div class="category-proportion">
+                              <div class="category-proportion__num">
+                                <span>0,2 g</span>
+                                <svg class="icon icon-arrow-right">
+                                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="category-card">
+                          <a href="http://www.yahoo.com" class="category-card__desc">
+                            <div class="category-card__bl">
+                              <img class="category-card__img" src="img/vitamin-c.png" alt="vitamin-c">
+                            </div>
+                            <div class="category-card__bl category-card__bl--info">
+                              <div class="category-card__info">
+                                <div class="category-card__title">Vitamin C</div>
+                                <div class="category-card__text">Acerola cherry is one of the most nutritionally dense superfruits with one of the highest levels of vitamin C and antioxidants of any food source.</div>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="category-card__bl category-card__bl--dosage-add">
+                            <div class="category-proportion">
+                              <div class="category-proportion__num" style="display: none">
+                                <span>200 mg</span>
+                                <svg class="icon icon-arrow-right">
+                                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                                </svg>
+                              </div>
+                              <a href="http://www.google.com" class="category-proportion__link"><i class="category-proportion__add js-ingredient-add-button is-visible"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="category">
+                    <div class="category__in m-0">
+                      <h5 class="title-h5 category__title">Superfoods</h5>
+                      <div class="category__cards">
+                        <a href="#" class="category-card">
+                          <div class="category-card__bl">
+                            <img class="category-card__img" src="img/acai.png" alt="acai">
+                          </div>
+                          <div class="category-card__bl category-card__bl--info">
+                            <div class="category-card__info">
+                              <div class="category-card__title">Açai Berry</div>
+                              <div class="category-card__text">Pure organic Açaí berry powder, loaded with antioxidants, essential amino acids, and full of monounsaturated and polyunsaturated fatty acids.</div>
+                            </div>
+                          </div>
+                          <div class="category-card__bl category-card__bl--dosage">
+                            <div class="category-proportion">
+                              <div class="category-proportion__num">
+                                <span>180 mg</span>
+                                <svg class="icon icon-arrow-right">
+                                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#" class="category-card">
+                          <div class="category-card__bl">
+                            <img class="category-card__img" src="img/ginger.png" alt="ginger">
+                          </div>
+                          <div class="category-card__bl category-card__bl--info">
+                            <div class="category-card__info">
+                              <div class="category-card__title">Ginger</div>
+                              <div class="category-card__text">Pure organic ginger root powder, used for thousands of years as a powerful anti-inflamatory.</div>
+                            </div>
+                          </div>
+                          <div class="category-card__bl category-card__bl--dosage">
+                            <div class="category-proportion">
+                              <div class="category-proportion__num">
+                                <span>400 mg</span>
+                                <svg class="icon icon-arrow-right">
+                                  <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
                 </div>
                 <div class="blend__bl">
                   <div class="product-collapse">
