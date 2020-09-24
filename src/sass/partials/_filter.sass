@@ -3,6 +3,14 @@
 	background: #F7F9FA
 	padding: 5px 0
 	min-height: 40px
+	&--in-content
+		z-index: 10
+		.filter__in
+			padding: 0 20px
+			+rmin(768)
+				padding: 0
+		.filter-preview
+			left: 20px
 	&.is-overlay
 		&:before
 			content: ""

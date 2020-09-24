@@ -15,8 +15,8 @@ footer: false
 			<div class="col">
 				<div class="blend__center">
 					<div class="special-title special-title--more-spacing"><span>Jane, your personal blend is ready for review!</span></div>
-					<div class="blend__bl">
-						<div class="tile">
+					<div class="blend__bl mb-0">
+						<div class="tile mb-0">
 							<div class="tile__head">
 								<h5 class="title-h5 text-uppercase tile__title">Each serving</h5>
 								<a href="#" class="link link--arrow tile__link"><span>Nutrition facts</span>{{ mixins.icon('arrow-right') }}</a>
@@ -83,36 +83,138 @@ footer: false
 							</div>
 						</div>
 					</div>
-					<div class="blend__bl">
-						<div class="tile">
-							<div class="tile__head">
-								<h5 class="title-h5 text-uppercase tile__title">INGREDIENTS</h5>
-								<a href="#" class="link link--arrow tile__link"><span>More</span>{{ mixins.icon('arrow-right') }}</a>
+					<div class="blend__bl mb-0">
+						<div class="filter filter--in-content js-filter">
+							<div class="filter__container">
+								<a href="#" class="filter-preview js-filter-add-ingredients">
+									<span>INGREDIENTS</span>
+									<i class="filter-preview__icon"></i>
+								</a>
+								<div class="filter__in js-filter">
+									<form class="filter__form">
+										<div class="filter__search-box js-search-box">
+											<i class="filter__search-ico js-search-loop"></i>
+											<input type="text" class="filter__search js-search">
+											<ul class="filter__search-list js-search-autocomplete">
+												<li><a href="#" class="filter__search-link">Maca root</a></li>
+												<li><a href="#" class="filter__search-link">Magnesium</a></li>
+												<li><a href="#" class="filter__search-link">Manganese</a></li>
+											</ul>
+											<button type="button" class="filter__search-close js-search-close">{{ mixins.icon('close') }}</button>
+										</div>
+									</form>
+									<div class="filter-dropdown js-filter-dropdown">
+										<a href="#" class="filter-dropdown__link js-filter-dropdown-link">Filter <i class="filter-dropdown__arrow-down"></i></a>
+										<ul class="filter-dropdown__list js-filter-dropdown-list">
+											<li class="filter-dropdown__option">
+												<span>Filter by:</span>
+												<a href="#" class="filter-dropdown__clear js-filter-dropdown-hide">Clear</a>
+											</li>
+											{% set radio = ['My Formulation', 'Vitamins', 'Minerals', 'Botanicals'] %}
+											{% for item in radio %}
+											<li class="filter-dropdown__option">
+												<span>{{ item }}</span>
+												<div class="filter-radio">
+													<input class="filter-radio__input js-filter-radio" type="radio" name="category" value="{{ item | lower | replace(' ', '-') }}"{% if loop.first %} checked{% endif %}>
+													<span class="filter-radio__dot"></span>
+												</div>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
 							</div>
-
-							{% set list = [{
-								title: 'Proteins',
-								text: 'Brown rice • Pea protein • Oat flour'
-							}, {
-								title: 'Superfoods',
-								text: 'Ashwagandha • Eleuthero • Ginseng Cinnamon • Tulsi • Bacopa • Rhodiola Gymnema • Kanna • Ginger • Astragalus Acai • Acerola'
-							}, {
-								title: 'Vitamins',
-								text: 'Vitamin D3 • Vitamin B12 • Thiamin • Folate Vitamin K2'
-							}, {
-								title: 'Minerals',
-								text: 'Chromium • Magnesium • Selenium • Zinc'
-							}] %}
-
-							<ul class="tile__list">
-								{% for option in list %}
-								<li class="tile__option">
-									<p class="tile__option-name">{{ option.title }}</p>
-									<p>{{ option.text }}</p>
-								</li>
-								{% endfor %}
-							</ul>
 						</div>
+					</div>
+					<div class="blend__bl">
+						{% set productList = [{
+							title: 'Vitamins',
+							products: [{
+								name: 'Baoab Fruit',
+								img: 'baobab',
+								text: 'Baobab powder is especially rich in fibre content, and acts as a prebiotic, which helps to maintain healthy microflora in the intestines. This powder also contains antioxidants, protein, and vitamin A, C and B6.',
+								dosage: '1,000 mg'
+							}, {
+								name: 'Wild Blueberry',
+								img: 'blueberry',
+								text: '100 grams of wild bilberries on average contain about 40 mg of vitamin C, as well as B vitamins and other beneficial substances. Wild blueberries are also very good for our eyes, specifically due to their antioxidant content, and bilberries also improve our digestion.',
+								dosage: '0,2 g'
+							}, {
+								name: 'Vitamin C',
+								img: 'vitamin-c',
+								text: 'Acerola cherry is one of the most nutritionally dense superfruits with one of the highest levels of vitamin C and antioxidants of any food source.',
+								dosage: '200 mg',
+								status: false
+							}]
+						},{
+							title: 'Superfoods',
+							products: [{
+								name: 'Açai Berry',
+								img: 'acai',
+								text: 'Pure organic Açaí berry powder, loaded with antioxidants, essential amino acids, and full of monounsaturated and polyunsaturated fatty acids.',
+								dosage: '180 mg'
+							}, {
+								name: 'Ginger',
+								img: 'ginger',
+								text: 'Pure organic ginger root powder, used for thousands of years as a powerful anti-inflamatory.',
+								dosage: '400 mg'
+							}]
+						}] %}
+						{% for category in productList %}
+						<section class="category">
+							<div class="category__in m-0">
+								<h5 class="title-h5 category__title">{{ category.title }}</h5>
+								<div class="category__cards">
+									{% for item in category.products %}
+										{% if item.status == false %}
+											<div class="category-card">
+												<a href="http://www.yahoo.com" class="category-card__desc">
+													<div class="category-card__bl">
+														<img class="category-card__img" src="img/{{ item.img }}.png" alt="{{ item.img }}">
+													</div>
+													<div class="category-card__bl category-card__bl--info">
+														<div class="category-card__info">
+															<div class="category-card__title">{{ item.name }}</div>
+															<div class="category-card__text">{{ item.text }}</div>
+														</div>
+													</div>
+												</a>
+												<div class="category-card__bl category-card__bl--dosage-add">
+													<div class="category-proportion">
+														<div class="category-proportion__num" style="display: none">
+															<span>{{ item.dosage }}</span>
+															{{ mixins.icon('arrow-right') }}
+														</div>
+														<a href="http://www.google.com" class="category-proportion__link"><i class="category-proportion__add js-ingredient-add-button is-visible"></i></a>
+													</div>
+												</div>
+											</div>
+										{% else %}
+											<a href="#" class="category-card">
+												<div class="category-card__bl">
+													<img class="category-card__img" src="img/{{ item.img }}.png" alt="{{ item.img }}">
+												</div>
+												<div class="category-card__bl category-card__bl--info">
+													<div class="category-card__info">
+														<div class="category-card__title">{{ item.name }}</div>
+														<div class="category-card__text">{{ item.text }}</div>
+													</div>
+												</div>
+												<div class="category-card__bl category-card__bl--dosage">
+													<div class="category-proportion">
+														<div class="category-proportion__num">
+															<span>{{ item.dosage }}</span>
+															{{ mixins.icon('arrow-right') }}
+														</div>
+													</div>
+												</div>
+											</a>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						</section>
+						{% endfor %}
 					</div>
 					<div class="blend__bl">
 						<div class="product-collapse">
