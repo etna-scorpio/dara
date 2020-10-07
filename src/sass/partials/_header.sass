@@ -21,13 +21,16 @@
 	&__in
 		display: flex
 		align-items: center
+		max-width: 940px
 		min-height: 40px
 		margin: 0 auto
+		padding: 0 5px
 		line-height: 1
-		+css-lock(31, 180, 992, 1545, padding-left)
-		+css-lock(31, 180, 992, 1545, padding-right)
 		+rmin(991)
+			max-width: 100%
 			min-height: 74px
+			+css-lock(31, 180, 992, 1545, padding-right)
+			+css-lock(31, 180, 992, 1545, padding-left)
 	&__checkout
 		display: none
 		margin-right: 10px
@@ -137,6 +140,7 @@
 .header-dropdown
 	display: none
 	position: absolute
+	z-index: 1
 	top: 100%
 	right: 0
 	width: 233px
