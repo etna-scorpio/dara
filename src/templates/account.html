@@ -9,23 +9,29 @@ fixedCheckout: false
 {% block content %}
 	{% set form = [{
 		row: [{
-			state: 'is-active is-error',
-			id: 'name',
-			name: 'Full Name',
+			state: 'is-error',
+			id: 'first-name',
+			name: 'First Name',
 			helper: 'Please type a name'
+		},
+		{
+			id: 'last-name',
+			name: 'Last Name'
 		}]
 	}, {
 		row: [{
 			id: 'address',
 			name: 'Address'
-		}, {
-			id: 'apt',
-			name: 'Apt/Suite'
 		}]
 	}, {
 		row: [{
 			id: 'city',
 			name: 'City'
+		}]
+	}, {
+		row: [{
+			id: 'country',
+			name: 'Country'
 		}, {
 			select: true,
 			id: 'state',

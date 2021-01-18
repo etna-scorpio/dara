@@ -19,23 +19,29 @@ externalFooter: true
 		}]
 	}, {
 		row: [{
-			state: 'is-active',
-			id: 'name',
-			name: 'Full Name',
-			value: 'Jane Doe'
+			id: 'first-name',
+			name: 'First Name'
+		},
+		{
+			id: 'last-name',
+			name: 'Last Name'
 		}]
 	}, {
 		row: [{
 			id: 'address',
 			name: 'Address'
-		}, {
-			id: 'apt',
-			name: 'Apt/Suite'
 		}]
 	}, {
 		row: [{
 			id: 'city',
 			name: 'City'
+		}]
+	}, {
+		row: [{
+			state: 'is-error',
+			id: 'country',
+			name: 'Country',
+			helper: 'Enter a city'
 		}, {
 			select: true,
 			id: 'state',
@@ -176,6 +182,9 @@ externalFooter: true
 									<button class="button button--checkout" type="submit">
 										PLACE ORDER
 									</button>
+								</div>
+								<div class="form__row mb-0">
+									<p class="form__error-msg">There was an error placing your order. Please try again.</p>
 								</div>
 								<div class="form__row mb-0">
 									<p class="checkout-card__comment">By making a purchase, you accept the <a href="#">Terms of Service</a> and Privacy.</p>

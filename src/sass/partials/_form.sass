@@ -16,28 +16,19 @@
 		&.is-active
 			.form__label
 				top: 10px
-				font-size: 9px
 		&.is-error
-			.form__input
-				padding-top: 23px
-				padding-bottom: 24px
 			.form__input,
 			.form__select
 				border-color: #E34F30
 			.form__helper
 				display: block
-			.form__label
-				top: 12px
-				font-size: 12px
 	&__label
 		position: absolute
-		top: 50%
+		top: 18px
 		left: 9px
-		margin: -6px 0 0
-		text-transform: uppercase
 		+gilroy-medium
 		font-size: 12px
-		color: #008489
+		color: #868686
 		line-height: 1
 		letter-spacing: -0.16px
 		transition: top 0.1s linear
@@ -47,9 +38,10 @@
 	&__input
 		display: block
 		width: 100%
-		padding: 14px 9px 15px
-		+gilroy-medium
+		padding: 24px 9px 5px
+		+gilroy-bold
 		font-size: 12px
+		color: #4a4a4a
 		border: 1px solid #ddd
 		line-height: 1
 		letter-spacing: -0.16px
@@ -57,17 +49,17 @@
 		border-radius: 3px
 	&__helper
 		display: none
-		position: absolute
-		left: 9px
-		bottom: 4px
-		+gilroy-medium
+		margin: 10px 0 6px
+		+gilroy-bold
 		font-size: 12px
 		color: #E34F30
+		letter-spacing: -0.17px
+		line-height: 1.25
 	&__select
 		width: 100%
 		height: 46px
-		padding: 10px 9px
-		+gilroy-medium
+		padding: 24px 9px 5px
+		+gilroy-bold
 		font-size: 12px
 		-webkit-appearance: none
 		background-color: #fff
@@ -105,6 +97,13 @@
 			outline: #008489
 	&__txt-bold
 		+gilroy-bold
+	&__error-msg
+		padding: 0 5px
+		+gilroy-bold
+		font-size: 12px
+		line-height: 1.25
+		letter-spacing: -0.165px
+		color: #E34F30
 
 .field
 	position: relative

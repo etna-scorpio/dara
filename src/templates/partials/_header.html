@@ -9,9 +9,15 @@
 							<li class="header-list__option"><a href="#" class="header-list__item">Ingredients</a></li>
 							<li class="header-list__option"><a href="#" class="header-list__item">My Blend</a></li>
 						</ul>
+						{% if headerBackArrow == true %}
+						<a href="#" class="header__back-ico d-lg-none">
+							{{ mixins.icon('arrow-left') }}
+						</a>
+						{% else %}
 						<a href="#" class="header__menu-ico d-lg-none js-show-menu-btn">
 							{{ mixins.icon('hamburger') }}
 						</a>
+						{% endif %}
 					</div>
 					<div class="col-4 col-lg-2 text-center">
 						<a href="/" class="header__logo js-header-logo">
