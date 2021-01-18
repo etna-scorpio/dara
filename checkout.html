@@ -117,9 +117,14 @@
                       </div>
                     </div>
                     <div class="form__row">
-                      <div class="form__field js-input-box is-active">
-                        <input id="name" type="text" class="form__input js-input-data" value="Jane Doe">
-                        <label for="name" class="form__label">Full Name</label>
+                      <div class="form__field js-input-box">
+                        <input id="first-name" type="text" class="form__input js-input-data">
+                        <label for="first-name" class="form__label">First Name</label>
+                        <div class="form__helper">This is not valid</div>
+                      </div>
+                      <div class="form__field js-input-box">
+                        <input id="last-name" type="text" class="form__input js-input-data">
+                        <label for="last-name" class="form__label">Last Name</label>
                         <div class="form__helper">This is not valid</div>
                       </div>
                     </div>
@@ -129,17 +134,19 @@
                         <label for="address" class="form__label">Address</label>
                         <div class="form__helper">This is not valid</div>
                       </div>
-                      <div class="form__field js-input-box">
-                        <input id="apt" type="text" class="form__input js-input-data">
-                        <label for="apt" class="form__label">Apt/Suite</label>
-                        <div class="form__helper">This is not valid</div>
-                      </div>
                     </div>
                     <div class="form__row">
                       <div class="form__field js-input-box">
                         <input id="city" type="text" class="form__input js-input-data">
                         <label for="city" class="form__label">City</label>
                         <div class="form__helper">This is not valid</div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field js-input-box is-error">
+                        <input id="country" type="text" class="form__input js-input-data">
+                        <label for="country" class="form__label">Country</label>
+                        <div class="form__helper">Enter a city</div>
                       </div>
                       <div class="form__field js-input-box">
                         <select class="form__select js-input-data" name="state" id="state">
@@ -229,6 +236,9 @@
                     </div>
                     <div class="form__row">
                       <button class="button button--checkout" type="submit"> PLACE ORDER </button>
+                    </div>
+                    <div class="form__row mb-0">
+                      <p class="form__error-msg">There was an error placing your order. Please try again.</p>
                     </div>
                     <div class="form__row mb-0">
                       <p class="checkout-card__comment">By making a purchase, you accept the <a href="#">Terms of Service</a> and Privacy.</p>
