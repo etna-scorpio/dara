@@ -61,6 +61,7 @@
 				align-items: center
 				align-self: stretch
 		&--info
+			flex-basis: 100%
 			margin-right: 26px
 			+rmin(768)
 				margin-right: 0
@@ -89,8 +90,11 @@
 			margin-bottom: 11px
 			font-size: 16px
 			line-height: 1.1
+		&:only-child
+			margin-bottom: 0
 	&__desc
 		display: flex
+		flex-basis: 100%
 		align-items: center
 		color: #000
 		&:hover,
@@ -154,5 +158,6 @@
 			+rmin(500)
 				width: 12px
 				margin-left: -6px
-	&__link
+	&__btn
 		display: inline-block
+		cursor: pointer

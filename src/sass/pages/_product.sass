@@ -32,12 +32,17 @@
 		line-height: 1.45
 		letter-spacing: -0.21px
 	&__view
+		position: relative
 		margin-bottom: 30px
+		padding-bottom: 57px
 		+rmin(499)
 			margin: 0 auto 30px
 		+rmin(768)
 			margin: -66px auto 30px
 			max-width: 240px
+		.dosage
+			position: absolute
+			width: 100%
 	&__benefit
 		margin-bottom: 20px
 		color: #008489
@@ -62,8 +67,12 @@
 		max-width: 231px
 		margin: 0 auto 20px
 	&__button
+		position: absolute
+		left: 0
+		right: 0
 		width: 100%
 		max-width: 442px
+		margin: 0 auto
 		+gilroy-medium
 		+rmin(768)
 			max-width: initial
