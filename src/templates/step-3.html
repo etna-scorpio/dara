@@ -16,6 +16,8 @@ footer: false
 	col: ['DIABETES', 'ARTHRITIS', 'ANEMIA', 'HYPERTENSION', 'FIBRYOMIALGIA']
 }, {
 	col: ['CONSTIPATION', 'PRE DIABETES', 'HYPOTHYROIDISM', 'ADRENAL FATIGUE', 'HYPERTENSION']
+}, {
+	col: ['LOREM', 'IPSUM DIABETES', 'DOLOR', 'SIT', 'AMET']
 }]  %}
 
 <section class="quiz">
@@ -24,8 +26,7 @@ footer: false
 			<div class="col">
 				<div class="special-title"><span>Any specific health issues you’d like to improve?</span></div>
 				<div class="quiz__carousel js-step-carousel">
-					{% for i in range(0,2) %}
-						{% for list in checkbox %}
+					{% for list in checkbox %}
 						{% set col_number = loop.index %}
 						<div class="quiz-item quiz-item--md-max-w">
 							{% for item in list.col  %}
@@ -38,7 +39,6 @@ footer: false
 							</div>
 							{% endfor %}
 						</div>
-						{% endfor %}
 					{% endfor %}
 				</div>
 				<div class="quiz__button-wrap quiz__button-wrap--md-margin-t">

@@ -20,6 +20,8 @@
 	&__carousel
 		max-width: 520px
 		margin: 0 auto
+		&:not(.slick-initialized)
+			margin-bottom: 24px
 		&--sm-max-w
 			max-width: 440px
 		.slick-arrow
@@ -39,6 +41,7 @@
 
 .quiz-item
 	max-width: 335px
+	width: 100%
 	margin: 10px auto
 	&--sm-max-w
 		max-width: 200px
